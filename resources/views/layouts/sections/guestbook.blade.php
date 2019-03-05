@@ -9,7 +9,7 @@
             @foreach($guestbookLast as $item)
             <div class="col-4">
                 <div class="guest__text">
-                    {!! $item->text !!}
+                    <p>{{ strip_tags($item->text) }}</p>
                 </div>
                 <div class="guest__footer">
                     <div class="guest__footer-name">{{ $item->name }}</div>
