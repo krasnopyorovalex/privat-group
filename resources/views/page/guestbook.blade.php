@@ -49,7 +49,7 @@
                         {!! $page->text !!}
                     </div>
                     <div class="pagination">
-                        {{ $guestbook->links() }}
+                        {{ $guestbookAll->links() }}
                     </div>
                 </div>
                 <div class="col-3 flex-start">
