@@ -30,7 +30,7 @@ class CostSent extends Mailable
      */
     public function build()
     {
-        return $this->from('info@villa-sany.ru')
+        return $this->from('info@krasber.ru')
             ->subject('Форма: Узнать стоимость')
             ->view('emails.cost', [
                 'data' => $this->data
