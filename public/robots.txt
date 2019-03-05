@@ -1,0 +1,3 @@
+User-agent: *
+Host: https://bravyi-turist.ru
+Sitemap: https://bravyi-turist.ru/sitemap.xml
