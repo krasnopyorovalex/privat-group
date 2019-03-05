@@ -1,29 +1,29 @@
 @extends('layouts.app')
 
-@section('title', $article->title)
-@section('description', $article->description)
+@section('title', $ourService->title)
+@section('description', $ourService->description)
 @push('og')
-    <meta property="og:title" content="{{ $article->title }}">
+    <meta property="og:title" content="{{ $ourService->title }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ request()->getUri() }}">
-    <meta property="og:image" content="{{ asset($article->image ? $article->image->path : 'img/logo.png') }}">
-    <meta property="og:description" content="{{ $article->description }}">
+    <meta property="og:image" content="{{ asset($ourService->image ? $ourService->image->path : 'img/logo.png') }}">
+    <meta property="og:description" content="{{ $ourService->description }}">
     <meta property="og:site_name" content="Вилла «SANY»">
     <meta property="og:locale" content="ru_RU">
 @endpush
 
 @section('content')
-    @includeWhen($article->slider, 'layouts.sections.slider', ['slider' => $article->slider])
+    @includeWhen($ourService->slider, 'layouts.sections.slider', ['slider' => $ourService->slider])
 
     <section class="breadcrumbs">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1>{{ $article->name }}</h1>
+                    <h1>{{ $ourService->name }}</h1>
                     <ul>
                         <li><a href="{{ route('page.show') }}">Главная</a></li>
-                        <li><a href="{{ route('page.show',['alias' => 'articles']) }}">Статьи</a></li>
-                        <li>{{ $article->name }}</li>
+                        <li><a href="{{ route('page.show',['alias' => 'our-services']) }}">Наши услуги</a></li>
+                        <li>{{ $ourService->name }}</li>
                     </ul>
                 </div>
             </div>
@@ -35,10 +35,10 @@
             <div class="row">
                 <div class="col-9 flex-start">
                     <div class="content page__content">
-                        @if($article->image)
-                        <img src="{{ asset($article->image->path) }}" alt="{{ $article->image->alt }}" title="{{ $article->image->title }}" class="responsive">
+                        @if($ourService->image)
+                        <img src="{{ asset($ourService->image->path) }}" alt="{{ $ourService->image->alt }}" title="{{ $ourService->image->title }}" class="responsive">
                         @endif
-                        {!! $article->text !!}
+                        {!! $ourService->text !!}
                     </div>
                 </div>
                 <div class="col-3 flex-start">
@@ -49,6 +49,6 @@
     </main>
 
 
-    @includeWhen($article->gallery, 'layouts.sections.gallery', ['gallery' => $article->gallery])
+    @includeWhen($ourService->gallery, 'layouts.sections.gallery', ['gallery' => $ourService->gallery])
 
 @endsection

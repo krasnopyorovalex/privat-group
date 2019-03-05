@@ -23,8 +23,9 @@ Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
 Route::group(['middleware' => ['redirector', 'shortcode']], function () {
     Route::get('{alias}', 'ServiceController@show')->name('service.show');
     Route::get('/{alias?}/{page?}', 'PageController@show')->name('page.show')->where('page', '[0-9]+');
-    Route::get('blog/{alias}', 'BlogController@show')->name('article.show');
-    Route::get('our-services/{alias}', 'BlogController@show')->name('our_service.show');
+    Route::get('articles/{alias}', 'BlogController@show')->name('article.show');
+    Route::get('our-services/{alias}', 'OurServiceController@show')->name('our_service.show');
+    Route::get('news/{alias}', 'InfoController@show')->name('info.show');
 });
 
 Route::group(['prefix' => '_root', 'middleware' => 'auth', 'namespace' => 'Admin', 'as' => 'admin.'], function () {

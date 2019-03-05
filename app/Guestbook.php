@@ -55,7 +55,7 @@ class Guestbook extends Model
      */
     public function getPreview(): string
     {
-        return Str::limit($this->text);
+        return Str::limit(strip_tags($this->text));
     }
 
     /**

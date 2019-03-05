@@ -13,28 +13,38 @@
     @if (count($services))
         @foreach($services as $service)
             <url>
-                <loc>{{ route('service.show', ['alias' => $service->alias]) }}</loc>
+                <loc>{{ $service->url }}</loc>
                 <lastmod>{{ Illuminate\Support\Carbon::now()->format("Y-m-d\\TH:i:sP") }}</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>0.9</priority>
             </url>
-                @if (count($service->services))
-                    @foreach($service->services as $subService)
-                        <url>
-                            <loc>{{ route('service.show', ['alias' => $subService->alias]) }}</loc>
-                            <lastmod>{{ Illuminate\Support\Carbon::now()->format("Y-m-d\\TH:i:sP") }}</lastmod>
-                            <changefreq>daily</changefreq>
-                            <priority>0.9</priority>
-                        </url>
-                    @endforeach
-                @endif
         @endforeach
     @endif
     @if (count($articles))
         @foreach($articles as $article)
             <url>
-                <loc>{{ route('article.show', ['alias' => $article->alias]) }}</loc>
+                <loc>{{ $article->url }}</loc>
                 <lastmod>{{ Illuminate\Support\Carbon::parse($article->published_at)->format("Y-m-d\\TH:i:sP") }}</lastmod>
+                <changefreq>daily</changefreq>
+                <priority>0.8</priority>
+            </url>
+        @endforeach
+    @endif
+    @if (count($news))
+        @foreach($news as $new)
+            <url>
+                <loc>{{ $new->url }}</loc>
+                <lastmod>{{ Illuminate\Support\Carbon::parse($new->published_at)->format("Y-m-d\\TH:i:sP") }}</lastmod>
+                <changefreq>daily</changefreq>
+                <priority>0.8</priority>
+            </url>
+        @endforeach
+    @endif
+    @if (count($ourServices))
+        @foreach($ourServices as $ourService)
+            <url>
+                <loc>{{ $ourService->url }}</loc>
+                <lastmod>{{ Illuminate\Support\Carbon::parse($ourService->published_at)->format("Y-m-d\\TH:i:sP") }}</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>0.8</priority>
             </url>

@@ -32,7 +32,7 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-9">
+                <div class="col-9 flex-start">
                     <div class="content page__content">
                         {!! $page->text !!}
                     </div>

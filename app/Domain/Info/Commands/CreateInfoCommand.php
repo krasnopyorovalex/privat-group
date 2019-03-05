@@ -1,24 +1,24 @@
 <?php
 
-namespace App\Domain\Article\Commands;
+namespace App\Domain\Info\Commands;
 
-use App\Article;
+use App\Info;
 use App\Domain\Image\Commands\UploadImageCommand;
 use App\Http\Requests\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
 /**
- * Class CreateArticleCommand
- * @package App\Domain\Article\Commands
+ * Class CreateInfoCommand
+ * @package App\Domain\Info\Commands
  */
-class CreateArticleCommand
+class CreateInfoCommand
 {
     use DispatchesJobs;
 
     private $request;
 
     /**
-     * CreateArticleCommand constructor.
+     * CreateInfoCommand constructor.
      * @param Request $request
      */
     public function __construct(Request $request)
@@ -31,13 +31,13 @@ class CreateArticleCommand
      */
     public function handle(): bool
     {
-        $article = new Article();
-        $article->fill($this->request->all());
-        $article->published_at = date('Y-m-d');
-        $article->save();
+        $info = new Info();
+        $info->fill($this->request->all());
+        $info->published_at = date('Y-m-d');
+        $info->save();
 
         if ($this->request->has('image')) {
-            return $this->dispatch(new UploadImageCommand($this->request, $article->id, Article::class));
+            return $this->dispatch(new UploadImageCommand($this->request, $info->id, Info::class));
         }
 
         return true;

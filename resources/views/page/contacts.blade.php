@@ -41,6 +41,7 @@
         </div>
     </main>
 
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab1d6df32506ddc0247f1349a1035b4f122379f2f5fb9e88723e28d636d741025&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
 
     @includeWhen($page->gallery, 'layouts.sections.gallery', ['gallery' => $page->gallery])
 

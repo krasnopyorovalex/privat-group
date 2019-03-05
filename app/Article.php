@@ -63,7 +63,7 @@ class Article extends Model
     /**
      * @return string
      */
-    public function getUrlAttribute()
+    public function getUrlAttribute(): string
     {
         return route("article.show", $this->alias);
     }

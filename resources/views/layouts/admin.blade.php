@@ -79,6 +79,7 @@
                             <li><a href="{{ route('admin.services.index') }}"><i class="icon-list"></i> <span>Номера</span></a></li>
                             <li><a href="{{ route('admin.our_services.index') }}"><i class="icon-menu6"></i> <span>Наши услуги</span></a></li>
                             <li><a href="{{ route('admin.articles.index') }}"><i class="icon-magazine"></i> <span>Статьи</span></a></li>
+                            <li><a href="{{ route('admin.infos.index') }}"><i class="icon-newspaper"></i> <span>Новости</span></a></li>
                             <li><a href="{{ route('admin.guestbooks.index') }}"><i class="icon-bubble2"></i> <span>Отзывы</span></a></li>
                             <li><a href="{{ route('admin.sliders.index') }}"><i class="icon-images2"></i> <span>Слайдер</span></a></li>
                             <li><a href="{{ route('admin.galleries.index') }}"><i class="icon-stack-picture"></i> <span>Галерея</span></a></li>

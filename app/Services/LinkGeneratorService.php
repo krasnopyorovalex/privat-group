@@ -17,7 +17,7 @@ class LinkGeneratorService
         'App\Page' => 'Страницы',
         'App\Service' => 'Номера',
         'App\Article' => 'Статьи',
-        'App\Information' => 'Новости',
+        'App\Info' => 'Новости',
         'App\OurService' => 'Наши услуги',
     ];
 

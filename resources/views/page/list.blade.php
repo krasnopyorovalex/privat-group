@@ -14,24 +14,37 @@
 
 @section('content')
     @includeWhen($page->slider, 'layouts.sections.slider', ['slider' => $page->slider])
-    <section class="title__section">
+
+    <section class="breadcrumbs">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h1>{{ $page->name }}</h1>
+                    <ul>
+                        <li><a href="{{ route('page.show') }}">Главная</a></li>
+                        <li>{{ $page->name }}</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <main class="seo page">
+    <main>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    @include('layouts.partials.breadcrumbs', ['page' => $page])
-                    {!! $page->text !!}
+                <div class="col-9 flex-start">
+                    <div class="content page__content">
+                        {!! $page->text !!}
+                    </div>
+                </div>
+                <div class="col-3 flex-start">
+                    @include('layouts.partials.sb_list')
                 </div>
             </div>
         </div>
     </main>
+
+
+    @includeWhen($page->gallery, 'layouts.sections.gallery', ['gallery' => $page->gallery])
+
 @endsection
