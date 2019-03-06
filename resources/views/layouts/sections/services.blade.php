@@ -6,7 +6,7 @@
             </div>
             <div class="col-12">
                 <div class="small__text">
-                    <p>Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar.</p>
+                    <p>Вилла "SANY" предлагает просторные полностью оборудованные номера для комфортного отдыха наших гостей</p>
                 </div>
             </div>
         </div>

@@ -42,7 +42,7 @@ class UpdateOurServiceCommand
         $urlNew = $this->request->post('alias');
 
         if ($OurService->getOriginal('alias') != $urlNew) {
-            event(new RedirectDetected($OurService->getOriginal('alias'), $urlNew, 'OurService.show'));
+            event(new RedirectDetected($OurService->getOriginal('alias'), $urlNew, 'our_service.show'));
         }
 
         if ($this->request->has('image')) {

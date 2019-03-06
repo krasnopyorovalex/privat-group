@@ -64,18 +64,24 @@
                 </div>
                 <div class="col-3 flex-start">
                     @include('layouts.forms.sb_booking')
-                    <div class="sb__title">Другие номера</div>
-                    <div class="sb__room">
-                        <div class="img">
-                            <a href="#">
-                                <img src="./img/sb__room-img.jpg" alt="alt">
-                            </a>
-                        </div>
-                        <div class="text">
-                            <a href="#" class="name">Апартаменты</a>
-                            <div class="price">от 5200 руб/сутки</div>
-                        </div>
-                    </div>
+                    @if($anotherRooms)
+                        <div class="sb__title">Другие номера</div>
+                        @foreach($anotherRooms as $room)
+                            <div class="sb__room">
+                                @if($room->image)
+                                <div class="img">
+                                    <a href="{{ $room->url }}">
+                                        <img src="{{ $room->image->path }}" alt="{{ $room->image->alt }}" title="{{ $room->image->title }}">
+                                    </a>
+                                </div>
+                                @endif
+                                <div class="text">
+                                    <a href="{{ $room->url }}" class="name">{{ $room->name }}</a>
+                                    <div class="price">{{ $room->price }}</div>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
             <div class="row">

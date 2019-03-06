@@ -112,12 +112,12 @@
             </div>
             <div class="row flex-center">
                 <div class="col-6">
-                    <div class="copyright">Copyright © 2018 Milenia Youth Hostel. All Rights Reserved.</div>
+                    <div class="copyright">© 2008-{{ date('Y') }} Вилла villa-sany.ru</div>
                 </div>
                 <div class="col-6">
                     <div class="develop">
                         <div class="develop__link">
-                            <a href="/" rel="nofollow" target="_blank">
+                            <a href="https://krasber.ru" rel="nofollow" target="_blank">
                                 Создание, продвижение и <br/>техподдержка сайтов
                             </a>
                         </div>

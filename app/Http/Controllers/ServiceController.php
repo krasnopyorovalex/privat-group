@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Domain\Service\Queries\GetAllServicesQuery;
 use App\Domain\Service\Queries\GetServiceByAliasQuery;
 use App\Service;
 
@@ -24,10 +25,14 @@ class ServiceController extends PageController
             $service->tabs = $service->tabs->mapWithKeys(function ($item) {
                 return [$item->tab_id => $item->value];
             });
+            $anotherRooms = $this->dispatch(new GetAllServicesQuery($service));
         } catch (\Exception $exception) {
             return parent::show($alias);
         }
 
-        return view('service.index', ['service' => $service]);
+        return view('service.index', [
+            'service' => $service,
+            'anotherRooms' => $anotherRooms
+        ]);
     }
 }
