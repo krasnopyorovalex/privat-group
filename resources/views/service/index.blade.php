@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1>Стандарт</h1>
+                    <h1>{{ $service->name }}</h1>
                     <ul>
                         <li><a href="{{ route('page.show') }}">Главная</a></li>
                         <li><a href="{{ route('page.show', ['alias' => 'nomera']) }}">Наши номера</a></li>
