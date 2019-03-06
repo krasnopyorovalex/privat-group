@@ -30,7 +30,7 @@ class BookingSent extends Mailable
      */
     public function build()
     {
-        return $this->from('krasber.ru@yandex.ru')
+        return $this->from('Sany0629@yandex.ru')
             ->subject('Форма: бронирование номера')
             ->view('emails.booking', [
                 'data' => $this->data
