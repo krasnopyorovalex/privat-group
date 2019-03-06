@@ -53,6 +53,7 @@ class Page extends Model
         'page.list' => 'Список(новости/статьи)',
         'page.guestbook' => 'Отызвы',
         'page.booking' => 'Страница бронирования',
+        'page.gallery' => 'Фотогалерея',
         'page.contacts' => 'Контакты'
     ];
 
