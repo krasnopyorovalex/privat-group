@@ -13,7 +13,7 @@ class OurService extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'title', 'description', 'text', 'preview', 'alias'];
+    protected $fillable = ['name', 'title', 'description', 'text', 'preview', 'alias', 'showed_in_main'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne

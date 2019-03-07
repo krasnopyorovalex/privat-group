@@ -27,6 +27,8 @@
                 @textarea(['name' => 'preview', 'label' => 'Превью статьи', 'id' => 'editor-full2'])
                 @textarea(['name' => 'text', 'label' => 'Текст'])
 
+                @checkbox(['name' => 'showed_in_main', 'label' => 'Отображать на главной?', 'isChecked' => true])
+
                 @submit_btn()
             </form>
 

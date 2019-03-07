@@ -20,6 +20,7 @@ class CreateOurServiceRequest extends Request
             'preview' => 'string|nullable',
             'alias' => 'required|max:64|unique:our_services',
             'image' => 'image',
+            'showed_in_main' => 'digits_between:0,1',
         ];
     }
 

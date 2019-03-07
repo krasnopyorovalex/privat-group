@@ -43,6 +43,8 @@
                                     @textarea(['name' => 'preview', 'label' => 'Превью статьи', 'id' => 'editor-full2', 'entity' => $ourService])
                                     @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $ourService])
 
+                                    @checkbox(['name' => 'showed_in_main', 'label' => 'Отображать на главной?', 'entity' => $ourService])
+
                                     @submit_btn()
                                 </div>
                             </div>

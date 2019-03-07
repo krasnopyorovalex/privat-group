@@ -20,7 +20,7 @@
 
     @includeWhen($services, 'layouts.sections.services')
 
-    @includeWhen($ourServices, 'layouts.sections.our_services')
+    @includeWhen($ourServicesInMain, 'layouts.sections.our_services')
 
     @includeWhen($guestbookLast, 'layouts.sections.guestbook')
 

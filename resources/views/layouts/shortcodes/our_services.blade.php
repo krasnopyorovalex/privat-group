@@ -1,4 +1,4 @@
-<div class="row services">
+<div class="row services not__padding">
     @foreach($ourServices as $ourService)
         <div class="col-4">
             <div class="img">

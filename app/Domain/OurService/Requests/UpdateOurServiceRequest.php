@@ -22,6 +22,7 @@ class UpdateOurServiceRequest extends Request
             'image' => 'image',
             'imageAlt' => 'string|max:255',
             'imageTitle' => 'string|max:255',
+            'showed_in_main' => 'digits_between:0,1',
             'alias' => [
                 'required',
                 'max:64',

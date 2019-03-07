@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="row">
-            @foreach($ourServices as $ourService)
+            @foreach($ourServicesInMain as $ourService)
                 <div class="col-3">
                     @if ($ourService->image)
                     <div class="img">

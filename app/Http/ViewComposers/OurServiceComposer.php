@@ -21,6 +21,11 @@ class OurServiceComposer
     {
         $ourServices = $this->dispatch(new GetAllOurServicesQuery());
 
+        $ourServicesInMain = $ourServices->filter(function ($item) {
+            return $item->showed_in_main == 1;
+        });
+
         $view->with('ourServices', $ourServices);
+        $view->with('ourServicesInMain', $ourServicesInMain);
     }
 }
