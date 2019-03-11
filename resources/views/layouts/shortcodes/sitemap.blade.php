@@ -30,6 +30,15 @@
                         @endforeach
                     </ul>
                 @endif
+                @if(strstr($page->text,'{our_services}') && count($ourServices))
+                    <ul>
+                        @foreach($ourServices as $ourService)
+                            <li>
+                                <a href="{{ $ourService->url }}">{{ $ourService->name }}</a>
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
             </li>
         @endforeach
     @endif
