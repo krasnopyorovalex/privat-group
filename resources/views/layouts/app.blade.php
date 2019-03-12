@@ -40,18 +40,6 @@
                                     <a href="tel:+79787248938">+7 978 724 89 38</a>
                                 </div>
                                 <div>
-                                    <svg class="icon">
-                                        <use xlink:href="{{ asset('img/symbols.svg#email') }}"></use>
-                                    </svg>
-                                    <a href="mailto:dom2008@mail.ru">dom2008@mail.ru</a>
-                                </div>
-                                <div>
-                                    <svg class="icon icon__address">
-                                        <use xlink:href="{{ asset('img/symbols.svg#address') }}"></use>
-                                    </svg>
-                                    Крым, Николаевка, ул. Чудесная, 2/8
-                                </div>
-                                <div>
                                     <a href="https://wa.me/79787248938" target="_blank" rel="noopener noreferrer">
                                         <svg class="icon__whatsapp">
                                             <use xlink:href="{{ asset('img/symbols.svg#whatsapp') }}"></use>
@@ -62,6 +50,18 @@
                                             <use xlink:href="{{ asset('img/symbols.svg#viber') }}"></use>
                                         </svg>
                                     </a>
+                                </div>
+                                <div>
+                                    <svg class="icon">
+                                        <use xlink:href="{{ asset('img/symbols.svg#email') }}"></use>
+                                    </svg>
+                                    <a href="mailto:dom2008@mail.ru">dom2008@mail.ru</a>
+                                </div>
+                                <div>
+                                    <svg class="icon icon__address">
+                                        <use xlink:href="{{ asset('img/symbols.svg#address') }}"></use>
+                                    </svg>
+                                    Крым, Николаевка, ул. Чудесная, 2/8
                                 </div>
                             </div>
                             <div class="header__contacts-socials">
