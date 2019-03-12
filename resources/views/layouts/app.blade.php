@@ -51,6 +51,18 @@
                                     </svg>
                                     Крым, Николаевка, ул. Чудесная, 2/8
                                 </div>
+                                <div>
+                                    <a href="https://wa.me/79787248938" target="_blank" rel="noopener noreferrer">
+                                        <svg class="icon__whatsapp">
+                                            <use xlink:href="{{ asset('img/symbols.svg#whatsapp') }}"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="viber://add?number=79787248938" target="_blank" rel="noopener noreferrer">
+                                        <svg class="icon__viber">
+                                            <use xlink:href="{{ asset('img/symbols.svg#viber') }}"></use>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                             <div class="header__contacts-socials">
                                 @include('layouts.partials.socials')
@@ -145,5 +157,13 @@
     <div class="loader__bg"></div><div class="notify"></div>
     <script src="{{ asset('js/jquery.3.3.1.min.js') }}"></script>
     <script src="{{ asset('js/app.min.js') }}" async></script>
+    {{--<script type='text/javascript'>--}}
+        {{--(function(){ var widget_id = 'F7wKL0ePYv';var d=document;var w=window;function l(){--}}
+            {{--var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;--}}
+            {{--s.src = '//code.jivosite.com/script/widget/'+widget_id--}}
+            {{--; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}--}}
+            {{--if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}--}}
+            {{--else{w.addEventListener('load',l,false);}}})();--}}
+    {{--</script>--}}
 </body>
 </html>
