@@ -49,7 +49,7 @@
                                     <svg class="icon icon__address">
                                         <use xlink:href="{{ asset('img/symbols.svg#address') }}"></use>
                                     </svg>
-                                    297546, Крым, п.Николаевка, ул. Чудесная, 2, коттедж 8
+                                    Крым, Николаевка, ул. Чудесная, 2/8
                                 </div>
                             </div>
                             <div class="header__contacts-socials">
