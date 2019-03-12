@@ -41,7 +41,7 @@
         </div>
     </main>
 
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab1d6df32506ddc0247f1349a1035b4f122379f2f5fb9e88723e28d636d741025&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ENeTGXeZ9cH10M53764cuvDqvwp7ZsMn&amp;width=100%&amp;height=450&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
 
     @includeWhen($page->gallery, 'layouts.sections.gallery', ['gallery' => $page->gallery])
 
