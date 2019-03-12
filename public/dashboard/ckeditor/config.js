@@ -9,6 +9,6 @@ CKEDITOR.editorConfig = function( config ) {
     config.filebrowserUploadUrl = '/_root/upload-ckeditor';
     config.allowedContent = true;
     config.coreStyles_bold = { element: 'b', overrides: 'strong' };
-    config.coreStyles_bold = { element: 'i', overrides: 'em' };
+    config.coreStyles_italic = { element: 'i', overrides: 'em' };
 	// config.uiColor = '#AADC6E';
 };
