@@ -12,7 +12,6 @@
     <link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
     <link href="{{ asset('favicon.ico') }}" rel="shortcut icon" type="image/x-icon" />
     <link rel="canonical" href="@yield('canonical', request()->url())"/>
-    <meta name="robots" content="noindex, nofollow" />
 </head>
 <body>
     <div class="loader">
@@ -157,13 +156,13 @@
     <div class="loader__bg"></div><div class="notify"></div>
     <script src="{{ asset('js/jquery.3.3.1.min.js') }}"></script>
     <script src="{{ asset('js/app.min.js') }}" async></script>
-    {{--<script type='text/javascript'>--}}
-        {{--(function(){ var widget_id = 'F7wKL0ePYv';var d=document;var w=window;function l(){--}}
-            {{--var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;--}}
-            {{--s.src = '//code.jivosite.com/script/widget/'+widget_id--}}
-            {{--; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}--}}
-            {{--if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}--}}
-            {{--else{w.addEventListener('load',l,false);}}})();--}}
-    {{--</script>--}}
+    <script type='text/javascript'>
+        (function(){ var widget_id = 'F7wKL0ePYv';var d=document;var w=window;function l(){
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+            s.src = '//code.jivosite.com/script/widget/'+widget_id
+            ; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}
+            if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}
+            else{w.addEventListener('load',l,false);}}})();
+    </script>
 </body>
 </html>

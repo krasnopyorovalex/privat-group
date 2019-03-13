@@ -74,7 +74,7 @@
             </div>
             <div class="single__block i__agree">
                 <input type="checkbox" name="agree" id="i_agree" value="1" checked="checked">
-                <label for="i_agree">Оставляя заявку, Вы соглашаетесь на <a href="#" target="_blank" title="Перейти на страницу описания">обработку персональных данных</a></label>
+                <label for="i_agree">Оставляя заявку, Вы соглашаетесь на <a href="/soglasie-na-obrabotku-personalnykh-dannykh" target="_blank" title="Перейти на страницу описания">обработку персональных данных</a></label>
                 <p class="error">Согласитесь на обработку персональных данных</p>
             </div>
             <div class="single__block submit">
