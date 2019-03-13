@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Forms;
 
 use App\Http\Requests\Request;
+use App\Rules\NotUrl;
 
 /**
  * Class GuestbookCheckRequest
@@ -14,8 +15,9 @@ class GuestbookCheckRequest extends Request
     {
         return [
             'name' => 'required|string|min:3',
-            'email' => 'email|nullable',
-            'text' => 'required|string'
+            'email' => 'required|email',
+            'text' => ['required', 'string', new NotUrl],
+            'agree' => 'required|integer'
         ];
     }
 }

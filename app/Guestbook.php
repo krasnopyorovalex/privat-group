@@ -43,14 +43,6 @@ class Guestbook extends Model
     protected $fillable = ['name', 'text', 'city', 'is_published', 'published_at'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
-     */
-    public function image()
-    {
-        return $this->morphOne('App\Image', 'imageable');
-    }
-
-    /**
      * @return string
      */
     public function getPreview(): string

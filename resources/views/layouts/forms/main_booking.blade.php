@@ -66,7 +66,7 @@
             </div>
             <div class="single__block">
                 <label for="email">Email:</label>
-                <input type="text" name="email" id="email" autocomplete="off" required="">
+                <input type="email" name="email" id="email" autocomplete="off" required="">
             </div>
             <div class="single__block message">
                 <label for="dop__info">Дополнительная инфо:</label>
@@ -74,7 +74,7 @@
             </div>
             <div class="single__block i__agree">
                 <input type="checkbox" name="agree" id="i_agree" value="1" checked="checked">
-                <label for="i_agree">Оставляя заявку, Вы соглашаетесь на <a href="/soglasie-na-obrabotku-personalnykh-dannykh" target="_blank" title="Перейти на страницу описания">обработку персональных данных</a></label>
+                <label for="i_agree">Оставляя заявку, Вы соглашаетесь на <a href="{{ route('page.show', ['alias' => 'soglasie-na-obrabotku-personalnykh-dannykh']) }}" target="_blank" title="Перейти на страницу описания">обработку персональных данных</a></label>
                 <p class="error">Согласитесь на обработку персональных данных</p>
             </div>
             <div class="single__block submit">
