@@ -47,9 +47,6 @@
 
         </div>
     </div>
-    @if ($guestbook->image)
-        @include('layouts.partials._image_attributes_popup', ['image' => $guestbook->image])
-    @endif
 
 @push('scripts')
 <script src="{{ asset('dashboard/assets/js/plugins/ui/moment/moment.min.js') }}" defer></script>

@@ -29,6 +29,6 @@ class GetGuestbookByIdQuery
      */
     public function handle()
     {
-        return Guestbook::with(['image'])->findOrFail($this->id);
+        return Guestbook::findOrFail($this->id);
     }
 }
