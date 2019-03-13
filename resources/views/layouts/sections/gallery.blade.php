@@ -12,7 +12,7 @@
     <div class="gallery__box">
         @foreach ($gallery->images as $image)
             <figure>
-                <img src="{{ $image->getThumb() }}" alt="{{ $image->alt }}" title="{{ $image->title }}">
+                <img src="" data-src="{{ $image->getThumb() }}" alt="{{ $image->alt }}" title="{{ $image->title }}">
                 <a href="{{ $image->getPath() }}" data-lightbox="gallery">
                     <svg class="icon">
                         <use xlink:href="/img/symbols.svg#search"></use>
