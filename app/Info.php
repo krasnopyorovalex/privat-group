@@ -22,7 +22,7 @@ class Info extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'title', 'description', 'text', 'preview', 'alias', 'is_published', 'published_at'];
+    protected $guarded = [];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
@@ -38,5 +38,21 @@ class Info extends Model
     public function getUrlAttribute()
     {
         return route("info.show", $this->alias);
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return sprintf('%s - новости виллы SANY от %s г.', $this->title, $this->published_at->formatLocalized('%d %B %Y'));
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return sprintf('Новости виллы SANY в Николаевке - %s от %s', $this->name, $this->published_at->formatLocalized('%d %B %Y'));
     }
 }

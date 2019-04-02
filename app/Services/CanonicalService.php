@@ -19,8 +19,8 @@ class CanonicalService
         $numberPage = intval(request('page'));
 
         if ($numberPage) {
-            $entity->title .= " - Страница {$numberPage}";
-            $entity->description .= " - Страница {$numberPage}";
+            $entity->title .= " - страница №{$numberPage}";
+            $entity->description .= " - страница №{$numberPage}";
         }
 
         return $entity;

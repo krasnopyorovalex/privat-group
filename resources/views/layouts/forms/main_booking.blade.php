@@ -16,7 +16,7 @@
                     <label for="date_in">Дата заезда:*</label>
                     <input type="text" name="date_in" id="date_in" class="date_in" autocomplete="off" required="">
                     <svg class="icon__calendar">
-                        <use xlink:href="/img/symbols.svg#calendar"></use>
+                        <use xlink:href="{{ asset('img/symbols.svg#calendar') }}"></use>
                     </svg>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <label for="date_out">Дата выезда:*</label>
                     <input type="text" name="date_out" id="date_out" class="date_out" autocomplete="off" required="">
                     <svg class="icon__calendar">
-                        <use xlink:href="/img/symbols.svg#calendar"></use>
+                        <use xlink:href="{{ asset('img/symbols.svg#calendar') }}"></use>
                     </svg>
                 </div>
             </div>

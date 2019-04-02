@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', $new->title)
-@section('description', $new->description)
+@section('title', $new->getTitle())
+@section('description', $new->getDescription())
 @push('og')
-    <meta property="og:title" content="{{ $new->title }}">
+    <meta property="og:title" content="{{ $new->getTitle() }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ request()->getUri() }}">
     <meta property="og:image" content="{{ asset($new->image ? $new->image->path : 'img/logo.png') }}">
-    <meta property="og:description" content="{{ $new->description }}">
+    <meta property="og:description" content="{{ $new->getDescription() }}">
     <meta property="og:site_name" content="Вилла «SANY»">
     <meta property="og:locale" content="ru_RU">
 @endpush
