@@ -8,10 +8,10 @@
                     <label for="fio">Имя*:</label>
                     <input type="text" name="name" id="fio" autocomplete="off" required="">
                 </div>
-                <div class="single__block">
-                    <label for="email">Email*:</label>
-                    <input type="email" name="email" id="email" autocomplete="off" required="">
-                </div>
+{{--                <div class="single__block">--}}
+{{--                    <label for="email">Email*:</label>--}}
+{{--                    <input type="email" name="email" id="email" autocomplete="off" required="">--}}
+{{--                </div>--}}
                 <div class="single__block">
                     <label for="dop__info">Текст отзыва*:</label>
                     <textarea name="text" id="dop__info" required=""></textarea>
