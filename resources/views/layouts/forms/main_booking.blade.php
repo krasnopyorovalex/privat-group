@@ -3,7 +3,7 @@
         @csrf
         <div class="form__body">
             <div class="single__block">
-                <label for="rooms">Категория номера:</label>
+                <label for="rooms">Категория номера:*</label>
                 <select name="room" id="rooms">
                     @foreach($services as $service)
                         <option value="{{ $service->name }}">{{ $service->name }}</option>
