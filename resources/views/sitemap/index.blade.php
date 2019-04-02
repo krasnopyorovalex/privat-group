@@ -3,7 +3,7 @@
     @if (count($pages))
         @foreach($pages as $page)
         <url>
-            <loc>{{ route('page.show', ['alias' => str_replace('index', '', $page->alias)]) }}</loc>
+            <loc>{{ $page->url }}</loc>
             <lastmod>{{ Illuminate\Support\Carbon::parse($page->updated_at)->format("Y-m-d\\TH:i:sP") }}</lastmod>
             <changefreq>daily</changefreq>
             <priority>{{ $page->alias == 'index' ? 1 : 0.9 }}</priority>

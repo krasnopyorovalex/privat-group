@@ -91,7 +91,7 @@ class Page extends Model
      */
     public function getUrlAttribute(): string
     {
-        return route("page.show", $this->alias);
+        return route("page.show", str_replace('index', '', $this->alias));
     }
 
     /**

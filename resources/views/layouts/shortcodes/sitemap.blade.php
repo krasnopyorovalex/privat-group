@@ -2,7 +2,7 @@
     @if(count($pages))
         @foreach($pages as $page)
             <li>
-                <a href="{{ route('page.show', ['alias' => $page->alias]) }}">{{ $page->name }}</a>
+                <a href="{{ $page->url }}">{{ $page->name }}</a>
                 @if(strstr($page->text,'{articles}') && count($articles))
                     <ul>
                         @foreach($articles as $article)
