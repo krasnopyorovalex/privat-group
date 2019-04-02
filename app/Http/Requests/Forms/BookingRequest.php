@@ -22,7 +22,7 @@ class BookingRequest extends Request
             'email' => 'required|email',
             'count_adults' => 'required|between:1,5',
             'count_child' => 'between:0,5|nullable',
-            'dop__info' => 'string'
+            'dop__info' => 'string|nullable'
         ];
     }
 }

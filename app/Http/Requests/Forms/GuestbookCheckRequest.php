@@ -15,7 +15,7 @@ class GuestbookCheckRequest extends Request
     {
         return [
             'name' => 'required|string|min:3',
-            'email' => 'required|email',
+            //'email' => 'required|email',
             'text' => ['required', 'string', new NotUrl],
             'agree' => 'required|integer'
         ];
