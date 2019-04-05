@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', $new->getTitle())
-@section('description', $new->getDescription())
+@section('title', $article->getTitle())
+@section('description', $article->getDescription())
 @push('og')
     <meta property="og:title" content="{{ $article->title }}">
     <meta property="og:type" content="website">
