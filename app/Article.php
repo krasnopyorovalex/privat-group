@@ -67,4 +67,20 @@ class Article extends Model
     {
         return route("article.show", $this->alias);
     }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return sprintf('%s - статьи виллы SANY от %s', $this->title, $this->published_at->format('d.m.Y'));
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return sprintf('Статьи виллы SANY в Николаевке - %s от %s', $this->name, $this->published_at->format('d.m.Y'));
+    }
 }

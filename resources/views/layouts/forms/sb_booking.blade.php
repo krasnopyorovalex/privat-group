@@ -1,6 +1,6 @@
 <div class="sb__booking-form">
     <div class="title">Забронировать номер</div>
-    <form action="{{ route('send.booking') }}" id="form__booking" method="post">
+    <form action="{{ route('send.booking') }}" id="form__booking" onsubmit="yaCounter43542924.reachGoal('BRON');return true;" method="post">
         @csrf
         <div class="form__body">
             <div class="single__block">

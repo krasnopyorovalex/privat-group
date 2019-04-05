@@ -1,5 +1,5 @@
 <div class="main__booking-form">
-    <form action="{{ route('send.booking') }}" method="post" id="form__booking-main">
+    <form action="{{ route('send.booking') }}" method="post" onsubmit="yaCounter43542924.reachGoal('BRON');return true;" id="form__booking-main">
         @csrf
         <div class="form__body">
             <div class="single__block">

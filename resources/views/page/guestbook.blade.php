@@ -2,6 +2,7 @@
 
 @section('title', $page->title)
 @section('description', $page->description)
+@section('canonical', route('page.show', ['alias' => request('alias')]))
 @push('og')
     <meta property="og:title" content="{{ $page->title }}">
     <meta property="og:type" content="website">
