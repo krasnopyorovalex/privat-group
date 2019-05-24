@@ -12,7 +12,7 @@
         </li>
     @endforeach
 </ul>
-<a href="tel:89787547499" class="phone__mob">
+<a href="tel:89787248938" class="phone__mob">
     <svg>
         <use xlink:href="{{ asset('img/symbols.svg#phone_mob') }}"></use>
     </svg>
