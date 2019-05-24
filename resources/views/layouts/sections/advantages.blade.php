@@ -8,7 +8,9 @@
         <div class="row">
             <div class="col-3 flex-start">
                 <div class="img">
-                    <img src="{{ asset('img/adv-01.png') }}" alt="">
+                    <a href="{{ route('page.show', ['alias' => 'kontakty']) }}">
+                        <img src="{{ asset('img/adv-01.png') }}" alt="">
+                    </a>
                 </div>
                 <div class="name">Удобное расположение</div>
                 <div class="text">
@@ -17,7 +19,9 @@
             </div>
             <div class="col-3 flex-start">
                 <div class="img">
-                    <img src="{{ asset('img/adv-02.png') }}" alt="">
+                    <a href="{{ route('page.show', ['alias' => 'our-services']) }}">
+                        <img src="{{ asset('img/adv-02.png') }}" alt="">
+                    </a>
                 </div>
                 <div class="name">Wi-Fi</div>
                 <div class="text">
@@ -26,7 +30,9 @@
             </div>
             <div class="col-3 flex-start">
                 <div class="img">
-                    <img src="{{ asset('img/adv-03.png') }}" alt="">
+                    <a href="{{ route('service.show', ['alias' => 'basseyn']) }}">
+                        <img src="{{ asset('img/adv-03.png') }}" alt="">
+                    </a>
                 </div>
                 <div class="name">Бассейн</div>
                 <div class="text">
@@ -35,7 +41,9 @@
             </div>
             <div class="col-3 flex-start">
                 <div class="img">
-                    <img src="{{ asset('img/adv-04.png') }}" alt="">
+                    <a href="{{ route('service.show', ['alias' => 'plaz']) }}">
+                        <img src="{{ asset('img/adv-04.png') }}" alt="">
+                    </a>
                 </div>
                 <div class="name">Семейный отдых</div>
                 <div class="text">
