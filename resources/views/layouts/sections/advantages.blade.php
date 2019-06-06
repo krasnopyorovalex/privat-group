@@ -30,7 +30,7 @@
             </div>
             <div class="col-3 flex-start">
                 <div class="img">
-                    <a href="{{ route('service.show', ['alias' => 'basseyn']) }}">
+                    <a href="{{ route('our_service.show', ['alias' => 'basseyn']) }}">
                         <img src="{{ asset('img/adv-03.png') }}" alt="">
                     </a>
                 </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="col-3 flex-start">
                 <div class="img">
-                    <a href="{{ route('service.show', ['alias' => 'plaz']) }}">
+                    <a href="{{ route('our_service.show', ['alias' => 'plaz']) }}">
                         <img src="{{ asset('img/adv-04.png') }}" alt="">
                     </a>
                 </div>
