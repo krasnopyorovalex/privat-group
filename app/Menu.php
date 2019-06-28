@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * App\Menu
@@ -29,10 +30,10 @@ class Menu extends Model
     protected $fillable = ['name', 'sys_name'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return HasMany
      */
-    public function menuItems()
+    public function menuItems(): HasMany
     {
-        return $this->hasMany('App\MenuItem');
+        return $this->hasMany(MenuItem::class);
     }
 }

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * App\SliderImage
@@ -47,11 +48,11 @@ class SliderImage extends Model
     protected $fillable = ['slider_id', 'sub', 'name', 'desc', 'link', 'alt', 'title', 'is_published', 'pos'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return BelongsTo
      */
-    public function slider()
+    public function slider(): BelongsTo
     {
-        return $this->belongsTo('App\Slider');
+        return $this->belongsTo(Slider::class);
     }
 
     /**

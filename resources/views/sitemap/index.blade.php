@@ -10,16 +10,6 @@
         </url>
         @endforeach
     @endif
-    @if (count($services))
-        @foreach($services as $service)
-            <url>
-                <loc>{{ $service->url }}</loc>
-                <lastmod>{{ Illuminate\Support\Carbon::now()->format("Y-m-d\\TH:i:sP") }}</lastmod>
-                <changefreq>daily</changefreq>
-                <priority>0.9</priority>
-            </url>
-        @endforeach
-    @endif
     @if (count($articles))
         @foreach($articles as $article)
             <url>

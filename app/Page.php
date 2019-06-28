@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * App\Page
@@ -63,27 +65,27 @@ class Page extends Model
     protected $fillable = ['slider_id', 'gallery_id', 'template', 'name', 'title', 'description', 'text', 'alias', 'is_published'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     * @return MorphOne
      */
-    public function image()
+    public function image(): MorphOne
     {
-        return $this->morphOne('App\Image', 'imageable');
+        return $this->morphOne(Image::class, 'imageable');
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return BelongsTo
      */
-    public function slider()
+    public function slider(): BelongsTo
     {
-        return $this->belongsTo('App\Slider');
+        return $this->belongsTo(Slider::class);
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return BelongsTo
      */
-    public function gallery()
+    public function gallery(): BelongsTo
     {
-        return $this->belongsTo('App\Gallery');
+        return $this->belongsTo(Gallery::class);
     }
 
     /**
@@ -91,7 +93,7 @@ class Page extends Model
      */
     public function getUrlAttribute(): string
     {
-        return route("page.show", str_replace('index', '', $this->alias));
+        return route('page.show', str_replace('index', '', $this->alias));
     }
 
     /**

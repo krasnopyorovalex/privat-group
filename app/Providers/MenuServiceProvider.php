@@ -3,16 +3,20 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Container;
+use App\Http\ViewComposers\MenuComposer;
 
+/**
+ * Class MenuServiceProvider
+ * @package App\Providers
+ */
 class MenuServiceProvider extends ServiceProvider
 {
     /**
-     * Register services.
-     *
-     * @return void
+     * @throws Container\BindingResolutionException
      */
-    public function register()
+    public function register(): void
     {
-        $this->app->make('view')->composer('layouts.app', 'App\Http\ViewComposers\MenuComposer');
+        $this->app->make('view')->composer('layouts.app', MenuComposer::class);
     }
 }

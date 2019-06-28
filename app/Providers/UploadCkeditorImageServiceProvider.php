@@ -5,26 +5,20 @@ namespace App\Providers;
 use App\Services\UploadCkeditorImageService;
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class UploadCkeditorImageServiceProvider
+ * @package App\Providers
+ */
 class UploadCkeditorImageServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //
-    }
-
     /**
      * Register services.
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
-        $this->app->bind(UploadCkeditorImageService::class, function () {
+        $this->app->bind(UploadCkeditorImageService::class, static function () {
             return new UploadCkeditorImageService();
         });
     }

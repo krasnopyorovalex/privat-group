@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Container;
+use App\Http\ViewComposers\OurServiceComposer;
 
 /**
  * Class OurServicesServiceProvider
@@ -11,10 +13,10 @@ use Illuminate\Support\ServiceProvider;
 class OurServicesServiceProvider extends ServiceProvider
 {
     /**
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws Container\BindingResolutionException
      */
-    public function register()
+    public function register(): void
     {
-        $this->app->make('view')->composer('*', 'App\Http\ViewComposers\OurServiceComposer');
+        $this->app->make('view')->composer('*', OurServiceComposer::class);
     }
 }

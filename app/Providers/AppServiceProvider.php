@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         Blade::include('includes.input', 'input');
         Blade::include('includes.submit_btn', 'submit_btn');
@@ -28,15 +28,5 @@ class AppServiceProvider extends ServiceProvider
         Blade::include('includes.select', 'select');
 
         setlocale(LC_TIME, 'ru_RU.UTF-8');
-    }
-
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
     }
 }

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 class OurService extends Model
 {
@@ -16,18 +17,18 @@ class OurService extends Model
     protected $fillable = ['name', 'title', 'description', 'text', 'preview', 'alias', 'showed_in_main'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     * @return MorphOne
      */
-    public function image()
+    public function image(): MorphOne
     {
-        return $this->morphOne('App\Image', 'imageable');
+        return $this->morphOne(Image::class, 'imageable');
     }
 
     /**
      * @return string
      */
-    public function getUrlAttribute()
+    public function getUrlAttribute(): string
     {
-        return route("our_service.show", $this->alias);
+        return route('our_service.show', $this->alias);
     }
 }

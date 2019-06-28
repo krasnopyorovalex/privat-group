@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 /**
  * App\Article
@@ -53,11 +55,11 @@ class Article extends Model
     protected $fillable = ['name', 'title', 'description', 'text', 'preview', 'alias', 'is_published', 'published_at'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     * @return Relations\MorphOne
      */
-    public function image()
+    public function image(): MorphOne
     {
-        return $this->morphOne('App\Image', 'imageable');
+        return $this->morphOne(Image::class, 'imageable');
     }
 
     /**
@@ -65,7 +67,7 @@ class Article extends Model
      */
     public function getUrlAttribute(): string
     {
-        return route("article.show", $this->alias);
+        return route('article.show', $this->alias);
     }
 
     /**
@@ -73,7 +75,7 @@ class Article extends Model
      */
     public function getTitle(): string
     {
-        return sprintf('%s - статьи виллы SANY от %s', $this->title, $this->published_at->format('d.m.Y'));
+        return sprintf('%s', $this->title);
     }
 
     /**
@@ -81,6 +83,6 @@ class Article extends Model
      */
     public function getDescription(): string
     {
-        return sprintf('Статьи виллы SANY в Николаевке - %s от %s', $this->name, $this->published_at->format('d.m.Y'));
+        return sprintf('%s', $this->description);
     }
 }

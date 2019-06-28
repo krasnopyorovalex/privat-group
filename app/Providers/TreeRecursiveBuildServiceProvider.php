@@ -16,9 +16,9 @@ class TreeRecursiveBuildServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
-        $this->app->bind(TreeRecursiveBuildService::class, function () {
+        $this->app->bind(TreeRecursiveBuildService::class, static function () {
             return new TreeRecursiveBuildService();
         });
     }

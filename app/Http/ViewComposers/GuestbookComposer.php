@@ -15,7 +15,7 @@ class GuestbookComposer
     /**
      * @param View $view
      */
-    public function compose(View $view)
+    public function compose(View $view): void
     {
         if (! self::$guestbook) {
             self::$guestbook = $this->dispatch(new GetAllGuestbookQuery(true, 10));

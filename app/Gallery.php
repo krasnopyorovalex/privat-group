@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * App\Gallery
@@ -34,10 +35,10 @@ class Gallery extends Model
     protected $fillable = ['name', 'is_published'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return HasMany
      */
-    public function images()
+    public function images(): HasMany
     {
-        return $this->hasMany('App\GalleryImage')->orderBy('pos');
+        return $this->hasMany(GalleryImage::class)->orderBy('pos');
     }
 }

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * App\Slider
@@ -31,10 +32,10 @@ class Slider extends Model
     protected $fillable = ['name', 'is_published'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return HasMany
      */
-    public function images()
+    public function images(): HasMany
     {
-        return $this->hasMany('App\SliderImage')->orderBy('pos');
+        return $this->hasMany(SliderImage::class)->orderBy('pos');
     }
 }

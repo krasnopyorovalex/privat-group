@@ -6,6 +6,7 @@ use App\Domain\Page\Queries\GetPageByAliasQuery;
 use App\Services\CanonicalService;
 use App\Services\TextParserService;
 use Illuminate\View\View;
+use Illuminate\Contracts\View\Factory;
 
 /**
  * Class PageController
@@ -36,7 +37,7 @@ class PageController extends Controller
 
     /**
      * @param string $alias
-     * @return \Illuminate\Contracts\View\Factory|View
+     * @return Factory|View
      */
     public function show(string $alias = 'index')
     {

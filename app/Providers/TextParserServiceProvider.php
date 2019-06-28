@@ -5,16 +5,15 @@ namespace App\Providers;
 use App\Services\TextParserService;
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class TextParserServiceProvider
+ * @package App\Providers
+ */
 class TextParserServiceProvider extends ServiceProvider
 {
-    /**
-     * Register services.
-     *
-     * @return void
-     */
-    public function register()
+    public function register(): void
     {
-        $this->app->singleton(TextParserService::class, function () {
+        $this->app->singleton(TextParserService::class, static function () {
             return new TextParserService();
         });
     }

@@ -85,7 +85,7 @@ if (! function_exists('is_main_page')) {
      */
     function is_main_page()
     {
-        return in_array(request()->path(), ['/']);
+        return request()->path() === '/';
     }
 }
 
@@ -97,12 +97,12 @@ if (! function_exists('add_css_class')) {
     function add_css_class($item)
     {
         $classes = [];
-        if (count($item->menuItems)) {
-            array_push($classes, 'has__child');
+
+        $path = request()->path();
+
+        if (trim($item->link,'/') === $path || $item->link === $path) {
+            $classes[] = ' active';
         }
-        if (trim($item->link,'/') == request()->path() || request()->path() == $item->link) {
-            array_push($classes, 'active');
-        }
-        return count($classes) ? ' class="'. implode(' ', $classes) .'"' : '';
+        return count($classes) ? implode(' ', $classes) : '';
     }
 }

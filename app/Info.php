@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 class Info extends Model
 {
@@ -25,19 +26,19 @@ class Info extends Model
     protected $guarded = [];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     * @return MorphOne
      */
-    public function image()
+    public function image(): MorphOne
     {
-        return $this->morphOne('App\Image', 'imageable');
+        return $this->morphOne(Image::class, 'imageable');
     }
 
     /**
      * @return string
      */
-    public function getUrlAttribute()
+    public function getUrlAttribute(): string
     {
-        return route("info.show", $this->alias);
+        return route('info.show', $this->alias);
     }
 
     /**
@@ -45,7 +46,7 @@ class Info extends Model
      */
     public function getTitle(): string
     {
-        return sprintf('%s - новости виллы SANY от %s', $this->title, $this->published_at->format('d.m.Y'));
+        return sprintf('%s', $this->title);
     }
 
     /**
@@ -53,6 +54,6 @@ class Info extends Model
      */
     public function getDescription(): string
     {
-        return sprintf('Новости виллы SANY в Николаевке - %s от %s', $this->name, $this->published_at->format('d.m.Y'));
+        return sprintf('%s', $this->description);
     }
 }

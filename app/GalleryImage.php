@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * App\GalleryImage
@@ -42,11 +43,11 @@ class GalleryImage extends Model
     protected $fillable = ['gallery_id', 'name', 'alt', 'title', 'is_published', 'pos'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return BelongsTo
      */
-    public function gallery()
+    public function gallery(): BelongsTo
     {
-        return $this->belongsTo('App\Gallery');
+        return $this->belongsTo(Gallery::class);
     }
 
     /**

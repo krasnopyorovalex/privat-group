@@ -76,7 +76,6 @@
                             <!-- Main -->
                             <li class="navigation-header"><span>Навигация</span> <i class="icon-menu" title="Main pages"></i></li>
                             <li><a href="{{ route('admin.pages.index') }}"><i class="icon-compose"></i> <span>Страницы</span></a></li>
-                            <li><a href="{{ route('admin.services.index') }}"><i class="icon-list"></i> <span>Номера</span></a></li>
                             <li><a href="{{ route('admin.our_services.index') }}"><i class="icon-menu6"></i> <span>Наши услуги</span></a></li>
                             <li><a href="{{ route('admin.articles.index') }}"><i class="icon-magazine"></i> <span>Статьи</span></a></li>
                             <li><a href="{{ route('admin.infos.index') }}"><i class="icon-newspaper"></i> <span>Новости</span></a></li>

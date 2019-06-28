@@ -11,9 +11,9 @@
 
                 @selectLink(['name' => 'link', 'entity' => $image, 'label' => 'Ссылка'])
 
-                @input(['name' => 'name', 'label' => 'Название', 'entity' => $image])
-                @input(['name' => 'alt', 'label' => 'alt', 'entity' => $image])
-                @input(['name' => 'title', 'label' => 'title', 'entity' => $image])
+                @input(['name' => 'name', 'label' => 'Верхний текст', 'entity' => $image])
+                @input(['name' => 'alt', 'label' => 'Средний текст', 'entity' => $image])
+                @input(['name' => 'title', 'label' => 'Нижний текст', 'entity' => $image])
             </div>
             <div class="modal-footer">
                 @submit_btn()
