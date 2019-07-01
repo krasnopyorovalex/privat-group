@@ -2,21 +2,21 @@
 
 namespace App\Providers;
 
+use App\Http\ViewComposers\AdvantageComposer;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Container;
-use App\Http\ViewComposers\OurServiceComposer;
 
 /**
- * Class OurServicesServiceProvider
+ * Class AdvantagesServiceProvider
  * @package App\Providers
  */
-class OurServicesServiceProvider extends ServiceProvider
+class AdvantagesServiceProvider extends ServiceProvider
 {
     /**
      * @throws Container\BindingResolutionException
      */
     public function register(): void
     {
-        $this->app->make('view')->composer(['page.page','page.index'], OurServiceComposer::class);
+        $this->app->make('view')->composer(['page.index', 'layouts.section.advantages'], AdvantageComposer::class);
     }
 }

@@ -1,3 +1,2 @@
 User-agent: *
-Host: https://villa-sany.ru
-Sitemap: https://villa-sany.ru/sitemap.xml
+Disallow: /

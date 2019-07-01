@@ -40,7 +40,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    @textarea(['name' => 'preview', 'label' => 'Превью статьи', 'id' => 'editor-full2', 'entity' => $ourService])
+{{--                                    @textarea(['name' => 'preview', 'label' => 'Превью услуги', 'id' => 'editor-full2', 'entity' => $ourService])--}}
                                     @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $ourService])
 
                                     @checkbox(['name' => 'showed_in_main', 'label' => 'Отображать на главной?', 'entity' => $ourService])

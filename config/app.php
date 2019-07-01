@@ -170,6 +170,8 @@ return [
         App\Providers\TextParserServiceProvider::class,
         App\Providers\OurServicesServiceProvider::class,
         App\Providers\GalleryServiceProvider::class,
+        App\Providers\AdvantagesServiceProvider::class,
+        App\Providers\PartnersServiceProvider::class,
     ],
 
     /*

@@ -1,36 +1,33 @@
-<section class="services">
+<!-- Our Blog-->
+<section class="section section-sm section-last bg-default">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="title">Наши услуги</div>
-            </div>
-        </div>
-        <div class="row">
-            @foreach($ourServicesInMain as $ourService)
-                <div class="col-3">
-                    @if ($ourService->image)
-                    <div class="img">
-                        <a href="{{ $ourService->url }}">
-                            <img src="{{ $ourService->image->path }}" alt="{{ $ourService->image->alt }}" title="{{ $ourService->image->title }}">
+        <h2 class="wow fadeScale">Услуги</h2>
+    </div>
+    <div class="container">
+        <div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
+        @foreach($ourServicesInMain as $ourService)
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <!-- Post Creative-->
+                <article class="post post-creative">
+                    @if($ourService->image)
+                        <a class="post-creative-figure" href="{{ $ourService->url }}">
+                            <img src="{{ $ourService->image->path }}" alt="{{ $ourService->image->alt }}" title="{{ $ourService->image->title }}" width="420" height="368"/>
                         </a>
-                    </div>
                     @endif
-                    <div class="name">
-                        <a href="{{ $ourService->url }}">{{ $ourService->name }}</a>
+                    <div class="post-creative-content">
+                        <h5 class="post-creative-title">
+                            <a href="{{ $ourService->url }}">
+                                {{ $ourService->name }}
+                            </a>
+                        </h5>
+                        <div class="btn__box">
+                            <div class="button button-sm button-secondary button-zakaria">Заказать</div>
+                            <a class="button button-sm button-secondary button-zakaria" href="{{ $ourService->url }}">Подробнее</a>
+                        </div>
                     </div>
-                    <div class="text">
-                        {!! $ourService->preview !!}
-                    </div>
-                    <a href="{{ $ourService->url }}" class="btn__more">Подробнее</a>
-                </div>
-            @endforeach
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="btn__see-all">
-                    <a href="{{ route('page.show',['alias' => 'our-services']) }}" class="btn">Смотреть все услуги</a>
-                </div>
+                </article>
             </div>
+        @endforeach
         </div>
     </div>
 </section>

@@ -17,12 +17,12 @@ class OurServiceComposer
     /**
      * @param View $view
      */
-    public function compose(View $view)
+    public function compose(View $view): void
     {
         $ourServices = $this->dispatch(new GetAllOurServicesQuery());
 
-        $ourServicesInMain = $ourServices->filter(function ($item) {
-            return $item->showed_in_main == 1;
+        $ourServicesInMain = $ourServices->filter(static function ($item) {
+            return (int) $item->showed_in_main === 1;
         });
 
         $view->with('ourServices', $ourServices);

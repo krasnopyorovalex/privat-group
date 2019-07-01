@@ -8,7 +8,7 @@
 @section('content')
 
     <div class="panel panel-default">
-        <div class="panel-heading">Форма добавления статьи</div>
+        <div class="panel-heading">Форма добавления услуги</div>
 
         <div class="panel-body">
 
@@ -24,7 +24,7 @@
 
                 @imageInput(['name' => 'image', 'type' => 'file', 'label' => 'Выберите изображение на компьютере'])
 
-                @textarea(['name' => 'preview', 'label' => 'Превью статьи', 'id' => 'editor-full2'])
+{{--                @textarea(['name' => 'preview', 'label' => 'Превью услуги', 'id' => 'editor-full2'])--}}
                 @textarea(['name' => 'text', 'label' => 'Текст'])
 
                 @checkbox(['name' => 'showed_in_main', 'label' => 'Отображать на главной?', 'isChecked' => true])

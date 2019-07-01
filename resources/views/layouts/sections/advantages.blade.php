@@ -1,54 +1,26 @@
-<section class="advantages">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="title">Наши преимущества</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-3 flex-start">
-                <div class="img">
-                    <a href="{{ route('page.show', ['alias' => 'kontakty']) }}">
-                        <img src="{{ asset('img/adv-01.png') }}" alt="">
-                    </a>
+<!-- Services-->
+<section class="section parallax-container" data-parallax-img="images/parallax-3.jpg">
+    <div class="parallax-content section-xxl context-dark">
+        <div class="container">
+            <div class="row row-30 box-ordered">
+                @foreach($advantages as $advantage)
+                <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay=".3s">
+                    <article class="box-icon-modern">
+                        <div class="box-icon-modern-header">
+                            <div class="box-icon-modern-count box-ordered-item"></div>
+                            <div class="box-icon-modern-svg">
+                                @if($advantage->image)
+                                    <img src="{{ asset($advantage->image->path) }}" alt="{{ $advantage->image->alt }}" title="{{ $advantage->image->title }}">
+                                @endif
+                            </div>
+                        </div>
+                        <h4 class="box-icon-modern-title">{{ $advantage->name }}</h4>
+                        <p class="box-icon-modern-text">
+                            {!! strip_tags($advantage->preview) !!}
+                        </p>
+                    </article>
                 </div>
-                <div class="name">Удобное расположение</div>
-                <div class="text">
-                    <p>Вилла "SANY" находится на б/о "Скиф" в Николаевке на первой береговой линии, 1 минута от пляжа</p>
-                </div>
-            </div>
-            <div class="col-3 flex-start">
-                <div class="img">
-                    <a href="{{ route('page.show', ['alias' => 'our-services']) }}">
-                        <img src="{{ asset('img/adv-02.png') }}" alt="">
-                    </a>
-                </div>
-                <div class="name">Wi-Fi</div>
-                <div class="text">
-                    <p>Бесплатный интернет на всей территории виллы</p>
-                </div>
-            </div>
-            <div class="col-3 flex-start">
-                <div class="img">
-                    <a href="{{ route('our_service.show', ['alias' => 'basseyn']) }}">
-                        <img src="{{ asset('img/adv-03.png') }}" alt="">
-                    </a>
-                </div>
-                <div class="name">Бассейн</div>
-                <div class="text">
-                    <p>Детский каркасный бассейн на территории</p>
-                </div>
-            </div>
-            <div class="col-3 flex-start">
-                <div class="img">
-                    <a href="{{ route('our_service.show', ['alias' => 'plaz']) }}">
-                        <img src="{{ asset('img/adv-04.png') }}" alt="">
-                    </a>
-                </div>
-                <div class="name">Семейный отдых</div>
-                <div class="text">
-                    <p>Вилла "SANY" находится удаленно от центра Николаевки, поэтому отлично подойдет для семейного отдыха</p>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

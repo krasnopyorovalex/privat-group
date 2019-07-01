@@ -332,3 +332,10 @@ li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
 .pagination ul li.active a, .pagination ul li.active span {
     color: #7eb71c;
 }
+.advantage__image {
+    background-color: #ccc;
+}
+.advantage__image .upload__image {
+    max-width: 100px;
+    height: auto;
+}
