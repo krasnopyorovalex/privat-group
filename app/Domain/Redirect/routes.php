@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'redirects', 'as' => 'redirects.'], function () {
+Route::group(['prefix' => 'redirects', 'as' => 'redirects.'], static function () {
     Route::pattern('id', '[0-9]+');
 
     Route::get('', 'RedirectController@index')->name('index');

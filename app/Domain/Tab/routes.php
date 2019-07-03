@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'tabs', 'as' => 'tabs.'], function () {
+Route::group(['prefix' => 'tabs', 'as' => 'tabs.'], static function () {
     Route::pattern('id', '[0-9]+');
 
     Route::get('', 'TabController@index')->name('index');

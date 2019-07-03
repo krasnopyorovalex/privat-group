@@ -16,11 +16,6 @@ class CreateOurServicesTable extends Migration
         Schema::create('our_services', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 512);
-            $table->string('title', 512);
-            $table->string('description', 512)->nullable();
-            $table->text('preview')->nullable();
-            $table->text('text')->nullable();
-            $table->string('alias', 64)->unique();
         });
     }
 

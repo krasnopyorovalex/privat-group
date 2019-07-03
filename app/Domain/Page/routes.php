@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'pages', 'as' => 'pages.'], function () {
+Route::group(['prefix' => 'pages', 'as' => 'pages.'], static function () {
     Route::pattern('id', '[0-9]+');
 
     Route::get('', 'PageController@index')->name('index');

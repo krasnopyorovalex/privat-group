@@ -30,6 +30,7 @@
                     <td>
                         <div>
                             <a href="{{ route('admin.our_services.edit', $ourService) }}"><i class="icon-pencil7"></i></a>
+                            <a href="{{ route('admin.our_service_items.index', $ourService) }}" data-original-title="Услуги" data-popup="tooltip"><i class="icon-lan2"></i></a>
                             <form method="POST" action="{{ route('admin.our_services.destroy', $ourService) }}" class="form__delete">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}

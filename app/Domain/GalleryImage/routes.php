@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'gallery-images', 'as' => 'gallery_images.'], function () {
+Route::group(['prefix' => 'gallery-images', 'as' => 'gallery_images.'], static function () {
     Route::pattern('id', '[0-9]+');
     Route::pattern('gallery', '[0-9]+');
 

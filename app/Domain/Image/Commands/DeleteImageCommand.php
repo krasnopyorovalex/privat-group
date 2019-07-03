@@ -3,6 +3,8 @@
 namespace App\Domain\Image\Commands;
 
 use App\Image;
+use Storage;
+use Exception;
 
 /**
  * Class DeleteImageCommand
@@ -23,12 +25,12 @@ class DeleteImageCommand
 
     /**
      * @return bool
-     * @throws \Exception
+     * @throws Exception
      */
     public function handle(): bool
     {
         $path = str_replace('/storage/', '/public/', $this->image->path);
-        \Storage::delete($path);
+        Storage::delete($path);
 
         return $this->image->delete();
     }

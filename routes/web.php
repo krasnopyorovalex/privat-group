@@ -20,15 +20,17 @@ Route::post('send-booking', 'FormHandlerController@booking')->name('send.booking
 Route::post('send-guestbook', 'FormHandlerController@guestbook')->name('send.guestbook');
 Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
 
-Route::group(['middleware' => ['redirector', 'shortcode']], function () {
+Route::group(['middleware' => ['redirector', 'shortcode']], static function () {
     Route::get('{alias}', 'ServiceController@show')->name('service.show');
     Route::get('/{alias?}/{page?}', 'PageController@show')->name('page.show')->where('page', '[0-9]+');
     Route::get('articles/{alias}', 'BlogController@show')->name('article.show');
     Route::get('our-services/{alias}', 'OurServiceController@show')->name('our_service.show');
     Route::get('news/{alias}', 'InfoController@show')->name('info.show');
+    Route::get('catalog/{alias}', 'CatalogController@show')->name('catalog.show');
+    Route::get('product/{alias}', 'CatalogProductController@show')->name('catalog_product.show');
 });
 
-Route::group(['prefix' => '_root', 'middleware' => 'auth', 'namespace' => 'Admin', 'as' => 'admin.'], function () {
+Route::group(['prefix' => '_root', 'middleware' => 'auth', 'namespace' => 'Admin', 'as' => 'admin.'], static function () {
 
     Route::get('', 'HomeController@home')->name('home');
 

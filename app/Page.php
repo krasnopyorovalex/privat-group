@@ -52,10 +52,6 @@ class Page extends Model
     private $templates = [
         'page.page' => 'Информационная',
         'page.index' => 'Главная',
-        'page.list' => 'Список(новости/статьи)',
-        'page.guestbook' => 'Отызвы',
-        'page.booking' => 'Страница бронирования',
-        'page.gallery' => 'Фотогалерея',
         'page.contacts' => 'Контакты'
     ];
 

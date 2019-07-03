@@ -362,7 +362,7 @@ h2 {
 .event-classic-date,
 .heading-3,
 h3 {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.33333
 }
 .event-classic-month,
@@ -3966,7 +3966,6 @@ textarea.textarea-lg {
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  min-height: 24.84375vw;
   padding: 40px 0;
   background-color: transparent;
   background-position: center
@@ -4631,7 +4630,7 @@ textarea.textarea-lg {
 .product-price {
   display: inline-block;
   vertical-align: middle;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1;
   font-weight: 700;
   letter-spacing: 0;
@@ -14268,4 +14267,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 .rd-form .button {
   padding: 14px 16px;
+}
+.thumbnail-classic-figure > a:hover {
+  cursor: zoom-in;
+}
+.list__items, .catalog__list {
+  width: 100%
+}
+.section-content {
+  margin: 2em 0;
+}
+.no__bg, .breadcrumbs-custom  {
+  background-color: #76aa6f;
+}
+.list-shop-filter li.active a {
+  color: #52814c
 }

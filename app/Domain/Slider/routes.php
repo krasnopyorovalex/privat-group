@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'sliders', 'as' => 'sliders.'], function () {
+Route::group(['prefix' => 'sliders', 'as' => 'sliders.'], static function () {
     Route::pattern('id', '[0-9]+');
 
     Route::get('', 'SliderController@index')->name('index');

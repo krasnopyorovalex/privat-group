@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'our_services', 'as' => 'our_services.'], function () {
+Route::group(['prefix' => 'our_services', 'as' => 'our_services.'], static function () {
     Route::pattern('id', '[0-9]+');
 
     Route::get('', 'OurServiceController@index')->name('index');

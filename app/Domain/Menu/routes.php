@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'menus', 'as' => 'menus.'], function () {
+Route::group(['prefix' => 'menus', 'as' => 'menus.'], static function () {
     Route::pattern('id', '[0-9]+');
 
     Route::get('', 'MenuController@index')->name('index');

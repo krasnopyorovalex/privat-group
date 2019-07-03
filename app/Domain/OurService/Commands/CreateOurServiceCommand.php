@@ -31,12 +31,12 @@ class CreateOurServiceCommand
      */
     public function handle(): bool
     {
-        $OurService = new OurService();
-        $OurService->fill($this->request->all());
-        $OurService->save();
+        $ourService = new OurService();
+        $ourService->fill($this->request->all());
+        $ourService->save();
 
         if ($this->request->has('image')) {
-            return $this->dispatch(new UploadImageCommand($this->request, $OurService->id, OurService::class));
+            return $this->dispatch(new UploadImageCommand($this->request, $ourService->id, OurService::class));
         }
 
         return true;

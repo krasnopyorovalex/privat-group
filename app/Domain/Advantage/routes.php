@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'advantages', 'as' => 'advantages.'], function () {
+Route::group(['prefix' => 'advantages', 'as' => 'advantages.'], static function () {
     Route::pattern('id', '[0-9]+');
 
     Route::get('', 'AdvantageController@index')->name('index');

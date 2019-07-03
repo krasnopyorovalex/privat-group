@@ -8,6 +8,7 @@ use App\Domain\OurService\Commands\UpdateOurServiceCommand;
 use App\Domain\OurService\Queries\GetAllOurServicesQuery;
 use App\Domain\OurService\Queries\GetOurServiceByIdQuery;
 use App\Http\Controllers\Controller;
+use App\OurService;
 use Domain\OurService\Requests\CreateOurServiceRequest;
 use Domain\OurService\Requests\UpdateOurServiceRequest;
 
@@ -38,7 +39,9 @@ class OurServiceController extends Controller
      */
     public function create()
     {
-        return view('admin.our_services.create');
+        $ourService = new OurService();
+
+        return view('admin.our_services.create', ['ourService' => $ourService]);
     }
 
     /**

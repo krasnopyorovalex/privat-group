@@ -21,7 +21,7 @@
                 <div class="tabbable">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#main" data-toggle="tab">Основное</a></li>
-                        <li><a href="#image" data-toggle="tab">Изображение для соцсетей</a></li>
+                        <li><a href="#image" data-toggle="tab">Изображение</a></li>
                     </ul>
 
                     <div class="tab-content">

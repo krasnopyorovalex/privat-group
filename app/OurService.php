@@ -5,6 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
+/**
+ * Class OurService
+ * @package App
+ */
 class OurService extends Model
 {
     use AutoAliasTrait;
@@ -14,7 +18,7 @@ class OurService extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'title', 'description', 'text', 'preview', 'alias', 'showed_in_main'];
+    protected $fillable = ['name'];
 
     /**
      * @return MorphOne
@@ -22,13 +26,5 @@ class OurService extends Model
     public function image(): MorphOne
     {
         return $this->morphOne(Image::class, 'imageable');
-    }
-
-    /**
-     * @return string
-     */
-    public function getUrlAttribute(): string
-    {
-        return route('our_service.show', $this->alias);
     }
 }

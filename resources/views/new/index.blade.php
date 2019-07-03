@@ -13,42 +13,34 @@
 @endpush
 
 @section('content')
-    @includeWhen($new->slider, 'layouts.sections.slider', ['slider' => $new->slider])
 
-    <section class="breadcrumbs">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>{{ $new->name }}</h1>
-                    <ul>
-                        <li><a href="{{ route('page.show') }}">Главная</a></li>
-                        <li><a href="{{ route('page.show',['alias' => 'news']) }}">Новости</a></li>
-                        <li>{{ $new->name }}</li>
-                    </ul>
+    <section class="breadcrumbs-custom no__bg">
+        <div class="parallax-container">
+            <div class="breadcrumbs-custom-body parallax-content context-dark">
+                <div class="container">
+                    <h2 class="breadcrumbs-custom-title">{{ $new->name }}</h2>
                 </div>
+            </div>
+        </div>
+        <div class="breadcrumbs-custom-footer">
+            <div class="container">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="{{ route('page.show') }}">Главная</a></li>
+                    <li><a href="{{ route('page.show', ['alias' => 'news']) }}">Наши новости</a></li>
+                    <li class="active">{{ $new->name }}</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <main>
+    <section class="section section-content bg-default text-justify">
         <div class="container">
-            <div class="row">
-                <div class="col-9 flex-start">
-                    <div class="content page__content">
-                        @if($new->image)
-                        <img src="{{ asset($new->image->path) }}" alt="{{ $new->image->alt }}" title="{{ $new->image->title }}" class="responsive">
-                        @endif
-                        {!! $new->text !!}
-                    </div>
-                </div>
-                <div class="col-3 flex-start">
-                    @include('layouts.partials.sb_list')
+            <div class="row row-xl row-30">
+                <div class="col-md-12">
+                    {!! $new->text !!}
                 </div>
             </div>
         </div>
-    </main>
-
-
-    @includeWhen($new->gallery, 'layouts.sections.gallery', ['gallery' => $new->gallery])
+    </section>
 
 @endsection

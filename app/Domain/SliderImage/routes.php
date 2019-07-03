@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'slider-images', 'as' => 'slider_images.'], function () {
+Route::group(['prefix' => 'slider-images', 'as' => 'slider_images.'], static function () {
     Route::pattern('id', '[0-9]+');
     Route::pattern('slider', '[0-9]+');
 

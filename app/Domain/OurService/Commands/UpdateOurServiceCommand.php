@@ -38,21 +38,21 @@ class UpdateOurServiceCommand
      */
     public function handle(): bool
     {
-        $OurService = $this->dispatch(new GetOurServiceByIdQuery($this->id));
+        $ourService = $this->dispatch(new GetOurServiceByIdQuery($this->id));
         $urlNew = $this->request->post('alias');
 
-        if ($OurService->getOriginal('alias') != $urlNew) {
-            event(new RedirectDetected($OurService->getOriginal('alias'), $urlNew, 'our_service.show'));
+        if ($ourService->getOriginal('alias') !== $urlNew) {
+            event(new RedirectDetected($ourService->getOriginal('alias'), $urlNew, 'our_service.show'));
         }
 
         if ($this->request->has('image')) {
-            if ($OurService->image) {
-                $this->dispatch(new DeleteImageCommand($OurService->image));
+            if ($ourService->image) {
+                $this->dispatch(new DeleteImageCommand($ourService->image));
             }
-            $this->dispatch(new UploadImageCommand($this->request, $OurService->id, OurService::class));
+            $this->dispatch(new UploadImageCommand($this->request, $ourService->id, OurService::class));
         }
 
-        return $OurService->update($this->request->all());
+        return $ourService->update($this->request->all());
     }
 
 }

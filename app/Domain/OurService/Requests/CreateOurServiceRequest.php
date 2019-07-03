@@ -13,14 +13,7 @@ class CreateOurServiceRequest extends Request
     public function rules(): array
     {
         return [
-            'name' => 'bail|required|max:512',
-            'title' => 'required|max:512',
-            'description' => 'max:512',
-            'text' => 'string|nullable',
-            'preview' => 'string|nullable',
-            'alias' => 'required|max:64|unique:our_services',
-            'image' => 'image',
-            'showed_in_main' => 'digits_between:0,1',
+            'name' => 'bail|required|max:512'
         ];
     }
 
@@ -32,10 +25,7 @@ class CreateOurServiceRequest extends Request
     public function messages(): array
     {
         return [
-            'name.required' => 'Поле «Название» обязательно для заполнения',
-            'title.required'  => 'Поле «Title» обязательно для заполнения',
-            'alias.required'  => 'Поле «Alias» обязательно для заполнения',
-            'alias.unique'  => 'Значение поля «Alias» уже присутствует в базе данных',
+            'name.required' => 'Поле «Название» обязательно для заполнения'
         ];
     }
 }

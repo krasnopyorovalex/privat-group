@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'galleries', 'as' => 'galleries.'], function () {
+Route::group(['prefix' => 'galleries', 'as' => 'galleries.'], static function () {
     Route::pattern('id', '[0-9]+');
 
     Route::get('', 'GalleryController@index')->name('index');

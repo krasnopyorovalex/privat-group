@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'guestbooks', 'as' => 'guestbooks.'], function () {
+Route::group(['prefix' => 'guestbooks', 'as' => 'guestbooks.'], static function () {
     Route::pattern('id', '[0-9]+');
 
     Route::get('', 'GuestbookController@index')->name('index');

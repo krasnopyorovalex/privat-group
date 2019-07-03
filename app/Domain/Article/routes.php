@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'articles', 'as' => 'articles.'], function () {
+Route::group(['prefix' => 'articles', 'as' => 'articles.'], static function () {
     Route::pattern('id', '[0-9]+');
 
     Route::get('', 'ArticleController@index')->name('index');

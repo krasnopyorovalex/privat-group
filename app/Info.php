@@ -5,6 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
+/**
+ * Class Info
+ * @package App
+ */
 class Info extends Model
 {
     use AutoAliasTrait;
@@ -23,7 +27,7 @@ class Info extends Model
     /**
      * @var array
      */
-    protected $guarded = [];
+    protected $guarded = ['image'];
 
     /**
      * @return MorphOne

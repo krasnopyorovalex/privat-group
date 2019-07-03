@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
+use Illuminate\Http\UploadedFile;
 
 /**
  * Class UploadImagesService
@@ -20,10 +21,10 @@ class UploadImagesService
     /**
      * @var int
      */
-    private $heightThumb = null;
+    private $heightThumb;
 
     /**
-     * @var \Illuminate\Http\UploadedFile
+     * @var UploadedFile
      */
     private $image;
 

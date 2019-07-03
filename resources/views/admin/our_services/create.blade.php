@@ -16,19 +16,9 @@
 
             <form action="{{ route('admin.our_services.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
-
                 @input(['name' => 'name', 'label' => 'Название'])
-                @input(['name' => 'title', 'label' => 'Title'])
-                @input(['name' => 'description', 'label' => 'Description'])
-                @input(['name' => 'alias', 'label' => 'Alias'])
 
                 @imageInput(['name' => 'image', 'type' => 'file', 'label' => 'Выберите изображение на компьютере'])
-
-{{--                @textarea(['name' => 'preview', 'label' => 'Превью услуги', 'id' => 'editor-full2'])--}}
-                @textarea(['name' => 'text', 'label' => 'Текст'])
-
-                @checkbox(['name' => 'showed_in_main', 'label' => 'Отображать на главной?', 'isChecked' => true])
-
                 @submit_btn()
             </form>
 

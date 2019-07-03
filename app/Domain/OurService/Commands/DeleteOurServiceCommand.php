@@ -36,13 +36,13 @@ class DeleteOurServiceCommand
      */
     public function handle(): bool
     {
-        $OurService = $this->dispatch(new GetOurServiceByIdQuery($this->id));
+        $ourService = $this->dispatch(new GetOurServiceByIdQuery($this->id));
 
-        if($OurService->image) {
-            $this->dispatch(new DeleteImageCommand($OurService->image));
+        if($ourService->image) {
+            $this->dispatch(new DeleteImageCommand($ourService->image));
         }
 
-        return $OurService->delete();
+        return $ourService->delete();
     }
 
 }

@@ -1,5 +1,8 @@
 <!-- Section Product and Clients-->
-<section class="section section-sm section-first bg-default text-md-left">
+<section class="section section-sm section-first bg-default text-md-center">
+    <div class="container">
+        <h2 class="wow fadeScale">Нам доверяют</h2>
+    </div>
     <div class="container">
         <div class="row row-30 justify-content-center align-items-md-center">
             <div class="col-xl-12">

@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'menu-items', 'as' => 'menu_items.'], function () {
+Route::group(['prefix' => 'menu-items', 'as' => 'menu_items.'], static function () {
     Route::pattern('id', '[0-9]+');
     Route::pattern('menu', '[0-9]+');
 

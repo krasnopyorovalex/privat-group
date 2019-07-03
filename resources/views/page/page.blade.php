@@ -15,35 +15,33 @@
 @section('content')
     @includeWhen($page->slider, 'layouts.sections.slider', ['slider' => $page->slider])
 
-    <section class="breadcrumbs">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>{{ $page->name }}</h1>
-                    <ul>
-                        <li><a href="{{ route('page.show') }}">Главная</a></li>
-                        <li>{{ $page->name }}</li>
-                    </ul>
+    <section class="breadcrumbs-custom">
+        <div class="parallax-container" data-parallax-img="{{ $page->image ? $page->image->path : '' }}">
+            <div class="breadcrumbs-custom-body parallax-content context-dark">
+                <div class="container">
+                    <h2 class="breadcrumbs-custom-title">{{ $page->name }}</h2>
                 </div>
+            </div>
+        </div>
+        <div class="breadcrumbs-custom-footer">
+            <div class="container">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="{{ route('page.show') }}">Главная</a></li>
+                    <li class="active">{{ $page->name }}</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <main>
+    <section class="section section-content bg-default text-justify">
         <div class="container">
-            <div class="row">
-                <div class="col-9 flex-start">
-                    <div class="content page__content">
-                        {!! $page->text !!}
-                    </div>
-                </div>
-                <div class="col-3 flex-start">
-                    @include('layouts.forms.sb_booking')
+            <div class="row row-xl row-30 justify-content-center">
+                <div class="col-md-12">
+                    {!! $page->text !!}
                 </div>
             </div>
         </div>
-    </main>
-
+    </section>
 
     @includeWhen($page->gallery, 'layouts.sections.gallery', ['gallery' => $page->gallery])
 
