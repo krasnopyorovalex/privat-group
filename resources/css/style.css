@@ -4627,6 +4627,9 @@ textarea.textarea-lg {
   letter-spacing: 0;
   text-transform: uppercase
 }
+.product-title a {
+  white-space: normal;
+}
 .product-price {
   display: inline-block;
   vertical-align: middle;
