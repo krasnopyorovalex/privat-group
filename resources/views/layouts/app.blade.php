@@ -70,9 +70,9 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="tel:+79787847093">
+                                    <a href="tel:+79780078141">
                                         <span class="fa-phone"></span>
-                                        +7 (978) 784-70-93
+                                        +7 (978) 007-81-41
                                     </a>
                                 </div>
                             </div>
@@ -118,22 +118,22 @@
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
                                         <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
                                         <div class="unit-body">
-                                            Россия, Севастополь, Фиолентовское шоссе, 1А
+                                            Россия, Севастополь, Фиолентовское шоссе, 1А/3
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
                                         <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                        <div class="unit-body"><a href="tel:+79787847093">+7 (978) 784-70-93</a></div>
+                                        <div class="unit-body"><a href="tel:+79780078141">+7 (978) 007-81-41</a></div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
                                         <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
                                         <div class="unit-body">
-                                            <a href="mailto:vsedlya.bani@mail.ru">
-                                                vsedlya.bani@mail.ru
+                                            <a href="mailto:fabrikabani@mail.ru">
+                                                fabrikabani@mail.ru
                                             </a>
                                         </div>
                                     </div>
