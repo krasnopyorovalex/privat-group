@@ -1,14 +1,15 @@
 @if ($paginator->hasPages())
-    <ul>
-        {{-- Pagination Elements --}}
+    <ul class="pagination">
         @foreach ($elements as $element)
-            {{-- Array Of Links --}}
+             Array Of Links
             @if (is_array($element))
                 @foreach ($element as $page => $url)
-                    @if ($page == $paginator->currentPage())
-                        <li class="active" aria-current="page"><span class="page-link">{{ $page }}</span></li>
+                    @if ($page === $paginator->currentPage())
+                        <li class="page-item active" aria-current="page"><span class="page-link">{{ $page }}</span></li>
                     @else
-                        <li><a class="page-link" href="{{ route('page.show', ['alias' => request('alias'), 'page' => ($page == 1 ? false : $page)]) }}">{{ $page }}</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="{{ str_replace('?page=1', '', $url) }}">{{ $page }}</a>
+                        </li>
                     @endif
                 @endforeach
             @endif

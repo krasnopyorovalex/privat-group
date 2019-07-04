@@ -90,18 +90,15 @@
                             @endforeach
                         @endif
                     </div>
+
+                    @if($products)
                     <div class="pagination-wrap">
-                        <!-- Bootstrap Pagination-->
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li class="page-item page-item-control disabled"><a class="page-link" href="grid-shop.html#" aria-label="Previous"><span class="icon" aria-hidden="true"></span></a></li>
-                                <li class="page-item active"><span class="page-link">1</span></li>
-                                <li class="page-item"><a class="page-link" href="grid-shop.html#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="grid-shop.html#">3</a></li>
-                                <li class="page-item page-item-control"><a class="page-link" href="grid-shop.html#" aria-label="Next"><span class="icon" aria-hidden="true"></span></a></li>
-                            </ul>
+                        <nav>
+                            {{ $products->links() }}
                         </nav>
                     </div>
+                    @endif
+
                 </div>
             </div>
         </div>

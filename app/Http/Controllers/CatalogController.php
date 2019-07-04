@@ -17,9 +17,10 @@ class CatalogController extends Controller
 
     /**
      * @param string $alias
+     * @param int $page
      * @return Factory|View
      */
-    public function show(string $alias)
+    public function show(string $alias, $page = 0)
     {
         $catalog = $this->dispatch(new GetCatalogByAliasQuery($alias));
 
