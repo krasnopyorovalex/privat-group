@@ -5788,8 +5788,7 @@ html:not(.ie-10):not(.ie-11):not(.ie-edge) .team-karen-header svg {
 .page {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
-  opacity: 0
+  min-height: 100vh
 }
 .page.fadeIn {
   -webkit-animation-timing-function: ease-out;
