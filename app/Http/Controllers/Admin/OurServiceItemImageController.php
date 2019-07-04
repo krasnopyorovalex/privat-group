@@ -57,7 +57,7 @@ class OurServiceItemImageController extends Controller
      */
     public function store(CreateOurServiceItemImageRequest $request, $ourServiceItem): array
     {
-        $image = $this->uploadGalleryImagesService->setWidthThumb(320)->upload($request, 'our_service_item', $ourServiceItem);
+        $image = $this->uploadGalleryImagesService->upload($request, 'our_service_item', $ourServiceItem);
 
         $this->dispatch(new CreateOurServiceItemImageCommand($image));
 

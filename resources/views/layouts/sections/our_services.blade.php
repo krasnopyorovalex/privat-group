@@ -5,7 +5,7 @@
     </div>
     <div class="container">
         <div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
-        @foreach($ourServicesInMain as $ourService)
+        @foreach($ourServices as $ourService)
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <!-- Post Creative-->
                 <article class="post post-creative">
@@ -22,7 +22,7 @@
                         </h5>
                         <div class="btn__box">
                             <div class="button button-sm button-secondary button-zakaria">Заказать</div>
-                            <a class="button button-sm button-secondary button-zakaria" href="{{ $ourService->url }}">Подробнее</a>
+                            <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}#service_{{ $ourService->id }}">Подробнее</a>
                         </div>
                     </div>
                 </article>

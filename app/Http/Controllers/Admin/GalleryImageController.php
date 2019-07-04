@@ -14,6 +14,10 @@ use Domain\GalleryImage\Requests\CreateGalleryImageRequest;
 use Domain\GalleryImage\Requests\UpdateGalleryImageRequest;
 use Illuminate\Http\Request;
 
+/**
+ * Class GalleryImageController
+ * @package App\Http\Controllers\Admin
+ */
 class GalleryImageController extends Controller
 {
     /**
@@ -35,7 +39,7 @@ class GalleryImageController extends Controller
      * @return array
      * @throws \Throwable
      */
-    public function index(int $gallery)
+    public function index(int $gallery): array
     {
         $gallery = $this->dispatch(new GetGalleryByIdQuery($gallery));
 
@@ -51,9 +55,9 @@ class GalleryImageController extends Controller
      * @param $gallery
      * @return array
      */
-    public function store(CreateGalleryImageRequest $request, $gallery)
+    public function store(CreateGalleryImageRequest $request, $gallery): array
     {
-        $image = $this->uploadGalleryImagesService->setWidthThumb(384)->setHeightThumb(286)->upload($request, 'gallery', $gallery);
+        $image = $this->uploadGalleryImagesService->upload($request, 'gallery', $gallery);
         $this->dispatch(new CreateGalleryImageCommand($image));
 
         return [
@@ -66,7 +70,7 @@ class GalleryImageController extends Controller
      * @return string
      * @throws \Throwable
      */
-    public function edit($id)
+    public function edit($id): string
     {
         $image = $this->dispatch(new GetGalleryImageByIdQuery($id));
 
@@ -81,7 +85,7 @@ class GalleryImageController extends Controller
      * @return array
      * @throws \Throwable
      */
-    public function update($id, UpdateGalleryImageRequest $request)
+    public function update($id, UpdateGalleryImageRequest $request): array
     {
         $this->dispatch(new UpdateGalleryImageCommand($id, $request));
 
@@ -100,7 +104,7 @@ class GalleryImageController extends Controller
      * @param $id
      * @return array
      */
-    public function destroy($id)
+    public function destroy($id): array
     {
         $this->dispatch(new DeleteGalleryImageCommand($id));
 
@@ -113,7 +117,7 @@ class GalleryImageController extends Controller
      * @param Request $request
      * @return array
      */
-    public function updatePositions(Request $request)
+    public function updatePositions(Request $request): array
     {
         $this->dispatch(new UpdatePositionsGalleryImageCommand($request));
 

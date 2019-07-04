@@ -39,7 +39,7 @@ class SliderImageController extends Controller
      * @return array
      * @throws \Throwable
      */
-    public function index(int $gallery)
+    public function index(int $gallery): array
     {
         $slider = $this->dispatch(new GetSliderByIdQuery($gallery));
 
@@ -55,9 +55,9 @@ class SliderImageController extends Controller
      * @param $slider
      * @return array
      */
-    public function store(CreateSliderImageRequest $request, $slider)
+    public function store(CreateSliderImageRequest $request, $slider): array
     {
-        $image = $this->uploadSliderImagesService->setWidthThumb(250)->upload($request, 'slider', $slider);
+        $image = $this->uploadSliderImagesService->upload($request, 'slider', $slider);
         $this->dispatch(new CreateSliderImageCommand($image));
 
         return [
@@ -70,7 +70,7 @@ class SliderImageController extends Controller
      * @return string
      * @throws \Throwable
      */
-    public function edit($id)
+    public function edit($id): string
     {
         $image = $this->dispatch(new GetSliderImageByIdQuery($id));
 
@@ -85,7 +85,7 @@ class SliderImageController extends Controller
      * @return array
      * @throws \Throwable
      */
-    public function update($id, UpdateSliderImageRequest $request)
+    public function update($id, UpdateSliderImageRequest $request): array
     {
         $this->dispatch(new UpdateSliderImageCommand($id, $request));
 
@@ -104,7 +104,7 @@ class SliderImageController extends Controller
      * @param $id
      * @return array
      */
-    public function destroy($id)
+    public function destroy($id): array
     {
         $this->dispatch(new DeleteSliderImageCommand($id));
 
@@ -117,7 +117,7 @@ class SliderImageController extends Controller
      * @param Request $request
      * @return array
      */
-    public function updatePositions(Request $request)
+    public function updatePositions(Request $request): array
     {
         $this->dispatch(new UpdatePositionsSliderImageCommand($request));
 

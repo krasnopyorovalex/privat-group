@@ -21,11 +21,6 @@ class OurServiceComposer
     {
         $ourServices = $this->dispatch(new GetAllOurServicesQuery());
 
-        $ourServicesInMain = $ourServices->filter(static function ($item) {
-            return (int) $item->showed_in_main === 1;
-        });
-
         $view->with('ourServices', $ourServices);
-        $view->with('ourServicesInMain', $ourServicesInMain);
     }
 }

@@ -46,4 +46,12 @@ class OurServiceItem extends Model
     {
         return $this->hasMany(OurServiceItemImage::class, 'our_service_item_id', 'id')->orderBy('pos');
     }
+
+    /**
+     * @return string
+     */
+    public function getUrlAttribute(): string
+    {
+        return route('service.show', $this->alias);
+    }
 }

@@ -6,6 +6,7 @@ use App\Domain\Article\Queries\GetAllArticlesQuery;
 use App\Domain\Catalog\Queries\GetAllCatalogsQuery;
 use App\Domain\Info\Queries\GetAllInfosQuery;
 use App\Domain\OurService\Queries\GetAllOurServicesQuery;
+use App\Domain\Project\Queries\GetAllProjectsQuery;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
@@ -47,6 +48,13 @@ class TextParserService
 
                     return view('layouts.shortcodes.catalogs', [
                         'catalogs' => $catalogs
+                    ]);
+                },
+                '#(<p(.*)>)?{projects}(<\/p>)?#' => function () {
+                    $projects = $this->dispatch(new GetAllProjectsQuery());
+
+                    return view('layouts.shortcodes.projects', [
+                        'projects' => $projects
                     ]);
                 }
             ],

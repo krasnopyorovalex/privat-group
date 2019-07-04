@@ -1,20 +1,28 @@
-<div class="row services not__padding">
-    @foreach($ourServices as $ourService)
-        <div class="col-4">
-            <div class="img">
-                @if($ourService->image)
-                <a href="{{ $ourService->url }}">
-                    <img src="{{ $ourService->image->path }}" alt="{{ $ourService->image->alt }}" title="{{ $ourService->image->title }}">
-                </a>
-                @endif
-            </div>
-            <div class="name">
-                <a href="{{ $ourService->url }}">{{ $ourService->name }}</a>
-            </div>
-            <div class="text">
-                {!! $ourService->preview !!}
-            </div>
-            <a href="{{ $ourService->url }}" class="btn__more">Подробнее</a>
+@foreach ($ourServices as $ourService)
+    @if(count($ourService->ourServiceItems))
+
+        <div class="our_service-name heading-3" id="service_{{ $ourService->id }}">{{ $ourService->name }}</div>
+
+        <div class="list__items our_services">
+        <div class="row">
+            @foreach($ourService->ourServiceItems as $ourServiceItem)
+                <div class="col-sm-6 col-lg-4 col-md-4 col-xs-12">
+                    <!-- Post Classic-->
+                    <article class="post post-classic box-md">
+                        @if(isset($ourServiceItem->images[0]))
+                            <figure>
+                                <a class="post-classic-figure" href="{{ $ourServiceItem->url }}">
+                                    <img src="{{ asset($ourServiceItem->images[0]->getThumb()) }}" alt="" width="370" height="239">
+                                </a>
+                            </figure>
+                        @endif
+                        <div class="post-classic-content">
+                            <h5 class="post-classic-title"><a href="{{ $ourServiceItem->url }}">{{ $ourServiceItem->name }}</a></h5>
+                        </div>
+                    </article>
+                </div>
+            @endforeach
         </div>
-    @endforeach
-</div>
+        </div>
+    @endif
+@endforeach

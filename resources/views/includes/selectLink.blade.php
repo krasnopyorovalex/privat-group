@@ -7,7 +7,7 @@
             @if (count($value['collections']))
             <optgroup label="{{ $key }}">
                 @foreach($value['collections'] as $item)
-                    <option value="{{ $linkGenerator->createLink($value['module'], $item->alias) }}"  @if ( isset($entity) && $linkGenerator->createLink($value['module'], $item['alias']) == old($name, $entity->{$name}))selected="selected"@endif>
+                    <option value="{{ $linkGenerator->createLink($value['module'], $item->alias) }}"  @if ( isset($entity) && $linkGenerator->createLink($value['module'], $item['alias']) === old($name, $entity->{$name}))selected="selected"@endif>
                         {{ $item->name }}
                     </option>
                 @endforeach

@@ -15,34 +15,40 @@
 @section('content')
     @includeWhen($page->slider, 'layouts.sections.slider', ['slider' => $page->slider])
 
-    <section class="breadcrumbs">
+    <section class="breadcrumbs-custom">
+        <div class="parallax-container" data-parallax-img="{{ $page->image ? $page->image->path : '' }}">
+            <div class="breadcrumbs-custom-body parallax-content context-dark">
+                <div class="container">
+                    <h2 class="breadcrumbs-custom-title">{{ $page->name }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumbs-custom-footer">
+            <div class="container">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="{{ route('page.show') }}">Главная</a></li>
+                    <li class="active">{{ $page->name }}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-content bg-default text-justify">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>{{ $page->name }}</h1>
-                    <ul>
-                        <li><a href="{{ route('page.show') }}">Главная</a></li>
-                        <li>{{ $page->name }}</li>
-                    </ul>
+            <div class="row row-xl row-30 justify-content-center">
+                <div class="col-md-12">
+                    {!! $page->text !!}
                 </div>
             </div>
         </div>
     </section>
 
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 flex-start">
-                    <div class="content page__content">
-                        {!! $page->text !!}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ENeTGXeZ9cH10M53764cuvDqvwp7ZsMn&amp;width=100%&amp;height=450&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
-
     @includeWhen($page->gallery, 'layouts.sections.gallery', ['gallery' => $page->gallery])
+
+    <section class="section">
+        <div class="yandex-map-container">
+            <script charset=utf-8 async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ace6eeb18be41210fad23ae6362d774483db8f1ed4b28eba8181464ac5c684de3&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+    </section>
 
 @endsection

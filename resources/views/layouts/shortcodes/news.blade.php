@@ -1,4 +1,4 @@
-<div class="list__items" itemscope="" itemtype="http://schema.org/BlogPosting" itemprop="BlogPost">
+<div class="row" itemscope="" itemtype="http://schema.org/BlogPosting" itemprop="BlogPost">
     @foreach ($news as $new)
         <div class="col-sm-6 col-lg-4">
             <!-- Post Classic-->

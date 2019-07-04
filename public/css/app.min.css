@@ -14288,6 +14288,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .list-shop-filter li.active a {
   color: #52814c
 }
+.our_service-name {
+  display: block;
+  text-align: center;
+  margin: 0 0 2em 0;
+}
+.our_services .post-classic-title {
+  text-align: center;
+}
 
 
 @media (min-width:576px) {

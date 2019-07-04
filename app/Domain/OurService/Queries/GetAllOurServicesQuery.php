@@ -18,7 +18,7 @@ class GetAllOurServicesQuery
     public function handle()
     {
         if (! self::$ourServices) {
-            self::$ourServices = OurService::with(['image'])->get();
+            self::$ourServices = OurService::all();
         }
 
         return self::$ourServices;

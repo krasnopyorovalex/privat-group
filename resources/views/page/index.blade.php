@@ -58,7 +58,7 @@
 
     @includeWhen($advantages, 'layouts.sections.advantages')
     @includeWhen($partners, 'layouts.sections.partners')
-    @includeWhen($ourServicesInMain, 'layouts.sections.our_services')
+    @includeWhen($ourServices, 'layouts.sections.our_services')
     @includeWhen($page->gallery, 'layouts.sections.gallery', ['gallery' => $page->gallery])
 
     <section class="section">
