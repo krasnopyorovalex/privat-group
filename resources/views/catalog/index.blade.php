@@ -69,7 +69,7 @@
                                                 </a>
                                             </div>
                                             @endif
-                                            <h5 class="product-title"><a href="{{ $product->url }}">{{ $product->name }}</a></h5>
+                                            <h5 class="product-title"><a href="{{ $product->url }}">{{ $product->name }}</a>11</h5>
                                             <div class="product-price-wrap">
                                                 <div class="product-price">{!! $product->getPrice() !!}</div>
                                             </div>
@@ -80,6 +80,9 @@
                                         <div class="product-button-wrap">
                                             <div class="product-button">
                                                 <a class="button button-secondary button-zakaria fl-bigmug-line-search74" href="{{ $product->url }}"></a>
+                                            </div>
+                                            <div class="product-button">
+                                                <div class="button button-primary button-zakaria fl-bigmug-line-shopping202"></div>
                                             </div>
                                         </div>
                                     </article>
