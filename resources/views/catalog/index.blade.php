@@ -69,7 +69,7 @@
                                                 </a>
                                             </div>
                                             @endif
-                                            <h5 class="product-title"><a href="{{ $product->url }}">{{ $product->name }}</a>11</h5>
+                                            <h5 class="product-title"><a href="{{ $product->url }}">{{ $product->name }}</a></h5>
                                             <div class="product-price-wrap">
                                                 <div class="product-price">{!! $product->getPrice() !!}</div>
                                             </div>
