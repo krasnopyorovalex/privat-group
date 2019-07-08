@@ -143,13 +143,12 @@
                         <div class="col-lg-4 wow fadeInRight" data-wow-delay=".2s">
                             <h4 class="footer-classic-title">Информация</h4>
                             <p>Получи бесплатную консультацию и статью "10 критических ошибок при строительстве бани или сауны"</p>
-                            <!-- RD Mailform-->
-                            <form class="rd-form rd-mailform rd-form-inline rd-form-inline-2" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="https://livedemo00.template-help.com/wt_prod-10492/theme/bat/rd-mailform.php">
+                            <form action="{{ route('send.subscribe') }}" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
+                                @csrf
                                 <div class="form-wrap">
-                                    <input class="form-input" id="subscribe-form-2-email" type="email" name="email" data-constraints="@Email @Required" autocomplete="off"/>
-                                    <label class="form-label" for="subscribe-form-2-email">Введите свой e-mail</label>
+                                    <input class="form-input" id="subscribe-form-2-email" type="email" name="email" autocomplete="off" placeholder="Введите свой e-mail" />
                                 </div>
-                                <div class="form-button">
+                                <div class="form-button submit">
                                     <button class="button button-icon-2 button-zakaria button-secondary" type="submit"><span class="fl-bigmug-line-paper122"></span></button>
                                 </div>
                             </form>
@@ -168,7 +167,8 @@
             </div>
         </footer>
     </div>
-    <div class="snackbars" id="form-output-global"></div>
+
+    <div class="snackbars" id="form-output-global"></div><div class="notify"></div>
     <script src="{{ asset('js/core.min.js') }}"></script>
     <script src="{{ mix('js/app.min.js') }}"></script>
 </body>

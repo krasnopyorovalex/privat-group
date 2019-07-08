@@ -15,9 +15,8 @@ Route::pattern('alias', '[\da-z-]+');
 
 Auth::routes();
 
-Route::post('send-cost', 'FormHandlerController@cost')->name('send.cost');
-Route::post('send-booking', 'FormHandlerController@booking')->name('send.booking');
-Route::post('send-guestbook', 'FormHandlerController@guestbook')->name('send.guestbook');
+Route::post('send-subscribe', 'FormHandlerController@subscribe')->name('send.subscribe');
+Route::post('send-order', 'FormHandlerController@order')->name('send.order');
 Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
 
 Route::group(['middleware' => ['redirector', 'shortcode']], static function () {

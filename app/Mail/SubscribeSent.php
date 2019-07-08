@@ -7,10 +7,10 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
 /**
- * Class BookingSent
+ * Class SubscribeSent
  * @package App\Mail
  */
-class BookingSent extends Mailable
+class SubscribeSent extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -26,13 +26,13 @@ class BookingSent extends Mailable
     }
 
     /**
-     * @return BookingSent
+     * @return SubscribeSent
      */
-    public function build()
+    public function build(): SubscribeSent
     {
-        return $this->from('Sany0629@yandex.ru')
-            ->subject('Форма: бронирование номера')
-            ->view('emails.booking', [
+        return $this->from('bani.crimea@yandex.ru')
+            ->subject('Форма: получить бесплатную консультацию')
+            ->view('emails.subscribe', [
                 'data' => $this->data
             ]);
     }

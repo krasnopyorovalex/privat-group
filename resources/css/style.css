@@ -14293,3 +14293,42 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .our_services .post-classic-title {
   text-align: center;
 }
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color:transparent
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color:transparent
+}
+input:focus::-ms-input-placeholder,
+textarea:focus::-ms-input-placeholder {
+  color:transparent
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color:transparent
+}
+.notify {
+  position:fixed;
+  display:none;
+  right:0;
+  top:16%;
+  width:320px;
+  border-top:3px solid #76aa6f;
+  box-shadow:0 1px 4px #373737;
+  background-color:#ebebeb;
+  z-index:999;
+  text-align: left
+}
+.notify>div {
+  padding:1.5em 2em 1em 1em;
+  font-size: 14px
+}
+.modal-title .product_name {
+  display: inline-block;
+}
+.modal {
+  top: 10%;
+}

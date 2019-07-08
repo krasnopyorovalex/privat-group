@@ -6,7 +6,7 @@
                 @if($catalog->image)
                     <div class="product-figure">
                         <a href="{{ $catalog->url }}">
-                            <img src="{{ asset($catalog->image->path) }}" alt="" width="220" height="160">
+                            <img src="" data-src="{{ asset($catalog->image->path) }}" alt="" width="220" height="160">
                         </a>
                     </div>
                 @endif

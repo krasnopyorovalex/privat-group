@@ -7,10 +7,10 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
 /**
- * Class CostSent
+ * Class OrderSent
  * @package App\Mail
  */
-class CostSent extends Mailable
+class OrderSent extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -26,13 +26,13 @@ class CostSent extends Mailable
     }
 
     /**
-     * @return CostSent
+     * @return OrderSent
      */
-    public function build()
+    public function build(): OrderSent
     {
-        return $this->from('Sany0629@yandex.ru')
-            ->subject('Форма: Узнать стоимость')
-            ->view('emails.cost', [
+        return $this->from('bani.crimea@yandex.ru')
+            ->subject('Форма: Заказать товар')
+            ->view('emails.order', [
                 'data' => $this->data
             ]);
     }

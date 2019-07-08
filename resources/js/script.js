@@ -1,7 +1,6 @@
 "use strict";
 (function() {
     var userAgent = navigator.userAgent.toLowerCase(),
-        initialDate = new Date(),
         $document = $(document),
         $window = $(window),
         $html = $("html"),
@@ -20,32 +19,21 @@
             counter: $(".counter"),
             circleProgress: $(".progress-bar-circle"),
             countDown: $('[data-circle-countdown]'),
-            captcha: $('.recaptcha'),
-            campaignMonitor: $('.campaign-mailform'),
-            copyrightYear: $(".copyright-year"),
             checkbox: $("input[type='checkbox']"),
             isotope: $(".isotope-wrap"),
             lightGallery: $("[data-lightgallery='group']"),
             lightGalleryItem: $("[data-lightgallery='item']"),
             lightDynamicGalleryItem: $("[data-lightgallery='dynamic']"),
             materialParallax: $(".parallax-container"),
-            mailchimp: $('.mailchimp-mailform'),
             owl: $(".owl-carousel"),
-            popover: $('[data-toggle="popover"]'),
             progressLinear: $(".progress-linear"),
             preloader: $(".preloader"),
             rdNavbar: $(".rd-navbar"),
-            rdMailForm: $(".rd-mailform"),
-            rdInputLabel: $(".form-label"),
-            regula: $("[data-constraints]"),
             radio: $("input[type='radio']"),
             swiper: document.querySelectorAll('.swiper-container'),
-            search: $(".rd-search"),
-            searchResults: $('.rd-search-results'),
             statefulButton: $('.btn-stateful'),
             viewAnimate: $('.view-animate'),
             wow: $(".wow"),
-            maps: $(".google-map-container"),
             rdRange: $('.rd-range'),
             selectFilter: $("select"),
             slick: $('.slick-slider'),
@@ -59,16 +47,6 @@
         return elem.offset().top + elem.outerHeight() >= $window.scrollTop() && elem.offset().top <= $window.scrollTop() + $window.height();
     }
 
-    function lazyInit(element, func) {
-        var scrollHandler = function() {
-            if ((!element.hasClass('lazy-loaded') && (isScrolledIntoView(element)))) {
-                func.call();
-                element.addClass('lazy-loaded');
-            }
-        };
-        scrollHandler();
-        $window.on('scroll', scrollHandler);
-    }
     $window.on('load', function() {
         if (plugins.preloader.length && !isNoviBuilder) {
             pageTransition({
@@ -217,51 +195,6 @@
     $(function() {
         isNoviBuilder = window.xMode;
 
-        function toggleSwiperInnerVideos(swiper) {
-            var prevSlide = $(swiper.slides[swiper.previousIndex]),
-                nextSlide = $(swiper.slides[swiper.activeIndex]),
-                videos, videoItems = prevSlide.find("video");
-            for (var i = 0; i < videoItems.length; i++) {
-                videoItems[i].pause();
-            }
-            videos = nextSlide.find("video");
-            if (videos.length) {
-                videos.get(0).play();
-            }
-        }
-
-        function toggleSwiperCaptionAnimation(swiper) {
-            var prevSlide = $(swiper.container).find("[data-caption-animate]"),
-                nextSlide = $(swiper.slides[swiper.activeIndex]).find("[data-caption-animate]"),
-                delay, duration, nextSlideItem, prevSlideItem;
-            for (var i = 0; i < prevSlide.length; i++) {
-                prevSlideItem = $(prevSlide[i]);
-                prevSlideItem.removeClass("animated").removeClass(prevSlideItem.attr("data-caption-animate")).addClass("not-animated");
-            }
-            var tempFunction = function(nextSlideItem, duration) {
-                return function() {
-                    nextSlideItem.removeClass("not-animated").addClass(nextSlideItem.attr("data-caption-animate")).addClass("animated");
-                    if (duration) {
-                        nextSlideItem.css('animation-duration', duration + 'ms');
-                    }
-                };
-            };
-            for (var i = 0; i < nextSlide.length; i++) {
-                nextSlideItem = $(nextSlide[i]);
-                delay = nextSlideItem.attr("data-caption-delay");
-                duration = nextSlideItem.attr('data-caption-duration');
-                if (!isNoviBuilder) {
-                    if (delay) {
-                        setTimeout(tempFunction(nextSlideItem, duration), parseInt(delay, 10));
-                    } else {
-                        tempFunction(nextSlideItem, duration);
-                    }
-                } else {
-                    nextSlideItem.removeClass("not-animated")
-                }
-            }
-        }
-
         function initOwlCarousel(c) {
             var aliaces = ["-", "-sm-", "-md-", "-lg-", "-xl-", "-xxl-"],
                 values = [0, 576, 768, 992, 1200, 1600],
@@ -322,140 +255,6 @@
                 navClass: c.attr("data-nav-class") ? $.parseJSON(c.attr("data-nav-class")) : ['owl-prev', 'owl-next']
             });
         }
-
-        function liveSearch(options) {
-            $('#' + options.live).removeClass('cleared').html();
-            options.current++;
-            options.spin.addClass('loading');
-            $.get(handler, {
-                s: decodeURI(options.term),
-                liveSearch: options.live,
-                dataType: "html",
-                liveCount: options.liveCount,
-                filter: options.filter,
-                template: options.template
-            }, function(data) {
-                options.processed++;
-                var live = $('#' + options.live);
-                if ((options.processed === options.current) && !live.hasClass('cleared')) {
-                    live.find('> #search-results').removeClass('active');
-                    live.html(data);
-                    setTimeout(function() {
-                        live.find('> #search-results').addClass('active');
-                    }, 50);
-                }
-                options.spin.parents('.rd-search').find('.input-group-addon').removeClass('loading');
-            })
-        }
-
-        function attachFormValidator(elements) {
-            regula.custom({
-                name: 'PhoneNumber',
-                defaultMessage: 'Invalid phone number format',
-                validator: function() {
-                    if (this.value === '') return true;
-                    else return /^(\+\d)?[0-9\-\(\) ]{5,}$/i.test(this.value);
-                }
-            });
-            for (var i = 0; i < elements.length; i++) {
-                var o = $(elements[i]),
-                    v;
-                o.addClass("form-control-has-validation").after("<span class='form-validation'></span>");
-                v = o.parent().find(".form-validation");
-                if (v.is(":last-child")) o.addClass("form-control-last-child");
-            }
-            elements.on('input change propertychange blur', function(e) {
-                var $this = $(this),
-                    results;
-                if (e.type !== "blur")
-                    if (!$this.parent().hasClass("has-error")) return;
-                if ($this.parents('.rd-mailform').hasClass('success')) return;
-                if ((results = $this.regula('validate')).length) {
-                    for (i = 0; i < results.length; i++) {
-                        $this.siblings(".form-validation").text(results[i].message).parent().addClass("has-error");
-                    }
-                } else {
-                    $this.siblings(".form-validation").text("").parent().removeClass("has-error")
-                }
-            }).regula('bind');
-            var regularConstraintsMessages = [{
-                type: regula.Constraint.Required,
-                newMessage: "The text field is required."
-            }, {
-                type: regula.Constraint.Email,
-                newMessage: "The email is not a valid email."
-            }, {
-                type: regula.Constraint.Numeric,
-                newMessage: "Only numbers are required"
-            }, {
-                type: regula.Constraint.Selected,
-                newMessage: "Please choose an option."
-            }];
-            for (var i = 0; i < regularConstraintsMessages.length; i++) {
-                var regularConstraint = regularConstraintsMessages[i];
-                regula.override({
-                    constraintType: regularConstraint.type,
-                    defaultMessage: regularConstraint.newMessage
-                });
-            }
-        }
-
-        function isValidated(elements, captcha) {
-            var results, errors = 0;
-            if (elements.length) {
-                for (var j = 0; j < elements.length; j++) {
-                    var $input = $(elements[j]);
-                    if ((results = $input.regula('validate')).length) {
-                        for (k = 0; k < results.length; k++) {
-                            errors++;
-                            $input.siblings(".form-validation").text(results[k].message).parent().addClass("has-error");
-                        }
-                    } else {
-                        $input.siblings(".form-validation").text("").parent().removeClass("has-error")
-                    }
-                }
-                if (captcha) {
-                    if (captcha.length) {
-                        return validateReCaptcha(captcha) && errors === 0
-                    }
-                }
-                return errors === 0;
-            }
-            return true;
-        }
-
-        function validateReCaptcha(captcha) {
-            var captchaToken = captcha.find('.g-recaptcha-response').val();
-            if (captchaToken.length === 0) {
-                captcha.siblings('.form-validation').html('Please, prove that you are not robot.').addClass('active');
-                captcha.closest('.form-wrap').addClass('has-error');
-                captcha.on('propertychange', function() {
-                    var $this = $(this),
-                        captchaToken = $this.find('.g-recaptcha-response').val();
-                    if (captchaToken.length > 0) {
-                        $this.closest('.form-wrap').removeClass('has-error');
-                        $this.siblings('.form-validation').removeClass('active').html('');
-                        $this.off('propertychange');
-                    }
-                });
-                return false;
-            }
-            return true;
-        }
-        window.onloadCaptchaCallback = function() {
-            for (var i = 0; i < plugins.captcha.length; i++) {
-                var $capthcaItem = $(plugins.captcha[i]);
-                grecaptcha.render($capthcaItem.attr('id'), {
-                    sitekey: $capthcaItem.attr('data-sitekey'),
-                    size: $capthcaItem.attr('data-size') ? $capthcaItem.attr('data-size') : 'normal',
-                    theme: $capthcaItem.attr('data-theme') ? $capthcaItem.attr('data-theme') : 'light',
-                    callback: function(e) {
-                        $('.recaptcha').trigger('propertychange');
-                    }
-                });
-                $capthcaItem.after("<span class='form-validation'></span>");
-            }
-        };
 
         function initBootstrapTooltip(tooltipPlacement) {
             plugins.bootstrapTooltip.tooltip('dispose');
@@ -605,9 +404,6 @@
             if (isIE < 10) $html.addClass("lt-ie-10");
             if (isIE < 11) $html.addClass("ie-10");
         }
-        if (plugins.captcha.length) {
-            $.getScript("//www.google.com/recaptcha/api.js?onload=onloadCaptchaCallback&render=explicit&hl=en");
-        }
         if (plugins.bootstrapTooltip.length) {
             var tooltipPlacement = plugins.bootstrapTooltip.attr('data-placement');
             initBootstrapTooltip(tooltipPlacement);
@@ -632,14 +428,6 @@
                 }, modalItem))
             }
         }
-        if (plugins.popover.length) {
-            if (window.innerWidth < 767) {
-                plugins.popover.attr('data-placement', 'bottom');
-                plugins.popover.popover();
-            } else {
-                plugins.popover.popover();
-            }
-        }
         if (plugins.statefulButton.length) {
             $(plugins.statefulButton).on('click', function() {
                 var statefulButtonLoading = $(this).button('loading');
@@ -661,12 +449,6 @@
                     }, bootstrapTabsItem));
                 }
             }
-        }
-        if (plugins.copyrightYear.length) {
-            plugins.copyrightYear.text(initialDate.getFullYear());
-        }
-        if (plugins.maps.length) {
-            lazyInit(plugins.maps, initMaps);
         }
         if (plugins.radio.length) {
             for (var i = 0; i < plugins.radio.length; i++) {
@@ -756,78 +538,6 @@
                 }, 500)
             }
         }
-        if (plugins.search.length || plugins.searchResults) {
-            var handler = "bat/rd-search.php";
-            var defaultTemplate = '<h5 class="search-title"><a target="_top" href="#{href}" class="search-link">#{title}</a></h5>' +
-                '<p>...#{token}...</p>' +
-                '<p class="match"><em>Terms matched: #{count} - URL: #{href}</em></p>';
-            var defaultFilter = '*.html';
-            if (plugins.search.length) {
-                for (var i = 0; i < plugins.search.length; i++) {
-                    var searchItem = $(plugins.search[i]),
-                        options = {
-                            element: searchItem,
-                            filter: (searchItem.attr('data-search-filter')) ? searchItem.attr('data-search-filter') : defaultFilter,
-                            template: (searchItem.attr('data-search-template')) ? searchItem.attr('data-search-template') : defaultTemplate,
-                            live: (searchItem.attr('data-search-live')) ? searchItem.attr('data-search-live') : false,
-                            liveCount: (searchItem.attr('data-search-live-count')) ? parseInt(searchItem.attr('data-search-live'), 10) : 4,
-                            current: 0,
-                            processed: 0,
-                            timer: {}
-                        };
-                    var $toggle = $('.rd-navbar-search-toggle');
-                    if ($toggle.length) {
-                        $toggle.on('click', (function(searchItem) {
-                            return function() {
-                                if (!($(this).hasClass('active'))) {
-                                    searchItem.find('input').val('').trigger('propertychange');
-                                }
-                            }
-                        })(searchItem));
-                    }
-                    if (options.live) {
-                        var clearHandler = false;
-                        searchItem.find('input').on("input propertychange", $.proxy(function() {
-                            this.term = this.element.find('input').val().trim();
-                            this.spin = this.element.find('.input-group-addon');
-                            clearTimeout(this.timer);
-                            if (this.term.length > 2) {
-                                this.timer = setTimeout(liveSearch(this), 200);
-                                if (clearHandler === false) {
-                                    clearHandler = true;
-                                    $body.on("click", function(e) {
-                                        if ($(e.toElement).parents('.rd-search').length === 0) {
-                                            $('#rd-search-results-live').addClass('cleared').html('');
-                                        }
-                                    })
-                                }
-                            } else if (this.term.length === 0) {
-                                $('#' + this.live).addClass('cleared').html('');
-                            }
-                        }, options, this));
-                    }
-                    searchItem.submit($.proxy(function() {
-                        $('<input />').attr('type', 'hidden').attr('name', "filter").attr('value', this.filter).appendTo(this.element);
-                        return true;
-                    }, options, this))
-                }
-            }
-            if (plugins.searchResults.length) {
-                var regExp = /\?.*s=([^&]+)\&filter=([^&]+)/g;
-                var match = regExp.exec(location.search);
-                if (match !== null) {
-                    $.get(handler, {
-                        s: decodeURI(match[1]),
-                        dataType: "html",
-                        filter: match[2],
-                        template: defaultTemplate,
-                        live: ''
-                    }, function(data) {
-                        plugins.searchResults.html(data);
-                    })
-                }
-            }
-        }
         if (plugins.viewAnimate.length) {
             for (var i = 0; i < plugins.viewAnimate.length; i++) {
                 var $view = $(plugins.viewAnimate[i]).not('.active');
@@ -911,245 +621,6 @@
         if ($html.hasClass("wow-animation") && plugins.wow.length && !isNoviBuilder && isDesktop) {
             new WOW().init();
         }
-        if (plugins.rdInputLabel.length) {
-            plugins.rdInputLabel.RDInputLabel();
-        }
-        if (plugins.regula.length) {
-            attachFormValidator(plugins.regula);
-        }
-        if (plugins.mailchimp.length) {
-            for (i = 0; i < plugins.mailchimp.length; i++) {
-                var $mailchimpItem = $(plugins.mailchimp[i]),
-                    $email = $mailchimpItem.find('input[type="email"]');
-                $mailchimpItem.attr('novalidate', 'true');
-                $email.attr('name', 'EMAIL');
-                $mailchimpItem.on('submit', $.proxy(function($email, event) {
-                    event.preventDefault();
-                    var $this = this;
-                    var data = {},
-                        url = $this.attr('action').replace('/post?', '/post-json?').concat('&c=?'),
-                        dataArray = $this.serializeArray(),
-                        $output = $("#" + $this.attr("data-form-output"));
-                    for (i = 0; i < dataArray.length; i++) {
-                        data[dataArray[i].name] = dataArray[i].value;
-                    }
-                    $.ajax({
-                        data: data,
-                        url: url,
-                        dataType: 'jsonp',
-                        error: function(resp, text) {
-                            $output.html('Server error: ' + text);
-                            setTimeout(function() {
-                                $output.removeClass("active");
-                            }, 4000);
-                        },
-                        success: function(resp) {
-                            $output.html(resp.msg).addClass('active');
-                            $email[0].value = '';
-                            var $label = $('[for="' + $email.attr('id') + '"]');
-                            if ($label.length) $label.removeClass('focus not-empty');
-                            setTimeout(function() {
-                                $output.removeClass("active");
-                            }, 6000);
-                        },
-                        beforeSend: function(data) {
-                            var isNoviBuilder = window.xMode;
-                            var isValidated = (function() {
-                                var results, errors = 0;
-                                var elements = $this.find('[data-constraints]');
-                                var captcha = null;
-                                if (elements.length) {
-                                    for (var j = 0; j < elements.length; j++) {
-                                        var $input = $(elements[j]);
-                                        if ((results = $input.regula('validate')).length) {
-                                            for (var k = 0; k < results.length; k++) {
-                                                errors++;
-                                                $input.siblings(".form-validation").text(results[k].message).parent().addClass("has-error");
-                                            }
-                                        } else {
-                                            $input.siblings(".form-validation").text("").parent().removeClass("has-error")
-                                        }
-                                    }
-                                    if (captcha) {
-                                        if (captcha.length) {
-                                            return validateReCaptcha(captcha) && errors === 0
-                                        }
-                                    }
-                                    return errors === 0;
-                                }
-                                return true;
-                            })();
-                            if (isNoviBuilder || !isValidated)
-                                return false;
-                            $output.html('Submitting...').addClass('active');
-                        }
-                    });
-                    return false;
-                }, $mailchimpItem, $email));
-            }
-        }
-        if (plugins.campaignMonitor.length) {
-            for (i = 0; i < plugins.campaignMonitor.length; i++) {
-                var $campaignItem = $(plugins.campaignMonitor[i]);
-                $campaignItem.on('submit', $.proxy(function(e) {
-                    var data = {},
-                        url = this.attr('action'),
-                        dataArray = this.serializeArray(),
-                        $output = $("#" + plugins.campaignMonitor.attr("data-form-output")),
-                        $this = $(this);
-                    for (i = 0; i < dataArray.length; i++) {
-                        data[dataArray[i].name] = dataArray[i].value;
-                    }
-                    $.ajax({
-                        data: data,
-                        url: url,
-                        dataType: 'jsonp',
-                        error: function(resp, text) {
-                            $output.html('Server error: ' + text);
-                            setTimeout(function() {
-                                $output.removeClass("active");
-                            }, 4000);
-                        },
-                        success: function(resp) {
-                            $output.html(resp.Message).addClass('active');
-                            setTimeout(function() {
-                                $output.removeClass("active");
-                            }, 6000);
-                        },
-                        beforeSend: function(data) {
-                            if (isNoviBuilder || !isValidated($this.find('[data-constraints]')))
-                                return false;
-                            $output.html('Submitting...').addClass('active');
-                        }
-                    });
-                    var inputs = $this[0].getElementsByTagName('input');
-                    for (var i = 0; i < inputs.length; i++) {
-                        inputs[i].value = '';
-                        var label = document.querySelector('[for="' + inputs[i].getAttribute('id') + '"]');
-                        if (label) label.classList.remove('focus', 'not-empty');
-                    }
-                    return false;
-                }, $campaignItem));
-            }
-        }
-        if (plugins.rdMailForm.length) {
-            var i, j, k, msg = {
-                'MF000': 'Successfully sent!',
-                'MF001': 'Recipients are not set!',
-                'MF002': 'Form will not work locally!',
-                'MF003': 'Please, define email field in your form!',
-                'MF004': 'Please, define type of your form!',
-                'MF254': 'Something went wrong with PHPMailer!',
-                'MF255': 'Aw, snap! Something went wrong.'
-            };
-            for (i = 0; i < plugins.rdMailForm.length; i++) {
-                var $form = $(plugins.rdMailForm[i]),
-                    formHasCaptcha = false;
-                $form.attr('novalidate', 'novalidate').ajaxForm({
-                    data: {
-                        "form-type": $form.attr("data-form-type") || "contact",
-                        "counter": i
-                    },
-                    beforeSubmit: function(arr, $form, options) {
-                        if (isNoviBuilder)
-                            return;
-                        var form = $(plugins.rdMailForm[this.extraData.counter]),
-                            inputs = form.find("[data-constraints]"),
-                            output = $("#" + form.attr("data-form-output")),
-                            captcha = form.find('.recaptcha'),
-                            captchaFlag = true;
-                        output.removeClass("active error success");
-                        if (isValidated(inputs, captcha)) {
-                            if (captcha.length) {
-                                var captchaToken = captcha.find('.g-recaptcha-response').val(),
-                                    captchaMsg = {
-                                        'CPT001': 'Please, setup you "site key" and "secret key" of reCaptcha',
-                                        'CPT002': 'Something wrong with google reCaptcha'
-                                    };
-                                formHasCaptcha = true;
-                                $.ajax({
-                                    method: "POST",
-                                    url: "bat/reCaptcha.php",
-                                    data: {
-                                        'g-recaptcha-response': captchaToken
-                                    },
-                                    async: false
-                                }).done(function(responceCode) {
-                                    if (responceCode !== 'CPT000') {
-                                        if (output.hasClass("snackbars")) {
-                                            output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + captchaMsg[responceCode] + '</span></p>')
-                                            setTimeout(function() {
-                                                output.removeClass("active");
-                                            }, 3500);
-                                            captchaFlag = false;
-                                        } else {
-                                            output.html(captchaMsg[responceCode]);
-                                        }
-                                        output.addClass("active");
-                                    }
-                                });
-                            }
-                            if (!captchaFlag) {
-                                return false;
-                            }
-                            form.addClass('form-in-process');
-                            if (output.hasClass("snackbars")) {
-                                output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Sending</span></p>');
-                                output.addClass("active");
-                            }
-                        } else {
-                            return false;
-                        }
-                    },
-                    error: function(result) {
-                        if (isNoviBuilder)
-                            return;
-                        var output = $("#" + $(plugins.rdMailForm[this.extraData.counter]).attr("data-form-output")),
-                            form = $(plugins.rdMailForm[this.extraData.counter]);
-                        output.text(msg[result]);
-                        form.removeClass('form-in-process');
-                        if (formHasCaptcha) {
-                            grecaptcha.reset();
-                        }
-                    },
-                    success: function(result) {
-                        if (isNoviBuilder)
-                            return;
-                        var form = $(plugins.rdMailForm[this.extraData.counter]),
-                            output = $("#" + form.attr("data-form-output")),
-                            select = form.find('select');
-                        form.addClass('success').removeClass('form-in-process');
-                        if (formHasCaptcha) {
-                            grecaptcha.reset();
-                        }
-                        result = result.length === 5 ? result : 'MF255';
-                        output.text(msg[result]);
-                        if (result === "MF000") {
-                            if (output.hasClass("snackbars")) {
-                                output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + msg[result] + '</span></p>');
-                            } else {
-                                output.addClass("active success");
-                            }
-                        } else {
-                            if (output.hasClass("snackbars")) {
-                                output.html(' <p class="snackbars-left"><span class="icon icon-xxs mdi mdi-alert-outline text-middle"></span><span>' + msg[result] + '</span></p>');
-                            } else {
-                                output.addClass("active error");
-                            }
-                        }
-                        form.clearForm();
-                        if (select.length) {
-                            select.select2("val", "");
-                        }
-                        form.find('input, textarea').trigger('blur');
-                        setTimeout(function() {
-                            output.removeClass("active error success");
-                            form.removeClass('success');
-                        }, 3500);
-                    }
-                });
-            }
-        }
         if (plugins.lightGallery.length) {
             for (var i = 0; i < plugins.lightGallery.length; i++) {
                 initLightGallery(plugins.lightGallery[i]);
@@ -1195,20 +666,6 @@
                     })
                 }
             }
-        }
-        if (plugins.rdRange.length && !isNoviBuilder) {
-            plugins.rdRange.RDRange({
-                callbacks: {
-                    onChange: function() {
-                        var $inputs = $('.rd-range-input-value-1, .rd-range-input-value-2');
-                        for (var z = 0; z < $inputs.length; z++) {
-                            if (isDesktop) {
-                                $inputs[z].style.width = ($inputs[z].value.length + 1) * 1.15 + 'ch';
-                            }
-                        }
-                    },
-                }
-            });
         }
         if (plugins.selectFilter.length) {
             var i;
@@ -1315,4 +772,77 @@
             multitoggles();
         }
     });
+
+    var btnCallOrder = $(".btn__call-order");
+    if (btnCallOrder.length) {
+        btnCallOrder.on("click", function () {
+            var val = $(this).attr("data-product");
+            return $("#order .modal-title .product_name").text(val) && $("#order input[name=product]").val(val);
+        });
+    }
+
+    var Notification = {
+        element: false,
+        setElement: function (element) {
+            return this.element = element;
+        },
+        notify: function (message) {
+            if( ! this.element) {
+                this.setElement(jQuery(".notify"));
+            }
+            return this.element.html('<div>' + message + '</div>') && this.element.fadeIn().delay(7000).fadeOut();
+        }
+    };
+
+    formHandler("#form__subscribe", Notification);
+    formHandler("#form__order", Notification);
+
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+        img.setAttribute('src', img.getAttribute('data-src'));
+        img.onload = function() {
+            img.removeAttribute('data-src');
+        };
+    });
+
 }());
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+function formHandler(selector, Notification) {
+    return $(document).on("submit", selector, function(e){
+        e.preventDefault();
+        var _this = $(this),
+            url = _this.attr('action'),
+            data = _this.serialize(),
+            submitBlock = _this.find(".submit"),
+            orderForm = $('#order'),
+            agree = _this.find(".i__agree input[type=checkbox]");
+        if (agree.length && ! agree.prop("checked")) {
+            agree.closest(".i__agree").find(".error").fadeIn().delay(3000).fadeOut();
+            return false;
+        }
+        return $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: url,
+            data: data,
+            beforeSend: function() {
+                return submitBlock.addClass("is__sent");
+            },
+            success: function (data) {
+                Notification.notify(data.message);
+                if (orderForm.length) {
+                    orderForm.modal("hide");
+                }
+                return submitBlock.removeClass("is__sent") && _this.trigger("reset");
+            }
+        });
+    });
+}
+jQuery(document).ajaxError(function () {
+    return jQuery("form .submit").removeClass("is__sent") && jQuery('.notify').html('<div>Произошла ошибка =(</div>').fadeIn().delay(3000).fadeOut();
+});

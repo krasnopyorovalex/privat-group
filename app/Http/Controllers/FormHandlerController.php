@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Domain\Guestbook\Commands\CreateGuestbookCommand;
-use App\Http\Requests\Forms\BookingRequest;
-use App\Http\Requests\Forms\GuestbookCheckRequest;
-use App\Http\Requests\Forms\CostRequest;
-use App\Mail\BookingSent;
-use App\Mail\CostSent;
+use App\Http\Requests\Forms\OrderRequest;
+use App\Http\Requests\Forms\SubscribeRequest;
+use App\Mail\OrderSent;
+use App\Mail\SubscribeSent;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
@@ -19,46 +17,32 @@ class FormHandlerController extends Controller
 {
     use DispatchesJobs;
 
-    private $to = 'dom2008@mail.ru';
+    private $to = 'djShtaket88@mail.ru';
 
     /**
-     * @param CostRequest $request
+     * @param SubscribeRequest $request
      * @return array
      */
-    public function cost(CostRequest $request): array
+    public function subscribe(SubscribeRequest $request): array
     {
-        Mail::to([$this->to])->send(new CostSent($request->all()));
+        Mail::to([$this->to])->send(new SubscribeSent($request->all()));
 
         return [
-            'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время',
+            'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
             'status' => 200
         ];
     }
 
     /**
-     * @param BookingRequest $request
+     * @param OrderRequest $request
      * @return array
      */
-    public function booking(BookingRequest $request): array
+    public function order(OrderRequest $request): array
     {
-        Mail::to([$this->to])->send(new BookingSent($request->all()));
+        Mail::to([$this->to])->send(new OrderSent($request->all()));
 
         return [
-            'message' => 'Благодарим за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время',
-            'status' => 200
-        ];
-    }
-
-    /**
-     * @param GuestbookCheckRequest $request
-     * @return array
-     */
-    public function guestbook(GuestbookCheckRequest $request): array
-    {
-        $this->dispatch(new CreateGuestbookCommand($request));
-
-        return [
-            'message' => 'Спасибо за Ваш отзыв!',
+            'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
             'status' => 200
         ];
     }

@@ -55,7 +55,7 @@
                         {!! $product->text !!}
                         <hr class="hr-gray-100">
                         <div class="group-xs group-middle">
-                            <div class="button button-lg button-secondary button-zakaria">Заказать</div>
+                            <div class="button button-lg button-secondary button-zakaria btn__call-order" data-toggle="modal" data-target="#order" data-product="{{ $product->name }}">Заказать</div>
                         </div>
                     </div>
                 </div>
@@ -64,5 +64,7 @@
     </section>
 
     @includeWhen($product->gallery, 'layouts.sections.gallery', ['gallery' => $product->gallery])
+
+    @include('layouts.forms.order')
 
 @endsection

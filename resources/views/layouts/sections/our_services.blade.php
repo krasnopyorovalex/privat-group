@@ -11,7 +11,7 @@
                 <article class="post post-creative">
                     @if($ourService->image)
                         <a class="post-creative-figure" href="{{ $ourService->url }}">
-                            <img src="{{ $ourService->image->path }}" alt="{{ $ourService->image->alt }}" title="{{ $ourService->image->title }}" width="420" height="368"/>
+                            <img src="" data-src="{{ $ourService->image->path }}" alt="{{ $ourService->image->alt }}" title="{{ $ourService->image->title }}" width="420" height="368"/>
                         </a>
                     @endif
                     <div class="post-creative-content">

@@ -2,11 +2,15 @@
 
 namespace App\Rules;
 
-use App\Domain\Service\Queries\ExistsServicesByNameQuery;
+use App\Domain\CatalogProduct\Queries\ExistsCatalogProductByNameQuery;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
-class Room implements Rule
+/**
+ * Class CatalogProduct
+ * @package App\Rules
+ */
+class CatalogProduct implements Rule
 {
     use DispatchesJobs;
 
@@ -21,21 +25,17 @@ class Room implements Rule
     }
 
     /**
-     * Determine if the validation rule passes.
-     *
-     * @param  string  $attribute
-     * @param  mixed  $value
-     * @return bool
+     * @param string $attribute
+     * @param mixed $value
+     * @return bool|mixed
      */
     public function passes($attribute, $value)
     {
-        return $this->dispatch(new ExistsServicesByNameQuery($value));
+        return $this->dispatch(new ExistsCatalogProductByNameQuery($value));
     }
 
     /**
-     * Get the validation error message.
-     *
-     * @return string
+     * @return array|string
      */
     public function message()
     {

@@ -65,7 +65,7 @@
                                             @if($product->image)
                                             <div class="product-figure">
                                                 <a href="{{ $product->url }}">
-                                                    <img src="{{ $product->image->path }}" alt="{{ $product->image->alt }}" title="{{ $product->image->title }}" width="220" height="160"/>
+                                                    <img src="" data-src="{{ $product->image->path }}" alt="{{ $product->image->alt }}" title="{{ $product->image->title }}" width="220" height="160"/>
                                                 </a>
                                             </div>
                                             @endif
@@ -82,7 +82,7 @@
                                                 <a class="button button-secondary button-zakaria fl-bigmug-line-search74" href="{{ $product->url }}"></a>
                                             </div>
                                             <div class="product-button">
-                                                <div class="button button-primary button-zakaria fl-bigmug-line-shopping202"></div>
+                                                <div class="button button-primary button-zakaria fl-bigmug-line-shopping202 btn__call-order" data-toggle="modal" data-target="#order" data-product="{{ $product->name }}"></div>
                                             </div>
                                         </div>
                                     </article>
@@ -103,5 +103,5 @@
             </div>
         </div>
     </section>
-
+    @include('layouts.forms.order')
 @endsection
