@@ -51,7 +51,7 @@
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand">
                                     <a class="brand" href="{{ route('page.show') }}">
-                                        <img class="brand-logo-dark" src="{{ asset('images/logo.png') }}" alt="Все для бани"/>
+                                        <img class="brand-logo-dark" src="{{ asset('images/logo.png') }}" alt="Все для бани" title="Строительство бань, саун и хаммамов"/>
                                     </a>
                                 </div>
                             </div>

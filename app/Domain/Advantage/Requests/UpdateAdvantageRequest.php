@@ -3,7 +3,6 @@
 namespace Domain\Advantage\Requests;
 
 use App\Http\Requests\Request;
-use Illuminate\Validation\Rule;
 
 /**
  * Class UpdateAdvantageRequest
