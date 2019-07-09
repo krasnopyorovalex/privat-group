@@ -10,11 +10,11 @@
         </url>
         @endforeach
     @endif
-    @if (count($articles))
-        @foreach($articles as $article)
+    @if (count($projects))
+        @foreach($projects as $project)
             <url>
-                <loc>{{ $article->url }}</loc>
-                <lastmod>{{ Illuminate\Support\Carbon::parse($article->published_at)->format("Y-m-d\\TH:i:sP") }}</lastmod>
+                <loc>{{ $project->url }}</loc>
+                <lastmod>{{ Illuminate\Support\Carbon::parse(date('Y-m-d'))->format("Y-m-d\\TH:i:sP") }}</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>0.8</priority>
             </url>
@@ -32,12 +32,36 @@
     @endif
     @if (count($ourServices))
         @foreach($ourServices as $ourService)
-            <url>
-                <loc>{{ $ourService->url }}</loc>
-                <lastmod>{{ Illuminate\Support\Carbon::parse($ourService->published_at)->format("Y-m-d\\TH:i:sP") }}</lastmod>
-                <changefreq>daily</changefreq>
-                <priority>0.8</priority>
-            </url>
+            @if(count($ourService->ourServiceItems))
+                @foreach($ourService->ourServiceItems as $ourServiceItem)
+                <url>
+                    <loc>{{ $ourServiceItem->url }}</loc>
+                    <lastmod>{{ Illuminate\Support\Carbon::parse(date('Y-m-d'))->format("Y-m-d\\TH:i:sP") }}</lastmod>
+                    <changefreq>daily</changefreq>
+                    <priority>0.8</priority>
+                </url>
+                @endforeach
+            @endif
+        @endforeach
+    @endif
+    @if (count($catalog))
+        @foreach($catalog as $catalogItem)
+                <url>
+                    <loc>{{ $catalogItem->url }}</loc>
+                    <lastmod>{{ Illuminate\Support\Carbon::parse($catalogItem->updated_at)->format("Y-m-d\\TH:i:sP") }}</lastmod>
+                    <changefreq>daily</changefreq>
+                    <priority>0.8</priority>
+                </url>
+            @if(count($catalogItem->products))
+                @foreach($catalogItem->products as $product)
+                    <url>
+                        <loc>{{ $product->url }}</loc>
+                        <lastmod>{{ Illuminate\Support\Carbon::parse($product->updated_at)->format("Y-m-d\\TH:i:sP") }}</lastmod>
+                        <changefreq>daily</changefreq>
+                        <priority>0.8</priority>
+                    </url>
+                @endforeach
+            @endif
         @endforeach
     @endif
 </urlset>

@@ -16,7 +16,7 @@
     @includeWhen($page->slider, 'layouts.sections.slider', ['slider' => $page->slider])
 
     <section class="breadcrumbs-custom">
-        <div class="parallax-container" data-parallax-img="{{ $page->image ? $page->image->path : '' }}">
+        <div class="parallax-container" data-parallax-img="{{ $page->image ? $page->image->path : asset('images/bg-default.jpg') }}">
             <div class="breadcrumbs-custom-body parallax-content context-dark">
                 <div class="container">
                     <h2 class="breadcrumbs-custom-title">{{ $page->name }}</h2>

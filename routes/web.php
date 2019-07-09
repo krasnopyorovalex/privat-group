@@ -17,13 +17,13 @@ Auth::routes();
 
 Route::post('send-subscribe', 'FormHandlerController@subscribe')->name('send.subscribe');
 Route::post('send-order', 'FormHandlerController@order')->name('send.order');
+Route::post('send-question', 'FormHandlerController@question')->name('send.question');
 Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
 
 Route::group(['middleware' => ['redirector', 'shortcode']], static function () {
     Route::get('{alias}', 'ServiceController@show')->name('service.show');
     Route::get('/{alias?}/{page?}', 'PageController@show')->name('page.show')->where('page', '[0-9]+');
     Route::get('articles/{alias}', 'BlogController@show')->name('article.show');
-    Route::get('our-services/{alias}', 'OurServiceController@show')->name('our_service_item.show');
     Route::get('news/{alias}', 'InfoController@show')->name('info.show');
     Route::get('catalog/{alias}', 'CatalogController@show')->name('catalog.show');
     Route::get('projects/{alias}', 'ProjectController@show')->name('project.show');

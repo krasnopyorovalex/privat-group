@@ -14,7 +14,7 @@ class CreateAdvantageRequest extends Request
     {
         return [
             'name' => 'bail|required|max:512',
-            'preview' => 'required|string',
+            'preview' => 'required|string|nullable',
             'pos' => 'integer|min:0|max:255',
             'image' => 'image'
         ];

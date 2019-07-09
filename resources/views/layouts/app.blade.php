@@ -96,8 +96,8 @@
                                 </a>
                             </div>
                             <ul class="list-schedule">
-                                <li><span>Weekdays:</span><span>08:00am - 08:00pm</span></li>
-                                <li><span>Weekends:</span><span>10:00am - 06:00pm</span></li>
+                                <li><span>Понедельник-пятница:</span><span>9:00-17:00</span></li>
+                                <li><span>Суббота:</span><span>9:00-15:00</span></li>
                             </ul>
                             <div class="footer-classic-social">
                                 <div class="group-lg group-middle">
@@ -146,7 +146,7 @@
                             <form action="{{ route('send.subscribe') }}" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
                                 @csrf
                                 <div class="form-wrap">
-                                    <input class="form-input" id="subscribe-form-2-email" type="email" name="email" autocomplete="off" placeholder="Введите свой e-mail" />
+                                    <input class="form-input" id="subscribe-form-2-email" type="email" name="email" autocomplete="off" placeholder="Введите свой e-mail" required="" />
                                 </div>
                                 <div class="form-button submit">
                                     <button class="button button-icon-2 button-zakaria button-secondary" type="submit"><span class="fl-bigmug-line-paper122"></span></button>
@@ -161,6 +161,20 @@
                     <div class="row row-10 align-items-center justify-content-sm-between">
                         <div class="col-md-auto">
                             <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>СТРОИТЕЛЬСТВО БАНЬ, САУН И ХАМАМОВ В СЕВАСТОПОЛЕ И КРЫМУ</span><span>.&nbsp;Все права защищены.</span></p>
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="develop">
+                                <div class="develop__link">
+                                    <a href="https://krasber.ru" rel="nofollow" target="_blank">
+                                        Создание, продвижение и <br>техподдержка сайтов
+                                    </a>
+                                </div>
+                                <div class="develop__logo">
+                                    <a href="https://krasber.ru" target="_blank" rel="nofollow">
+                                        <img src="{{ asset('images/logo_green.svg') }}" alt="Веб-студия Красбер">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

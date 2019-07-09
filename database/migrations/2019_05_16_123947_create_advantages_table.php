@@ -16,7 +16,7 @@ class CreateAdvantagesTable extends Migration
         Schema::create('advantages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 512);
-            $table->text('preview');
+            $table->text('preview')->nullable();
             $table->unsignedTinyInteger('pos')->default(0);
         });
     }

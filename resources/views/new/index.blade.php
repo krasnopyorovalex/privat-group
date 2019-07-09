@@ -15,7 +15,7 @@
 @section('content')
 
     <section class="breadcrumbs-custom no__bg">
-        <div class="parallax-container">
+        <div class="parallax-container" data-parallax-img="{{ asset('images/bg-default.jpg') }}">
             <div class="breadcrumbs-custom-body parallax-content context-dark">
                 <div class="container">
                     <h2 class="breadcrumbs-custom-title">{{ $new->name }}</h2>

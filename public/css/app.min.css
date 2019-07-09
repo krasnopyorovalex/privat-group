@@ -4192,10 +4192,10 @@ textarea.textarea-lg {
 }
 .list-schedule li > :first-child {
   color: #151515;
-  min-width: 75px
+  min-width: 162px
 }
 .list-schedule li > * + * {
-  margin-left: 8px
+  margin-left: 12px
 }
 .footer-classic-social {
   color: #151515;
@@ -14344,6 +14344,43 @@ textarea:focus::placeholder {
 .section-content ul li {
   display: list-item;
 }
+.form_info {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+}
+.form_question {
+  margin: 1.5em 0 0 0;
+}
+.form_question form {
+  margin: 0;
+}
+.form_question .form-wrap {
+  margin: 0;
+}
+.form_question .rd-form-inline .form-button .button {
+  padding: 14px 24px;
+}
+footer .develop {
+  text-align: right
+}
+footer .develop__link {
+  display: inline-block;
+  margin-right: 4px;
+  vertical-align: middle
+}
+footer .develop__link a {
+  font-size: 12px;
+  line-height: normal
+}
+footer .develop__logo {
+  display: inline-block;
+  width: 130px
+}
+.swiper-title-1 {
+  font-size: 50px;
+}
 
 
 @media (min-width:576px) {
@@ -15036,7 +15073,7 @@ textarea:focus::placeholder {
         padding: 30px 0
     }
     .list-schedule li > :first-child {
-        min-width: 86px
+        min-width: 162px
     }
     * + .list-schedule {
         margin-top: 30px

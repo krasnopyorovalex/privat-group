@@ -16,7 +16,7 @@
     @includeWhen($service->slider, 'layouts.sections.slider', ['slider' => $service->slider])
 
     <section class="breadcrumbs-custom">
-        <div class="parallax-container" data-parallax-img="{{ $service->image ? $service->image->path : '' }}">
+        <div class="parallax-container" data-parallax-img="{{ asset('images/bg-default.jpg') }}">
             <div class="breadcrumbs-custom-body parallax-content context-dark">
                 <div class="container">
                     <h2 class="breadcrumbs-custom-title">{{ $service->name }}</h2>

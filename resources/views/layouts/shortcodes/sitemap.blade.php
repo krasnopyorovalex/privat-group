@@ -3,20 +3,11 @@
         @foreach($pages as $page)
             <li>
                 <a href="{{ $page->url }}">{{ $page->name }}</a>
-                @if(strstr($page->text,'{articles}') && count($articles))
+                @if(strstr($page->text,'{projects}') && count($projects))
                     <ul>
-                        @foreach($articles as $article)
+                        @foreach($projects as $project)
                             <li>
-                                <a href="{{ $article->url }}">{{ $article->name }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                @endif
-                @if(strstr($page->text,'{rooms}') && count($services))
-                    <ul>
-                        @foreach($services as $service)
-                            <li>
-                                <a href="{{ $service->url }}">{{ $service->name }}</a>
+                                <a href="{{ $project->url }}">{{ $project->name }}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -31,10 +22,32 @@
                     </ul>
                 @endif
                 @if(strstr($page->text,'{our_services}') && count($ourServices))
+                    @foreach($ourServices as $ourService)
+                        @if(count($ourService->ourServiceItems))
+                            <ul>
+                                @foreach($ourService->ourServiceItems as $ourServiceItem)
+                                    <li>
+                                        <a href="{{ $ourServiceItem->url }}">{{ $ourServiceItem->name }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    @endforeach
+                @endif
+                @if(strstr($page->text,'{catalog}') && count($catalog))
                     <ul>
-                        @foreach($ourServices as $ourService)
+                        @foreach($catalog as $catalogItem)
                             <li>
-                                <a href="{{ $ourService->url }}">{{ $ourService->name }}</a>
+                                <a href="{{ $catalogItem->url }}">{{ $catalogItem->name }}</a>
+                                @if($catalogItem->products)
+                                <ul>
+                                    @foreach($catalogItem->products as $product)
+                                        <li>
+                                            <a href="{{ $product->url }}">{{ $product->name }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                                @endif
                             </li>
                         @endforeach
                     </ul>
