@@ -20,13 +20,19 @@
         <div class="container">
             <div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
                 <div class="col-md-4 col-lg-4 col-xs-12">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/zIFEGZRzkXc" frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="youtube-box" data-embed="zIFEGZRzkXc">
+                        <div class="btn-play"></div>
+                    </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-xs-12">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/VsD61yrHfMI" frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="youtube-box" data-embed="VsD61yrHfMI">
+                        <div class="btn-play"></div>
+                    </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-xs-12">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/L_-_w791HsM" frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="youtube-box" data-embed="L_-_w791HsM">
+                        <div class="btn-play"></div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -846,3 +846,35 @@ function formHandler(selector, Notification) {
 jQuery(document).ajaxError(function () {
     return jQuery("form .submit").removeClass("is__sent") && jQuery('.notify').html('<div>Произошла ошибка =(</div>').fadeIn().delay(3000).fadeOut();
 });
+(function() {
+
+    var youtube = document.querySelectorAll(".youtube-box");
+
+    var yLength = youtube.length;
+    if(yLength) {
+        for (var i = 0; i < yLength; i++) {
+
+            var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";
+
+            var image = new Image();
+            image.src = source;
+            image.addEventListener( "load", function() {
+                youtube[ i ].appendChild( image );
+            }(i));
+
+            youtube[i].addEventListener( "click", function() {
+
+                var iframe = document.createElement( "iframe" );
+
+                iframe.setAttribute("frameborder", "0");
+                iframe.setAttribute("allowfullscreen", "");
+                iframe.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+                iframe.setAttribute("src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1");
+
+                this.innerHTML = "";
+                this.appendChild(iframe);
+            });
+        }
+    }
+
+})();

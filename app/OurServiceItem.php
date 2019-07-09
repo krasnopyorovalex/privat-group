@@ -52,6 +52,6 @@ class OurServiceItem extends Model
      */
     public function getUrlAttribute(): string
     {
-        return route('service.show', $this->alias);
+        return route('our_service_item.show', $this->alias);
     }
 }

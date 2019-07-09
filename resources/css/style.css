@@ -5804,9 +5804,6 @@ html:not(.ie-10):not(.ie-11):not(.ie-edge) .team-karen-header svg {
 [data-x-mode] .page {
   opacity: 1
 }
-html.boxed body {
-  background: #e1e1e1 url(https://livedemo00.template-help.com/wt_prod-10492/theme/images/bg-pattern-boxed.png) repeat fixed
-}
 .text-italic {
   font-style: italic
 }
@@ -14375,4 +14372,35 @@ footer .develop__logo {
 }
 .swiper-title-1 {
   font-size: 50px;
+}
+.youtube-box {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding-top: 70%;
+}
+
+.youtube-box .btn-play {
+  background: url(../images/youtube-play.png) no-repeat;
+  width: 84px;
+  height: 59px;
+  position: absolute;
+  left: calc(50% - 42px);
+  top: 38%;
+  z-index: 999;
+}
+.youtube-box:hover .btn-play {
+  background: url(../images/youtube-play.png) 0 -60px no-repeat
+}
+.youtube-box img {
+  left: 0;
+  top: -16.82%;
+  position: absolute;
+}
+.youtube-box iframe {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
