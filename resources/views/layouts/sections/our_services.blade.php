@@ -10,13 +10,13 @@
                 <!-- Post Creative-->
                 <article class="post post-creative">
                     @if($ourService->image)
-                        <a class="post-creative-figure" href="{{ $ourService->url }}">
+                        <a class="post-creative-figure" href="{{ route('page.show', ['alias' => 'services']) }}#service_{{ $ourService->id }}">
                             <img src="" data-src="{{ $ourService->image->path }}" alt="{{ $ourService->image->alt }}" title="{{ $ourService->image->title }}" width="420" height="368"/>
                         </a>
                     @endif
                     <div class="post-creative-content">
                         <h5 class="post-creative-title">
-                            <a href="{{ $ourService->url }}">
+                            <a href="{{ route('page.show', ['alias' => 'services']) }}#service_{{ $ourService->id }}">
                                 {{ $ourService->name }}
                             </a>
                         </h5>
