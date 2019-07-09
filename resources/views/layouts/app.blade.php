@@ -104,8 +104,8 @@
                                     <p>Мы в соцсеятх</p>
                                     <div>
                                         <ul class="list-inline list-social list-inline-sm">
-                                            <li><a class="icon mdi mdi-youtube-play" href="https://www.youtube.com/channel/UCigKb7WaQgDwppkEODoFMuw"></a></li>
-                                            <li><a class="icon mdi mdi-instagram" href="https://www.instagram.com/fabrika_bani/"></a></li>
+                                            <li><a class="icon mdi mdi-youtube-play" href="https://www.youtube.com/channel/UCigKb7WaQgDwppkEODoFMuw" target="_blank"></a></li>
+                                            <li><a class="icon mdi mdi-instagram" href="https://www.instagram.com/fabrika_bani/" target="_blank"></a></li>
                                         </ul>
                                     </div>
                                 </div>
