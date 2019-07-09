@@ -15,9 +15,11 @@
                             </div>
                         </div>
                         <h4 class="box-icon-modern-title">{{ $advantage->name }}</h4>
+                        @if($advantage->preview)
                         <p class="box-icon-modern-text">
                             {!! strip_tags($advantage->preview) !!}
                         </p>
+                        @endif
                     </article>
                 </div>
                 @endforeach
