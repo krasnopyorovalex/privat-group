@@ -14,7 +14,7 @@ class CreateAdvantageRequest extends Request
     {
         return [
             'name' => 'bail|required|max:512',
-            'preview' => 'required|string|nullable',
+            'preview' => 'string|nullable',
             'pos' => 'integer|min:0|max:255',
             'image' => 'image'
         ];
@@ -28,8 +28,7 @@ class CreateAdvantageRequest extends Request
     public function messages(): array
     {
         return [
-            'name.required' => 'Поле «Название» обязательно для заполнения',
-            'preview.required'  => 'Поле «Превью» обязательно для заполнения'
+            'name.required' => 'Поле «Название» обязательно для заполнения'
         ];
     }
 }
