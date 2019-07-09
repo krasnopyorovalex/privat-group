@@ -12,10 +12,10 @@
                     @csrf
                     <input type="hidden" name="product">
                     <div class="form-wrap">
-                        <input class="form-input" id="contact-name" type="text" name="name" autocomplete="off" placeholder="Имя"/>
+                        <input class="form-input" id="contact-name" type="text" name="name" autocomplete="off" placeholder="Имя" required=""/>
                     </div>
                     <div class="form-wrap">
-                        <input class="form-input" id="contact-phone" type="text" name="phone" autocomplete="off" placeholder="Телефон"/>
+                        <input class="form-input" id="contact-phone" type="text" name="phone" autocomplete="off" placeholder="Телефон" required=""/>
                     </div>
                     <button class="button button-lg button-primary button-zakaria" type="submit">Заказать</button>
                 </form>
