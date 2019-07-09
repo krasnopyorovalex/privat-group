@@ -6,7 +6,7 @@
     <meta property="og:title" content="{{ $service->title }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ request()->getUri() }}">
-    <meta property="og:image" content="{{ asset($service->image ? $service->image->path : 'img/logo.png') }}">
+    <meta property="og:image" content="{{ asset($service->image ? $service->image->path : 'images/logo.png') }}">
     <meta property="og:description" content="{{ $service->description }}">
     <meta property="og:site_name" content="Всё для бани">
     <meta property="og:locale" content="ru_RU">
