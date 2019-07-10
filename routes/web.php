@@ -17,6 +17,7 @@ Auth::routes();
 
 Route::post('send-subscribe', 'FormHandlerController@subscribe')->name('send.subscribe');
 Route::post('send-order', 'FormHandlerController@order')->name('send.order');
+Route::post('send-order-service', 'FormHandlerController@orderService')->name('send.order_service');
 Route::post('send-question', 'FormHandlerController@question')->name('send.question');
 Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
 

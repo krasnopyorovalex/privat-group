@@ -21,7 +21,7 @@
                             </a>
                         </h5>
                         <div class="btn__box">
-                            <div class="button button-sm button-secondary button-zakaria">Заказать</div>
+                            <div class="button button-sm button-secondary button-zakaria btn__call-order-service" data-toggle="modal" data-target="#order_service" data-service="{{ $ourService->name }}">Заказать</div>
                             <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}#service_{{ $ourService->id }}">Подробнее</a>
                         </div>
                     </div>
@@ -31,3 +31,4 @@
         </div>
     </div>
 </section>
+@include('layouts.forms.order_service')

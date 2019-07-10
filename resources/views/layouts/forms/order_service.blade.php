@@ -1,4 +1,4 @@
-<div class="modal" tabindex="-1" role="dialog" id="order">
+<div class="modal" tabindex="-1" role="dialog" id="order_service">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -8,9 +8,9 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post" action="{{ route('send.order') }}" id="form__order">
+                <form method="post" action="{{ route('send.order_service') }}" id="form__order-service">
                     @csrf
-                    <input type="hidden" name="product">
+                    <input type="hidden" name="service">
                     <div class="form-wrap">
                         <input class="form-input" id="contact-name" type="text" name="name" autocomplete="off" placeholder="Имя" required=""/>
                     </div>

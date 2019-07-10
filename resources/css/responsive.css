@@ -3192,6 +3192,19 @@
     .grid-demonstration * + p {
         margin-top: 6px
     }
+    .form_question .form-wrap {
+        display: block;
+        min-width: 260px;
+    }
+    .form_question .form-wrap input {
+        text-align: center;
+    }
+    .form_question .rd-form-inline .form-button {
+        margin: 1em auto 0;
+    }
+    .form_question .form-wrap + .form-wrap {
+        margin-left: 0;
+    }
     [data-isotope-layout] [class*=col-] {
         max-width: 100%
     }

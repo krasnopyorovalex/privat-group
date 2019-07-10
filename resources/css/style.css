@@ -14351,6 +14351,9 @@ textarea:focus::placeholder {
 .form_question .form-wrap {
   margin: 0;
 }
+.form_question .form-wrap + .form-wrap {
+    margin-left: 1em;
+}
 .form_question .rd-form-inline .form-button .button {
   padding: 14px 24px;
 }

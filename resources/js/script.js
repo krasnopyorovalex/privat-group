@@ -781,6 +781,14 @@
         });
     }
 
+    var btnCallOrderService = $(".btn__call-order-service");
+    if (btnCallOrderService.length) {
+        btnCallOrderService.on("click", function () {
+            var val = $(this).attr("data-service");
+            return $("#order_service .modal-title .product_name").text(val) && $("#order_service input[name=service]").val(val);
+        });
+    }
+
     var Notification = {
         element: false,
         setElement: function (element) {
@@ -796,6 +804,7 @@
 
     formHandler("#form__subscribe", Notification);
     formHandler("#form__order", Notification);
+    formHandler("#form__order-service", Notification);
 
     [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
         img.setAttribute('src', img.getAttribute('data-src'));
@@ -819,7 +828,7 @@ function formHandler(selector, Notification) {
             url = _this.attr('action'),
             data = _this.serialize(),
             submitBlock = _this.find(".submit"),
-            orderForm = $('#order'),
+            orderForm = $(".modal"),
             agree = _this.find(".i__agree input[type=checkbox]");
         if (agree.length && ! agree.prop("checked")) {
             agree.closest(".i__agree").find(".error").fadeIn().delay(3000).fadeOut();
