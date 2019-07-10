@@ -40,7 +40,7 @@
                 <header class="section-single-header page-header">
                     <div class="page-head-inner">
                         <a class="brand" href="{{ route('page.show') }}">
-                            <img class="brand-logo-light" src="{{ asset('images/logo.png') }}" alt="" />
+                            <img class="brand-logo-light img_404" src="{{ asset('images/logo.png') }}" alt="Все для бани" />
                         </a>
                     </div>
                 </header>
@@ -52,11 +52,6 @@
                         <a class="button button-lg button-secondary button-zakaria" href="{{ route('page.show') }}">Вернуться на главную</a>
                     </div>
                 </div>
-                <div class="section-single-footer">
-                    <div class="container text-center">
-                    </div>
-                </div>
-
             </div>
         </section>
     </div>

@@ -14460,3 +14460,6 @@ img[src=""] {
     transform:rotate(360deg)
   }
 }
+.img_404 {
+  max-width: 350px;
+}
