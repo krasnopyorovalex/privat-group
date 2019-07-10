@@ -14463,3 +14463,7 @@ img[src=""] {
 .img_404 {
   max-width: 350px;
 }
+.bg_404 {
+  background-color: rgba(0,0,0,0.15);
+  background-blend-mode: darken;
+}

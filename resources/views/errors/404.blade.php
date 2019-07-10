@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="page">
-        <section class="section section-single context-dark bg-image" style="background-image: url('/images/bg-404.jpg');">
+        <section class="section section-single context-dark bg-image bg_404" style="background-image: url('/images/bg-404.jpg');">
             <div class="section-single-inner">
                 <header class="section-single-header page-header">
                     <div class="page-head-inner">
