@@ -17,7 +17,16 @@
                     <div class="form-wrap">
                         <input class="form-input" id="contact-phone" type="text" name="phone" autocomplete="off" placeholder="Телефон" required=""/>
                     </div>
-                    <button class="button button-lg button-primary button-zakaria" type="submit">Заказать</button>
+                    <div class="form-wrap agree__block">
+                        <label class="checkbox-inline" for="i_agree">
+                            <input name="agree" value="1" checked type="checkbox" id="i_agree">Согласие на обработку персональных данных
+                            Оставляя заявку, Вы соглашаетесь на <a href="{{ route('page.show', ['alias' => 'personal-data']) }}" target="_blank" title="Перейти на страницу описания">обработку персональных данных</a>
+                        </label>
+                        <p class="error">Отметьте, пожалуйста</p>
+                    </div>
+                    <div class="submit">
+                        <button class="button button-lg button-primary button-zakaria" type="submit">Заказать</button>
+                    </div>
                 </form>
             </div>
         </div>

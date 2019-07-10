@@ -829,9 +829,9 @@ function formHandler(selector, Notification) {
             data = _this.serialize(),
             submitBlock = _this.find(".submit"),
             orderForm = $(".modal"),
-            agree = _this.find(".i__agree input[type=checkbox]");
+            agree = _this.find(".agree__block input[type=checkbox]");
         if (agree.length && ! agree.prop("checked")) {
-            agree.closest(".i__agree").find(".error").fadeIn().delay(3000).fadeOut();
+            agree.closest(".agree__block").find(".error").fadeIn().delay(3000).fadeOut();
             return false;
         }
         return $.ajax({
