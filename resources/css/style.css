@@ -4188,7 +4188,7 @@ textarea.textarea-lg {
 }
 .list-schedule li > :first-child {
   color: #151515;
-  min-width: 162px
+  min-width: 174px
 }
 .list-schedule li > * + * {
   margin-left: 12px
