@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use App\Domain\Article\Queries\GetAllArticlesQuery;
-use App\Domain\Catalog\Queries\GetAllCatalogsQuery;
+use App\Domain\Catalog\Queries\GetAllCatalogsWithoutParentQuery;
 use App\Domain\Info\Queries\GetAllInfosQuery;
 use App\Domain\OurService\Queries\GetAllOurServicesQuery;
 use App\Domain\Project\Queries\GetAllProjectsQuery;
@@ -44,7 +44,7 @@ class TextParserService
                     return view('layouts.shortcodes.news', ['news' => $news]);
                 },
                 '#(<p(.*)>)?{catalog}(<\/p>)?#' => function () {
-                    $catalogs = $this->dispatch(new GetAllCatalogsQuery());
+                    $catalogs = $this->dispatch(new GetAllCatalogsWithoutParentQuery());
 
                     return view('layouts.shortcodes.catalogs', [
                         'catalogs' => $catalogs

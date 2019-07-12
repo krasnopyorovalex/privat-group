@@ -28,6 +28,9 @@
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="{{ route('page.show') }}">Главная</a></li>
                     <li><a href="{{ route('page.show', ['alias' => 'catalog']) }}">Каталог</a></li>
+                    @if($catalog->parent)
+                        <li><a href="{{ route('catalog.show', ['alias' => $catalog->parent->alias]) }}">{{ $catalog->parent->name }}</a></li>
+                    @endif
                     <li class="active">{{ $catalog->name }}</li>
                 </ul>
             </div>
@@ -45,8 +48,8 @@
                             <div class="row row-10 row-lg-20 gutters-10">
                                 @if($catalogs)
                                 <ul class="list-shop-filter">
-                                    @foreach($catalogs as $catalog)
-                                    <li class="{{ $catalog->alias === request('alias') ? 'active' : '' }}"><a href="{{ $catalog->url }}">{{ $catalog->name }}</a></li>
+                                    @foreach($catalogs as $cat)
+                                    <li class="{{ $cat->alias === request('alias') ? 'active' : '' }}"><a href="{{ $cat->url }}">{{ $cat->name }}</a></li>
                                     @endforeach
                                 </ul>
                                 @endif
@@ -98,6 +101,8 @@
                         </nav>
                     </div>
                     @endif
+
+                    @includeWhen($catalog->catalogs, 'layouts.shortcodes.catalogs', ['catalogs' => $catalog->catalogs])
 
                 </div>
             </div>

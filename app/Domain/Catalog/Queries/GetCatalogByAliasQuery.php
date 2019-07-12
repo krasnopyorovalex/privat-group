@@ -29,7 +29,7 @@ class GetCatalogByAliasQuery
      */
     public function handle()
     {
-        return Catalog::with(['image'])
+        return Catalog::with(['image','catalogs'])
             ->where('alias', $this->alias)
             ->firstOrFail();
     }

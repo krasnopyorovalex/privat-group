@@ -39,7 +39,6 @@
                             @input(['name' => 'name', 'label' => 'Название'])
                             @input(['name' => 'title', 'label' => 'Title'])
                             @input(['name' => 'description', 'label' => 'Description'])
-                            @input(['name' => 'keywords', 'label' => 'Keywords'])
 
                             @input(['name' => 'price', 'label' => 'Цена', 'defaultValue' => 0])
 
