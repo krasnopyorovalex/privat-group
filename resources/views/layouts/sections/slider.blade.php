@@ -2,7 +2,7 @@
 <section class="section swiper-container swiper-slider swiper-slider-1" data-loop="true">
     <div class="swiper-wrapper context-dark text-center">
         @foreach ($slider->images as $image)
-        <div class="swiper-slide" data-slide-bg="{{ asset($image->getPath()) }}">
+        <div class="swiper-slide darken" data-slide-bg="{{ asset($image->getPath()) }}">
             <div class="swiper-slide-caption section-md">
                 <div class="container">
                     @if($image->name)
