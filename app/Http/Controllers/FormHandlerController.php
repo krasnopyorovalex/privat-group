@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Forms\OrderRequest;
+use App\Http\Requests\Forms\OrderServiceItemRequest;
 use App\Http\Requests\Forms\OrderServiceRequest;
 use App\Http\Requests\Forms\QuestionRequest;
 use App\Http\Requests\Forms\SubscribeRequest;
@@ -60,7 +61,7 @@ class FormHandlerController extends Controller
         Mail::to([$this->to])->send(new QuestionSent($request->all()));
 
         return [
-            'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
+            'message' => 'Ваш запрос принят. Я свяжусь с Вами в ближайшее время',
             'status' => 200
         ];
     }
@@ -70,6 +71,20 @@ class FormHandlerController extends Controller
      * @return array
      */
     public function orderService(OrderServiceRequest $request): array
+    {
+        Mail::to([$this->to])->send(new OrderServiceSent($request->all()));
+
+        return [
+            'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
+            'status' => 200
+        ];
+    }
+
+    /**
+     * @param OrderServiceItemRequest $request
+     * @return array
+     */
+    public function orderServiceItem(OrderServiceItemRequest $request): array
     {
         Mail::to([$this->to])->send(new OrderServiceSent($request->all()));
 

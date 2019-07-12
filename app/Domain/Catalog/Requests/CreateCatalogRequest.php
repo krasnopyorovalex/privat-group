@@ -18,6 +18,7 @@ class CreateCatalogRequest extends Request
             'description' => 'max:512|nullable',
             'text' => 'string|nullable',
             'alias' => 'required|string|max:255|unique:catalogs',
+            'parent_id' => 'numeric|exists:catalogs,id|nullable',
             'image' => 'image',
             'pos' => 'integer|min:0|max:255'
         ];

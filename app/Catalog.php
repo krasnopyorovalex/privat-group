@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * App\Catalog
@@ -46,14 +46,22 @@ class Catalog extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'title', 'description', 'text', 'alias', 'pos'];
+    protected $fillable = ['parent_id', 'name', 'title', 'description', 'text', 'alias', 'pos'];
 
     /**
-     * @return BelongsToMany
+     * @return HasMany
      */
-    public function dopProducts(): BelongsToMany
+    public function catalogs(): HasMany
     {
-        return $this->belongsToMany(CatalogProduct::class, 'catalog_dop_products', 'catalog_id', 'product_id')->orderBy('id','desc');
+        return $this->hasMany(__CLASS__, 'parent_id', 'id')->orderBy('pos');
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function parent(): BelongsTo
+    {
+        return $this->belongsTo(__CLASS__, 'parent_id', 'id');
     }
 
     /**
@@ -68,14 +76,6 @@ class Catalog extends Model
      * @return MorphOne
      */
     public function image(): MorphOne
-    {
-        return $this->morphOne(Image::class, 'imageable');
-    }
-
-    /**
-     * @return MorphOne
-     */
-    public function icon(): MorphOne
     {
         return $this->morphOne(Image::class, 'imageable');
     }

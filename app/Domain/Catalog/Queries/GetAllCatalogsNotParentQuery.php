@@ -3,7 +3,6 @@
 namespace App\Domain\Catalog\Queries;
 
 use App\Catalog;
-use Illuminate\Support\Collection;
 
 /**
  * Class GetAllCatalogsNotParentQuery
@@ -14,8 +13,8 @@ class GetAllCatalogsNotParentQuery
     /**
      * Execute the job.
      */
-    public function handle(): Collection
+    public function handle()
     {
-        return Catalog::orderBy('pos')->get();
+        return Catalog::where('parent_id')->with(['catalogs'])->orderBy('pos')->get();
     }
 }

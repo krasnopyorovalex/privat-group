@@ -12,6 +12,10 @@ use App\Http\Controllers\Controller;
 use App\Services\TreeRecursiveBuildService;
 use Domain\Catalog\Requests\CreateCatalogRequest;
 use Domain\Catalog\Requests\UpdateCatalogRequest;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 
 /**
  * @property  treeRecursiveBuildService
@@ -19,9 +23,7 @@ use Domain\Catalog\Requests\UpdateCatalogRequest;
 class CatalogController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return Factory|View
      */
     public function index()
     {
@@ -33,9 +35,7 @@ class CatalogController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return Factory|View
      */
     public function create()
     {
@@ -47,10 +47,8 @@ class CatalogController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
      * @param CreateCatalogRequest $request
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @return RedirectResponse|Redirector
      */
     public function store(CreateCatalogRequest $request)
     {
@@ -60,10 +58,8 @@ class CatalogController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return Factory|View
      */
     public function edit($id)
     {
@@ -79,7 +75,7 @@ class CatalogController extends Controller
     /**
      * @param $id
      * @param UpdateCatalogRequest $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse|Redirector
      */
     public function update($id, UpdateCatalogRequest $request)
     {
@@ -89,10 +85,8 @@ class CatalogController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return RedirectResponse|Redirector
      */
     public function destroy($id)
     {

@@ -63,4 +63,33 @@
     </div>
     @endif
 
+    <section class="with_bg">
+        <div class="container">
+            <div class="row row-30 align-content-end">
+                <div class="col-md-12 group-middle wow fadeInRight" data-wow-delay=".3s">
+                    <div class="form_question in_content">
+                        <div class="form_info"><p>Заказать {{ $service->name }}</p></div>
+                        <div>
+                            <form action="{{ route('send.order_service_item') }}" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
+                                @csrf
+                                <input type="hidden" name="service" value="{{ $service->name }}">
+                                <div class="form-wrap">
+                                    <input class="form-input" id="subscribe-form-2-email" type="text" name="name" autocomplete="off" placeholder="Имя" required="" />
+                                </div>
+                                <div class="form-wrap">
+                                    <input class="form-input" id="subscribe-form-2-email" type="text" name="phone" autocomplete="off" placeholder="Телефон" required="" />
+                                </div>
+                                <div class="form-button submit">
+                                    <button class="button button-sm button-secondary button-zakaria" type="submit">
+                                        отправить
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 @endsection

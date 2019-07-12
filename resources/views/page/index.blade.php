@@ -45,9 +45,9 @@
                 <div class="col-sm-4 col-md-4 col-lg-4 wow fadeInLeft"><img src="{{ asset('images/director.jpg') }}" alt="Прокопенко Сергей" />
                 </div>
                 <div class="col-md-8 col-lg-8">
-                    <h4 class="title-style-1 wow fadeInRight">Приветствую Вас на нашем сайте.</h4>
-                    <p class="offset-top-md-20 wow fadeInRight" data-wow-delay=".2s">Немного расскажу о нашей компании. Компания на рынке Крыма с 2014 года. За время работы компании построено множество объектов от маленьких парных в квартире до полноценных СПА зон с несколькими видами бань, мокрыми зонами, бассейнами и купелями. <br />Мы используем в строительстве передовые технологии и оборудование только надежных производителей. Заказывая строительство или оборудование в нашей компании Вы приобретаете не только товар или услугу, Вы приобретаете бесценный опыт, добытый нами. Если Вы планируете построить баню, сауну, хамам или СПА комплекс Вы получите в нашей компании Весь спектр услуг от разработки концепции и дизайн проекта, до реализации проекта под ключ.</p>
-                    <p class="offset-top-md-20 wow fadeInRight" data-wow-delay=".2s"><b>С Уважением Прокопенко Сергей</b></p>
+                    <h4 class="title-style-1 wow fadeInRight decorate">Приветствую Вас на нашем сайте.</h4>
+                    <p class="offset-top-md-20 wow fadeInRight decorate" data-wow-delay=".2s">Немного расскажу о нашей компании. Компания на рынке Крыма с 2014 года. За время работы компании построено множество объектов от маленьких парных в квартире до полноценных СПА зон с несколькими видами бань, мокрыми зонами, бассейнами и купелями. <br />Мы используем в строительстве передовые технологии и оборудование только надежных производителей. Заказывая строительство или оборудование в нашей компании Вы приобретаете не только товар или услугу, Вы приобретаете бесценный опыт, добытый нами. Если Вы планируете построить баню, сауну, хамам или СПА комплекс Вы получите в нашей компании Весь спектр услуг от разработки концепции и дизайн проекта, до реализации проекта под ключ.</p>
+                    <p class="offset-top-md-20 wow fadeInRight decorate" data-wow-delay=".2s"><b>С Уважением Прокопенко Сергей</b></p>
                     <div class="group-middle d-md-flex justify-content-md-start wow fadeInRight" data-wow-delay=".3s">
                         <div class="form_question">
                             <div>
@@ -55,10 +55,10 @@
                                 <form action="{{ route('send.question') }}" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
                                     @csrf
                                     <div class="form-wrap">
-                                        <input class="form-input" id="subscribe-form-2-email" type="email" name="email" autocomplete="off" placeholder="Введите e-mail" required="" />
+                                        <input class="form-input" id="subscribe-form-2-email" type="text" name="name" autocomplete="off" placeholder="Имя" required="" />
                                     </div>
                                     <div class="form-wrap">
-                                        <input class="form-input" id="subscribe-form-2-email" type="text" name="phone" autocomplete="off" placeholder="Введите телефон" required="" />
+                                        <input class="form-input" id="subscribe-form-2-email" type="text" name="phone" autocomplete="off" placeholder="Телефон" required="" />
                                     </div>
                                     <div class="form-button submit">
                                         <button class="button button-sm button-secondary button-zakaria" type="submit">

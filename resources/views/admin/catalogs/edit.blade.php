@@ -27,6 +27,14 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="main">
 
+                            <div class="form-group">
+                                <label for="parent_id">Выберите родительский категорию</label>
+                                <select class="form-control border-blue border-xs select-search" id="parent_id" name="parent_id" data-width="100%">
+                                    <option value="">Не выбрано</option>
+                                    {!! build_root_child_select($catalogs, old('parent_id', $catalog->parent_id)) !!}
+                                </select>
+                            </div>
+
                             @input(['name' => 'name', 'label' => 'Название', 'entity' => $catalog])
                             @input(['name' => 'title', 'label' => 'Title', 'entity' => $catalog])
                             @input(['name' => 'description', 'label' => 'Description', 'entity' => $catalog])

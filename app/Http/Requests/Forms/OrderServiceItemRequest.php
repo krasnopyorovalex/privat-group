@@ -4,18 +4,20 @@ namespace App\Http\Requests\Forms;
 
 use App\Http\Requests\Request;
 use App\Rules\NotUrl;
+use App\Rules\ServiceItem;
 
 /**
- * Class QuestionRequest
+ * Class OrderServiceItemRequest
  * @package App\Http\Requests\Forms
  */
-class QuestionRequest extends Request
+class OrderServiceItemRequest extends Request
 {
     public function rules(): array
     {
         return [
+            'service' => ['required', 'string', new ServiceItem],
             'name' => ['required', 'string', 'min:3', new NotUrl],
-            'phone' => ['required', 'string', 'min:5', new NotUrl],
+            'phone' => ['required', 'string', 'min:3', new NotUrl],
         ];
     }
 
@@ -27,7 +29,7 @@ class QuestionRequest extends Request
     public function messages(): array
     {
         return [
-            'name.required' => 'Поле «email» обязательно для заполнения',
+            'name.required' => 'Поле «Имя» обязательно для заполнения',
             'phone.required' => 'Поле «Телефон» обязательно для заполнения'
         ];
     }

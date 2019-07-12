@@ -3217,7 +3217,8 @@ textarea.textarea-lg {
   transform: translate3d(50%,50%,0)
 }
 .post-classic {
-  text-align: left
+  text-align: left;
+  margin: 0 0 2em 0;
 }
 .post-classic-figure {
   display: block;
@@ -14345,6 +14346,9 @@ textarea:focus::placeholder {
 .form_question {
   margin: 1.5em 0 0 0;
 }
+.in_content.form_question .form_info {
+  margin: 0 0 1em 0;
+}
 .form_question form {
   margin: 0;
 }
@@ -14465,5 +14469,19 @@ img[src=""] {
 }
 .bg_404 {
   background-color: rgba(0,0,0,0.15);
+  background-blend-mode: darken;
+}
+.with_bg {
+  background: #f5f5f5;
+  margin: 4em 0 0 0;
+  padding: 0 0 1em 0;
+}
+.decorate {
+  font-family: 'Cassandra', serif;
+  font-size: 20px;
+  color: #000;
+}
+.darken {
+  background-color: rgba(0,0,0,0.55);
   background-blend-mode: darken;
 }
