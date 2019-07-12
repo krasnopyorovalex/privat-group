@@ -15,6 +15,9 @@
 
             @include('layouts.partials.errors')
 
+            <form action="{{ route('admin.catalog_products.update', ['id' => $catalogProduct->id]) }}" method="post" enctype="multipart/form-data">
+                @csrf
+                @method('put')
                 <div class="tabbable">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#main" data-toggle="tab">Основное</a></li>
@@ -23,9 +26,6 @@
 
                     <div class="tab-content">
                         <div class="tab-pane active" id="main">
-                            <form action="{{ route('admin.catalog_products.update', ['id' => $catalogProduct->id]) }}" method="post" enctype="multipart/form-data">
-                                @csrf
-                                @method('put')
 
                                 <div class="form-group">
                                     <label for="label">Метка:</label>
@@ -47,7 +47,6 @@
                                 @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $catalogProduct])
 
                                 @submit_btn()
-                            </form>
                         </div>
                         <div class="tab-pane" id="image">
                             @if ($catalogProduct->image)
@@ -68,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-
+            </form>
         </div>
     </div>
     @if ($catalogProduct->image)
