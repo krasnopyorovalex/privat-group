@@ -28,6 +28,9 @@
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="{{ route('page.show') }}">Главная</a></li>
                     <li><a href="{{ route('page.show', ['alias' => 'catalog']) }}">Каталог</a></li>
+                    @if($product->catalog->parent)
+                        <li><a href="{{ route('catalog.show', ['alias' => $product->catalog->parent->alias]) }}">{{ $product->catalog->parent->name }}</a></li>
+                    @endif
                     <li><a href="{{ route('catalog.show', ['alias' => $product->catalog->alias]) }}">{{ $product->catalog->name }}</a></li>
                     <li class="active">{{ $product->name }}</li>
                 </ul>
