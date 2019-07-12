@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Catalog;
 use App\OurServiceItem;
 use Illuminate\Support\Str;
 use App\Page;
@@ -22,6 +23,7 @@ class LinkGeneratorService
      */
     private $models = [
         Page::class => 'Страницы',
+        Catalog::class => 'Каталог',
         Article::class => 'Статьи',
         Info::class => 'Новости',
         OurServiceItem::class => 'Услуги'
