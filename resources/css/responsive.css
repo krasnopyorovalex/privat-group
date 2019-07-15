@@ -3192,6 +3192,9 @@
     .grid-demonstration * + p {
         margin-top: 6px
     }
+    .visible-xs {
+        display: block;
+    }
     .form_question .form-wrap {
         display: block;
         min-width: 260px;

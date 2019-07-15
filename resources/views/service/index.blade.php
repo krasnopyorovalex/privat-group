@@ -81,7 +81,7 @@
                                 </div>
                                 <div class="form-button submit">
                                     <button class="button button-sm button-secondary button-zakaria" type="submit">
-                                        отправить
+                                        Заказать расчёт
                                     </button>
                                 </div>
                             </form>

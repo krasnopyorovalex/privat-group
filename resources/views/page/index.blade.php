@@ -18,6 +18,11 @@
 
     <section class="section section-inset-2 bg-default text-md-left">
         <div class="container">
+            <h5 class="text-center video_title">
+                Посмотрите видео и Вы убедитесь в отличном качестве наших товаров и услуг.
+            </h5>
+        </div>
+        <div class="container">
             <div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
                 <div class="col-md-4 col-lg-4 col-xs-12">
                     <div class="youtube-box" data-embed="zIFEGZRzkXc">
@@ -33,6 +38,19 @@
                     <div class="youtube-box" data-embed="L_-_w791HsM">
                         <div class="btn-play"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-4 text-center">
+                    <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}">Строительство бани и сауны</a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a class="button button-sm button-secondary button-zakaria" href="{{ route('catalog.show', ['alias' => 'glild']) }}">Печи GriilD</a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}#service_2">Строительство хамама</a>
                 </div>
             </div>
         </div>

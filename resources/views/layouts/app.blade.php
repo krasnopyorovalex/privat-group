@@ -54,6 +54,10 @@
                                         <img class="brand-logo-dark" src="{{ asset('images/logo.png') }}" alt="Все для бани" title="Строительство бань, саун и хаммамов"/>
                                     </a>
                                 </div>
+                                <a class="visible-xs mobile_phone" href="tel:+79780078141">
+                                    <span class="icon mdi mdi-phone"></span>
+                                    +7 (978) 007-81-41
+                                </a>
                             </div>
                             <div class="rd-navbar-nav-wrap">
                                 @includeWhen($menu->get('menu_header'), 'layouts.menus.header', ['menu' => $menu])
@@ -146,7 +150,10 @@
                             <form action="{{ route('send.subscribe') }}" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
                                 @csrf
                                 <div class="form-wrap">
-                                    <input class="form-input" id="subscribe-form-2-email" type="email" name="email" autocomplete="off" placeholder="Введите свой e-mail" required="" />
+                                    <input class="form-input" id="subscribe-form-2-email" type="text" name="phone" autocomplete="off" placeholder="Телефон" required="" />
+                                </div>
+                                <div class="form-wrap">
+                                    <input class="form-input" id="subscribe-form-2-email" type="email" name="email" autocomplete="off" placeholder="E-mail" required="" />
                                 </div>
                                 <div class="form-button submit">
                                     <button class="button button-icon-2 button-zakaria button-secondary" type="submit"><span class="fl-bigmug-line-paper122"></span></button>

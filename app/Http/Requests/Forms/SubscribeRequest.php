@@ -13,7 +13,8 @@ class SubscribeRequest extends Request
     public function rules(): array
     {
         return [
-            'email' => 'required|email'
+            'email' => 'required|email',
+            'phone' => 'required|string',
         ];
     }
 
@@ -25,7 +26,8 @@ class SubscribeRequest extends Request
     public function messages(): array
     {
         return [
-            'email.required' => 'Поле «Email» обязательно для заполнения'
+            'email.required' => 'Поле «Email» обязательно для заполнения',
+            'phone.required' => 'Поле «Телефон» обязательно для заполнения'
         ];
     }
 }

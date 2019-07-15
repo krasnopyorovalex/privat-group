@@ -304,7 +304,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   letter-spacing: .05em;
-  font-family: lato,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
   color: #777;
   background-color: #fff;
   -webkit-text-size-adjust: none;
@@ -14287,6 +14287,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   display: block;
   text-align: center;
   margin: 2em 0;
+  font-weight: 700
 }
 .our_services .post-classic-title {
   text-align: center;
@@ -14484,4 +14485,24 @@ img[src=""] {
 .darken {
   background-color: rgba(0,0,0,0.55);
   background-blend-mode: darken;
+}
+.mobile_phone {
+  margin: 0 5px 0 auto;
+  color: #000;
+  font-size: 16px;
+}
+.visible-xs {
+  display: none;
+}
+.video_title {
+  font-size: 20px;
+}
+#form__subscribe .form-wrap {
+  min-width: auto;
+}
+#form__subscribe .form-wrap + .form-wrap {
+  margin-top: 0;
+}
+.context-dark .box-icon-modern-count {
+  color: rgba(255,255,255,.3);
 }

@@ -17,7 +17,7 @@
                             </figure>
                         @endif
                         <div class="post-classic-content">
-                            <h5 class="post-classic-title"><a href="{{ $ourServiceItem->url }}">{{ $ourServiceItem->name }}</a></h5>
+                            <h4 class="post-classic-title"><a href="{{ $ourServiceItem->url }}">{{ $ourServiceItem->name }}</a></h4>
                             <div class="btn__box text-center">
                                 <a class="button button-sm button-secondary button-zakaria" href="{{ $ourServiceItem->url }}">Подробнее</a>
                             </div>

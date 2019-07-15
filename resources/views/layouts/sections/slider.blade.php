@@ -1,5 +1,5 @@
 <!-- Swiper-->
-<section class="section swiper-container swiper-slider swiper-slider-1" data-loop="true">
+<section class="section swiper-container swiper-slider swiper-slider-1" data-loop="true" data-autoplay="5000">
     <div class="swiper-wrapper context-dark text-center">
         @foreach ($slider->images as $image)
         <div class="swiper-slide darken" data-slide-bg="{{ asset($image->getPath()) }}">

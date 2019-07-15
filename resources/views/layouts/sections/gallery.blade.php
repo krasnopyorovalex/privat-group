@@ -9,7 +9,7 @@
             <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
                 <!-- Thumbnail Classic-->
                 <article class="thumbnail-classic">
-                    <div class="thumbnail-classic-figure">
+                    <div>
                         <a href="{{ $image->getPath() }}" data-lightgallery="item" title="{{ $image->name }}">
                             <img src="" data-src="{{ $image->getThumb() }}" alt="{{ $image->alt }}" title="{{ $image->title }}" />
                         </a>
@@ -17,6 +17,13 @@
                 </article>
             </div>
             @endforeach
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-12 text-center">
+                <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'projects']) }}">Смотреть все проекты</a>
+            </div>
         </div>
     </div>
 </section>
