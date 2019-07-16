@@ -22,7 +22,7 @@ class FormHandlerController extends Controller
 {
     use DispatchesJobs;
 
-    private $to = 'djShtaket88@mail.ru';
+    private $to = 'fabrikabani@mail.ru';
 
     /**
      * @param SubscribeRequest $request
