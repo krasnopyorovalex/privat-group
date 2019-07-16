@@ -47,7 +47,7 @@
                     <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}">Строительство бани и сауны</a>
                 </div>
                 <div class="col-md-4 text-center">
-                    <a class="button button-sm button-secondary button-zakaria" href="{{ route('catalog.show', ['alias' => 'glild']) }}">Печи GriilD</a>
+                    <a class="button button-sm button-secondary button-zakaria" href="{{ route('catalog.show', ['alias' => 'grilld']) }}">Печи GriilD</a>
                 </div>
                 <div class="col-md-4 text-center">
                     <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}#service_2">Строительство хамама</a>
