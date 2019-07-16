@@ -8,7 +8,6 @@
     <meta name="description" content="@yield('description', '')">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="#eee">
-    <meta name="robots" content="noindex, nofollow" />
     @stack('og')
     <link href="{{ mix('css/app.min.css') }}" rel="stylesheet">
     <link href="{{ asset('favicon.ico') }}" rel="shortcut icon" type="image/x-icon" />
@@ -192,5 +191,21 @@
     <div class="snackbars" id="form-output-global"></div><div class="notify"></div>
     <script src="{{ asset('js/core.min.js') }}"></script>
     <script src="{{ mix('js/app.min.js') }}"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(54461437, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true,
+            ecommerce:"dataLayer"
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/54461437" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

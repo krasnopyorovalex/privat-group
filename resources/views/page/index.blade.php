@@ -28,29 +28,25 @@
                     <div class="youtube-box" data-embed="zIFEGZRzkXc">
                         <div class="btn-play"></div>
                     </div>
+                    <div class="block-center text-center">
+                        <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}">Строительство бани и сауны</a>
+                    </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-xs-12">
                     <div class="youtube-box" data-embed="VsD61yrHfMI">
                         <div class="btn-play"></div>
+                    </div>
+                    <div class="block-center text-center">
+                        <a class="button button-sm button-secondary button-zakaria" href="{{ route('catalog.show', ['alias' => 'grilld']) }}">Печи GriilD</a>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-xs-12">
                     <div class="youtube-box" data-embed="L_-_w791HsM">
                         <div class="btn-play"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row align-items-center justify-content-center after_video-btns">
-                <div class="col-md-4 text-center">
-                    <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}">Строительство бани и сауны</a>
-                </div>
-                <div class="col-md-4 text-center">
-                    <a class="button button-sm button-secondary button-zakaria" href="{{ route('catalog.show', ['alias' => 'grilld']) }}">Печи GriilD</a>
-                </div>
-                <div class="col-md-4 text-center">
-                    <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}#service_2">Строительство хамама</a>
+                    <div class="block-center text-center">
+                        <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}#service_2">Строительство хамама</a>
+                    </div>
                 </div>
             </div>
         </div>
