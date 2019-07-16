@@ -3971,8 +3971,9 @@ textarea.textarea-lg {
   background-color: transparent;
   background-position: center
 }
-.breadcrumbs-custom-title {
-  text-shadow: 3px 9px 16px rgba(0,0,0,.18)
+.context-dark .breadcrumbs-custom-title {
+  text-shadow: 3px 9px 16px rgba(0,0,0,.18);
+  color: #e9da5d;
 }
 .breadcrumbs-custom-text {
   font-weight: 400;
@@ -14505,4 +14506,16 @@ img[src=""] {
 }
 .context-dark .box-icon-modern-count {
   color: rgba(255,255,255,.3);
+}
+.swiper-slider-1 .swiper-title-1,
+.swiper-slider-1 .swiper-title-2,
+.swiper-slider-1 .swiper-title-3 {
+  color: #e9da5d;
+}
+.product_text {
+  margin: .5em 0 1em 0;
+}
+.p_info {
+  font-size: 14px;
+  margin: 1em 0 0 0;
 }

@@ -53,10 +53,20 @@
                     <div class="single-product">
                         <h3 class="text-transform-none font-weight-medium">{{ $product->name }}</h3>
                         <div class="group-md group-middle">
-                            <div class="single-product-price">Цена: {!! $product->getPrice() !!}</div>
+                            <div class="single-product-price">
+                                Цена: {!! $product->getPrice() !!}
+                                @if($product->catalog->parent && in_array($product->catalog->parent->id, [21,22], true))
+                                    *
+                                @endif
+                            </div>
                         </div>
-                        {!! $product->text !!}
+                        <div class="product_text">
+                            {!! $product->text !!}
+                        </div>
                         <hr class="hr-gray-100">
+                        @if($product->catalog->parent && in_array($product->catalog->parent->id, [21,22], true))
+                            <div class="p_info">*Стоимость указана без учета доставки</div>
+                        @endif
                         <div class="group-xs group-middle">
                             <div class="button button-lg button-secondary button-zakaria btn__call-order" data-toggle="modal" data-target="#order" data-product="{{ $product->name }}">Заказать</div>
                         </div>

@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="row align-items-center justify-content-center">
+            <div class="row align-items-center justify-content-center after_video-btns">
                 <div class="col-md-4 text-center">
                     <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}">Строительство бани и сауны</a>
                 </div>
