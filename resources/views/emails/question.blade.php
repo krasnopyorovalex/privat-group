@@ -1,2 +1,2 @@
-<p>E-mail: {{ $data['email'] }}</p>
+<p>Имя: {{ $data['name'] }}</p>
 <p>Телефон: {{ $data['phone'] }}</p>
