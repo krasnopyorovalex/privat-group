@@ -70,7 +70,7 @@
                     <div class="form_question in_content">
                         <div class="form_info"><p>Заказать услугу - «{{ $service->name }}»</p></div>
                         <div>
-                            <form action="{{ route('send.order_service_item') }}" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
+                            <form action="{{ route('send.order_service_item') }}" onsubmit="yaCounter54461437.reachGoal('ZAKAZ_USLUGI'); return true" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
                                 @csrf
                                 <input type="hidden" name="service" value="{{ $service->name }}">
                                 <div class="form-wrap">

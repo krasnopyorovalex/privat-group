@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post" action="{{ route('send.order') }}" id="form__order">
+                <form method="post" action="{{ route('send.order') }}" id="form__order" onsubmit="yaCounter54461437.reachGoal('ZAKAZ_TOVARA'); return true">
                     @csrf
                     <input type="hidden" name="product">
                     <div class="form-wrap">
