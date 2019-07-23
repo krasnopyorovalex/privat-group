@@ -56,7 +56,8 @@
     <section class="section section-inset-2 bg-default text-md-left">
         <div class="container">
             <div class="row row-30 align-items-start justify-content-center">
-                <div class="col-sm-4 col-md-4 col-lg-4 wow fadeInLeft"><img src="{{ asset('images/director.jpg') }}" alt="Прокопенко Сергей" />
+                <div class="col-sm-4 col-md-4 col-lg-4 wow fadeInLeft">
+                    <img src="" data-src="{{ asset('images/director.jpg') }}" alt="Прокопенко Сергей" />
                 </div>
                 <div class="col-md-8 col-lg-8">
                     <h4 class="title-style-1 wow fadeInRight decorate">Приветствую Вас на нашем сайте.</h4>
