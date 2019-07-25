@@ -14484,7 +14484,7 @@ img[src=""] {
   color: #000;
 }
 .darken {
-  background-color: rgba(0,0,0,0.55);
+  background-color: rgba(0,0,0,0.65);
   background-blend-mode: darken;
 }
 .mobile_phone {
@@ -14510,7 +14510,7 @@ img[src=""] {
 .swiper-slider-1 .swiper-title-1,
 .swiper-slider-1 .swiper-title-2,
 .swiper-slider-1 .swiper-title-3 {
-  color: #76aa6f;
+  color: #e9da5d;
 }
 .product_text {
   margin: .5em 0 1em 0;
