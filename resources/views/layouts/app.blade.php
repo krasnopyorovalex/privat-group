@@ -53,9 +53,9 @@
                                         <img class="brand-logo-dark" src="{{ asset('images/logo.png') }}" alt="Все для бани" title="Строительство бань, саун и хаммамов"/>
                                     </a>
                                 </div>
-                                <a class="visible-xs mobile_phone" href="tel:+79780078141">
+                                <a class="visible-xs mobile_phone" href="tel:+79787847093">
                                     <span class="icon mdi mdi-phone"></span>
-                                    +7 (978) 007-81-41
+                                    +7 (978) 784-70-93
                                 </a>
                             </div>
                             <div class="rd-navbar-nav-wrap">
@@ -73,9 +73,9 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="tel:+79780078141">
+                                    <a href="tel:+79787847093">
                                         <span class="fa-phone"></span>
-                                        +7 (978) 007-81-41
+                                        +7 (978) 784-70-93
                                     </a>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
                                 <li>
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
                                         <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                        <div class="unit-body"><a href="tel:+79780078141">+7 (978) 007-81-41</a></div>
+                                        <div class="unit-body"><a href="tel:+79787847093">+7 (978) 784-70-93</a></div>
                                     </div>
                                 </li>
                                 <li>
