@@ -47,7 +47,7 @@
 
     <section class="section">
         <div class="yandex-map-container">
-            <script charset=utf-8 async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ace6eeb18be41210fad23ae6362d774483db8f1ed4b28eba8181464ac5c684de3&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac4db9bb6e87fa6d628253543b41ef61b3a8bde8c8d8cd63bca063905416cf583&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
         </div>
     </section>
 
