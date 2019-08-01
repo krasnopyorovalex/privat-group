@@ -85,7 +85,7 @@
                                                 <a class="button button-secondary button-zakaria fl-bigmug-line-search74" href="{{ $product->url }}"></a>
                                             </div>
                                             <div class="product-button">
-                                                <div class="button button-primary button-zakaria fl-bigmug-line-shopping202 btn__call-order" data-toggle="modal" data-target="#order" data-product="{{ $product->name }}"></div>
+                                                <div class="button button-primary button-zakaria fl-bigmug-line-shopping202 add_to-cart" data-cart="{{ route('api.cart.add', ['product' => $product->id]) }}"></div>
                                             </div>
                                         </div>
                                     </article>

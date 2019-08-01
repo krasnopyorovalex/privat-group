@@ -10,7 +10,7 @@ use App\Domain\Catalog\Queries\GetAllCatalogsQuery;
 use App\Domain\Catalog\Queries\GetCatalogByIdQuery;
 use App\Http\Controllers\Controller;
 use App\Services\TreeRecursiveBuildService;
-use Domain\Catalog\Requests\CreateCatalogRequest;
+use Domain\Catalog\Requests\AddToCartRequest;
 use Domain\Catalog\Requests\UpdateCatalogRequest;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\View\View;
@@ -47,10 +47,10 @@ class CatalogController extends Controller
     }
 
     /**
-     * @param CreateCatalogRequest $request
+     * @param AddToCartRequest $request
      * @return RedirectResponse|Redirector
      */
-    public function store(CreateCatalogRequest $request)
+    public function store(AddToCartRequest $request)
     {
         $this->dispatch(new CreateCatalogCommand($request));
 

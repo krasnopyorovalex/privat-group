@@ -818,4 +818,26 @@ jQuery(document).ajaxError(function () {
 
     ymap();
 
+    /*
+    |-----------------------------------------------------------
+    |   cart actions
+    |-----------------------------------------------------------
+    */
+    // add to cart
+    $("section").on("click", ".add_to-cart", function () {
+        var _this = $(this);
+
+        return $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: _this.attr("data-cart"),
+            beforeSend: function() {
+                return true;
+            },
+            success: function (response) {
+                console.log(response);
+            }
+        });
+    });
+
 })();

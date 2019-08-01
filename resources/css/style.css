@@ -14523,3 +14523,9 @@ img[src=""] {
   width: 100%;
   height: 450px;
 }
+.section-content .youtube-box {
+  padding-top: 56%;
+}
+.section-content .youtube-box img {
+  margin: 0;
+}
