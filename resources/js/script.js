@@ -52,7 +52,7 @@
             pageTransition({
                 target: document.querySelector('.page'),
                 delay: 0,
-                duration: 500,
+                duration: 350,
                 classIn: 'fadeIn',
                 classOut: 'fadeOut',
                 classActive: 'animated',
