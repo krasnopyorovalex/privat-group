@@ -190,6 +190,7 @@
 
     <div class="snackbars" id="form-output-global"></div><div class="notify"></div>
     <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/core.min.js') }}"></script>
     <script src="{{ mix('js/app.min.js') }}"></script>
     <!-- Yandex.Metrika counter -->

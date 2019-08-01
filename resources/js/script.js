@@ -20,7 +20,6 @@
             circleProgress: $(".progress-bar-circle"),
             countDown: $('[data-circle-countdown]'),
             checkbox: $("input[type='checkbox']"),
-            isotope: $(".isotope-wrap"),
             lightGallery: $("[data-lightgallery='group']"),
             lightGalleryItem: $("[data-lightgallery='item']"),
             lightDynamicGalleryItem: $("[data-lightgallery='dynamic']"),
@@ -35,11 +34,8 @@
             viewAnimate: $('.view-animate'),
             wow: $(".wow"),
             rdRange: $('.rd-range'),
-            selectFilter: $("select"),
-            slick: $('.slick-slider'),
             stepper: $("input[type='number']"),
-            radioPanel: $('.radio-panel .radio-inline'),
-            multitoggle: document.querySelectorAll('[data-multitoggle]')
+            radioPanel: $('.radio-panel .radio-inline')
         };
 
     function isScrolledIntoView(elem) {
@@ -52,7 +48,7 @@
             pageTransition({
                 target: document.querySelector('.page'),
                 delay: 0,
-                duration: 350,
+                duration: 150,
                 classIn: 'fadeIn',
                 classOut: 'fadeOut',
                 classActive: 'animated',
@@ -144,38 +140,6 @@
                         circle.addClass('animated-first');
                     }
                 }, circle));
-            }
-        }
-        if (plugins.isotope.length) {
-            for (var i = 0; i < plugins.isotope.length; i++) {
-                var
-                    wrap = plugins.isotope[i],
-                    filterHandler = function(event) {
-                        event.preventDefault();
-                        for (var n = 0; n < this.isoGroup.filters.length; n++) this.isoGroup.filters[n].classList.remove('active');
-                        this.classList.add('active');
-                        this.isoGroup.isotope.arrange({
-                            filter: this.getAttribute("data-isotope-filter") !== '*' ? '[data-filter*="' + this.getAttribute("data-isotope-filter") + '"]' : '*'
-                        });
-                    },
-                    resizeHandler = function() {
-                        this.isoGroup.isotope.layout();
-                    };
-                wrap.isoGroup = {};
-                wrap.isoGroup.filters = wrap.querySelectorAll('[data-isotope-filter]');
-                wrap.isoGroup.node = wrap.querySelector('.isotope');
-                wrap.isoGroup.layout = wrap.isoGroup.node.getAttribute('data-isotope-layout') ? wrap.isoGroup.node.getAttribute('data-isotope-layout') : 'masonry';
-                wrap.isoGroup.isotope = new Isotope(wrap.isoGroup.node, {
-                    itemSelector: '.isotope-item',
-                    layoutMode: wrap.isoGroup.layout,
-                    filter: '*',
-                });
-                for (var n = 0; n < wrap.isoGroup.filters.length; n++) {
-                    var filter = wrap.isoGroup.filters[n];
-                    filter.isoGroup = wrap.isoGroup;
-                    filter.addEventListener('click', filterHandler);
-                }
-                window.addEventListener('resize', resizeHandler.bind(wrap));
             }
         }
         if (plugins.materialParallax.length) {
@@ -667,90 +631,6 @@
                 }
             }
         }
-        if (plugins.selectFilter.length) {
-            var i;
-            for (i = 0; i < plugins.selectFilter.length; i++) {
-                var select = $(plugins.selectFilter[i]),
-                    selectStyle = 'html-' + select.attr('data-style') + '-select';
-                $html.addClass(selectStyle);
-                select.select2({
-                    placeholder: select.attr("data-placeholder") ? select.attr("data-placeholder") : false,
-                    minimumResultsForSearch: select.attr("data-minimum-results-search") ? select.attr("data-minimum-results-search") : -1,
-                    maximumSelectionSize: 3,
-                    dropdownCssClass: select.attr("data-dropdown-class") ? select.attr("data-dropdown-class") : false
-                });
-            }
-        }
-        if (plugins.slick.length) {
-            for (var i = 0; i < plugins.slick.length; i++) {
-                var $slickItem = $(plugins.slick[i]);
-                $slickItem.on('init', function(slick) {
-                    initLightGallery($('[data-lightgallery="group-slick"]'), 'lightGallery-in-carousel');
-                    initLightGallery($('[data-lightgallery="item-slick"]'), 'lightGallery-in-carousel');
-                });
-                $slickItem.slick({
-                    slidesToScroll: parseInt($slickItem.attr('data-slide-to-scroll'), 10) || 1,
-                    asNavFor: $slickItem.attr('data-for') || false,
-                    dots: $slickItem.attr("data-dots") === "true",
-                    infinite: isNoviBuilder ? false : $slickItem.attr("data-loop") === "true",
-                    focusOnSelect: $slickItem.attr('data-focus-select') || true,
-                    arrows: $slickItem.attr("data-arrows") === "true",
-                    swipe: $slickItem.attr("data-swipe") === "true",
-                    autoplay: $slickItem.attr("data-autoplay") === "true",
-                    centerMode: $slickItem.attr("data-center-mode") === "true",
-                    fade: $slickItem.attr("data-slide-effect") === "true",
-                    centerPadding: $slickItem.attr("data-center-padding") ? $slickItem.attr("data-center-padding") : '0.50',
-                    mobileFirst: true,
-                    appendArrows: $slickItem.attr("data-arrows-class") || $slickItem,
-                    nextArrow: '<button type="button" class="slick-next"></button>',
-                    prevArrow: '<button type="button" class="slick-prev"></button>',
-                    responsive: [{
-                        breakpoint: 0,
-                        settings: {
-                            slidesToShow: parseInt($slickItem.attr('data-items'), 10) || 1,
-                            vertical: $slickItem.attr('data-vertical') === 'true' || false
-                        }
-                    }, {
-                        breakpoint: 575,
-                        settings: {
-                            slidesToShow: parseInt($slickItem.attr('data-sm-items'), 10) || 1,
-                            vertical: $slickItem.attr('data-sm-vertical') === 'true' || false
-                        }
-                    }, {
-                        breakpoint: 767,
-                        settings: {
-                            slidesToShow: parseInt($slickItem.attr('data-md-items'), 10) || 1,
-                            vertical: $slickItem.attr('data-md-vertical') === 'true' || false
-                        }
-                    }, {
-                        breakpoint: 991,
-                        settings: {
-                            slidesToShow: parseInt($slickItem.attr('data-lg-items'), 10) || 1,
-                            vertical: $slickItem.attr('data-lg-vertical') === 'true' || false
-                        }
-                    }, {
-                        breakpoint: 1199,
-                        settings: {
-                            slidesToShow: parseInt($slickItem.attr('data-xl-items'), 10) || 1,
-                            vertical: $slickItem.attr('data-xl-vertical') === 'true' || false
-                        }
-                    }, {
-                        breakpoint: 1599,
-                        settings: {
-                            slidesToShow: parseInt($slickItem.attr('data-xxl-items'), 10) || 1,
-                            vertical: $slickItem.attr('data-xxl-vertical') === 'true' || false
-                        }
-                    }]
-                }).on('afterChange', function(event, slick, currentSlide, nextSlide) {
-                    var $this = $(this),
-                        childCarousel = $this.attr('data-child');
-                    if (childCarousel) {
-                        $(childCarousel + ' .slick-slide').removeClass('slick-current');
-                        $(childCarousel + ' .slick-slide').eq(currentSlide).addClass('slick-current');
-                    }
-                });
-            }
-        }
         if (plugins.stepper.length) {
             plugins.stepper.stepper({
                 labels: {
@@ -767,9 +647,6 @@
                     $(this).addClass('active');
                 })
             }
-        }
-        if (plugins.multitoggle.length) {
-            multitoggles();
         }
     });
 
