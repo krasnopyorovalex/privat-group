@@ -2085,7 +2085,8 @@ h5 + .table-custom-responsive {
   background: #f5f5f5
 }
 .table-cart-figure + a {
-  margin-left: 15px
+  /*margin-left: 15px*/
+  width: calc(100% - 110px);
 }
 .table-checkout {
   text-transform: uppercase
@@ -7599,7 +7600,7 @@ html.tablet .ui-to-top {
   margin-top: 20px
 }
 .rd-navbar-static .rd-nav-item + .rd-nav-item {
-  margin-left: 42px
+  margin-left: 32px
 }
 .rd-navbar-static .rd-nav-link {
   position: relative;
@@ -8762,7 +8763,7 @@ html.rd-navbar-fixed-linked .page {
   margin-left: 18px
 }
 .rd-navbar-classic.rd-navbar-static .rd-navbar-nav-wrap {
-  margin: 0 30px
+  margin: 0 20px
 }
 .rd-navbar-classic.rd-navbar-static .rd-navbar-brand {
   display: -webkit-box;
@@ -14528,4 +14529,12 @@ img[src=""] {
 }
 .section-content .youtube-box img {
   margin: 0;
+}
+.total_price {
+  font-weight: 700;
+  font-size: 22px;
+}
+table tr td .remove_item {
+  font-size: 26px;
+  cursor: pointer;
 }

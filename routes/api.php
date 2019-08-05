@@ -11,8 +11,6 @@
 |
 */
 
-Route::group(['middleware' => 'throttle:30,1', 'namespace' => 'Api', 'as' => 'api.'], static function () {
-
-    Route::post('cart/add/{product}', 'CartController@add')->name('cart.add')->where('product', '[0-9]+');
-    Route::post('cart/remove/{product}', 'CartController@remove')->name('cart.remove')->where('product', '[0-9]+');
+Route::middleware('auth:api')->get('/user', static function (Request $request) {
+    return $request->user();
 });

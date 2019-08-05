@@ -682,6 +682,7 @@
     formHandler("#form__subscribe", Notification);
     formHandler("#form__order", Notification);
     formHandler("#form__order-service", Notification);
+    formHandler("#form__order-cart", Notification);
 
     [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
         img.setAttribute('src', img.getAttribute('data-src'));
@@ -723,6 +724,10 @@ function formHandler(selector, Notification) {
                 Notification.notify(data.message);
                 if (orderForm.length) {
                     orderForm.modal("hide");
+                }
+                if (data.clear) {
+                    $(".cart_table").remove();
+                    $("html, body").animate({ scrollTop: 0 }, "slow");
                 }
                 return submitBlock.removeClass("is__sent") && _this.trigger("reset");
             }
@@ -780,6 +785,9 @@ jQuery(document).ajaxError(function () {
     };
 
     function init () {
+        if(!$("#map-yandex").length) {
+            return false;
+        }
         var myMapTemp = new ymaps.Map("map-yandex", {
             center: [44.581759, 33.484082],
             zoom: 17,
@@ -823,6 +831,9 @@ jQuery(document).ajaxError(function () {
     |   cart actions
     |-----------------------------------------------------------
     */
+
+    var cartIcon = $("button.rd-navbar-basket");
+
     // add to cart
     $("section").on("click", ".add_to-cart", function () {
         var _this = $(this);
@@ -835,7 +846,49 @@ jQuery(document).ajaxError(function () {
                 return true;
             },
             success: function (response) {
-                console.log(response);
+                var notify = jQuery(".notify");
+                cartIcon.find("span").text(response.quantity);
+                return notify.html('<div>' + response.message + '</div>') &&  notify.fadeIn().delay(2000).fadeOut();
+            }
+        });
+    });
+
+    var table = $("table");
+    table.on("click", ".remove_item", function () {
+        var _this = $(this),
+            table = _this.closest("table");
+
+        return $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: _this.attr("data-link"),
+            success: function (response) {
+                if (response.status) {
+                    cartIcon.find("span").text(response.quantity);
+                    return _this.closest("tr").remove() && table.find(".total_price").text(response.total);
+                }
+                return false;
+            }
+        });
+    });
+
+    table.on("click", ".stepper-arrow", function () {
+        var _this = $(this),
+            productId = parseInt(_this.closest("tr").attr("data-product")),
+            table = _this.closest("table"),
+            quantity = 1;
+
+        if (_this.hasClass("down")) {
+            quantity = quantity * -1;
+        }
+
+        return $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "cart/update/" + productId + "/" + quantity,
+            success: function (response) {
+                cartIcon.find("span").text(response.quantity);
+                return table.find(".total_price").text(response.total) && _this.closest("tr").find(".product_price > span").text(response.productPrice);
             }
         });
     });

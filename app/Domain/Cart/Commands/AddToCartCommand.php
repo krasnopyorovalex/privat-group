@@ -7,9 +7,6 @@ use App\Domain\CatalogProduct\Queries\GetCatalogProductByIdQuery;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Darryldecode\Cart\CartCollection;
 use Exception;
-use Illuminate\Support\Facades\Cookie;
-use Illuminate\Support\Str;
-use Cart;
 
 /**
  * Class AddToCartCommand
@@ -18,9 +15,6 @@ use Cart;
 class AddToCartCommand
 {
     use DispatchesJobs;
-
-    private const MINUTES_TO_SAVE = 2880; // two days
-    private const COOKIE_KEY = 'session';
 
     private $product;
 
@@ -41,16 +35,11 @@ class AddToCartCommand
     {
         $product = $this->dispatch(new GetCatalogProductByIdQuery($this->product));
 
-//        $cookie = Cookie::get(self::COOKIE_KEY);
-//
-//        if (!$cookie) {
-//            $user = md5(Str::random(11));
-//            $cookie = cookie(self::COOKIE_KEY, $user, self::MINUTES_TO_SAVE);
-//        }
+        app('cart')->add($product->id, $product->name, $product->price, 1, [
+            'image' => $product->image ? $product->image->path : false,
+            'url' => $product->url
+        ]);
 
-        $cart = Cart::session(self::COOKIE_KEY)
-            ->add($product->id, $product->name, $product->price, 1, []);
-
-        return $this->dispatch(new GetAllItemsCartQuery($cart));
+        return $this->dispatch(new GetAllItemsCartQuery());
     }
 }

@@ -3,8 +3,6 @@
 namespace App\Domain\Cart\Commands;
 
 use App\Domain\CatalogProduct\Queries\GetCatalogProductByIdQuery;
-use App\Http\Requests\Request;
-use Darryldecode\Cart\Cart;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
 /**
@@ -14,26 +12,19 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 class RemoveCartItemCommand
 {
     use DispatchesJobs;
-
     /**
-     * @var Request
+     * @var int
      */
-    private $request;
-    /**
-     * @var Cart
-     */
-    private $cart;
+    private $product;
 
 
     /**
      * RemoveCartItemCommand constructor.
-     * @param Cart $cart
-     * @param Request $request
+     * @param int $product
      */
-    public function __construct(Cart $cart, Request $request)
+    public function __construct(int $product)
     {
-        $this->request = $request;
-        $this->cart = $cart;
+        $this->product = $product;
     }
 
     /**
@@ -41,9 +32,8 @@ class RemoveCartItemCommand
      */
     public function handle(): bool
     {
-        $product = $this->dispatch(new GetCatalogProductByIdQuery($this->request->post('product')));
+        $product = $this->dispatch(new GetCatalogProductByIdQuery($this->product));
 
-        return $this->cart->remove($product->id);
+        return app('cart')->remove($product->id);
     }
-
 }

@@ -11,7 +11,7 @@ use App\Domain\Catalog\Queries\GetCatalogByIdQuery;
 use App\Http\Controllers\Controller;
 use App\Services\TreeRecursiveBuildService;
 use Domain\Catalog\Requests\AddToCartRequest;
-use Domain\Catalog\Requests\UpdateCatalogRequest;
+use Domain\Catalog\Requests\CheckoutCartRequest;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -74,10 +74,10 @@ class CatalogController extends Controller
 
     /**
      * @param $id
-     * @param UpdateCatalogRequest $request
+     * @param CheckoutCartRequest $request
      * @return RedirectResponse|Redirector
      */
-    public function update($id, UpdateCatalogRequest $request)
+    public function update($id, CheckoutCartRequest $request)
     {
         $this->dispatch(new UpdateCatalogCommand($id, $request));
 

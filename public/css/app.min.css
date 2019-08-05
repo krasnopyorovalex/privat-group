@@ -2100,7 +2100,8 @@ h5 + .table-custom-responsive {
   background: #f5f5f5
 }
 .table-cart-figure + a {
-  margin-left: 15px
+  /*margin-left: 15px*/
+  width: calc(100% - 110px);
 }
 .table-checkout {
   text-transform: uppercase
@@ -7614,7 +7615,7 @@ html.tablet .ui-to-top {
   margin-top: 20px
 }
 .rd-navbar-static .rd-nav-item + .rd-nav-item {
-  margin-left: 42px
+  margin-left: 32px
 }
 .rd-navbar-static .rd-nav-link {
   position: relative;
@@ -8777,7 +8778,7 @@ html.rd-navbar-fixed-linked .page {
   margin-left: 18px
 }
 .rd-navbar-classic.rd-navbar-static .rd-navbar-nav-wrap {
-  margin: 0 30px
+  margin: 0 20px
 }
 .rd-navbar-classic.rd-navbar-static .rd-navbar-brand {
   display: -webkit-box;
@@ -14544,6 +14545,14 @@ img[src=""] {
 .section-content .youtube-box img {
   margin: 0;
 }
+.total_price {
+  font-weight: 700;
+  font-size: 22px;
+}
+table tr td .remove_item {
+  font-size: 26px;
+  cursor: pointer;
+}
 
 
 @media (min-width:576px) {
@@ -16155,14 +16164,14 @@ img[src=""] {
         min-width: 500px
     }
     .table-cart td {
-        font-size: 18px
+        font-size: 14px
     }
     .table-cart-figure {
-        max-width: 146px
+        max-width: 100px
     }
-    .table-cart-figure + a {
-        margin-left: 30px
-    }
+    /*.table-cart-figure + a {*/
+    /*    margin-left: 30px*/
+    /*}*/
     .button {
         padding: 14px 34px
     }
@@ -17132,7 +17141,10 @@ img[src=""] {
         font-size: 35px
     }
     .table-cart td {
-        font-size: 24px
+        font-size: 18px
+    }
+    .table-cart td:first-child {
+        font-size: 18px
     }
     .rd-form .button {
         min-width: 190px

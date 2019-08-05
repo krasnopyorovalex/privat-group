@@ -79,6 +79,12 @@
                                     </a>
                                 </div>
                             </div>
+                            <!-- RD Navbar Basket-->
+                            <div class="rd-navbar-basket-wrap">
+                                <a href="{{ route('page.show', ['alias' => 'cart']) }}">
+                                    <button class="rd-navbar-basket fl-bigmug-line-shopping202"><span>{{ app('cart')->getTotalQuantity() }}</span></button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </nav>
