@@ -22,9 +22,7 @@
         <tr>
             <td>
                 @if($item->attributes->image)
-                    <a style="display: inline-block; vertical-align: middle;" href="{{ $item->attributes->url }}">
-                        <img src="{{ $item->attributes->image }}" alt="" width="146" height="132"/>
-                    </a>
+                    <img style="display: inline-block; vertical-align: middle;" src="https://fabrikabani-krym.ru{{ $item->attributes->image }}" alt="" width="146" height="132"/>
                 @endif
                 <a style="display: inline-block; vertical-align: middle;" href="{{ $item->attributes->url }}">{{ $item->name }}</a>
             </td>
