@@ -85,6 +85,7 @@
                                     <button class="rd-navbar-basket fl-bigmug-line-shopping202"><span>{{ app('cart')->getTotalQuantity() }}</span></button>
                                 </a>
                             </div>
+                            <a class="rd-navbar-basket rd-navbar-basket-mobile fl-bigmug-line-shopping202 rd-navbar-fixed-element-2" href="{{ route('page.show', ['alias' => 'cart']) }}"><span>{{ app('cart')->getTotalQuantity() }}</span></a>
                         </div>
                     </div>
                 </nav>

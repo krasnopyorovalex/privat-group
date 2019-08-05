@@ -833,7 +833,7 @@ jQuery(document).ajaxError(function () {
     |-----------------------------------------------------------
     */
 
-    var cartIcon = $("button.rd-navbar-basket");
+    var cartIcon = $(".rd-navbar-basket");
 
     // add to cart
     $("section").on("click", ".add_to-cart", function () {
@@ -854,7 +854,7 @@ jQuery(document).ajaxError(function () {
         });
     });
 
-    var table = jQuery("table");
+    var table = jQuery(".table-cart");
     table.on("click", ".remove_item", function () {
         var _this = jQuery(this),
             table = _this.closest("table");
@@ -873,7 +873,7 @@ jQuery(document).ajaxError(function () {
         });
     });
 
-    table.on("click", ".stepper-arrow", function () {
+    table.on("click touchend", ".stepper-arrow", function () {
         var _this = jQuery(this),
             productId = parseInt(_this.closest("tr").attr("data-product")),
             table = _this.closest("table"),

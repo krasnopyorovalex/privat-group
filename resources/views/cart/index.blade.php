@@ -64,7 +64,7 @@
                                     <td>{{ number_format($item->price, 0, '.', ' ') }} &#8381;</td>
                                     <td>
                                         <div class="table-cart-stepper">
-                                            <input class="form-input" type="number" data-zeros="false" value="{{ $item->quantity }}" min="1" max="10">
+                                            <input class="form-input" type="number" data-zeros="false" value="{{ $item->quantity }}" min="1" max="20">
                                         </div>
                                     </td>
                                     <td class="product_price"><span>{{ number_format($item->quantity * $item->price, 0, '.', ' ') }}</span> &#8381;</td>
@@ -72,7 +72,7 @@
                                 </tr>
                             @endforeach
                             <tr>
-                                <td colspan="4">
+                                <td colspan="5">
                                     Общая цена: <div class="total_price">{{ $total }}</div> &#8381;
                                 </td>
                             </tr>
