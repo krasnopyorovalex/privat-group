@@ -836,9 +836,9 @@ jQuery(document).ajaxError(function () {
 
     // add to cart
     $("section").on("click", ".add_to-cart", function () {
-        var _this = $(this);
+        var _this = jQuery(this);
 
-        return $.ajax({
+        return jQuery.ajax({
             type: "POST",
             dataType: "json",
             url: _this.attr("data-cart"),
@@ -853,12 +853,12 @@ jQuery(document).ajaxError(function () {
         });
     });
 
-    var table = $("table");
+    var table = jQuery("table");
     table.on("click", ".remove_item", function () {
-        var _this = $(this),
+        var _this = jQuery(this),
             table = _this.closest("table");
 
-        return $.ajax({
+        return jQuery.ajax({
             type: "POST",
             dataType: "json",
             url: _this.attr("data-link"),
@@ -873,7 +873,7 @@ jQuery(document).ajaxError(function () {
     });
 
     table.on("click", ".stepper-arrow", function () {
-        var _this = $(this),
+        var _this = jQuery(this),
             productId = parseInt(_this.closest("tr").attr("data-product")),
             table = _this.closest("table"),
             quantity = 1;
@@ -882,7 +882,7 @@ jQuery(document).ajaxError(function () {
             quantity = quantity * -1;
         }
 
-        return $.ajax({
+        return jQuery.ajax({
             type: "POST",
             dataType: "json",
             url: "cart/update/" + productId + "/" + quantity,
