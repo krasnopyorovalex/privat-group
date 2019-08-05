@@ -1608,14 +1608,14 @@
         min-width: 500px
     }
     .table-cart td {
-        font-size: 18px
+        font-size: 14px
     }
     .table-cart-figure {
-        max-width: 146px
+        max-width: 100px
     }
-    .table-cart-figure + a {
-        margin-left: 30px
-    }
+    /*.table-cart-figure + a {*/
+    /*    margin-left: 30px*/
+    /*}*/
     .button {
         padding: 14px 34px
     }
@@ -2585,7 +2585,10 @@
         font-size: 35px
     }
     .table-cart td {
-        font-size: 24px
+        font-size: 18px
+    }
+    .table-cart td:first-child {
+        font-size: 18px
     }
     .rd-form .button {
         min-width: 190px

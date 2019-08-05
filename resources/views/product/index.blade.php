@@ -68,7 +68,7 @@
                             <div class="p_info">*Стоимость указана без учета доставки</div>
                         @endif
                         <div class="group-xs group-middle">
-                            <div class="button button-lg button-secondary button-zakaria btn__call-order" data-toggle="modal" data-target="#order" data-product="{{ $product->name }}">Заказать</div>
+                            <div class="button button-lg button-secondary button-zakaria add_to-cart" data-cart="{{ route('cart.add', ['product' => $product->id]) }}">Купить</div>
                         </div>
                     </div>
                 </div>

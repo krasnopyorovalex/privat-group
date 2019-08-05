@@ -20,7 +20,13 @@ Route::post('send-order', 'FormHandlerController@order')->name('send.order');
 Route::post('send-order-service', 'FormHandlerController@orderService')->name('send.order_service');
 Route::post('send-order-service-item', 'FormHandlerController@orderServiceItem')->name('send.order_service_item');
 Route::post('send-question', 'FormHandlerController@question')->name('send.question');
+Route::post('order-cart', 'CartController@order')->name('order.cart');
 Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
+
+Route::get('cart', 'CartController@index')->name('cart.index');
+Route::post('cart/add/{product}', 'CartController@add')->name('cart.add')->where('product', '[0-9]+');
+Route::post('cart/remove/{product}', 'CartController@remove')->name('cart.remove')->where('product', '[0-9]+');
+Route::post('cart/update/{product}/{quantity}', 'CartController@update')->name('cart.update')->where('product', '[0-9]+')->where(['quantity', '[0-9]+' ]);
 
 Route::group(['middleware' => ['redirector', 'shortcode']], static function () {
     Route::get('{alias}', 'ServiceController@show')->name('our_service_item.show');

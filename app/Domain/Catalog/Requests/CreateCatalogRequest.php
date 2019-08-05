@@ -5,7 +5,7 @@ namespace Domain\Catalog\Requests;
 use App\Http\Requests\Request;
 
 /**
- * Class CreateCatalogRequest
+ * Class AddToCartRequest
  * @package Domain\Catalog\Requests
  */
 class CreateCatalogRequest extends Request
