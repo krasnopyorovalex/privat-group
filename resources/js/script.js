@@ -727,6 +727,7 @@ function formHandler(selector, Notification) {
                 }
                 if (data.clear) {
                     $(".cart_table").remove();
+                    $("button.rd-navbar-basket span").text(0);
                     $("html, body").animate({ scrollTop: 0 }, "slow");
                 }
                 return submitBlock.removeClass("is__sent") && _this.trigger("reset");
