@@ -100,8 +100,7 @@ class CartController extends Controller
      */
     public function order(CheckoutCartRequest $request): array
     {
-        //fabrikabani@mail.ru
-        Mail::to(['djShtaket88@mail.ru'])->send(new CheckoutCartSent($request->all()));
+        Mail::to(['fabrikabani@mail.ru'])->send(new CheckoutCartSent($request->all()));
 
         $this->dispatch(new ClearCartCommand);
 
