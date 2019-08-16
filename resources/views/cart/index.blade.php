@@ -85,7 +85,7 @@
             <div class="row row-30">
                 <div class="col-md-12 col-lg-12">
                     <h3 class="font-weight-medium">Форма оформления заказа</h3>
-                    <form id="form__order-cart" class="rd-form rd-mailform form-checkout" action="{{ route('order.cart') }}" method="post">
+                    <form id="form__order-cart" class="rd-form rd-mailform form-checkout" action="{{ route('order.cart') }}" method="post" onsubmit="yaCounter54461437.reachGoal('ZAKAZ_TOVARA'); return true">
                         @csrf
                         <div class="row row-30">
                             <div class="col-sm-12">
