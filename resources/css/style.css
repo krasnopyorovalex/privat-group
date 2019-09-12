@@ -14538,3 +14538,20 @@ table tr td .remove_item {
   font-size: 26px;
   cursor: pointer;
 }
+.catalog-item__property {
+  display: flex;
+  align-items: center;
+}
+.catalog-item__property .catalog-item__property_value {
+  padding: 0 0 0 1rem;
+  position: relative;
+}
+.catalog-item__property .catalog-item__property_value:before {
+  content: "-";
+  position: absolute;
+  left: .3rem;
+}
+.product_text h2 {
+  font-size: 22px;
+  margin: 1rem 0;
+}

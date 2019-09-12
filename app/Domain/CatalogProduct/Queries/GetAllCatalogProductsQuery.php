@@ -15,16 +15,22 @@ class GetAllCatalogProductsQuery
     private $catalog;
 
     private $excludedId;
+    /**
+     * @var bool
+     */
+    private $paginate;
 
     /**
      * GetAllCatalogProductsQuery constructor.
      * @param null $catalog
      * @param null $excludedId
+     * @param bool $paginate
      */
-    public function __construct($catalog = null, $excludedId = null)
+    public function __construct($catalog = null, $excludedId = null, $paginate = false)
     {
         $this->catalog = $catalog;
         $this->excludedId = $excludedId;
+        $this->paginate = $paginate;
     }
 
     /**
@@ -40,6 +46,10 @@ class GetAllCatalogProductsQuery
 
         if ($this->excludedId) {
             $query->where('id', '<>', $this->excludedId);
+        }
+
+        if ($this->paginate) {
+            return $query->paginate(50);
         }
 
         return $query->get();

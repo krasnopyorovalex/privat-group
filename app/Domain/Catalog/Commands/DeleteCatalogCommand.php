@@ -3,6 +3,7 @@
 namespace App\Domain\Catalog\Commands;
 
 use App\Domain\Catalog\Queries\GetCatalogByIdQuery;
+use App\Domain\CatalogProduct\Commands\DeleteCatalogProductCommand;
 use App\Domain\Image\Commands\DeleteImageCommand;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
@@ -40,6 +41,10 @@ class DeleteCatalogCommand
 
         if($catalog->image) {
             $this->dispatch(new DeleteImageCommand($catalog->image));
+        }
+
+        foreach ($catalog->products() as $product) {
+            $this->dispatch(new DeleteCatalogProductCommand($product->id));
         }
 
         return $catalog->delete();

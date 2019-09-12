@@ -29,7 +29,7 @@ class CatalogProductController extends Controller
      */
     public function index(int $catalog)
     {
-        $catalogProducts = $this->dispatch(new GetAllCatalogProductsQuery($catalog));
+        $catalogProducts = $this->dispatch(new GetAllCatalogProductsQuery($catalog, null, true));
 
         return view('admin.catalog_products.index', [
             'catalogProducts' => $catalogProducts,
