@@ -54,6 +54,8 @@ class DeleteCatalogCommand
                         $this->dispatch(new DeleteCatalogProductCommand($childProduct->id));
                     }
                 }
+
+                $childCatalog->delete();
             }
         }
 

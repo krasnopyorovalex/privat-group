@@ -31,8 +31,6 @@ class CatalogSixDbSeeder extends Command
      */
     protected $description = 'Set to db catalog and items from source site url';
 
-    private $linksItems = [];
-
     /**
      * @throws \Exception
      */
@@ -254,6 +252,11 @@ class CatalogSixDbSeeder extends Command
             $image = $crawler->filter('.product__photos .product__photo img');
 
             if ($catalogProduct->save() && count($image) && ($image = self::BASE_URL . $image->first()->attr('src'))) {
+
+                if (strstr($image, '_w/')) {
+                    $image = str_replace('_w/', '/', $image);
+                }
+
                 $imageNew = explode('/', $image);
 
                 $name = Str::random(40);
