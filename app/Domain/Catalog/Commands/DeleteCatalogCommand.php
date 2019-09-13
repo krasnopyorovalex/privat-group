@@ -43,8 +43,18 @@ class DeleteCatalogCommand
             $this->dispatch(new DeleteImageCommand($catalog->image));
         }
 
-        foreach ($catalog->products() as $product) {
+        foreach ($catalog->products as $product) {
             $this->dispatch(new DeleteCatalogProductCommand($product->id));
+        }
+
+        if ($catalog->catalogs) {
+            foreach ($catalog->catalogs as $childCatalog) {
+                if ($childCatalog->products) {
+                    foreach ($childCatalog->products as $childProduct) {
+                        $this->dispatch(new DeleteCatalogProductCommand($childProduct->id));
+                    }
+                }
+            }
         }
 
         return $catalog->delete();

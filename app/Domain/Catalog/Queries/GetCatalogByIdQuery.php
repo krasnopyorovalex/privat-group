@@ -29,6 +29,8 @@ class GetCatalogByIdQuery
      */
     public function handle()
     {
-        return Catalog::with(['image'])->findOrFail($this->id);
+        return Catalog::with(['image','products', 'catalogs' => static function ($query) {
+            return $query->with(['products']);
+        }])->findOrFail($this->id);
     }
 }
