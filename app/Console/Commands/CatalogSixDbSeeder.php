@@ -60,7 +60,7 @@ class CatalogSixDbSeeder extends Command
 //            'https://3d-sauna.ru/pechi-v-oblitsovke-kamnem',
 //            'https://3d-sauna.ru/drovjanye-pechi',
 //            'https://3d-sauna.ru/gazovye-pechi-dlya-bani',
-//            'https://3d-sauna.ru/gimalajskaja-sol',
+            'https://3d-sauna.ru/gimalajskaja-sol',
             'https://3d-sauna.ru/aromatizatori'
         ];
 

@@ -14538,15 +14538,15 @@ table tr td .remove_item {
   font-size: 26px;
   cursor: pointer;
 }
-.catalog-item__property {
+.catalog-item__property, .product__property {
   display: flex;
   align-items: center;
 }
-.catalog-item__property .catalog-item__property_value {
+.catalog-item__property .catalog-item__property_value, .product__property .pp__right {
   padding: 0 0 0 1rem;
   position: relative;
 }
-.catalog-item__property .catalog-item__property_value:before {
+.catalog-item__property .catalog-item__property_value:before, .product__property .pp__right:before{
   content: "-";
   position: absolute;
   left: .3rem;
