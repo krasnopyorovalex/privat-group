@@ -14555,3 +14555,7 @@ table tr td .remove_item {
   font-size: 22px;
   margin: 1rem 0;
 }
+.product_text table tr td {
+  border: 1px solid #151515;
+  padding: 2px;
+}
