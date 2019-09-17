@@ -4,6 +4,8 @@ namespace App\Domain\Image\Commands;
 
 use App\Http\Requests\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Intervention\Image\ImageManager;
+use Storage;
 
 /**
  * Class UploadImageCommand
@@ -48,8 +50,22 @@ class UploadImageCommand
     {
         $path = $this->request->file('image')->store('public/images');
 
+        $im = (new ImageManager())->make(Storage::path($path));
+
+        $imHeight = $im->height();
+        $imWidth = $im->width();
+
+        $im->text('fabrikabani-krym.ru', abs($imWidth/2), abs($imHeight/2), static function($font) {
+            $font->file(public_path('fonts/Arial-Black.ttf'));
+            $font->size(24);
+            $font->color(array(255, 255, 255, 0.6));
+            $font->align('center');
+            $font->valign('middle');
+            $font->angle(45);
+        })->save(Storage::path($path));
+
         return $this->dispatch(new CreateImageCommand([
-            'path' => \Storage::url($path),
+            'path' => Storage::url($path),
             'imageable_id' => $this->imageableId,
             'imageable_type' => $this->imageableType
         ]));
