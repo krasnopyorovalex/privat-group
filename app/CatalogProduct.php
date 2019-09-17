@@ -42,7 +42,6 @@ class CatalogProduct extends Model
 {
     use AutoAliasTrait;
 
-    public const PER_PAGE = 15;
     private const LABELS = [
         '' => 'Не выбрано',
         'sale' => 'Акция',

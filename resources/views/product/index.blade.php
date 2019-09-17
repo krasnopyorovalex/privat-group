@@ -55,7 +55,7 @@
                         <div class="group-md group-middle">
                             <div class="single-product-price">
                                 Цена: {!! $product->getPrice() !!}
-                                @if($product->catalog->parent && in_array($product->catalog->parent->id, [21,22], true))
+                                @if($product->catalog->parent && in_array($product->catalog->parent->id, [21,22,40,46], true))
                                     *
                                 @endif
                             </div>
@@ -64,7 +64,7 @@
                             {!! $product->text !!}
                         </div>
                         <hr class="hr-gray-100">
-                        @if($product->catalog->parent && in_array($product->catalog->parent->id, [21,22], true))
+                        @if($product->catalog->parent && in_array($product->catalog->parent->id, [21,22,40,46], true))
                             <div class="p_info">*Стоимость указана без учета доставки</div>
                         @endif
                         <div class="group-xs group-middle">

@@ -24,7 +24,7 @@ class CatalogController extends Controller
 
         $catalogs = $this->dispatch(new GetAllCatalogsWithoutParentQuery());
 
-        $products = $catalog->products()->paginate(CatalogProduct::PER_PAGE);
+        $products = $catalog->products()->paginate();
 
         return view('catalog.index', [
             'catalog' => $catalog,
