@@ -5019,6 +5019,9 @@ textarea.textarea-lg {
   font-family: lato,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
   color: #151515
 }
+.list-shop-filter li a {
+  color: #151515
+}
 .list-shop-filter li {
   display: -webkit-box;
   display: -webkit-flex;
