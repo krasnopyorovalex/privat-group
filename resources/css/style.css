@@ -5020,7 +5020,8 @@ textarea.textarea-lg {
   color: #151515
 }
 .list-shop-filter li a {
-  color: #151515
+  color: #151515;
+  font-weight: 700;
 }
 .list-shop-filter li {
   display: -webkit-box;
