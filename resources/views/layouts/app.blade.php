@@ -14,27 +14,27 @@
     <link rel="canonical" href="@yield('canonical', request()->url())"/>
 </head>
 <body>
-    <div class="preloader">
-        <div class="preloader-body">
-            <div class="cssload-bell">
-                <div class="cssload-circle">
-                    <div class="cssload-inner"></div>
-                </div>
-                <div class="cssload-circle">
-                    <div class="cssload-inner"></div>
-                </div>
-                <div class="cssload-circle">
-                    <div class="cssload-inner"></div>
-                </div>
-                <div class="cssload-circle">
-                    <div class="cssload-inner"></div>
-                </div>
-                <div class="cssload-circle">
-                    <div class="cssload-inner"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--    <div class="preloader">--}}
+{{--        <div class="preloader-body">--}}
+{{--            <div class="cssload-bell">--}}
+{{--                <div class="cssload-circle">--}}
+{{--                    <div class="cssload-inner"></div>--}}
+{{--                </div>--}}
+{{--                <div class="cssload-circle">--}}
+{{--                    <div class="cssload-inner"></div>--}}
+{{--                </div>--}}
+{{--                <div class="cssload-circle">--}}
+{{--                    <div class="cssload-inner"></div>--}}
+{{--                </div>--}}
+{{--                <div class="cssload-circle">--}}
+{{--                    <div class="cssload-inner"></div>--}}
+{{--                </div>--}}
+{{--                <div class="cssload-circle">--}}
+{{--                    <div class="cssload-inner"></div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <div class="page">
         <!-- Page Header-->
         <header class="section page-header">
