@@ -5,6 +5,7 @@ namespace App\Domain\CatalogProduct\Commands;
 use App\Domain\CatalogProduct\Queries\GetCatalogProductByIdQuery;
 use App\Domain\Image\Commands\DeleteImageCommand;
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Storage;
 
 /**
  * Class DeleteCatalogProductCommand
@@ -38,10 +39,11 @@ class DeleteCatalogProductCommand
     {
         $catalogProduct = $this->dispatch(new GetCatalogProductByIdQuery($this->id));
 
-
-        if($catalogProduct->image) {
+        if ($catalogProduct->image) {
             $this->dispatch(new DeleteImageCommand($catalogProduct->image));
         }
+
+        Storage::deleteDirectory('public/catalog_products/' . $this->id);
 
         return $catalogProduct->delete();
     }

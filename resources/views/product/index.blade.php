@@ -55,7 +55,7 @@
                         <div class="group-md group-middle">
                             <div class="single-product-price">
                                 Цена: {!! $product->getPrice() !!}
-                                @if(($product->catalog->parent && in_array($product->catalog->parent->id, [21,22,40,46], true)) || $product->catalog->id === 269)
+                                @if($product->priceNotIncludedDelivery() || $product->on_request)
                                     *
                                 @endif
                             </div>
@@ -64,20 +64,54 @@
                             {!! $product->text !!}
                         </div>
                         <hr class="hr-gray-100">
-                        @if(($product->catalog->parent && in_array($product->catalog->parent->id, [21,22,40,46], true)) || $product->catalog->id === 269)
+                        @if($product->priceNotIncludedDelivery())
                             <div class="p_info">*Стоимость указана без учета доставки</div>
                         @endif
+                        @if($product->on_request)
+                            <div class="p_info">*Стоимость указана без учета доставки в г. Севастополь</div>
+                        @endif
+                        @if(! $product->on_request)
                         <div class="group-xs group-middle">
                             <div class="button button-lg button-secondary button-zakaria add_to-cart" data-cart="{{ route('cart.add', ['product' => $product->id]) }}">Купить</div>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    @includeWhen($product->gallery, 'layouts.sections.gallery', ['gallery' => $product->gallery])
+    @includeWhen(count($product->images), 'layouts.sections.product_gallery', ['$product' => $product])
 
-    @include('layouts.forms.order')
+    @if($product->on_request)
+        <section class="with_bg">
+            <div class="container">
+                <div class="row row-30 align-content-end">
+                    <div class="col-md-12 group-middle wow fadeInRight" data-wow-delay=".3s">
+                        <div class="form_question in_content">
+                            <div class="form_info"><p>Получить смету - «{{ $product->name }}»</p></div>
+                            <div>
+                                <form action="{{ route('send.order_product') }}" onsubmit="yaCounter54461437.reachGoal('ZAKAZ_HOBBIT'); return true" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
+                                    @csrf
+                                    <input type="hidden" name="product" value="{{ $product->name }}">
+                                    <div class="form-wrap">
+                                        <input class="form-input" id="subscribe-form-2-email" type="text" name="name" autocomplete="off" placeholder="Имя" required="" />
+                                    </div>
+                                    <div class="form-wrap">
+                                        <input class="form-input" id="subscribe-form-2-email" type="text" name="phone" autocomplete="off" placeholder="Телефон" required="" />
+                                    </div>
+                                    <div class="form-button submit">
+                                        <button class="button button-sm button-secondary button-zakaria" type="submit">
+                                            Закзать
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    @endif
 
 @endsection

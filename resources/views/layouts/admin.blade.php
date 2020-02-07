@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Административная панель управления сайтом - ООО «Красбер»</title>
+    <title>Административная панель управления сайтом - веб студия «Красбер»</title>
 
     <!-- Styles -->
     <link href="{{ asset('dashboard/assets/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -129,7 +129,7 @@
 
                 <!-- Footer -->
                 <div class="footer text-muted">
-                    &copy; <a href="https://krasber.ru" target="_blank">ООО «Красбер»</a> 2017 - {{ date('Y') }}
+                    &copy; <a href="https://krasber.ru" target="_blank">Веб студия «Красбер»</a> 2017 - {{ date('Y') }}
                 </div>
                 <!-- /footer -->
 

@@ -29,6 +29,6 @@ class GetCatalogProductByIdQuery
      */
     public function handle()
     {
-        return CatalogProduct::findOrFail($this->id);
+        return CatalogProduct::with(['images'])->findOrFail($this->id);
     }
 }

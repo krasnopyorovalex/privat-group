@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
@@ -20,6 +21,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @property integer $price
  * @property string $is_published
  * @property int $pos
+ * @property int $on_request
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Catalog $catalog
@@ -48,12 +50,21 @@ class CatalogProduct extends Model
         'new' => 'Новинка'
     ];
 
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'on_request' => 'boolean',
+    ];
+
     protected $with = ['catalog', 'image'];
 
     /**
      * @var array
      */
-    protected $fillable = ['catalog_id', 'price', 'name', 'title', 'description', 'text', 'alias', 'label', 'pos'];
+    protected $guarded= ['image'];
 
     /**
      * @return HasOne
@@ -69,6 +80,14 @@ class CatalogProduct extends Model
     public function image(): MorphOne
     {
         return $this->morphOne(Image::class, 'imageable');
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function images(): HasMany
+    {
+        return $this->hasMany(CatalogProductImage::class)->orderBy('pos');
     }
 
     /**
@@ -111,5 +130,13 @@ class CatalogProduct extends Model
     public function isSelectedLabel(string $key): bool
     {
         return $key === $this->label;
+    }
+
+    /**
+     * @return bool
+     */
+    public function priceNotIncludedDelivery(): bool
+    {
+        return ($this->catalog->parent && in_array($this->catalog->parent->id, [21,22,40,46], true)) || $this->catalog->id === 269 || $this->catalog_id === 270;
     }
 }
