@@ -54,7 +54,12 @@
                         <h3 class="text-transform-none font-weight-medium">{{ $product->name }}</h3>
                         <div class="group-md group-middle">
                             <div class="single-product-price">
-                                Цена: {!! $product->getPrice() !!}
+                                @if($product->on_request)
+                                    <a href="#form__subscribe" class="to-form__subscribe">Запросить стоимость</a>
+                                @else
+                                    Цена: {!! $product->getPrice() !!}
+                                @endif
+
                                 @if($product->priceNotIncludedDelivery() || $product->on_request)
                                     *
                                 @endif

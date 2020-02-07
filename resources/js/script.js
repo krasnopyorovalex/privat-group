@@ -430,6 +430,7 @@
                 containerClass: 'ui-to-top mdi mdi-arrow-up'
             });
         }
+
         if (plugins.rdNavbar.length) {
             var aliaces, i, j, len, value, values, responsiveNavbar;
             aliaces = ["-", "-sm-", "-md-", "-lg-", "-xl-", "-xxl-"];
@@ -892,6 +893,14 @@ jQuery(document).ajaxError(function () {
                 return table.find(".total_price").text(response.total) && _this.closest("tr").find(".product_price > span").text(response.productPrice);
             }
         });
+    });
+
+    $(".to-form__subscribe").click(function () {
+        const elementClick = $(this).attr("href");
+        const destination = $(elementClick).offset().top;
+        $('html, body').animate({ scrollTop: destination }, 600);
+
+        return false;
     });
 
 })();
