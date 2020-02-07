@@ -102,7 +102,7 @@
                                     </div>
                                     <div class="form-button submit">
                                         <button class="button button-sm button-secondary button-zakaria" type="submit">
-                                            Закзать
+                                            Заказать
                                         </button>
                                     </div>
                                 </form>
