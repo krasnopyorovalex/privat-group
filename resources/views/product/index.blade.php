@@ -94,7 +94,7 @@
                 <div class="row row-30 align-content-end">
                     <div class="col-md-12 group-middle wow fadeInRight" data-wow-delay=".3s">
                         <div class="form_question in_content">
-                            <div class="form_info"><p>Заказать баню - «{{ $product->name }}»</p></div>
+                            <div class="form_info"><p>Узнать стоимость - «{{ $product->name }}»</p></div>
                             <div>
                                 <form action="{{ route('send.order_product') }}" onsubmit="yaCounter54461437.reachGoal('ZAKAZ_HOBBIT'); return true" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
                                     @csrf
