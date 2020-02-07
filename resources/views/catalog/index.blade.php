@@ -73,9 +73,11 @@
                                             </div>
                                             @endif
                                             <h5 class="product-title"><a href="{{ $product->url }}">{{ $product->name }}</a></h5>
-                                            <div class="product-price-wrap">
-                                                <div class="product-price">{!! $product->getPrice() !!}</div>
-                                            </div>
+                                            @if(!$product->on_request)
+                                                <div class="product-price-wrap">
+                                                    <div class="product-price">{!! $product->getPrice() !!}</div>
+                                                </div>
+                                            @endif
                                         </div>
                                         @if($product->label)
                                         <span class="product-badge product-badge-{{ $product->label }}">{{ $product->getLabelName($product->label) }}</span>
@@ -84,9 +86,11 @@
                                             <div class="product-button">
                                                 <a class="button button-secondary button-zakaria fl-bigmug-line-search74" href="{{ $product->url }}"></a>
                                             </div>
+                                            @if(!$product->on_request)
                                             <div class="product-button">
                                                 <div class="button button-primary button-zakaria fl-bigmug-line-shopping202 add_to-cart" data-cart="{{ route('cart.add', ['product' => $product->id]) }}"></div>
                                             </div>
+                                            @endif
                                         </div>
                                     </article>
                                 </div>
