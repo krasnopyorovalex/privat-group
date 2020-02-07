@@ -50,7 +50,7 @@
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand">
                                     <a class="brand" href="{{ route('page.show') }}">
-                                        <img class="brand-logo-dark" src="{{ asset('images/logo.png') }}" alt="Все для бани" title="Строительство бань, саун и хаммамов"/>
+                                        <img class="brand-logo-dark" src="{{ asset('images/logo.png') }}" alt="Все для бани" title="Строительство бань, саун и хамамов"/>
                                     </a>
                                 </div>
                                 <a class="visible-xs mobile_phone" href="tel:+79787847093">
