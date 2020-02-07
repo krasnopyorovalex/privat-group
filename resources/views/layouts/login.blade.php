@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Административная панель управления сайтом - ООО «Красбер»</title>
+    <title>Административная панель управления сайтом - веб студия «Красбер»</title>
 
     <!-- Styles -->
     <link href="{{ asset('dashboard/assets/css/bootstrap.min.css') }}" rel="stylesheet">
