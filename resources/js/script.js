@@ -897,7 +897,7 @@ jQuery(document).ajaxError(function () {
 
     $(".to-form__subscribe").click(function () {
         const elementClick = $(this).attr("href");
-        const destination = $(elementClick).offset().top;
+        const destination = $(elementClick).offset().top - 200;
         $('html, body').animate({ scrollTop: destination }, 900);
 
         return false;
