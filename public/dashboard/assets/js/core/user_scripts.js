@@ -124,7 +124,11 @@ $(function() {
     });
 
     if($('#editor-full').length) {
-        CKEDITOR.replace( 'editor-full');
+        CKEDITOR.replace('editor-full');
+    }
+
+    if($('#editor-props').length) {
+        CKEDITOR.replace('editor-props');
     }
 
     var tabsEditors = $("textarea.tabs__editor");

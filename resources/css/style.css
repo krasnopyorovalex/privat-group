@@ -14573,3 +14573,30 @@ table tr td .remove_item {
   width: 50px;
   margin: 0 1rem 0 0;
 }
+h2.adh2 {
+  font-size: 22px;
+  margin: .5rem 0 1rem 0;
+}
+.cart__parametr-notice {
+  border: 1px solid #eee;
+  padding: 0;
+}
+.cart__parametr-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 10px 20px;
+}
+.cart__bigright-item p {
+  display: inline-block;
+  margin: 0 0 0 .2rem;
+}
+.product_text h2 {
+  font-size: 18px;
+}
+.cart__bigright-item {
+  display: flex;
+  align-items: flex-start;
+}

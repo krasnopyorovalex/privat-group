@@ -20,6 +20,7 @@ class CreateCatalogProductRequest extends Request
             'title' => 'required|max:512',
             'description' => 'max:512|nullable',
             'text' => 'string|nullable',
+            'props' => 'string|nullable',
             'alias' => 'required|max:255|unique:catalog_products',
             'pos' => 'integer|min:0|max:255',
             'on_request' => 'boolean'

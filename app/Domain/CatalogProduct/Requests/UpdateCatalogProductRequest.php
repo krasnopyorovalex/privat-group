@@ -20,6 +20,7 @@ class UpdateCatalogProductRequest extends Request
             'title' => 'required|max:512',
             'description' => 'max:512|nullable',
             'text' => 'string|nullable',
+            'props' => 'string|nullable',
             'pos' => 'integer|min:0|max:255',
             'on_request' => 'boolean',
             'alias' => [

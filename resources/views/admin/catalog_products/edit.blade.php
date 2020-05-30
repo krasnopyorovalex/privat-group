@@ -44,6 +44,7 @@
                                         @input(['name' => 'alias', 'label' => 'Alias', 'entity' => $catalogProduct])
 
                                         @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $catalogProduct])
+                                        @textarea(['name' => 'props', 'label' => 'Текст', 'id' => 'full-props', 'entity' => $catalogProduct])
 
                                         @checkbox(['name' => 'on_request', 'label' => 'Стоимость под запрос?', 'entity' => $catalogProduct])
                                     </div>
