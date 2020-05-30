@@ -306,8 +306,6 @@ class CatalogSecondDbSeeder extends Command
                 //$product->props = preg_replace("/\s+/u", " ", $product->props);
                 //$product->text = str_replace('<p> </p>', '', $product->text);
                 //$product->text = str_replace('<br>', '', $product->text);
-                //E7KTE%iL
-                //old - %%ELte78
                 $product->props = str_replace('</iframe>>', '</iframe>', $product->props);
                 $product->save();
             }
