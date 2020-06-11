@@ -185,7 +185,7 @@
                                     </a>
                                 </div>
                                 <div class="develop__logo">
-                                    <a href="https://krasber.ru" target="_blank" rel="nofollow">
+                                    <a href="https://krasber.ru" target="_blank">
                                         <img src="{{ asset('images/logo_green.svg') }}" alt="Веб-студия Красбер">
                                     </a>
                                 </div>
