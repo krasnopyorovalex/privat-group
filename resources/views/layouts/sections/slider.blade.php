@@ -15,7 +15,11 @@
                     <h3 class="swiper-title-2" data-caption-animate="fadeInRight" data-caption-delay="200">{{ $image->title }}</h3>
                     @endif
                     @if($image->link)
-                    <div class="button-wrap" data-caption-animate="fadeInUp" data-caption-delay="300"><a class="button button-lg button-shadow-3 button-secondary button-zakaria" href="{{ $image->link }}">Подробнее</a></div>
+                    <div class="button-wrap" data-caption-animate="fadeInUp" data-caption-delay="300">
+                        <a class="button button-lg button-shadow-3 button-secondary button-zakaria" data-toggle="modal" data-target="#callback" href="#">
+                            Получить бесплатную консультацию
+                        </a>
+                    </div>
                     @endif
                 </div>
             </div>

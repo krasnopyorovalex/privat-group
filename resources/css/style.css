@@ -14515,7 +14515,7 @@ img[src=""] {
 .swiper-slider-1 .swiper-title-1,
 .swiper-slider-1 .swiper-title-2,
 .swiper-slider-1 .swiper-title-3 {
-  color: #e9da5d;
+  color: #FFE738;
 }
 .product_text {
   margin: .5em 0 1em 0;
@@ -14599,4 +14599,9 @@ h2.adh2 {
 .cart__bigright-item {
   display: flex;
   align-items: flex-start;
+}
+.h-phone {
+  color: #151515;
+  font-size: 16px;
+  font-weight: 700;
 }

@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Forms\CallbackRequest;
 use App\Http\Requests\Forms\OrderProductRequest;
 use App\Http\Requests\Forms\OrderRequest;
 use App\Http\Requests\Forms\OrderServiceItemRequest;
 use App\Http\Requests\Forms\OrderServiceRequest;
 use App\Http\Requests\Forms\QuestionRequest;
 use App\Http\Requests\Forms\SubscribeRequest;
+use App\Mail\CallbackSent;
 use App\Mail\OrderProductSent;
 use App\Mail\OrderSent;
 use App\Mail\OrderServiceSent;
@@ -47,6 +49,20 @@ class FormHandlerController extends Controller
     public function order(OrderRequest $request): array
     {
         Mail::to([$this->to])->send(new OrderSent($request->all()));
+
+        return [
+            'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
+            'status' => 200
+        ];
+    }
+
+    /**
+     * @param CallbackRequest $request
+     * @return array
+     */
+    public function callback(CallbackRequest $request): array
+    {
+        Mail::to([$this->to])->send(new CallbackSent($request->all()));
 
         return [
             'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',

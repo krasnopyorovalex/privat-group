@@ -50,7 +50,7 @@
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand">
                                     <a class="brand" href="{{ route('page.show') }}">
-                                        <img class="brand-logo-dark" src="{{ asset('images/logo.png') }}" alt="Все для бани" title="Строительство бань, саун и хамамов"/>
+                                        <img class="brand-logo-dark" src="{{ asset('images/logo.svg') }}" alt="Все для бани" title="Строительство бань, саун и хамамов"/>
                                     </a>
                                 </div>
                                 <a class="visible-xs mobile_phone" href="tel:+79787847093">
@@ -62,23 +62,24 @@
                                 @includeWhen($menu->get('menu_header'), 'layouts.menus.header', ['menu' => $menu])
                             </div>
                             <div class="rd-navbar-main-element connection-elements">
+{{--                                <div>--}}
+{{--                                    <a href="https://www.instagram.com/fabrika_bani/" target="_blank">--}}
+{{--                                        <span class="fa-instagram"></span>--}}
+{{--                                    </a>--}}
+{{--                                </div>--}}
+{{--                                <div>--}}
+{{--                                    <a href="https://www.youtube.com/channel/UCigKb7WaQgDwppkEODoFMuw" target="_blank">--}}
+{{--                                        <span class="fa-youtube-play"></span>--}}
+{{--                                    </a>--}}
+{{--                                </div>--}}
                                 <div>
-                                    <a href="https://www.instagram.com/fabrika_bani/" target="_blank">
-                                        <span class="fa-instagram"></span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="https://www.youtube.com/channel/UCigKb7WaQgDwppkEODoFMuw" target="_blank">
-                                        <span class="fa-youtube-play"></span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="tel:+79787847093">
+                                    <a href="tel:+79787847093" class="h-phone">
                                         <span class="fa-phone"></span>
                                         +7 (978) 784-70-93
                                     </a>
                                 </div>
                             </div>
+                            @if(request()->path() !== '/')
                             <!-- RD Navbar Basket-->
                             <div class="rd-navbar-basket-wrap">
                                 <a href="{{ route('page.show', ['alias' => 'cart']) }}">
@@ -86,6 +87,7 @@
                                 </a>
                             </div>
                             <a class="rd-navbar-basket rd-navbar-basket-mobile fl-bigmug-line-shopping202 rd-navbar-fixed-element-2" href="{{ route('page.show', ['alias' => 'cart']) }}"><span>{{ app('cart')->getTotalQuantity() }}</span></a>
+                            @endif
                         </div>
                     </div>
                 </nav>
