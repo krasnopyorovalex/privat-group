@@ -104,7 +104,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 wow fadeInRight">
                             <div class="footer-classic-brand">
                                 <a class="brand" href="{{ route('page.show') }}">
-                                    <img class="brand-logo-dark" src="{{ asset('images/logo.png') }}" alt=""/>
+                                    <img class="brand-logo-dark" src="{{ asset('images/logo.svg') }}" alt=""/>
                                 </a>
                             </div>
                             <ul class="list-schedule">
@@ -180,7 +180,7 @@
                         <div class="col-md-auto">
                             <div class="develop">
                                 <div class="develop__link">
-                                    <a href="https://krasber.ru" rel="nofollow" target="_blank">
+                                    <a href="https://krasber.ru" target="_blank">
                                         Создание, продвижение и <br>техподдержка сайтов
                                     </a>
                                 </div>
