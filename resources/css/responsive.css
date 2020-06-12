@@ -3275,6 +3275,10 @@
     .countdown-heading {
         font-size: 14px
     }
+    .swiper-slider .button-lg {
+        font-size: 12px;
+        padding: 9px 10px;
+    }
 }
 @media (min-width:576px) and (max-width:767px) {
     .footer-modern-list-2 {
