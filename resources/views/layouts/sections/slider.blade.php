@@ -26,9 +26,9 @@
         </div>
         @endforeach
     </div>
-    <!-- Swiper Pagination-->
-    <div class="swiper-pagination"></div>
-    <!-- Swiper Navigation-->
+{{--    <!-- Swiper Pagination-->--}}
+{{--    <div class="swiper-pagination"></div>--}}
+{{--    <!-- Swiper Navigation-->--}}
 {{--    <div class="swiper-button-prev"></div>--}}
 {{--    <div class="swiper-button-next"></div>--}}
 </section>
