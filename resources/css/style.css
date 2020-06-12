@@ -8210,7 +8210,7 @@ html.tablet .ui-to-top {
 .rd-navbar-basket span {
   position: absolute;
   top: 0;
-  right: -5px;
+  right: 0;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0;

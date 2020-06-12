@@ -3279,6 +3279,9 @@
         font-size: 12px;
         padding: 9px 10px;
     }
+    .rd-navbar-basket span {
+        right: -5px;
+    }
 }
 @media (min-width:576px) and (max-width:767px) {
     .footer-modern-list-2 {
