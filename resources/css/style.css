@@ -14615,6 +14615,12 @@ h2.adh2 {
   font-size: 32px;
   line-height: 50px;
 }
-.swiper-slider .button-secondary {
+.swiper-slider .button-secondary, .swiper-slider .button-secondary:focus {
   background-color: #FFE104;
+}
+.swiper-slider .button-secondary:active,
+.swiper-slider .button-secondary:hover {
+  color: #fff;
+  background-color: #76aa6f;
+  border-color: #76aa6f
 }
