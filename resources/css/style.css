@@ -14488,9 +14488,15 @@ img[src=""] {
   font-size: 20px;
   color: #000;
 }
-.darken {
+.darken:before {
+  content: '';
   background-color: rgba(0,0,0,0.65);
-  background-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
 }
 .mobile_phone {
   margin: 0 52px 0 auto;
