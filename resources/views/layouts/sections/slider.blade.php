@@ -6,13 +6,13 @@
             <div class="swiper-slide-caption section-md">
                 <div class="container">
                     @if($image->name)
-                    <h4 class="swiper-title-3" data-caption-animate="fadeInLeft" data-caption-delay="200">{{ $image->name }}</h4>
+                    <h2 class="swiper-title-2" data-caption-animate="fadeInLeft" data-caption-delay="200">{{ $image->name }}</h2>
                     @endif
                     @if($image->alt)
-                    <h1 class="swiper-title-1" data-caption-animate="fadeScale" data-caption-delay="100">{{ $image->alt }}</h1>
+                    <h2 class="swiper-title-2" data-caption-animate="fadeScale" data-caption-delay="100">{{ $image->alt }}</h2>
                     @endif
                     @if($image->title)
-                    <h3 class="swiper-title-2" data-caption-animate="fadeInRight" data-caption-delay="200">{{ $image->title }}</h3>
+                    <h2 class="swiper-title-2" data-caption-animate="fadeInRight" data-caption-delay="200">{{ $image->title }}</h2>
                     @endif
                     @if($image->link)
                     <div class="button-wrap" data-caption-animate="fadeInUp" data-caption-delay="300">
