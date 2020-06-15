@@ -14615,3 +14615,6 @@ h2.adh2 {
   font-size: 32px;
   line-height: 50px;
 }
+.swiper-slider .button-secondary {
+  background-color: #FFE104;
+}
