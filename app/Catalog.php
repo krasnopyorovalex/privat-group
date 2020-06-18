@@ -69,7 +69,7 @@ class Catalog extends Model
      */
     public function products(): HasMany
     {
-        return $this->hasMany(CatalogProduct::class);
+        return $this->hasMany(CatalogProduct::class)->orderBy('pos');
     }
 
     /**

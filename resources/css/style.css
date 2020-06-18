@@ -14484,9 +14484,15 @@ img[src=""] {
   padding: 0 0 1em 0;
 }
 .decorate {
-  font-family: 'Cassandra', serif;
-  font-size: 20px;
+  font-size: 19px;
   color: #000;
+  text-align: justify;
+}
+.decorate.title {
+  font-size: 28px;
+}
+p.decorate {
+  margin-top: 12px;
 }
 .darken:before {
   content: '';

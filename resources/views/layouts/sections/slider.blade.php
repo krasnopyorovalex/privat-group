@@ -17,7 +17,7 @@
                     @if($image->link)
                     <div class="button-wrap" data-caption-animate="fadeInUp" data-caption-delay="300">
                         <a class="button button-lg button-shadow-3 button-secondary button-zakaria" data-toggle="modal" data-target="#callback" href="#">
-                            Получить бесплатную консультацию
+                            ЗАКАЗАТЬ БЕСПЛАТНЫЙ ЗАМЕР
                         </a>
                     </div>
                     @endif

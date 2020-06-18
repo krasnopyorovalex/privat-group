@@ -1,7 +1,7 @@
 <!-- Our Blog-->
 <section class="section section-sm section-last bg-default">
     <div class="container">
-        <h2 class="wow fadeScale">Услуги</h2>
+        <h2 class="wow fadeScale">Наши услуги</h2>
     </div>
     <div class="container">
         <div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
@@ -21,7 +21,7 @@
                             </a>
                         </h5>
                         <div class="btn__box">
-                            <div class="button button-sm button-secondary button-zakaria btn__call-order-service" data-toggle="modal" data-target="#order_service" data-service="{{ $ourService->name }}">Заказать</div>
+{{--                            <div class="button button-sm button-secondary button-zakaria btn__call-order-service" data-toggle="modal" data-target="#order_service" data-service="{{ $ourService->name }}">Заказать</div>--}}
                             <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}#service_{{ $ourService->id }}">Подробнее</a>
                         </div>
                     </div>
@@ -31,4 +31,4 @@
         </div>
     </div>
 </section>
-@include('layouts.forms.order_service')
+{{--@include('layouts.forms.order_service')--}}

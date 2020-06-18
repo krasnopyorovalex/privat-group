@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row row-30 box-ordered">
                 @foreach($advantages as $advantage)
-                <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay=".3s">
+                <div class="col-sm-6 col-lg-4 wow fadeInLeft" data-wow-delay=".3s">
                     <article class="box-icon-modern">
                         <div class="box-icon-modern-header">
                             <div class="box-icon-modern-count box-ordered-item"></div>
