@@ -15,6 +15,6 @@ class GetAllProjectsQuery
      */
     public function handle()
     {
-        return Project::with(['image'])->get();
+        return Project::with(['image'])->latest('id')->get();
     }
 }

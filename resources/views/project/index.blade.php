@@ -46,7 +46,7 @@
 
     @if($project->images)
         <div class="container">
-            <div class="row row-30 isotope" data-lightgallery="group">
+            <div class="row row-30 isotope" data-lightgallery="group" data-lg-thumbnail="false">
                 @foreach ($project->images as $image)
                     <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
                         <!-- Thumbnail Classic-->

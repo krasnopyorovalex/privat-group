@@ -79,7 +79,7 @@
                                     </a>
                                 </div>
                             </div>
-                            @if(request()->path() !== '/')
+                            @if(is_shop_pages())
                             <!-- RD Navbar Basket-->
                             <div class="rd-navbar-basket-wrap">
                                 <a href="{{ route('page.show', ['alias' => 'cart']) }}">

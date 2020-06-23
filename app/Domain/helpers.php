@@ -106,3 +106,16 @@ if (! function_exists('add_css_class')) {
         return count($classes) ? implode(' ', $classes) : '';
     }
 }
+
+
+if (! function_exists('is_shop_pages')) {
+    /**
+     * @return bool
+     */
+    function is_shop_pages(): bool
+    {
+        $path = request()->path();
+
+       return strpos($path, 'catalog') !== false || strpos($path, 'product/') !== false || strpos($path, 'cart') !== false;
+    }
+}
