@@ -5,6 +5,7 @@ namespace App\Services;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
 use Illuminate\Http\UploadedFile;
+use Storage;
 
 /**
  * Class UploadImagesService
@@ -42,9 +43,10 @@ class UploadImagesService
      * @param Request $request
      * @param string $entity
      * @param int $entityId
-     * @return UploadImagesService
+     * @param bool $addWatermark
+     * @return $this
      */
-    public function upload(Request $request, string $entity, int $entityId): self
+    public function upload(Request $request, string $entity, int $entityId, bool $addWatermark = false): self
     {
         $this->entityId = $entityId;
         $this->entity = $entity;
@@ -52,6 +54,9 @@ class UploadImagesService
 
         $this->image->store($this->getSavePath());
         $this->createThumb();
+        if ($addWatermark) {
+            $this->createWatermark();
+        }
 
         return $this;
     }
@@ -116,5 +121,38 @@ class UploadImagesService
             ->make($this->image)
             ->resize($this->widthThumb, $this->heightThumb)
             ->save(public_path('storage/' . $this->entity . '/' . $this->entityId .'/' . $this->getImageHashName() . '_thumb.' . $this->getExt()));
+    }
+
+    private function createWatermark()
+    {
+        $im = (new ImageManager())->make($this->image);
+
+        $imHeight = $im->height();
+        $imWidth = $im->width();
+
+        $im->text('fabrikabani-krym.ru', abs($imWidth/2), abs($imHeight/2), static function($font) {
+            $font->file(public_path('fonts/Arial-Black.ttf'));
+            $font->size(24);
+            $font->color(array(255, 255, 255, 0.6));
+            $font->align('center');
+            $font->valign('middle');
+            $font->angle(45);
+        })->save(public_path('storage/' . $this->entity . '/' . $this->entityId .'/' . $this->getImageHashName() . '.' . $this->getExt()));
+
+        $imThumb = (new ImageManager())->make(
+            public_path('storage/' . $this->entity . '/' . $this->entityId .'/' . $this->getImageHashName() . '_thumb.' . $this->getExt())
+        );
+
+        $imHeightThumb = $imThumb->height();
+        $imWidthThumb = $imThumb->width();
+
+        $imThumb->text('fabrikabani-krym.ru', abs($imWidthThumb/2), abs($imHeightThumb/2), static function($font) {
+            $font->file(public_path('fonts/Arial-Black.ttf'));
+            $font->size(24);
+            $font->color(array(255, 255, 255, 0.6));
+            $font->align('center');
+            $font->valign('middle');
+            $font->angle(45);
+        })->save(public_path('storage/' . $this->entity . '/' . $this->entityId .'/' . $this->getImageHashName() . '_thumb.' . $this->getExt()));
     }
 }

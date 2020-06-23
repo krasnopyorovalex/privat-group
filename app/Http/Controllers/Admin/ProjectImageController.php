@@ -57,7 +57,7 @@ class ProjectImageController extends Controller
      */
     public function store(CreateProjectImageRequest $request, $project): array
     {
-        $image = $this->uploadGalleryImagesService->upload($request, 'project', $project);
+        $image = $this->uploadGalleryImagesService->upload($request, 'project', $project, true);
         $this->dispatch(new CreateProjectImageCommand($image));
 
         return [
