@@ -11,7 +11,7 @@
                 <article class="thumbnail-classic">
                     <div>
                         <a href="{{ $image->getPath() }}" data-lightgallery="item" title="{{ $image->name }}">
-                            <img src="" data-src="{{ $image->getThumb() }}" alt="{{ $image->alt }}" title="{{ $image->title }}" />
+                            <img src="" data-src="{{ $image->getPath() }}" alt="{{ $image->alt }}" title="{{ $image->title }}" />
                         </a>
                     </div>
                 </article>
