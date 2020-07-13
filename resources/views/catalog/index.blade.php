@@ -16,11 +16,9 @@
     @includeWhen($catalog->slider, 'layouts.sections.slider', ['slider' => $catalog->slider])
 
     <section class="breadcrumbs-custom">
-        <div class="parallax-container" data-parallax-img="{{ asset('images/bg-default.jpg') }}">
-            <div class="breadcrumbs-custom-body parallax-content context-dark">
-                <div class="container">
-                    <h2 class="breadcrumbs-custom-title">{{ $catalog->name }}</h2>
-                </div>
+        <div class="breadcrumbs-custom-body parallax-content context-dark">
+            <div class="container">
+                <h2 class="breadcrumbs-custom-title">{{ $catalog->name }}</h2>
             </div>
         </div>
         <div class="breadcrumbs-custom-footer">

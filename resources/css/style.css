@@ -3968,13 +3968,13 @@ textarea.textarea-lg {
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  padding: 40px 0;
   background-color: transparent;
   background-position: center
 }
 .context-dark .breadcrumbs-custom-title {
   text-shadow: 3px 9px 16px rgba(0,0,0,.18);
   color: #e9da5d;
+  font-size: 36px;
 }
 .breadcrumbs-custom-text {
   font-weight: 400;
@@ -4033,11 +4033,6 @@ textarea.textarea-lg {
 }
 * + .breadcrumbs-custom-path {
   margin-top: 14px
-}
-.ie-10 .breadcrumbs-custom-body,
-.ie-11 .breadcrumbs-custom-body,
-.ie-edge .breadcrumbs-custom-body {
-  height: 24.84375vw
 }
 .pagination {
   position: relative;
@@ -14629,4 +14624,10 @@ h2.adh2 {
   color: #fff;
   background-color: #76aa6f;
   border-color: #76aa6f
+}
+.with-preview img {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 0 .5rem 0 0;
 }
