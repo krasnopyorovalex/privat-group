@@ -14634,4 +14634,5 @@ h2.adh2 {
 .with-preview a {
   display: flex;
   align-items: center;
+  text-align: left;
 }
