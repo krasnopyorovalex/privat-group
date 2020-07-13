@@ -14631,3 +14631,7 @@ h2.adh2 {
   height: 100px;
   margin: 0 .5rem 0 0;
 }
+.with-preview a {
+  display: flex;
+  align-items: center;
+}
