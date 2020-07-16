@@ -199,6 +199,7 @@
 
     <div class="snackbars" id="form-output-global"></div><div class="notify"></div>
     <div class="call__qa button-zakaria" data-toggle="modal" data-target="#callback">Заказать бесплатный замер</div>
+    @include('layouts.forms.callback')
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/core.min.js') }}"></script>

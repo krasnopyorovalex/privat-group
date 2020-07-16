@@ -97,7 +97,4 @@
     <section class="section">
         <div class="yandex-map-container" id="map-yandex"></div>
     </section>
-
-    @include('layouts.forms.callback')
-
 @endsection
