@@ -684,6 +684,7 @@
     formHandler("#form__order", Notification);
     formHandler("#form__order-service", Notification);
     formHandler("#form__order-cart", Notification);
+    formHandler("#form__callback-popup", Notification);
 
     [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
         img.setAttribute('src', img.getAttribute('data-src'));

@@ -18,6 +18,7 @@ Auth::routes();
 Route::post('send-subscribe', 'FormHandlerController@subscribe')->name('send.subscribe');
 Route::post('send-order', 'FormHandlerController@order')->name('send.order');
 Route::post('send-callback', 'FormHandlerController@callback')->name('send.callback');
+Route::post('send-callback-popup', 'FormHandlerController@callbackPopup')->name('send.callback-popup');
 Route::post('send-order-service', 'FormHandlerController@orderService')->name('send.order_service');
 Route::post('send-order-service-item', 'FormHandlerController@orderServiceItem')->name('send.order_service_item');
 Route::post('send-order-product', 'FormHandlerController@orderProduct')->name('send.order_product');

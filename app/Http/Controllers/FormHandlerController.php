@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Forms\CallbackPopupRequest;
 use App\Http\Requests\Forms\CallbackRequest;
 use App\Http\Requests\Forms\OrderProductRequest;
 use App\Http\Requests\Forms\OrderRequest;
@@ -9,6 +10,7 @@ use App\Http\Requests\Forms\OrderServiceItemRequest;
 use App\Http\Requests\Forms\OrderServiceRequest;
 use App\Http\Requests\Forms\QuestionRequest;
 use App\Http\Requests\Forms\SubscribeRequest;
+use App\Mail\CallbackPopupSent;
 use App\Mail\CallbackSent;
 use App\Mail\OrderProductSent;
 use App\Mail\OrderSent;
@@ -63,6 +65,20 @@ class FormHandlerController extends Controller
     public function callback(CallbackRequest $request): array
     {
         Mail::to([$this->to])->send(new CallbackSent($request->all()));
+
+        return [
+            'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
+            'status' => 200
+        ];
+    }
+
+    /**
+     * @param CallbackPopupRequest $request
+     * @return array
+     */
+    public function callbackPopup(CallbackPopupRequest $request): array
+    {
+        Mail::to([$this->to])->send(new CallbackPopupSent($request->all()));
 
         return [
             'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
