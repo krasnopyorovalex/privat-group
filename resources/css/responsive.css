@@ -3284,20 +3284,18 @@
         line-height: 24px;
     }
     .call__qa, .call__qa2 {
-        position: fixed;
-        z-index: 99999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         bottom: 0;
         top: unset;
-        width: 60%;
+        width: 49%;
         left: 0;
-        background-color: #ffe104;
         color: #151515;
         font-weight: 700;
         height: 38px;
-        text-overflow: ellipsis;
-        letter-spacing: 1px;
         font-size: 13px;
-        line-height: 38px;
+        line-height: normal;
         text-align: center;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -3312,10 +3310,9 @@
         transform-origin: 0 0;
     }
     .call__qa2 {
-        width: 39%;
         right: 0;
         left: unset;
-        margin: 0 0 0 1%;
+        margin: 0 0 0 2%;
         border-top-left-radius: 10px;
         border-top-right-radius: 0
     }
