@@ -198,7 +198,7 @@
     </div>
 
     <div class="snackbars" id="form-output-global"></div><div class="notify"></div>
-    <div class="call__qa button-zakaria" data-toggle="modal" data-target="#callback">Заказать бесплатный замер</div>
+    <div class="call__qa button-zakaria" data-toggle="modal" data-target="#callback">Заказать бесплатный просчёт бани</div>
     <div class="call__qa2 button-zakaria" data-toggle="modal" data-target="#callback-popup">Заказать звонок</div>
     @include('layouts.forms.callback')
     @include('layouts.forms.callback-popup')

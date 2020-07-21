@@ -14640,8 +14640,8 @@ h2.adh2 {
   position: fixed;
   z-index: 99999;
   top: 30%;
-  width: 350px;
-  right: -350px;
+  width: 450px;
+  right: -450px;
   background-color: #ffe104;
   color: #151515;
   font-weight: 700;
