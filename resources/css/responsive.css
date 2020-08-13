@@ -247,7 +247,7 @@
     }
     .heading-1,
     h1 {
-        font-size: 50px
+        font-size: 30px
     }
     .counter-classic-number .symbol,
     .heading-2,
@@ -1412,7 +1412,7 @@
 @media (min-width:992px) {
     .heading-1,
     h1 {
-        font-size: 70px
+        font-size: 30px
     }
     .counter-classic-number .symbol,
     .heading-2,
@@ -2511,7 +2511,7 @@
 @media (min-width:1200px) {
     .heading-1,
     h1 {
-        font-size: 100px
+        font-size: 35px
     }
     .counter-classic-number .symbol,
     .heading-2,

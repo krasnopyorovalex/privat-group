@@ -772,7 +772,6 @@ jQuery(document).ajaxError(function () {
     }
 
     var check_if_load = false;
-    var myMapTemp, myPlacemarkTemp;
     var halfHeightDocument = $(document).height() / 3;
 
     var ymap = function() {
@@ -792,14 +791,14 @@ jQuery(document).ajaxError(function () {
             return false;
         }
         var myMapTemp = new ymaps.Map("map-yandex", {
-            center: [44.581759, 33.484082],
+            center: [44.497762, 34.167027],
             zoom: 17,
             controls: ['zoomControl', 'fullscreenControl']
         });
         var myPlacemarkTemp = new ymaps.GeoObject({
             geometry: {
                 type: "Point",
-                coordinates: [44.581759, 33.484082]
+                coordinates: [44.497762, 34.167027]
             }
         });
         myMapTemp.geoObjects.add(myPlacemarkTemp);

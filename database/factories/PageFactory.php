@@ -15,9 +15,9 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Page::class, function (Faker $faker) {
     return [
-        'name' => 'Всё для бани',
-        'title' => 'Всё для бани',
-        'description' => 'Всё для бани',
+        'name' => 'Агентство недвижимости - PrivatEstate',
+        'title' => 'Агентство недвижимости - PrivatEstate',
+        'description' => 'Агентство недвижимости - PrivatEstate',
         'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam culpa ducimus est eum explicabo laborum, maxime minima mollitia. Aut, dolorum ea eos explicabo illum iusto necessitatibus quas reiciendis rerum voluptatem.',
         'alias' => 'index',
         'template' => 'page.index'

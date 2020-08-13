@@ -1,5 +1,5 @@
 <!-- Services-->
-<section class="section parallax-container" data-parallax-img="images/parallax-3.jpg">
+<section class="section parallax-container" data-parallax-img="images/parallax-03.jpg">
     <div class="parallax-content section-xxl context-dark darken">
         <div class="container">
             <div class="row row-30 box-ordered">

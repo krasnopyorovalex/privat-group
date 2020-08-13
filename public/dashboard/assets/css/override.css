@@ -78,9 +78,9 @@
 }
 .navbar-brand > img {
     width: 100%;
-    max-width: 150px;
+    max-width: 120px;
     height: auto;
-    margin: 5px auto 0;
+    margin: 8px auto 0;
 }
 .center {
     text-align: center;

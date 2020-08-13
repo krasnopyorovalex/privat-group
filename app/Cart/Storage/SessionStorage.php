@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Cart\Storage;
-
 
 use Darryldecode\Cart\CartCollection;
 use Illuminate\Support\Facades\Session;

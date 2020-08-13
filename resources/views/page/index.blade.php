@@ -15,20 +15,39 @@
 @section('content')
 
     @includeWhen($page->slider, 'layouts.sections.slider', ['slider' => $page->slider])
-    @includeWhen($ourServices, 'layouts.sections.our_services')
-    @includeWhen($page->gallery, 'layouts.sections.gallery', ['gallery' => $page->gallery])
+
+    <section class="section section-inset-2 bg-default text-md-left main-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {!! $page->text !!}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @includeWhen($advantages, 'layouts.sections.advantages')
 
     <!-- About Us-->
     <section class="section section-inset-2 bg-default text-md-left">
         <div class="container">
             <div class="row row-30 align-items-start justify-content-center">
                 <div class="col-sm-4 col-md-4 col-lg-4 wow fadeInLeft">
-                    <img src="" data-src="{{ asset('images/director.jpg') }}" alt="Прокопенко Сергей" />
+                    <img src="" data-src="{{ asset('images/director.jpg') }}" alt="Елена Сергеевна Калиниченко" />
                 </div>
                 <div class="col-md-8 col-lg-8">
-                    <h4 class="wow fadeInRight decorate title">Про нас</h4>
-                    <p class="offset-top-md-20 wow fadeInRight decorate" data-wow-delay=".2s">Немного расскажу о нашей компании. Компания на рынке Крыма с 2014 года. За время работы компании построено множество объектов от маленьких парных в квартире до полноценных СПА зон с несколькими видами бань, мокрыми зонами, бассейнами и купелями. <br /><br />Мы используем в строительстве передовые технологии и оборудование только надежных производителей. Заказывая строительство или оборудование в нашей компании Вы приобретаете не только товар или услугу, Вы приобретаете бесценный опыт, добытый нами. Если Вы планируете построить баню, сауну, хамам или СПА комплекс Вы получите в нашей компании Весь спектр услуг от разработки концепции и дизайн проекта, до реализации проекта под ключ.</p>
-                    <p class="offset-top-md-20 wow fadeInRight decorate" data-wow-delay=".2s"><b>С Уважением Прокопенко Сергей</b></p>
+                    <h4 class="wow fadeInRight decorate title">Дорогие друзья!</h4>
+                    <p class="offset-top-md-20 wow fadeInRight decorate" data-wow-delay=".2s">
+                        Приветствуем Вас на сайте Агентства Private Estate!<br />
+                        Если Вы планируете приобрести квартиру, дом или земельный участок на Южном берегу Крыма, то Вам стоит задуматься: поиск и приобретение жилья в Крыму – не самая простая задача.<br />
+                        В 2020 г. происходят важные изменения в генпланах многих городов, ввиду чего уже на этапе перехода права собственности возникают препятствия, влекущие дополнительные расходы.<br />
+                        Более, чем в 70% случаев оценить самостоятельно объекты недвижимости, находясь в другом городе, затруднительно или практически невозможно. В итоге возрастают риски при заключении сделок, а поиск именно своего варианта затягивается на месяцы.<br />
+                        <br />
+                        Обращение к нашим экспертам рынка недвижимости с многолетним опытом работы сохранит не только Ваше время и душевное спокойствие при общении с посредниками и госорганами, но – во многих случаях – и значительные денежные средства.<br />
+                        Private Estate осуществляет полный спектр услуг: от первичной консультации по рыночной ситуации, составления списка недостающих документов или подбора объектов до момента получения документов на право собственности.<br />
+                        Только Агентство Private Estate предоставляет исключительную возможность дистанционно приобрести крымскую недвижимость с максимальной юридической защитой Ваших законных прав и интересов.<br />
+                    </p>
+                    <p class="offset-top-md-20 wow fadeInRight decorate" data-wow-delay=".2s"><b>С Уважением, Елена Сергеевна Калиниченко</b></p>
                     <div class="group-middle d-md-flex justify-content-md-start wow fadeInRight" data-wow-delay=".3s">
                         <div class="form_question">
                             <div>
@@ -55,43 +74,8 @@
         </div>
     </section>
 
-    @includeWhen($advantages, 'layouts.sections.advantages')
-    @includeWhen($partners, 'layouts.sections.partners')
-
-    <section class="section section-inset-2 bg-default text-md-left">
-        <div class="container">
-            <h5 class="text-center video_title">
-                Посмотрите видео и Вы убедитесь в отличном качестве наших товаров и услуг.
-            </h5>
-        </div>
-        <div class="container">
-            <div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
-                <div class="col-md-4 col-lg-4 col-xs-12">
-                    <div class="youtube-box" data-embed="zIFEGZRzkXc">
-                        <div class="btn-play"></div>
-                    </div>
-                    <div class="block-center text-center">
-                        <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}">Строительство бани и сауны</a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-xs-12">
-                    <div class="youtube-box" data-embed="VsD61yrHfMI">
-                        <div class="btn-play"></div>
-                    </div>
-                    <div class="block-center text-center">
-                        <a class="button button-sm button-secondary button-zakaria" href="{{ route('catalog.show', ['alias' => 'grilld']) }}">Печи GriilD</a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-xs-12">
-                    <div class="youtube-box" data-embed="L_-_w791HsM">
-                        <div class="btn-play"></div>
-                    </div>
-                    <div class="block-center text-center">
-                        <a class="button button-sm button-secondary button-zakaria" href="{{ route('page.show', ['alias' => 'services']) }}#service_2">Строительство хамама</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="section-banner">
+        <img src="{{ asset('images/banner-01.png') }}" alt="">
     </section>
 
     <section class="section">

@@ -14,13 +14,6 @@
                     @if($image->title)
                     <h2 class="swiper-title-2" data-caption-animate="fadeInRight" data-caption-delay="200">{{ $image->title }}</h2>
                     @endif
-                    @if($image->link)
-                    <div class="button-wrap" data-caption-animate="fadeInUp" data-caption-delay="300">
-                        <a class="button button-lg button-shadow-3 button-secondary button-zakaria" data-toggle="modal" data-target="#callback" href="#">
-                            ЗАКАЗАТЬ БЕСПЛАТНЫЙ ПРОСЧЁТ БАНИ
-                        </a>
-                    </div>
-                    @endif
                 </div>
             </div>
         </div>

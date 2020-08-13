@@ -28,7 +28,7 @@
                         <div class="tab-pane active" id="main">
 
                             @select(['name' => 'slider_id', 'label' => 'Слайдер', 'items' => $sliders, 'entity' => $page])
-                            @select(['name' => 'gallery_id', 'label' => 'Галерея', 'items' => $galleries, 'entity' => $page])
+{{--                            @select(['name' => 'gallery_id', 'label' => 'Галерея', 'items' => $galleries, 'entity' => $page])--}}
 
                             <div class="form-group">
                                 <label for="template">Шаблон страницы:</label>

@@ -304,7 +304,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   letter-spacing: .05em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #777;
   background-color: #fff;
   -webkit-text-size-adjust: none;
@@ -318,9 +318,9 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 12px;
   font-weight: 600;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   letter-spacing: .05em;
   text-transform: uppercase;
   color: #151515
@@ -529,7 +529,7 @@ a[href*=tel] {
   font-weight: 600;
   letter-spacing: .05em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   -webkit-transition: all .25s ease;
   transition: all .25s ease
 }
@@ -727,7 +727,7 @@ a[href*=tel] {
   line-height: 1;
   font-weight: 600;
   letter-spacing: 0;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: rgba(21,21,21,.05)
 }
 .box-icon-modern-icon {
@@ -1151,7 +1151,7 @@ a[href*=tel] {
   font-weight: 600;
   letter-spacing: .05em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   -webkit-transition: color .25s ease-in-out,-webkit-transform .25s ease;
   transition: color .25s ease-in-out,-webkit-transform .25s ease;
   transition: transform .25s ease,color .25s ease-in-out;
@@ -1311,7 +1311,7 @@ a[href*=tel] {
   font-weight: 700;
   letter-spacing: .2em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #76aa6f
 }
 .box-info-beryl-text {
@@ -1954,7 +1954,7 @@ img {
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515;
   background: #f5f5f5
 }
@@ -1965,7 +1965,6 @@ img {
   font-weight: 400;
   letter-spacing: .05em;
   background: #fff;
-  font-family: lato,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
   color: #777;
   min-width: 170px
 }
@@ -2043,7 +2042,7 @@ h5 + .table-custom-responsive {
   min-width: auto;
   font-size: 16px;
   letter-spacing: .075em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515
 }
 .table-cart td:first-child {
@@ -2171,7 +2170,7 @@ hr {
   line-height: 2;
   border: 2px solid;
   border-radius: 6px;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -2671,7 +2670,7 @@ hr {
 }
 .btn-primary {
   border-radius: 3px;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   font-weight: 700;
   letter-spacing: .05em;
   text-transform: uppercase;
@@ -2747,7 +2746,7 @@ input:-webkit-autofill ~ label {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: .1em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515;
   background-color: transparent;
   background-image: none;
@@ -2789,7 +2788,7 @@ textarea.textarea-lg {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: .1em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -2939,7 +2938,7 @@ textarea.textarea-lg {
   font-size: 15px;
   line-height: 1.72;
   letter-spacing: .025em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #9b9b9b;
   cursor: pointer
 }
@@ -2976,7 +2975,7 @@ textarea.textarea-lg {
   font-size: 15px;
   line-height: 1.72;
   letter-spacing: .025em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #9b9b9b;
   cursor: pointer
 }
@@ -3137,7 +3136,6 @@ textarea.textarea-lg {
   font-size: 15px;
   font-weight: 400;
   letter-spacing: .05em;
-  font-family: lato,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .rd-form-coupon .form-input {
   border-width: 1px;
@@ -3280,7 +3278,7 @@ textarea.textarea-lg {
   font-weight: 500;
   letter-spacing: .05em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   z-index: 1
 }
 .post-modern-tag,
@@ -3397,7 +3395,7 @@ textarea.textarea-lg {
   font-weight: 500;
   letter-spacing: .05em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   z-index: 1
 }
 .post-lisa-tag,
@@ -3604,7 +3602,7 @@ textarea.textarea-lg {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #76aa6f;
   border-top: 1px solid #e1e1e1
 }
@@ -3691,7 +3689,7 @@ textarea.textarea-lg {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515
 }
 .quote-modern-status {
@@ -3715,7 +3713,7 @@ textarea.textarea-lg {
   line-height: 2;
   font-weight: 400;
   letter-spacing: .05em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515
 }
 .quote-creative-rating {
@@ -3735,7 +3733,7 @@ textarea.textarea-lg {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #76aa6f
 }
 * + .quote-creative-rating {
@@ -3759,7 +3757,7 @@ textarea.textarea-lg {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515
 }
 .quote-minimal-status {
@@ -3810,7 +3808,7 @@ textarea.textarea-lg {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515
 }
 .quote-carly-status {
@@ -4008,7 +4006,7 @@ textarea.textarea-lg {
   line-height: 2;
   font-weight: 600;
   letter-spacing: .13em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   text-transform: uppercase
 }
 .breadcrumbs-custom-path li::after {
@@ -4064,7 +4062,7 @@ textarea.textarea-lg {
   line-height: 1.33333;
   font-weight: 500;
   letter-spacing: 0;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out
 }
@@ -4387,7 +4385,7 @@ textarea.textarea-lg {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515
 }
 .footer-creative-list a,
@@ -4657,7 +4655,7 @@ textarea.textarea-lg {
   font-weight: 600;
   letter-spacing: .02em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   border-radius: 6px;
   color: #fff;
   z-index: 1
@@ -5011,7 +5009,6 @@ textarea.textarea-lg {
   font-size: 15px;
   line-height: 1.6;
   letter-spacing: .1em;
-  font-family: lato,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
   color: #151515
 }
 .list-shop-filter li a {
@@ -5067,7 +5064,7 @@ textarea.textarea-lg {
   line-height: 1;
   font-weight: 500;
   letter-spacing: .05em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #76aa6f
 }
 .single-product-rating .icon {
@@ -5117,7 +5114,7 @@ textarea.textarea-lg {
   font-weight: 500;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515
 }
 .radio-panel .radio-inline.active + .radio-panel-content {
@@ -5527,7 +5524,7 @@ textarea.textarea-lg {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #76aa6f
 }
 * + .team-amy-list-social {
@@ -5611,7 +5608,7 @@ textarea.textarea-lg {
   font-weight: 600;
   letter-spacing: .05em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515
 }
 .team-navy-name a,
@@ -5884,12 +5881,6 @@ html:not(.ie-10):not(.ie-11):not(.ie-edge) .team-karen-header svg {
 }
 .text-transform-capitalize {
   text-transform: capitalize
-}
-.font-family-sans-serif {
-  font-family: lato,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
-}
-.font-family-sans-serif-1 {
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .font-family-cursive {
   font-family: kalam,cursive
@@ -6478,7 +6469,7 @@ p.rights a:hover {
   font-weight: 500;
   line-height: 1;
   letter-spacing: .05em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: rgba(255,255,255,.14);
   -webkit-animation: titleColor 3s linear infinite;
   animation: titleColor 3s linear infinite
@@ -7599,17 +7590,16 @@ html.tablet .ui-to-top {
   margin-top: 20px
 }
 .rd-navbar-static .rd-nav-item + .rd-nav-item {
-  margin-left: 18px
+  margin-left: 24px
 }
 .rd-navbar-static .rd-nav-link {
   position: relative;
   display: inline-block;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
   color: #151515;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out
@@ -7691,7 +7681,7 @@ html.tablet .ui-to-top {
   font-weight: 400;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out
@@ -8209,7 +8199,7 @@ html.tablet .ui-to-top {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #76aa6f
 }
 .rd-navbar-basket:hover {
@@ -9422,7 +9412,7 @@ html.rd-navbar-fixed-linked .page {
   font-size: 12px;
   line-height: 2;
   letter-spacing: .1em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #fff;
   background: #4d4e50;
   border-bottom: 6px solid #838996
@@ -9853,7 +9843,7 @@ html.rd-navbar-fixed-linked .page {
   line-height: 1.8;
   font-weight: 600;
   letter-spacing: .05em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #fff;
   background: rgba(255,255,255,.22);
   -webkit-transition: all .2s ease;
@@ -10681,7 +10671,7 @@ html.rd-navbar-fixed-linked .page {
 .rd-search-results-live .search-quick-result {
   padding-left: 15px;
   padding-right: 15px;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   font-size: 14px;
   font-weight: 700;
   line-height: 30px;
@@ -10706,7 +10696,7 @@ html.rd-navbar-fixed-linked .page {
 }
 .rd-search-results-live .search-title {
   position: relative;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   font-size: 14px;
   font-weight: 700;
   color: #76aa6f
@@ -10721,7 +10711,6 @@ html.rd-navbar-fixed-linked .page {
   overflow: hidden;
   display: block;
   padding: 8px;
-  font-family: lato,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: .1em;
@@ -10787,7 +10776,7 @@ html.rd-navbar-fixed-linked .page {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 600;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #000
 }
 .rd-search-results .search-list-item + .search-list-item {
@@ -10937,7 +10926,6 @@ html.rd-navbar-fixed-linked .page {
   padding-left: 20px;
   padding-right: 56px;
   letter-spacing: .05em;
-  font-family: lato,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
   color: #777
 }
 .form-search .form-input {
@@ -11040,7 +11028,7 @@ html.rd-navbar-fixed-linked .page {
   padding-right: 10px
 }
 .isotope-filters-modern .inline-list > li {
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   font-size: 18px
 }
 .isotope-filters-modern .inline-list a {
@@ -11111,7 +11099,7 @@ html.rd-navbar-fixed-linked .page {
   line-height: 1;
   font-weight: 600;
   letter-spacing: .02em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   text-transform: uppercase;
   color: #9b9b9b
 }
@@ -11159,7 +11147,7 @@ html.rd-navbar-fixed-linked .page {
   margin: 0;
   border: 0;
   border-radius: 0;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #9b9b9b
 }
 .tabs-custom .nav-link.active {
@@ -11292,7 +11280,7 @@ html.rd-navbar-fixed-linked .page {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: rgba(21,21,21,.41);
   background: 0 0;
   border: none
@@ -11402,7 +11390,7 @@ h3 + .card-group-corporate {
   line-height: 1.6;
   font-weight: 500;
   letter-spacing: .02em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #151515;
   border-bottom: 1px solid #e1e1e1;
   z-index: 1
@@ -11793,7 +11781,7 @@ h3 + .card-group-corporate {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: rgba(21,21,21,.5)
 }
 * + .countdown-mini-wrap {
@@ -11961,7 +11949,7 @@ html:not(.ie-10):not(.ie-11):not(.ie-edge) .countdown-circle svg {
   line-height: 1.8;
   font-weight: 600;
   letter-spacing: .05em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #a3a3a3;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -13257,7 +13245,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-size: 14px;
   line-height: 1.72;
   letter-spacing: .05em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   background: 0 0
 }
 .select2-container-active {
@@ -13740,7 +13728,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   line-height: 1.8;
   font-weight: 600;
   letter-spacing: .05em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   color: #a3a3a3;
   background: 0 0;
   -webkit-transition: all .2s ease;
@@ -14149,7 +14137,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   width: 100%;
   padding: 10px 42px;
   font-weight: 500;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+  font-family: 'Roboto Condensed';
   text-align: center;
   -moz-appearance: textfield;
   background: #f5f5f5;
@@ -14636,67 +14624,33 @@ h2.adh2 {
   align-items: center;
   text-align: left;
 }
-.call__qa {
-  position: fixed;
-  z-index: 99999;
-  top: 30%;
-  width: 450px;
-  right: -450px;
-  background-color: #ffe104;
-  color: #151515;
+.main-text {
+  font-size: 19px;
+  color: #000;
+}
+.main-text .title {
   font-weight: 700;
-  height: 42px;
-  text-overflow: ellipsis;
-  line-height: 42px;
-  letter-spacing: 1px;
-  font-size: 20px;
-  text-align: center;
-  -ms-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -ms-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  color: #8FB731;
+  margin: 0 0 .5rem 0;
+  padding: 0 0 .5rem 0;
+  line-height: 25px;
+  min-height: 60px;
+  position: relative;
 }
-.call__qa:hover {
-  color: #fff;
-  background-color: #76aa6f;
-  cursor: pointer;
+.main-text .title:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#F4FBD6), to(#365709));
+  background-image: linear-gradient(to right, #F4FBD6, #365709);
 }
-.call__qa2 {
-  position: fixed;
-  z-index: 99999;
-  top: 30%;
-  width: 350px;
-  left: 42px;
-  background-color: #ffe104;
-  color: #151515;
-  font-weight: 700;
-  height: 42px;
-  text-overflow: ellipsis;
-  line-height: 42px;
-  letter-spacing: 1px;
-  font-size: 20px;
-  text-align: center;
-  -ms-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -ms-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+.main-text ul li {
+  line-height: 34px;
 }
-.call__qa2:hover {
-  color: #fff;
-  background-color: #76aa6f;
-  cursor: pointer;
+.section-banner img {
+  width: 100%;
 }

@@ -14,27 +14,6 @@
     <link rel="canonical" href="@yield('canonical', request()->url())"/>
 </head>
 <body>
-{{--    <div class="preloader">--}}
-{{--        <div class="preloader-body">--}}
-{{--            <div class="cssload-bell">--}}
-{{--                <div class="cssload-circle">--}}
-{{--                    <div class="cssload-inner"></div>--}}
-{{--                </div>--}}
-{{--                <div class="cssload-circle">--}}
-{{--                    <div class="cssload-inner"></div>--}}
-{{--                </div>--}}
-{{--                <div class="cssload-circle">--}}
-{{--                    <div class="cssload-inner"></div>--}}
-{{--                </div>--}}
-{{--                <div class="cssload-circle">--}}
-{{--                    <div class="cssload-inner"></div>--}}
-{{--                </div>--}}
-{{--                <div class="cssload-circle">--}}
-{{--                    <div class="cssload-inner"></div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
     <div class="page">
         <!-- Page Header-->
         <header class="section page-header">
@@ -53,13 +32,18 @@
                                         <img class="brand-logo-dark" src="{{ asset('images/logo.svg') }}" alt="Все для бани" title="Строительство бань, саун и хамамов"/>
                                     </a>
                                 </div>
-                                <a class="visible-xs mobile_phone" href="tel:+79789125067">
+                                <a class="visible-xs mobile_phone" href="tel:+79789455747">
                                     <span class="icon mdi mdi-phone"></span>
-                                    +7 (978) 912-50-67
+                                    +7 (978) 94-557-47
                                 </a>
                             </div>
                             <div class="rd-navbar-nav-wrap">
                                 @includeWhen($menu->get('menu_header'), 'layouts.menus.header', ['menu' => $menu])
+                                <div class="categories-menu">
+                                    <ul>
+                                        <li><a href="#">sdsdvd</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="rd-navbar-main-element connection-elements">
 {{--                                <div>--}}
@@ -73,21 +57,12 @@
 {{--                                    </a>--}}
 {{--                                </div>--}}
                                 <div>
-                                    <a href="tel:+79789125067" class="h-phone">
+                                    <a href="tel:+79789455747" class="h-phone">
                                         <span class="fa-phone"></span>
-                                        +7 (978) 912-50-67
+                                        +7 (978) 94-557-47
                                     </a>
                                 </div>
                             </div>
-                            @if(is_shop_pages())
-                            <!-- RD Navbar Basket-->
-                            <div class="rd-navbar-basket-wrap">
-                                <a href="{{ route('page.show', ['alias' => 'cart']) }}">
-                                    <button class="rd-navbar-basket fl-bigmug-line-shopping202"><span>{{ app('cart')->getTotalQuantity() }}</span></button>
-                                </a>
-                            </div>
-                            <a class="rd-navbar-basket rd-navbar-basket-mobile fl-bigmug-line-shopping202 rd-navbar-fixed-element-2" href="{{ route('page.show', ['alias' => 'cart']) }}"><span>{{ app('cart')->getTotalQuantity() }}</span></a>
-                            @endif
                         </div>
                     </div>
                 </nav>
@@ -108,8 +83,8 @@
                                 </a>
                             </div>
                             <ul class="list-schedule">
-                                <li><span>Понедельник-пятница:</span><span>9:00-17:00</span></li>
-                                <li><span>Суббота:</span><span>9:00-15:00</span></li>
+                                <li><span>Понедельник-пятница:</span><span>9:00-18:00</span></li>
+                                <li><span>Суббота-воскресенье:</span><span>Выходные</span></li>
                             </ul>
                             <div class="footer-classic-social">
                                 <div class="group-lg group-middle">
@@ -130,24 +105,14 @@
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
                                         <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
                                         <div class="unit-body">
-                                            Россия, Севастополь, Фиолентовское шоссе, 1А/3
+                                            298600, Республика Крым, Ялта г., ул. К. Маркса, д. 15а, оф. 3-3
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
                                         <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                        <div class="unit-body"><a href="tel:+79789125067">+7 (978) 912-50-67</a></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="unit unit-spacing-sm flex-column flex-md-row">
-                                        <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
-                                        <div class="unit-body">
-                                            <a href="mailto:fabrikabani@mail.ru">
-                                                fabrikabani@mail.ru
-                                            </a>
-                                        </div>
+                                        <div class="unit-body"><a href="tel:+79789455747">+7 (978) 94-557-47</a></div>
                                     </div>
                                 </li>
                             </ul>
@@ -177,20 +142,7 @@
                         <div class="col-md-auto">
                             <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>СТРОИТЕЛЬСТВО БАНЬ, САУН И ХАМАМОВ В СЕВАСТОПОЛЕ И КРЫМУ</span><span>.&nbsp;Все права защищены.</span></p>
                         </div>
-                        <div class="col-md-auto">
-                            <div class="develop">
-                                <div class="develop__link">
-                                    <a href="https://krasber.ru" target="_blank">
-                                        Создание, продвижение и <br>техподдержка сайтов
-                                    </a>
-                                </div>
-                                <div class="develop__logo">
-                                    <a href="https://krasber.ru" target="_blank">
-                                        <img src="{{ asset('images/logo_green.svg') }}" alt="Веб-студия Красбер">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="col-md-auto"></div>
                     </div>
                 </div>
             </div>
@@ -198,28 +150,9 @@
     </div>
 
     <div class="snackbars" id="form-output-global"></div><div class="notify"></div>
-    <div class="call__qa button-zakaria" data-toggle="modal" data-target="#callback">Заказать бесплатный просчёт бани</div>
-    <div class="call__qa2 button-zakaria" data-toggle="modal" data-target="#callback-popup">Заказать звонок</div>
-    @include('layouts.forms.callback')
-    @include('layouts.forms.callback-popup')
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/core.min.js') }}"></script>
     <script src="{{ mix('js/app.min.js') }}"></script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(54461437, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-        });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/54461437" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

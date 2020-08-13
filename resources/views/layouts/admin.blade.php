@@ -78,14 +78,14 @@
                             <li><a href="{{ route('admin.pages.index') }}"><i class="icon-compose"></i> <span>Страницы</span></a></li>
                             <li><a href="{{ route('admin.advantages.index') }}"><i class="icon-thumbs-up2"></i> <span>Почему мы?</span></a></li>
                             <li><a href="{{ route('admin.catalogs.index') }}"><i class="icon-folder-open"></i> <span>Категории каталога</span></a></li>
-                            <li><a href="{{ route('admin.projects.index') }}"><i class="icon-books"></i> <span>Проекты</span></a></li>
-                            <li><a href="{{ route('admin.our_services.index') }}"><i class="icon-menu6"></i> <span>Категории услуг</span></a></li>
-                            <li><a href="{{ route('admin.partners.index') }}"><i class="icon-collaboration"></i> <span>Нам доверяют</span></a></li>
+{{--                            <li><a href="{{ route('admin.projects.index') }}"><i class="icon-books"></i> <span>Проекты</span></a></li>--}}
+{{--                            <li><a href="{{ route('admin.our_services.index') }}"><i class="icon-menu6"></i> <span>Категории услуг</span></a></li>--}}
+{{--                            <li><a href="{{ route('admin.partners.index') }}"><i class="icon-collaboration"></i> <span>Нам доверяют</span></a></li>--}}
 {{--                            <li><a href="{{ route('admin.articles.index') }}"><i class="icon-magazine"></i> <span>Статьи</span></a></li>--}}
                             <li><a href="{{ route('admin.infos.index') }}"><i class="icon-newspaper"></i> <span>Новости</span></a></li>
 {{--                            <li><a href="{{ route('admin.guestbooks.index') }}"><i class="icon-bubble2"></i> <span>Отзывы</span></a></li>--}}
                             <li><a href="{{ route('admin.sliders.index') }}"><i class="icon-images2"></i> <span>Слайдер</span></a></li>
-                            <li><a href="{{ route('admin.galleries.index') }}"><i class="icon-stack-picture"></i> <span>Галерея</span></a></li>
+{{--                            <li><a href="{{ route('admin.galleries.index') }}"><i class="icon-stack-picture"></i> <span>Галерея</span></a></li>--}}
 {{--                            <li><a href="{{ route('admin.tabs.index') }}"><i class="icon-stack"></i> <span>Вкладки</span></a></li>--}}
                             <li><a href="{{ route('admin.menus.index') }}"><i class="icon-lan2"></i> <span>Навигация</span></a></li>
                             <li><a href="{{ route('admin.redirects.index') }}"><i class="icon-transmission"></i> <span>Редиректы</span></a></li>
