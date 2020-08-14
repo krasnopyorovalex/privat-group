@@ -1,8 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Domain\Catalog\Queries;
 
 use App\Catalog;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * Class GetAllCatalogsWithoutParentQuery
@@ -15,6 +18,11 @@ class GetAllCatalogsWithoutParentQuery
      */
     public function handle()
     {
-        return Catalog::with(['products','catalogs'])->where('parent_id', null)->orderBy('pos')->get();
+        return Catalog::with(['products','catalogs' => static function (HasMany $relation) {
+            $relation->withCount('products');
+        }])
+            ->where('parent_id', null)
+            ->orderBy('pos')
+            ->get();
     }
 }

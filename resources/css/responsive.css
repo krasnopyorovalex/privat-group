@@ -2851,10 +2851,6 @@
     .rd-navbar-static .rd-navbar-search-2.active .rd-search .form-wrap {
         max-width: 1000px
     }
-    .rd-navbar-classic.rd-navbar-static .rd-navbar-main {
-        padding-top: 18px;
-        padding-bottom: 18px
-    }
     .rd-navbar-project {
         width: 410px;
         padding: 38px 30px 50px
@@ -3063,10 +3059,6 @@
     }
     .rd-navbar-static .rd-navbar-search-2 .rd-search .form-wrap {
         margin-top: 15%
-    }
-    .rd-navbar-classic.rd-navbar-static .rd-navbar-main {
-        padding-top: 30px;
-        padding-bottom: 30px
     }
     .rd-navbar-project {
         padding-top: 50px;

@@ -148,7 +148,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
-        /*ArticlesServiceProvider
+        /*
          * Package Service Providers...
          */
 
@@ -173,6 +173,7 @@ return [
         App\Providers\AdvantagesServiceProvider::class,
         App\Providers\PartnersServiceProvider::class,
         Darryldecode\Cart\CartServiceProvider::class,
+        App\Providers\CategoriesServiceProvider::class,
     ],
 
     /*

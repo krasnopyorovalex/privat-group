@@ -39,11 +39,6 @@
                             </div>
                             <div class="rd-navbar-nav-wrap">
                                 @includeWhen($menu->get('menu_header'), 'layouts.menus.header', ['menu' => $menu])
-                                <div class="categories-menu">
-                                    <ul>
-                                        <li><a href="#">sdsdvd</a></li>
-                                    </ul>
-                                </div>
                             </div>
                             <div class="rd-navbar-main-element connection-elements">
 {{--                                <div>--}}
@@ -64,6 +59,34 @@
                                 </div>
                             </div>
                         </div>
+                        @if($categories->count())
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="categories-menu">
+                                        <ul>
+                                            @foreach($categories as $category)
+                                                <li>
+                                                    <a href="#">{{ $category->name }}</a>
+                                                    <div class="categories-menu-count">122</div>
+                                                    @if($category->catalogs->count())
+                                                    <ul class="categories-sub-menu">
+                                                        @foreach($category->catalogs as $subCategory)
+                                                        <li>
+                                                            <a href="#">{{ $subCategory->name }}</a>
+                                                            <div class="categories-menu-count">{{ $subCategory->products_count }}</div>
+                                                        </li>
+                                                        @endforeach
+                                                    </ul>
+                                                    @endif
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                 </nav>
             </div>

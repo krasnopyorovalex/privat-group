@@ -8802,7 +8802,7 @@ html.rd-navbar-fixed-linked .page {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  padding: 13px 0;
+  padding: 13px 0 5px 0;
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px
@@ -14721,6 +14721,93 @@ h2.adh2 {
 .section-banner img {
   width: 100%;
 }
+.rd-navbar-nav {
+    margin: 1.5rem 0 1rem 0;
+}
+
+.categories-menu > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A20101;
+    border-radius: 3px;
+}
+
+.categories-menu > ul > li {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    position: relative;
+}
+
+.categories-menu > ul > li > a {
+    display: block;
+    padding: .5rem 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+.categories-menu > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+.categories-menu > ul > li + li {
+    border-left: 1px solid #C65757;
+}
+
+.categories-menu .categories-menu-count {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    color: #B7808A;
+    font-size: 12px;
+}
+
+.categories-menu .categories-sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    background: #fff;
+    margin-bottom: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    text-align: left;
+}
+
+.categories-menu .categories-sub-menu li {
+    border-top: 1px solid #cccccc;
+    position: relative;
+}
+
+.categories-menu .categories-sub-menu li:hover {
+    background-color: #A20101;
+}
+
+.categories-menu .categories-sub-menu li a {
+    position: relative;
+    display: block;
+    line-height: 20px;
+    text-align: left;
+    padding: .5rem .5rem;
+    font-size: 14px;
+    color: #151515;
+    transition: none;
+}
+
+.categories-sub-menu li .categories-menu-count {
+    right: .5rem;
+}
+
+.categories-menu .categories-sub-menu li:hover a,
+.categories-menu .categories-sub-menu li:hover .categories-menu-count {
+    color: #ffffff;
+}
+
+.categories-menu > ul > li:hover .categories-sub-menu {
+    display: block;
+}
+
 
 @media (min-width:576px) {
     .box-comment-figure img {
@@ -17574,10 +17661,6 @@ h2.adh2 {
     .rd-navbar-static .rd-navbar-search-2.active .rd-search .form-wrap {
         max-width: 1000px
     }
-    .rd-navbar-classic.rd-navbar-static .rd-navbar-main {
-        padding-top: 18px;
-        padding-bottom: 18px
-    }
     .rd-navbar-project {
         width: 410px;
         padding: 38px 30px 50px
@@ -17786,10 +17869,6 @@ h2.adh2 {
     }
     .rd-navbar-static .rd-navbar-search-2 .rd-search .form-wrap {
         margin-top: 15%
-    }
-    .rd-navbar-classic.rd-navbar-static .rd-navbar-main {
-        padding-top: 30px;
-        padding-bottom: 30px
     }
     .rd-navbar-project {
         padding-top: 50px;
