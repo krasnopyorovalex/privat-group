@@ -29,10 +29,10 @@
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand">
                                     <a class="brand" href="{{ route('page.show') }}">
-                                        <img class="brand-logo-dark" src="{{ asset('images/logo.svg') }}" alt="Все для бани" title="Строительство бань, саун и хамамов"/>
+                                        <img class="brand-logo-dark" src="{{ asset('images/logo.svg') }}" alt="Все для бани" title=""/>
                                     </a>
                                 </div>
-                                <a class="visible-xs mobile_phone" href="tel:+79789455747">
+                                <a class="mobile_phone" href="tel:+79789455747">
                                     <span class="icon mdi mdi-phone"></span>
                                     +7 (978) 94-557-47
                                 </a>
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                         @if($categories->count())
-                        <div class="container">
+                        <div class="container rd-navbar-nav-wrap categories-menu-wrap">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="categories-menu">

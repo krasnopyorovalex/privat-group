@@ -508,7 +508,6 @@ a[href*=tel] {
   font-weight: 600;
   letter-spacing: .13em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .link-tag,
 .link-tag:active,
@@ -986,7 +985,6 @@ a[href*=tel] {
   font-weight: 600;
   letter-spacing: .13em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .box-comment-reply,
 .box-comment-reply:active,
@@ -1223,7 +1221,6 @@ a[href*=tel] {
 .box-info-renee-subtitle {
   font-weight: 600;
   letter-spacing: .1em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .box-info-renee-title {
   font-weight: 500;
@@ -1292,7 +1289,6 @@ a[href*=tel] {
 .box-info-rose-author,
 .box-info-rose-text {
   letter-spacing: .075em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .box-info-rose-title + .unit {
   margin-top: 4px
@@ -2101,7 +2097,6 @@ h5 + .table-custom-responsive {
   font-size: 16px;
   letter-spacing: .05em;
   color: #151515;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .table-checkout td:first-child {
   min-width: 190px
@@ -3332,7 +3327,6 @@ textarea.textarea-lg {
   font-weight: 500;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .post-modern-link:hover {
   color: #151515
@@ -3523,7 +3517,6 @@ textarea.textarea-lg {
 .post-nikki-title {
   font-weight: 400;
   letter-spacing: .05em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 * + .post-nikki-title {
   margin-top: 8px
@@ -3579,7 +3572,6 @@ textarea.textarea-lg {
   padding-top: 40px;
   font-weight: 400;
   letter-spacing: .05em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .quote-classic-text::before {
   position: absolute;
@@ -3664,7 +3656,6 @@ textarea.textarea-lg {
   line-height: 1.44;
   font-weight: 400;
   letter-spacing: .02em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .quote-modern-text::before {
   position: absolute;
@@ -3747,7 +3738,6 @@ textarea.textarea-lg {
   line-height: 2;
   font-weight: 400;
   letter-spacing: .02em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .quote-minimal-figure img {
   border-radius: 50%
@@ -3783,7 +3773,6 @@ textarea.textarea-lg {
   line-height: 1.45;
   font-weight: 400;
   letter-spacing: .02em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .quote-carly-text::before {
   position: absolute;
@@ -4889,7 +4878,6 @@ textarea.textarea-lg {
 .product-dawn-price {
   line-height: 1.2;
   letter-spacing: .025em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 * + .product-dawn-price {
   margin-top: 8px
@@ -5327,7 +5315,6 @@ textarea.textarea-lg {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .promo-classic-title + .promo-classic-text {
   margin-top: 16px
@@ -5748,7 +5735,6 @@ html:not(.ie-10):not(.ie-11):not(.ie-edge) .team-karen-header svg {
 .event-classic-month {
   font-weight: 600;
   letter-spacing: .02em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .event-classic-month {
   margin-left: 10px;
@@ -6396,7 +6382,6 @@ html [class*=section-].section-top-0 {
 p.rights {
   letter-spacing: 0;
   color: #777;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 p.rights a,
 p.rights a:active,
@@ -7737,7 +7722,6 @@ html.tablet .ui-to-top {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .rd-navbar-static .rd-megamenu-list-item + .rd-megamenu-list-item {
   margin-top: 14px
@@ -8042,7 +8026,6 @@ html.tablet .ui-to-top {
 .rd-navbar-static .rd-navbar-search-2 .search-submit {
   display: inline-block;
   padding: 10px 30px;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .rd-navbar-static .rd-navbar-search-2 * + .rd-search-results-live {
   margin-top: 20px
@@ -8308,7 +8291,6 @@ html.tablet .ui-to-top {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .rd-navbar-fixed li.opened > .rd-navbar-dropdown {
   padding: 4px 0 0
@@ -8402,7 +8384,6 @@ html.tablet .ui-to-top {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .rd-navbar-fixed .rd-navbar-submenu-toggle {
   cursor: pointer
@@ -10388,7 +10369,6 @@ html.rd-navbar-fixed-linked .page {
 }
 .swiper-slider-2 .swiper-text {
   letter-spacing: .075em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .swiper-slider-2 * + .swiper-text {
   margin-top: 10px
@@ -10433,7 +10413,6 @@ html.rd-navbar-fixed-linked .page {
 }
 .swiper-slider-3 .swiper-text {
   letter-spacing: .075em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .swiper-slider-3.swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 75px
@@ -11544,7 +11523,6 @@ h3 + .card-group-corporate {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .progress-header > * {
   max-width: 50%
@@ -13188,7 +13166,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-size: 15px;
   line-height: 1;
   letter-spacing: .05em;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .rd-range-title {
   margin-right: 4px;
@@ -13600,7 +13577,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   line-height: 21px;
   font-weight: 500;
   letter-spacing: 0;
-  font-family: poppins,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif
 }
 .select-inline .select2-choice {
   text-align: center;
@@ -14479,7 +14455,7 @@ p.decorate {
 }
 .darken:before {
   content: '';
-  background-color: rgba(0,0,0,0.65);
+  background-color: rgba(0,0,0,0.2);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -14601,8 +14577,9 @@ h2.adh2 {
   font-weight: 700;
 }
 .swiper-slide-caption .swiper-title-2 {
-  font-size: 32px;
+  font-size: 50px;
   line-height: 50px;
+  font-weight: 700;
 }
 .swiper-slider .button-secondary, .swiper-slider .button-secondary:focus {
   background-color: #FFE104;

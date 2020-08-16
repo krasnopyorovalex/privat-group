@@ -2,6 +2,10 @@
     margin: 1.5rem 0 1rem 0;
 }
 
+.categories-menu {
+    display: none;
+}
+
 .categories-menu > ul {
     display: flex;
     align-items: center;
@@ -83,4 +87,8 @@
 
 .categories-menu > ul > li:hover .categories-sub-menu {
     display: block;
+}
+
+.rd-navbar-classic .container.rd-navbar-nav-wrap {
+    margin: 0 auto;
 }

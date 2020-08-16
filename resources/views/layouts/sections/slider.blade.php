@@ -6,10 +6,10 @@
             <div class="swiper-slide-caption section-md">
                 <div class="container">
                     @if($image->name)
-                    <h2 class="swiper-title-2" data-caption-animate="fadeInLeft" data-caption-delay="200">{{ $image->name }}</h2>
+                    <div class="swiper-title-2" data-caption-animate="fadeInLeft" data-caption-delay="200">{{ $image->name }}</div>
                     @endif
                     @if($image->alt)
-                    <h2 class="swiper-title-2" data-caption-animate="fadeScale" data-caption-delay="100">{{ $image->alt }}</h2>
+                    <div class="swiper-title-2" data-caption-animate="fadeScale" data-caption-delay="100">{{ $image->alt }}</div>
                     @endif
                     @if($image->title)
                     <h2 class="swiper-title-2" data-caption-animate="fadeInRight" data-caption-delay="200">{{ $image->title }}</h2>
