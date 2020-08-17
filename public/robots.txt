@@ -1,3 +1,2 @@
 User-agent: *
-Host: https://fabrikabani-krym.ru
-Sitemap: https://fabrikabani-krym.ru/sitemap.xml
+Disallow: /
