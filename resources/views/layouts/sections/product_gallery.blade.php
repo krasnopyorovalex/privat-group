@@ -1,5 +1,5 @@
 <!-- Grid Gallery-->
-<section class="section section-xl bg-default">
+<section class="section section-xl bg-default product-gallery">
     <div class="container">
         <h3 class="wow fadeScale">Фотографии товара</h3>
     </div>
