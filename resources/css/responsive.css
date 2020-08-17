@@ -3196,6 +3196,9 @@
         bottom: 0;
         overflow-y: auto;
     }
+    .mobile_phone {
+        display: block;
+    }
 }
 @media (max-width:992px) {
     .table-custom th {

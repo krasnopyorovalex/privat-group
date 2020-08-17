@@ -14467,6 +14467,7 @@ p.decorate {
   margin: 0 52px 0 auto;
   color: #000;
   font-size: 14px;
+  display: none;
 }
 .visible-xs {
   display: none;
