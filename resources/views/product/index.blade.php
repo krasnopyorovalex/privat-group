@@ -13,8 +13,6 @@
 @endpush
 
 @section('content')
-    @includeWhen($product->slider, 'layouts.sections.slider', ['slider' => $product->slider])
-
     <section class="breadcrumbs-custom">
         <div class="breadcrumbs-custom-body parallax-content context-dark">
             <div class="container">
@@ -61,7 +59,7 @@
                                     Цена: {!! $product->getPrice() !!}
                                 @endif
 
-                                @if($product->priceNotIncludedDelivery() || $product->on_request)
+                                @if($product->on_request)
                                     *
                                 @endif
                             </div>
@@ -70,16 +68,8 @@
                             {!! $product->text !!}
                         </div>
                         <hr class="hr-gray-100">
-                        @if($product->priceNotIncludedDelivery())
-                            <div class="p_info">*Стоимость указана без учета доставки</div>
-                        @endif
                         @if($product->on_request)
-                            <div class="p_info">*Стоимость указана без учета доставки в г. Севастополь</div>
-                        @endif
-                        @if(! $product->on_request)
-                        <div class="group-xs group-middle">
-                            <div class="button button-lg button-secondary button-zakaria add_to-cart" data-cart="{{ route('cart.add', ['product' => $product->id]) }}">Купить</div>
-                        </div>
+                            <div class="p_info">*Стоимость по запросу</div>
                         @endif
                     </div>
                 </div>
@@ -105,7 +95,7 @@
                         <div class="form_question in_content">
                             <div class="form_info"><p>Узнать стоимость - «{{ $product->name }}»</p></div>
                             <div>
-                                <form action="{{ route('send.order_product') }}" onsubmit="yaCounter54461437.reachGoal('ZAKAZ_HOBBIT'); return true" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
+                                <form action="{{ route('send.order_product') }}" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
                                     @csrf
                                     <input type="hidden" name="product" value="{{ $product->name }}">
                                     <div class="form-wrap">

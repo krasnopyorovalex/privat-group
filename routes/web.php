@@ -21,7 +21,7 @@ Auth::routes();
 //Route::post('send-callback-popup', 'FormHandlerController@callbackPopup')->name('send.callback-popup');
 //Route::post('send-order-service', 'FormHandlerController@orderService')->name('send.order_service');
 //Route::post('send-order-service-item', 'FormHandlerController@orderServiceItem')->name('send.order_service_item');
-//Route::post('send-order-product', 'FormHandlerController@orderProduct')->name('send.order_product');
+Route::post('send-order-product', 'FormHandlerController@orderProduct')->name('send.order_product');
 Route::post('send-question', 'FormHandlerController@question')->name('send.question');
 //Route::post('order-cart', 'CartController@order')->name('order.cart');
 Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');

@@ -131,12 +131,4 @@ class CatalogProduct extends Model
     {
         return $key === $this->label;
     }
-
-    /**
-     * @return bool
-     */
-    public function priceNotIncludedDelivery(): bool
-    {
-        return ($this->catalog->parent && in_array($this->catalog->parent->id, [21,22,40,46], true)) || $this->catalog->id === 269;
-    }
 }
