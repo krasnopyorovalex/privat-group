@@ -45,7 +45,7 @@
 
     <section class="section">
         <div>
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac4db9bb6e87fa6d628253543b41ef61b3a8bde8c8d8cd63bca063905416cf583&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad2739ff287667580fcb7de1950e661284399f334acd36bcc247542127041b3a6&amp;source=constructor&amp;scroll=false" width="100%" height="450" frameborder="0"></iframe>
         </div>
     </section>
 
