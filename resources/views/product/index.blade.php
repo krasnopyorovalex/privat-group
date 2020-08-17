@@ -76,7 +76,7 @@
             </div>
         </div>
     </section>
-
+    @includeWhen(count($product->images), 'layouts.sections.product_gallery', ['$product' => $product])
     <section class="section section-sm bg-default">
         <div class="container">
             <div class="row">
@@ -84,8 +84,6 @@
             </div>
         </div>
     </section>
-
-    @includeWhen(count($product->images), 'layouts.sections.product_gallery', ['$product' => $product])
 
     @if($product->on_request)
         <section class="with_bg">

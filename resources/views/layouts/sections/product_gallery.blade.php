@@ -1,9 +1,6 @@
 <!-- Grid Gallery-->
 <section class="section section-xl bg-default product-gallery">
     <div class="container">
-        <h3 class="wow fadeScale">Фотографии товара</h3>
-    </div>
-    <div class="container">
         <div class="row row-30 isotope" data-lightgallery="group">
             @foreach ($product->images as $image)
             <div class="col-md-3 col-sm-3 col-lg-3 col-xs-12">
