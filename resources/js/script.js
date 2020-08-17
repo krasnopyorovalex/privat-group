@@ -795,6 +795,9 @@ jQuery(document).ajaxError(function () {
             zoom: 17,
             controls: ['zoomControl', 'fullscreenControl']
         });
+
+        myMapTemp.behaviors.disable('scrollZoom');
+
         var myPlacemarkTemp = new ymaps.GeoObject({
             geometry: {
                 type: "Point",
