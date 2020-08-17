@@ -14632,3 +14632,6 @@ h2.adh2 {
 .section-banner img {
   width: 100%;
 }
+.bg-inside-pages {
+  background: url("../images/bg-inside-pages.jpg");
+}

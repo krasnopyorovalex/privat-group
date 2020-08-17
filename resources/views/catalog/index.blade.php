@@ -16,7 +16,7 @@
     @includeWhen($catalog->slider, 'layouts.sections.slider', ['slider' => $catalog->slider])
 
     <section class="breadcrumbs-custom">
-        <div class="breadcrumbs-custom-body parallax-content context-dark">
+        <div class="breadcrumbs-custom-body parallax-content context-dark bg-inside-pages">
             <div class="container">
                 <h2 class="breadcrumbs-custom-title">{{ $catalog->name }}</h2>
             </div>
