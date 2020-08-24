@@ -13,7 +13,7 @@
 
                 @input(['name' => 'name', 'label' => 'Верхний текст', 'entity' => $image])
                 @input(['name' => 'alt', 'label' => 'Средний текст', 'entity' => $image])
-                @input(['name' => 'title', 'label' => 'Нижний текст', 'entity' => $image])
+                @input(['name' => 'title', 'label' => 'Текст кнопки', 'entity' => $image])
             </div>
             <div class="modal-footer">
                 @submit_btn()

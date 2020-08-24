@@ -13,15 +13,11 @@
                             <div class="swiper-title-2" data-caption-animate="fadeScale"
                                  data-caption-delay="100">{{ $image->alt }}</div>
                         @endif
-                        @if($image->title)
-                            <h2 class="swiper-title-2" data-caption-animate="fadeInRight"
-                                data-caption-delay="200">{{ $image->title }}</h2>
-                        @endif
-                        @if($image->link)
+                        @if($image->link && $image->title)
                             <div class="button-wrap" data-caption-animate="fadeInUp" data-caption-delay="300">
                                 <a class="button button-lg button-shadow-3 button-secondary button-zakaria"
                                    data-toggle="modal" data-target="#callback" href="{{ $image->link }}">
-                                    Подробнее
+                                    {{ $image->title }}
                                 </a>
                             </div>
                         @endif
@@ -30,9 +26,9 @@
             </div>
         @endforeach
     </div>
-    {{--    <!-- Swiper Pagination-->--}}
-    {{--    <div class="swiper-pagination"></div>--}}
-    {{--    <!-- Swiper Navigation-->--}}
-    {{--    <div class="swiper-button-prev"></div>--}}
-    {{--    <div class="swiper-button-next"></div>--}}
+    <!-- Swiper Pagination-->
+    <div class="swiper-pagination"></div>
+    <!-- Swiper Navigation-->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 </section>
