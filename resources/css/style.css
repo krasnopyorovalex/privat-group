@@ -7279,7 +7279,6 @@ html:not(.lt-ie10) .not-animated {
   opacity: 1;
   color: #fff;
   text-decoration: none;
-  background-color: #1D48D0;
 }
 .ui-to-top.active {
   -webkit-transform: translate3d(0,0,0);
