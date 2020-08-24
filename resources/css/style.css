@@ -3960,7 +3960,7 @@ textarea.textarea-lg {
 }
 .context-dark .breadcrumbs-custom-title {
   text-shadow: 3px 9px 16px rgba(0,0,0,.18);
-  color: #e9da5d;
+  color: #fff;
   font-size: 36px;
 }
 .breadcrumbs-custom-text {
@@ -14645,4 +14645,5 @@ h2.adh2 {
 }
 .bg-inside-pages {
   background: url("../images/bg-inside-pages.jpg");
+  background-size: cover;
 }
