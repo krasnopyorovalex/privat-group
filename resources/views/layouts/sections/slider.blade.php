@@ -15,8 +15,7 @@
                         @endif
                         @if($image->link && $image->title)
                             <div class="button-wrap" data-caption-animate="fadeInUp" data-caption-delay="300">
-                                <a class="button button-lg button-shadow-3 button-secondary button-zakaria"
-                                   data-toggle="modal" data-target="#callback" href="{{ $image->link }}">
+                                <a class="button button-lg button-shadow-3 button-secondary button-zakaria" href="{{ $image->link }}">
                                     {{ $image->title }}
                                 </a>
                             </div>
