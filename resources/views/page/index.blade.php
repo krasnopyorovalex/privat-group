@@ -61,7 +61,7 @@
                                         <input class="form-input" id="subscribe-form-2-email" type="text" name="phone" autocomplete="off" placeholder="Телефон" required="" />
                                     </div>
                                     <div class="form-button submit">
-                                        <button class="button button-sm button-secondary button-zakaria" type="submit">
+                                        <button class="button button-sm button-secondary" type="submit">
                                             Задать вопрос Директору
                                         </button>
                                     </div>

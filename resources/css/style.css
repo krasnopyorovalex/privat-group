@@ -7273,12 +7273,13 @@ html:not(.lt-ie10) .not-animated {
 .ui-to-top:active,
 .ui-to-top:focus {
   color: #fff;
-  background: #76aa6f
+  background: #295EF2;
 }
 .ui-to-top:hover {
   opacity: 1;
   color: #fff;
-  text-decoration: none
+  text-decoration: none;
+  background-color: #1D48D0;
 }
 .ui-to-top.active {
   -webkit-transform: translate3d(0,0,0);
@@ -14326,6 +14327,12 @@ textarea:focus::placeholder {
 }
 .form_question .rd-form-inline .form-button .button {
   padding: 14px 24px;
+  background-color: #295EF2;
+  color: #fff;
+  border: none;
+}
+.form_question .rd-form-inline .form-button .button:hover {
+  background-color: #1D48D0
 }
 footer .develop {
   text-align: right
@@ -14453,7 +14460,7 @@ img[src=""] {
 p.decorate {
   margin-top: 12px;
 }
-.darken:before {
+.darken:before, .darken-two:before {
   content: '';
   background-color: rgba(0,0,0,0.2);
   position: absolute;
@@ -14462,6 +14469,9 @@ p.decorate {
   right: 0;
   left: 0;
   z-index: 0;
+}
+.darken-two:before {
+  background-color: rgba(0,0,0,0.3);
 }
 .mobile_phone {
   margin: 0 52px 0 auto;
@@ -14487,7 +14497,8 @@ p.decorate {
 .swiper-slider-1 .swiper-title-1,
 .swiper-slider-1 .swiper-title-2,
 .swiper-slider-1 .swiper-title-3 {
-  color: #FFE104;
+  color: #ffffff;
+  text-shadow: 0 0 50px hsla(0, 0%, 0%, .4);
 }
 .product_text {
   margin: .5em 0 1em 0;
@@ -14583,13 +14594,14 @@ h2.adh2 {
   font-weight: 700;
 }
 .swiper-slider .button-secondary, .swiper-slider .button-secondary:focus {
-  background-color: #FFE104;
+  background-color: #295EF2;
+  border: none;
+  color: #fff
 }
 .swiper-slider .button-secondary:active,
 .swiper-slider .button-secondary:hover {
   color: #fff;
-  background-color: #76aa6f;
-  border-color: #76aa6f
+  background-color: #1D48D0
 }
 .with-preview img {
   display: inline-block;
@@ -14608,12 +14620,12 @@ h2.adh2 {
 }
 .main-text .title {
   font-weight: 700;
-  color: #8FB731;
+  color: #1D48D0;
   margin: 0 0 .5rem 0;
   padding: 0 0 .5rem 0;
   line-height: 25px;
   min-height: 60px;
-  position: relative;
+  position: relative
 }
 .main-text .title:after {
   content: '';
@@ -14623,11 +14635,11 @@ h2.adh2 {
   left: 0;
   right: 0;
   height: 2px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#F4FBD6), to(#365709));
-  background-image: linear-gradient(to right, #F4FBD6, #365709);
+  background-image: -webkit-gradient(linear, left top, right top, from(#D4E3FE), to(#1D48D0));
+  background-image: linear-gradient(to right, #D4E3FE, #1D48D0);
 }
 .main-text ul li {
-  line-height: 34px;
+  line-height: 34px
 }
 .section-banner img {
   width: 100%;

@@ -1,6 +1,6 @@
 <!-- Services-->
 <section class="section parallax-container" data-parallax-img="images/parallax-03.jpg">
-    <div class="parallax-content section-xxl context-dark darken">
+    <div class="parallax-content section-xxl context-dark darken-two">
         <div class="container">
             <div class="row row-30 box-ordered">
                 @foreach($advantages as $advantage)
