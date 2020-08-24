@@ -14471,7 +14471,7 @@ p.decorate {
   z-index: 0;
 }
 .darken-two:before {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.4);
 }
 .mobile_phone {
   margin: 0 52px 0 auto;
