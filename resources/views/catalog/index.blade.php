@@ -45,8 +45,8 @@
                 <div class="col-lg-4 col-xl-3">
                     <div class="aside row row-30 row-md-50 justify-content-md-between">
                         <div class="aside-item col-sm-6 col-lg-12">
-                            <h6 class="aside-title">Категории каталога</h6>
-                            <div class="row row-10 row-lg-20 gutters-10">
+                            <div class="aside-title">Категории каталога</div>
+                            <div>
                                 @if($catalogs)
                                 <ul class="list-shop-filter">
                                     @foreach($catalogs as $cat)
