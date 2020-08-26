@@ -51,7 +51,7 @@
                     <div class="group-middle d-md-flex justify-content-md-start wow fadeInRight" data-wow-delay=".3s">
                         <div class="form_question">
                             <div>
-                                <div class="form_info"><p>Задать вопрос директору</p></div>
+                                <div class="form_info"><p>Задать вопрос</p></div>
                                 <form action="{{ route('send.question') }}" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
                                     @csrf
                                     <div class="form-wrap">
@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="form-button submit">
                                         <button class="button button-sm button-secondary" type="submit">
-                                            Задать вопрос Директору
+                                            Задать вопрос
                                         </button>
                                     </div>
                                 </form>
