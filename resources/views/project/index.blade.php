@@ -8,7 +8,7 @@
     <meta property="og:url" content="{{ request()->getUri() }}">
     <meta property="og:image" content="{{ asset($project->image ? $project->image->path : 'images/logo.png') }}">
     <meta property="og:description" content="{{ $project->description }}">
-    <meta property="og:site_name" content="Всё для бани">
+    <meta property="og:site_name" content="Private Estate - недвижимость для жизни">
     <meta property="og:locale" content="ru_RU">
 @endpush
 
