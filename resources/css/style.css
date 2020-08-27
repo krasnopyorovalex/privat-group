@@ -14649,3 +14649,6 @@ h2.adh2 {
   background: url("../images/bg-inside-pages.jpg");
   background-size: cover;
 }
+.img-big {
+  height: 100%;
+}
