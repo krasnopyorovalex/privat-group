@@ -3958,7 +3958,18 @@ textarea.textarea-lg {
   -webkit-align-items: center;
   align-items: center;
   background-color: transparent;
-  background-position: center
+  background-position: center;
+  position: relative;
+}
+.breadcrumbs-custom-body:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: -1;
 }
 .context-dark .breadcrumbs-custom-title {
   text-shadow: 3px 9px 16px rgba(0,0,0,.18);
@@ -14244,9 +14255,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 .section-content {
   margin: 2em 0;
-}
-.no__bg, .breadcrumbs-custom  {
-  background-color: #76aa6f;
 }
 .list-shop-filter li.active a {
   color: #228B22
