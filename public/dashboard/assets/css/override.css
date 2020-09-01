@@ -337,3 +337,6 @@ li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
     max-width: 100px;
     height: auto;
 }
+.navbar-nav>.dropdown-user img {
+    border-radius: 0;
+}
