@@ -3205,12 +3205,15 @@
     }
     .rd-navbar-classic .rd-navbar-nav-wrap.categories-menu-wrap {
         padding: 0;
-        top: 15rem;
+        top: 13rem;
         bottom: 0;
         overflow-y: auto;
     }
     .mobile_phone {
         display: block;
+    }
+    .rd-navbar-fixed .rd-navbar-nav {
+        margin: 10px 0;
     }
 }
 @media (max-width:992px) {
