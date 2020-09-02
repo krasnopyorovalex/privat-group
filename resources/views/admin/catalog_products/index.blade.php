@@ -29,7 +29,7 @@
                 <tr data-id="{{ $catalogProduct->id }}">
                     <td><span class="label label-primary">{{ request('page') > 1 ? request('page') * 50 - 50 + $loop->iteration : $loop->iteration }}</span></td>
                     <td>{{ $catalogProduct->name }}</td>
-                    <td>{{ $catalogProduct->price }}</td>
+                    <td>{{ $catalogProduct->getPrice() }}</td>
                     <td><span class="label label-primary bg-teal-400">{{ $catalogProduct->catalog->name }}</span></td>
                     <td><span class="label label-primary">{{ $catalogProduct->updated_at->diffForHumans() }}</span></td>
                     <td>
