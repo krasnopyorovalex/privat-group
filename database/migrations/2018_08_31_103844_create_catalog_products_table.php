@@ -22,7 +22,7 @@ class CreateCatalogProductsTable extends Migration
             $table->text('text')->nullable();
             $table->string('alias', 255)->unique();
             $table->string('label', 16)->nullable();
-            $table->unsignedMediumInteger('price')->default(0);
+            $table->unsignedInteger('price')->default(0);
             $table->unsignedSmallInteger('pos')->default(0);
             $table->timestamps();
 

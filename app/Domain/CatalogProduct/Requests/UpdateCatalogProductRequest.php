@@ -15,7 +15,7 @@ class UpdateCatalogProductRequest extends Request
     {
         return [
             'name' => 'bail|required|max:512',
-            'price' => 'integer|max:16777215',
+            'price' => 'integer|max:4294967295',
             'label' => 'string|max:16|nullable',
             'title' => 'required|max:512',
             'description' => 'max:512|nullable',
