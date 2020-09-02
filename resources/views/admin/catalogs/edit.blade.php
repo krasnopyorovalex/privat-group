@@ -52,9 +52,9 @@
                                         <img src="{{ asset($catalog->image->path) }}" alt="" class="upload__image">
 
                                         <div class="btn-group btn__actions">
-                                            <button data-toggle="modal" data-target="#modal_info" type="button" class="btn btn-primary btn-labeled btn-sm"><b><i class="icon-pencil4"></i></b> Атрибуты</button>
+                                            <button data-toggle="modal" data-target="#modal_info" type="button" class="btn btn-primary btn-labeled btn-xs"><b><i class="icon-pencil4"></i></b> Атрибуты</button>
 
-                                            <button type="button" data-href="{{ route('admin.images.destroy', ['id' => $catalog->image->id]) }}" class="btn delete__img btn-danger btn-labeled btn-labeled-right btn-sm">Удалить <b><i class="icon-trash"></i></b></button>
+                                            <button type="button" data-href="{{ route('admin.images.destroy', ['id' => $catalog->image->id]) }}" class="btn delete__img btn-danger btn-labeled btn-labeled-right btn-xs">Удалить <b><i class="icon-trash"></i></b></button>
                                         </div>
                                     </div>
                                 </div>
