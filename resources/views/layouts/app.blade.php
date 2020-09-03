@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes"/>
-    <title>@yield('title', 'Все для бани')</title>
+    <title>@yield('title', '') | Private Estate</title>
     <meta name="description" content="@yield('description', '')">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="#eee">
@@ -15,6 +15,31 @@
 </head>
 <body>
     <div class="page">
+        <div class="header-contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header-contacts-items">
+                            <address>
+                                <span class="icon mdi mdi-map-marker"></span>
+                                Ялта, ул. К. Маркса 15а, оф. 3-3
+                            </address>
+                            <div class="email">
+                                <span class="icon mdi mdi-email"></span>
+                                <a href="mailto:pr.estate82@gmail.com">pr.estate82@gmail.com</a>
+                            </div>
+                            <div class="socials">
+                                <div>
+                                    <a href="https://vk.com/privateestatecrimea " target="_blank" rel="noopener noreferrer">
+                                        <span class="fa-vk"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Page Header-->
         <header class="section page-header">
             <!-- RD Navbar-->
@@ -114,8 +139,8 @@
                                     <p>Мы в соцсеятх</p>
                                     <div>
                                         <ul class="list-inline list-social list-inline-sm">
-                                            <li><a class="icon mdi mdi-youtube-play" href="https://www.youtube.com/channel/UCigKb7WaQgDwppkEODoFMuw" target="_blank"></a></li>
-                                            <li><a class="icon mdi mdi-instagram" href="https://www.instagram.com/fabrika_bani/" target="_blank"></a></li>
+                                            <li><a class="icon mdi mdi-vk" href="https://vk.com/privateestatecrimea" target="_blank" rel="noopener noreferrer"></a></li>
+{{--                                            <li><a class="icon mdi mdi-instagram" href="https://www.instagram.com/fabrika_bani/" target="_blank"></a></li>--}}
                                         </ul>
                                     </div>
                                 </div>
@@ -163,7 +188,7 @@
                 <div class="container">
                     <div class="row row-10 align-items-center justify-content-sm-between">
                         <div class="col-md-auto">
-                            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>СТРОИТЕЛЬСТВО БАНЬ, САУН И ХАМАМОВ В СЕВАСТОПОЛЕ И КРЫМУ</span><span>.&nbsp;Все права защищены.</span></p>
+                            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>ООО "Private Estate"</span><span>.&nbsp;Все права защищены.</span></p>
                         </div>
                         <div class="col-md-auto"></div>
                     </div>

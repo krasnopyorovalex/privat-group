@@ -14660,3 +14660,27 @@ h2.adh2 {
 .img-big {
   height: 100%;
 }
+.header-contacts {
+  background-color: #2f4c58;
+  padding: .5rem 0;
+}
+.header-contacts address,
+.header-contacts .email a,
+.header-contacts .email span,
+.header-contacts .socials span {
+  color: #fff;
+}
+.header-contacts .email a:hover {
+  text-decoration: underline;
+}
+.header-contacts .email {
+  margin: 0 0 0 1rem;
+}
+.header-contacts-items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header-contacts .socials {
+  margin: 0 0 0 auto;
+}

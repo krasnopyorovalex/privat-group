@@ -3354,6 +3354,12 @@
     .rd-form-inline .form-label {
         text-align: center
     }
+    .header-contacts-items {
+        justify-content: center;
+    }
+    .header-contacts-items > div, .header-contacts-items address {
+        flex-grow: 1;
+    }
     .container.grid-demonstration [class^=col] {
         padding: 5px
     }
