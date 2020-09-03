@@ -21,6 +21,7 @@ class GetAllCatalogsWithoutParentQuery
         return Catalog::with(['products','catalogs' => static function (HasMany $relation) {
             $relation->withCount('products');
         }])
+            ->withCount('products')
             ->where('parent_id', null)
             ->orderBy('pos')
             ->get();

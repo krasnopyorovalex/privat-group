@@ -68,7 +68,7 @@
                                             @foreach($categories as $category)
                                                 <li>
                                                     <a href="{{ route('catalog.show', ['alias' => $category->alias]) }}">{{ $category->name }}</a>
-                                                    <div class="categories-menu-count">{{ $category->catalogs->sum('products_count') }}</div>
+                                                    <div class="categories-menu-count">{{ $category->products_count ?: $category->catalogs->sum('products_count') }}</div>
                                                     @if($category->catalogs->count())
                                                     <ul class="categories-sub-menu">
                                                         @foreach($category->catalogs as $subCategory)
