@@ -3360,6 +3360,9 @@
     .header-contacts-items > div, .header-contacts-items address {
         flex-grow: 1;
     }
+    .owl-carousel.owl-style-5 {
+        max-width: 100%;
+    }
     .container.grid-demonstration [class^=col] {
         padding: 5px
     }
@@ -3381,39 +3384,6 @@
     .swiper-slide-caption .swiper-title-2 {
         font-size: 16px;
         line-height: 24px;
-    }
-    .call__qa, .call__qa2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        bottom: 0;
-        top: unset;
-        width: 49%;
-        left: 0;
-        color: #151515;
-        font-weight: 700;
-        height: 38px;
-        font-size: 13px;
-        line-height: normal;
-        text-align: center;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 10px;
-        -ms-transform: none;
-        -moz-transform: none;
-        -webkit-transform: none;
-        transform: none;
-        -ms-transform-origin: 0 0;
-        -moz-transform-origin: 0 0;
-        -webkit-transform-origin: 0 0;
-        transform-origin: 0 0;
-    }
-    .call__qa2 {
-        right: 0;
-        left: unset;
-        margin: 0 0 0 2%;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 0
     }
 }
 @media (min-width:576px) and (max-width:767px) {

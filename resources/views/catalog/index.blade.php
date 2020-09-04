@@ -62,32 +62,74 @@
                     <div class="row row-30 row-lg-50">
                         @if($products)
                             @foreach($products as $product)
-                                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">
-                                    <!-- Product-->
-                                    <article class="product">
-                                        <div class="product-body">
-                                            @if($product->image)
-                                            <div class="product-figure">
-                                                <a href="{{ $product->url }}">
-                                                    <img src="" data-src="{{ $product->image->path }}" alt="{{ $product->image->alt }}" title="{{ $product->image->title }}" width="220" height="160"/>
-                                                </a>
+                                <div class="col-md-12">
+                                    <article class="product-modern text-center text-sm-left">
+                                        <div class="unit unit-spacing-0 flex-column flex-sm-row">
+                                            <div class="unit-left">
+                                                @if($product->images->count())
+                                                    <!-- Owl Carousel-->
+                                                    <div class="owl-carousel owl-style-5" data-nav="true" data-items="1" data-margin="30" data-dots="false" data-autoplay="false">
+                                                        @foreach($product->images as $image)
+                                                            <article class="product-creative">
+                                                                <div class="product-figure">
+                                                                    <img src="" class="left-img" data-src="{{ $image->path }}" alt="{{ $image->alt }}" title="{{ $image->title }}" />
+                                                                </div>
+                                                            </article>
+                                                        @endforeach
+                                                    </div>
+                                                @endif
                                             </div>
-                                            @endif
-                                            <h5 class="product-title"><a href="{{ $product->url }}">{{ $product->name }}</a></h5>
-                                                <div class="product-price-wrap">
-                                                    <div class="product-price">{!! $product->getPrice() !!}</div>
+                                            <div class="unit-body">
+                                                <div class="product-modern-body">
+                                                    <div class="h4 product-modern-title">
+                                                        <a href="{{ $product->url }}">{{ $product->name }}</a>
+                                                    </div>
+                                                    <div class="product-address-wrap">
+                                                        <div class="product-address">
+                                                            <span class="icon mdi mdi-map-marker"></span>
+                                                            {{ $product->address }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-price-wrap">
+                                                        <div class="product-price">{!! $product->getPrice() !!}</div>
+                                                    </div>
+                                                    <p class="product-modern-text">{{ strip_tags($product->preview) }}</p>
+                                                    <a class="button button-primary button-zakaria" href="{{ $product->url }}">Подробнее</a>
                                                 </div>
+                                            </div>
                                         </div>
                                         @if($product->label)
                                         <span class="product-badge product-badge-{{ $product->label }}">{{ $product->getLabelName($product->label) }}</span>
                                         @endif
-                                        <div class="product-button-wrap">
-                                            <div class="product-button">
-                                                <a class="button button-secondary button-zakaria fl-bigmug-line-search74" href="{{ $product->url }}"></a>
-                                            </div>
-                                        </div>
                                     </article>
                                 </div>
+
+{{--                                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">--}}
+{{--                                    <!-- Product-->--}}
+{{--                                    <article class="product">--}}
+{{--                                        <div class="product-body">--}}
+{{--                                            @if($product->image)--}}
+{{--                                            <div class="product-figure">--}}
+{{--                                                <a href="{{ $product->url }}">--}}
+{{--                                                    <img src="" data-src="{{ $product->image->path }}" alt="{{ $product->image->alt }}" title="{{ $product->image->title }}" width="220" height="160"/>--}}
+{{--                                                </a>--}}
+{{--                                            </div>--}}
+{{--                                            @endif--}}
+{{--                                            <h5 class="product-title"><a href="{{ $product->url }}">{{ $product->name }}</a></h5>--}}
+{{--                                                <div class="product-price-wrap">--}}
+{{--                                                    <div class="product-price">{!! $product->getPrice() !!}</div>--}}
+{{--                                                </div>--}}
+{{--                                        </div>--}}
+{{--                                        @if($product->label)--}}
+{{--                                        <span class="product-badge product-badge-{{ $product->label }}">{{ $product->getLabelName($product->label) }}</span>--}}
+{{--                                        @endif--}}
+{{--                                        <div class="product-button-wrap">--}}
+{{--                                            <div class="product-button">--}}
+{{--                                                <a class="button button-secondary button-zakaria fl-bigmug-line-search74" href="{{ $product->url }}"></a>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </article>--}}
+{{--                                </div>--}}
                             @endforeach
                         @endif
                     </div>

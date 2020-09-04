@@ -21,9 +21,11 @@ class CreateCatalogProductRequest extends Request
             'description' => 'max:512|nullable',
             'text' => 'string|nullable',
             'props' => 'string|nullable',
+            'preview' => 'string|nullable',
             'alias' => 'required|max:255|unique:catalog_products',
             'pos' => 'integer|min:0|max:255',
-            'on_request' => 'boolean'
+            'on_request' => 'boolean',
+            'address' => 'string|nullable'
         ];
     }
 

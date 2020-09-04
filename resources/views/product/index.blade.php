@@ -80,7 +80,11 @@
     <section class="section section-sm bg-default">
         <div class="container">
             <div class="row">
-                {!! $product->props !!}
+                <div class="col-md-12">
+                    <div class="after-gallery-text">
+                        {!! $product->props !!}
+                    </div>
+                </div>
             </div>
         </div>
     </section>

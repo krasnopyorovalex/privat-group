@@ -135,6 +135,10 @@ $(function() {
         CKEDITOR.replace('full-props');
     }
 
+    if($('#full-preview').length) {
+        CKEDITOR.replace('full-preview');
+    }
+
     var tabsEditors = $("textarea.tabs__editor");
     if(tabsEditors) {
         tabsEditors.each(function(){

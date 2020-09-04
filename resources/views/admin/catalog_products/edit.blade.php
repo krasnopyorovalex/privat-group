@@ -40,11 +40,13 @@
                                         @input(['name' => 'description', 'label' => 'Description', 'entity' => $catalogProduct])
 
                                         @input(['name' => 'price', 'label' => 'Цена', 'entity' => $catalogProduct])
+                                        @input(['name' => 'address', 'label' => 'Адрес', 'entity' => $catalogProduct])
 
                                         @input(['name' => 'alias', 'label' => 'Alias', 'entity' => $catalogProduct])
 
                                         @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $catalogProduct])
-                                        @textarea(['name' => 'props', 'label' => 'Текст', 'id' => 'full-props', 'entity' => $catalogProduct])
+                                        @textarea(['name' => 'props', 'label' => 'Текст под галереей', 'id' => 'full-props', 'entity' => $catalogProduct])
+                                        @textarea(['name' => 'preview', 'label' => 'Превью для списка', 'id' => 'full-preview', 'entity' => $catalogProduct])
 
                                         @checkbox(['name' => 'on_request', 'label' => 'Стоимость под запрос?', 'entity' => $catalogProduct])
                                     </div>
