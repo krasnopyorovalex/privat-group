@@ -44,9 +44,9 @@
 
                                         @input(['name' => 'alias', 'label' => 'Alias', 'entity' => $catalogProduct])
 
+                                        @textarea(['name' => 'preview', 'label' => 'Превью для списка', 'id' => 'full-preview', 'entity' => $catalogProduct])
                                         @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $catalogProduct])
                                         @textarea(['name' => 'props', 'label' => 'Текст под галереей', 'id' => 'full-props', 'entity' => $catalogProduct])
-                                        @textarea(['name' => 'preview', 'label' => 'Превью для списка', 'id' => 'full-preview', 'entity' => $catalogProduct])
 
                                         @checkbox(['name' => 'on_request', 'label' => 'Стоимость под запрос?', 'entity' => $catalogProduct])
                                     </div>

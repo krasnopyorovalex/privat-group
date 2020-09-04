@@ -45,9 +45,9 @@
 
                             @input(['name' => 'alias', 'label' => 'Alias'])
                             @imageInput(['name' => 'image', 'type' => 'file', 'label' => 'Выберите изображение на компьютере'])
+                            @textarea(['name' => 'preview', 'label' => 'Превью для списка', 'id' => 'full-preview'])
                             @textarea(['name' => 'text', 'label' => 'Текст'])
                             @textarea(['name' => 'props', 'label' => 'Текст под галереей', 'id' => 'full-props'])
-                            @textarea(['name' => 'preview', 'label' => 'Превью для списка', 'id' => 'full-preview'])
                             @checkbox(['name' => 'on_request', 'label' => 'Стоимость под запрос?'])
 
                             @submit_btn()
