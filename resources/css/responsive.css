@@ -3360,7 +3360,11 @@
     .header-contacts-items > div, .header-contacts-items address {
         flex-grow: 1;
     }
-    .owl-carousel.owl-style-5, .product-modern .product-figure img.left-img {
+    .product-modern .product-figure img.left-img {
+        max-width: 100%;
+        width: 100%;
+    }
+    .owl-carousel.owl-style-5 {
         max-width: 100%;
     }
     .container.grid-demonstration [class^=col] {

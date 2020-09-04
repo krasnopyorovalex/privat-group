@@ -34,7 +34,7 @@
 }
 
 .categories-menu > ul > li:hover > a {
-    background-color: #007A96;
+    background-color: #005F81;
 }
 
 .categories-menu > ul > li + li {
@@ -67,7 +67,7 @@
 }
 
 .categories-menu .categories-sub-menu li:hover {
-    background-color: #007A96;
+    background-color: #005F81;
 }
 
 .categories-menu .categories-sub-menu li a {

@@ -50,7 +50,11 @@
                                 @if($catalogs)
                                 <ul class="list-shop-filter">
                                     @foreach($catalogs as $cat)
-                                    <li class="{{ $cat->alias === request('alias') ? 'active' : '' }}"><a href="{{ $cat->url }}">{{ $cat->name }}</a></li>
+                                    <li class="{{ $cat->alias === request('alias') ? 'active' : '' }}">
+                                        <a href="{{ $cat->url }}">{{ $cat->name }}</a>
+                                        <div class="line"></div>
+                                        <div class="count">{{ $cat->products_count ?: $cat->catalogs->sum('products_count') }}</div>
+                                    </li>
                                     @endforeach
                                 </ul>
                                 @endif
@@ -62,50 +66,42 @@
                     <div class="row row-30 row-lg-50">
                         @if($products)
                             @foreach($products as $product)
-                                <div class="col-md-12">
+                                <div class="col-12">
                                     <article class="product-modern text-center text-sm-left">
                                         <div class="unit unit-spacing-0 flex-column flex-sm-row">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <div class="unit-left">
-                                                    @if($product->images->count())
-                                                        <!-- Owl Carousel-->
-                                                            <div class="owl-carousel owl-style-5" data-nav="true" data-items="1" data-margin="30" data-dots="false" data-autoplay="false">
-                                                                @foreach($product->images as $image)
-                                                                    <article class="product-creative">
-                                                                        <div class="product-figure">
-                                                                            <img src="" class="left-img" data-src="{{ $image->getThumb() }}" alt="{{ $image->alt }}" title="{{ $image->title }}" />
-                                                                        </div>
-                                                                    </article>
-                                                                @endforeach
-                                                            </div>
-                                                        @endif
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="unit-body">
-                                                        <div class="product-modern-body">
-                                                            <div class="h4 product-modern-title">
-                                                                <a href="{{ $product->url }}">{{ $product->name }}</a>
-                                                            </div>
-                                                            @if($product->address)
-                                                            <div class="product-address-wrap">
-                                                                <div class="product-address">
-                                                                    <span class="icon mdi mdi-map-marker"></span>
-                                                                    {{ $product->address }}
+                                            <div class="unit-left">
+                                            @if($product->images->count())
+                                                <!-- Owl Carousel-->
+                                                    <div class="owl-carousel owl-style-5" data-nav="true" data-items="1" data-margin="30" data-dots="false" data-autoplay="false">
+                                                        @foreach($product->images as $image)
+                                                            <article class="product-creative">
+                                                                <div class="product-figure">
+                                                                    <img src="" class="left-img" data-src="{{ $image->getThumb() }}" alt="{{ $image->alt }}" title="{{ $image->title }}" />
                                                                 </div>
-                                                            </div>
-                                                            @endif
-                                                            <div class="product-price-wrap">
-                                                                <div class="product-price">{!! $product->getPrice() !!}</div>
-                                                            </div>
-                                                            <p class="product-modern-text">{{ strip_tags($product->preview) }}</p>
-                                                            <a class="button button-primary button-zakaria" href="{{ $product->url }}">Подробнее</a>
+                                                            </article>
+                                                        @endforeach
+                                                    </div>
+                                                @endif
+                                            </div>
+                                            <div class="unit-body">
+                                                <div class="product-modern-body">
+                                                    <div class="h4 product-modern-title">
+                                                        <a href="{{ $product->url }}">{{ $product->name }}</a>
+                                                    </div>
+                                                    <div class="product-address-wrap">
+                                                        <div class="product-address">
+                                                            <span class="icon mdi mdi-map-marker"></span>
+                                                            {{ $product->address }}
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <div class="product-price-wrap">
+                                                        <div class="product-price">{!! $product->getPrice() !!}</div>
+                                                    </div>
+                                                    <p class="product-modern-text">{{ strip_tags($product->preview) }}</p>
+                                                    <a class="button button-primary" href="{{ $product->url }}">Подробнее</a>
                                                 </div>
                                             </div>
+                                        </div>
                                         @if($product->label)
                                             <span class="product-badge product-badge-{{ $product->label }}">{{ $product->getLabelName($product->label) }}</span>
                                         @endif
