@@ -14716,10 +14716,10 @@ h2.adh2 {
   margin-top: 1rem;
 }
 .product-modern .product-figure img.left-img {
-  max-width: 320px;
+  width: 320px;
 }
 .owl-carousel.owl-style-5 {
-  max-width: 320px;
+  width: 320px;
 }
 .product-modern .owl-next, .product-modern .owl-prev {
   color: #ffffff;
