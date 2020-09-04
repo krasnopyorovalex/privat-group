@@ -4777,6 +4777,9 @@ textarea.textarea-lg {
 .product-price-wrap + .product-price-wrap {
   margin-top: 4px
 }
+.product-modern-title + .product-price-wrap {
+  margin-top: 1rem;
+}
 .product-modern-title + .product-address-wrap {
   margin: .5rem 0 1rem 0;
 }
@@ -14695,12 +14698,6 @@ h2.adh2 {
 .product_text, .after-gallery-text {
   font-size: 17px;
 }
-.product-modern .product-figure img.left-img {
-  max-width: 320px;
-}
-.owl-carousel.owl-style-5 {
-  max-width: 320px;
-}
 .product-modern .owl-next {
   right: 10px;
 }
@@ -14709,4 +14706,5 @@ h2.adh2 {
 }
 .product-modern .owl-next, .product-modern .owl-prev {
   color: #ffffff;
+  background-color: rgba(255,255,255,.22);
 }
