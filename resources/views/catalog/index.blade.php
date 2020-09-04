@@ -88,12 +88,14 @@
                                                     <div class="h4 product-modern-title">
                                                         <a href="{{ $product->url }}">{{ $product->name }}</a>
                                                     </div>
+                                                    @if($product->address)
                                                     <div class="product-address-wrap">
                                                         <div class="product-address">
                                                             <span class="icon mdi mdi-map-marker"></span>
                                                             {{ $product->address }}
                                                         </div>
                                                     </div>
+                                                    @endif
                                                     <div class="product-price-wrap">
                                                         <div class="product-price">{!! $product->getPrice() !!}</div>
                                                     </div>
