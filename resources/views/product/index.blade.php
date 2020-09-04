@@ -38,7 +38,7 @@
     </section>
 
     <!-- Single Product-->
-    <section class="section section-sm section-first bg-default">
+    <section class="section section-sm bg-default">
         <div class="container">
             <div class="row row-30">
                 <div class="col-lg-5">
