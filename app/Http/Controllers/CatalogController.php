@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\CatalogProduct;
 use App\Domain\Catalog\Queries\GetAllCatalogsWithoutParentQuery;
 use App\Domain\Catalog\Queries\GetCatalogByAliasQuery;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\View\View;
 
 /**
