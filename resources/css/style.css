@@ -4778,11 +4778,14 @@ textarea.textarea-lg {
 * + .product-modern-text {
   margin-top: 12px
 }
+.product-modern-text {
+  font-size: 16px;
+}
 .product-price-wrap + .product-price-wrap {
   margin-top: 4px
 }
 .product-modern-title + .product-address-wrap {
-  margin: 1rem 0 1.5rem 0;
+  margin: .5rem 0 1rem 0;
 }
 .product-modern .product-price {
   font-size: 28px;
