@@ -73,7 +73,7 @@
                                             @if($product->images->count())
                                                 <!-- Owl Carousel-->
                                                     <div class="owl-carousel owl-style-5" data-nav="true" data-items="1" data-margin="30" data-dots="false" data-autoplay="false">
-                                                        @foreach($product->images as $image)
+                                                        @foreach($product->images->take(3) as $image)
                                                             <article class="product-creative">
                                                                 <div class="product-figure">
                                                                     <img src="" class="left-img" data-src="{{ $image->getThumb() }}" alt="{{ $image->alt }}" title="{{ $image->title }}" />
