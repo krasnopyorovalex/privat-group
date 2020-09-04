@@ -18,7 +18,9 @@ class GetAllCatalogsWithoutParentQuery
      */
     public function handle()
     {
-        return Catalog::with(['products','catalogs' => static function (HasMany $relation) {
+        return Catalog::with(['products' => static function (HasMany $relation) {
+            $relation->with(['images']);
+        },'catalogs' => static function (HasMany $relation) {
             $relation->withCount('products');
         }])
             ->withCount('products')
