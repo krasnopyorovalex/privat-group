@@ -51,6 +51,12 @@
                 <div class="col-lg-7">
                     <div class="single-product">
                         <h3 class="text-transform-none font-weight-medium">{{ $product->name }}</h3>
+                        @if($product->address)
+                            <div class="single-product-address">
+                                <span class="icon mdi mdi-map-marker"></span>
+                                {{ $product->address }}
+                            </div>
+                        @endif
                         <div class="group-md group-middle">
                             <div class="single-product-price">
                                 @if($product->on_request)
