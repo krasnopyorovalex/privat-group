@@ -30,7 +30,7 @@ class OrderProductSent extends Mailable
      */
     public function build(): OrderProductSent
     {
-        return $this->from('bani.crimea@yandex.ru')
+        return $this->from(env('MAIL_FROM_ADDRESS'))
             ->subject('Форма: Заказать баню')
             ->view('emails.order_product', [
                 'data' => $this->data

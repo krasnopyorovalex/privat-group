@@ -30,7 +30,7 @@ class QuestionSent extends Mailable
      */
     public function build(): QuestionSent
     {
-        return $this->from('bani.crimea@yandex.ru')
+        return $this->from(env('MAIL_FROM_ADDRESS'))
             ->subject('Форма: Задать вопрос директору')
             ->view('emails.question', [
                 'data' => $this->data

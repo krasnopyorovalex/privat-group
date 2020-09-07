@@ -30,7 +30,7 @@ class CallbackSent extends Mailable
      */
     public function build(): CallbackSent
     {
-        return $this->from('bani.crimea@yandex.ru')
+        return $this->from(env('MAIL_FROM_ADDRESS'))
             ->subject('Форма: Заказ бесплатного замера')
             ->view('emails.callback', [
                 'data' => $this->data

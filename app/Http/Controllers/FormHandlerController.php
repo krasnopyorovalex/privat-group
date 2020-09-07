@@ -28,15 +28,13 @@ class FormHandlerController extends Controller
 {
     use DispatchesJobs;
 
-    private $to = 'fabrikabani@mail.ru';
-
     /**
      * @param SubscribeRequest $request
      * @return array
      */
     public function subscribe(SubscribeRequest $request): array
     {
-        Mail::to([$this->to])->send(new SubscribeSent($request->all()));
+        Mail::to([env('MAIL_TO')])->send(new SubscribeSent($request->all()));
 
         return [
             'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
@@ -50,7 +48,7 @@ class FormHandlerController extends Controller
      */
     public function order(OrderRequest $request): array
     {
-        Mail::to([$this->to])->send(new OrderSent($request->all()));
+        Mail::to([env('MAIL_TO')])->send(new OrderSent($request->all()));
 
         return [
             'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
@@ -64,7 +62,7 @@ class FormHandlerController extends Controller
      */
     public function callback(CallbackRequest $request): array
     {
-        Mail::to([$this->to])->send(new CallbackSent($request->all()));
+        Mail::to([env('MAIL_TO')])->send(new CallbackSent($request->all()));
 
         return [
             'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
@@ -78,7 +76,7 @@ class FormHandlerController extends Controller
      */
     public function callbackPopup(CallbackPopupRequest $request): array
     {
-        Mail::to([$this->to])->send(new CallbackPopupSent($request->all()));
+        Mail::to([env('MAIL_TO')])->send(new CallbackPopupSent($request->all()));
 
         return [
             'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
@@ -92,7 +90,7 @@ class FormHandlerController extends Controller
      */
     public function question(QuestionRequest $request): array
     {
-        Mail::to([$this->to])->send(new QuestionSent($request->all()));
+        Mail::to([env('MAIL_TO')])->send(new QuestionSent($request->all()));
 
         return [
             'message' => 'Ваш запрос принят. Я свяжусь с Вами в ближайшее время',
@@ -106,7 +104,7 @@ class FormHandlerController extends Controller
      */
     public function orderService(OrderServiceRequest $request): array
     {
-        Mail::to([$this->to])->send(new OrderServiceSent($request->all()));
+        Mail::to([env('MAIL_TO')])->send(new OrderServiceSent($request->all()));
 
         return [
             'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
@@ -120,7 +118,7 @@ class FormHandlerController extends Controller
      */
     public function orderServiceItem(OrderServiceItemRequest $request): array
     {
-        Mail::to([$this->to])->send(new OrderServiceSent($request->all()));
+        Mail::to([env('MAIL_TO')])->send(new OrderServiceSent($request->all()));
 
         return [
             'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
@@ -134,7 +132,7 @@ class FormHandlerController extends Controller
      */
     public function orderProduct(OrderProductRequest $request): array
     {
-        Mail::to([$this->to])->send(new OrderProductSent($request->all()));
+        Mail::to([env('MAIL_TO')])->send(new OrderProductSent($request->all()));
 
         return [
             'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',

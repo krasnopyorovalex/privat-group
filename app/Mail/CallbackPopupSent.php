@@ -30,7 +30,7 @@ class CallbackPopupSent extends Mailable
      */
     public function build(): CallbackPopupSent
     {
-        return $this->from('bani.crimea@yandex.ru')
+        return $this->from(env('MAIL_FROM_ADDRESS'))
             ->subject('Форма: Заказ звонка')
             ->view('emails.callback-popup', [
                 'data' => $this->data

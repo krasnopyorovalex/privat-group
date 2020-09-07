@@ -31,7 +31,7 @@ class CheckoutCartSent extends Mailable
      */
     public function build(): CheckoutCartSent
     {
-        return $this->from('bani.crimea@yandex.ru')
+        return $this->from(env('MAIL_FROM_ADDRESS'))
             ->subject('Форма: Оформление заказа')
             ->view('emails.checkout_cart', [
                 'data' => $this->data

@@ -30,7 +30,7 @@ class OrderServiceItemSent extends Mailable
      */
     public function build(): OrderServiceItemSent
     {
-        return $this->from('bani.crimea@yandex.ru')
+        return $this->from(env('MAIL_FROM_ADDRESS'))
             ->subject('Форма: Заказать услугу')
             ->view('emails.order_service', [
                 'data' => $this->data

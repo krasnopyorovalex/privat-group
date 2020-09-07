@@ -30,7 +30,7 @@ class SubscribeSent extends Mailable
      */
     public function build(): SubscribeSent
     {
-        return $this->from('bani.crimea@yandex.ru')
+        return $this->from(env('MAIL_FROM_ADDRESS'))
             ->subject('Форма: получить бесплатную консультацию')
             ->view('emails.subscribe', [
                 'data' => $this->data
