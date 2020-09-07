@@ -3349,7 +3349,7 @@
         margin: 20px 0 10px 0;
     }
     .service-item + .service-item {
-        margin-top: 1rem;
+        margin-top: 3rem;
     }
 }
 @media (max-width:576px) {
