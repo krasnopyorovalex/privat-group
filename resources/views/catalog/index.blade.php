@@ -97,8 +97,15 @@
                                                     </div>
                                                     @endif
                                                     <div class="product-price-wrap">
-                                                        <div class="product-price">{!! $product->getPrice() !!}</div>
+                                                        <div class="product-price">
+                                                            @if($product->on_request)
+                                                                Цена под запрос
+                                                            @else
+                                                                {!! $product->getPrice() !!}
+                                                            @endif
+                                                        </div>
                                                     </div>
+                                                    @endif
                                                     <p class="product-modern-text">{{ strip_tags($product->preview) }}</p>
                                                     <a class="button button-primary" href="{{ $product->url }}">Подробнее</a>
                                                 </div>
