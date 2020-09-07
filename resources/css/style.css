@@ -14312,9 +14312,9 @@ textarea:focus::placeholder {
   right:0;
   top:16%;
   width:320px;
-  border-top:3px solid #76aa6f;
+  border-top:3px solid #3CAA2E;
   box-shadow:0 1px 4px #373737;
-  background-color:#ebebeb;
+  background-color:#fff;
   z-index:999;
   text-align: left
 }

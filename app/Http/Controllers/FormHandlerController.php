@@ -93,7 +93,7 @@ class FormHandlerController extends Controller
         Mail::to([env('MAIL_TO')])->send(new QuestionSent($request->all()));
 
         return [
-            'message' => 'Ваш запрос принят. Я свяжусь с Вами в ближайшее время',
+            'message' => 'Форма отправлена успешно. Наш менеджер свяжется с Вами в ближайшее время',
             'status' => 200
         ];
     }
