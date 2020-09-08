@@ -3354,6 +3354,9 @@
     .main-text .title {
         min-height: unset;
     }
+    .img-big {
+        height: auto;
+    }
 }
 @media (max-width:576px) {
     .rd-form-inline .form-input,
