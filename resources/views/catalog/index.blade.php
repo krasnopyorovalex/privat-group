@@ -70,18 +70,25 @@
                                     <article class="product-modern text-center text-sm-left">
                                         <div class="unit unit-spacing-0 flex-column flex-sm-row">
                                             <div class="unit-left">
-                                            @if($product->images->count())
                                                 <!-- Owl Carousel-->
-                                                    <div class="owl-carousel owl-style-5" data-nav="true" data-items="1" data-margin="30" data-dots="false" data-autoplay="false">
-                                                        @foreach($product->images->take(3) as $image)
+                                                <div class="owl-carousel owl-style-5" data-nav="true" data-items="1" data-margin="30" data-dots="false" data-autoplay="false">
+                                                    @if($product->image)
+                                                    <article class="product-creative">
+                                                        <div class="product-figure">
+                                                            <img src="" class="left-img" data-src="{{ $product->image->path }}" alt="{{ $product->image->alt }}" title="{{ $product->image->title }}" />
+                                                        </div>
+                                                    </article>
+                                                    @endif
+                                                    @if($product->images->count())
+                                                        @foreach($product->images->take(2) as $image)
                                                             <article class="product-creative">
                                                                 <div class="product-figure">
                                                                     <img src="" class="left-img" data-src="{{ $image->getThumb() }}" alt="{{ $image->alt }}" title="{{ $image->title }}" />
                                                                 </div>
                                                             </article>
                                                         @endforeach
-                                                    </div>
-                                                @endif
+                                                    @endif
+                                                </div>
                                             </div>
                                             <div class="unit-body">
                                                 <div class="product-modern-body">
