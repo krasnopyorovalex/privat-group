@@ -8,7 +8,7 @@
             <div>
                 <a href="{{ route('admin.catalogs.edit', $catalog) }}"><i class="icon-pencil7"></i></a>
                 @if (!count($catalog->catalogs))
-                <a href="{{ route('admin.catalog_products.index', $catalog) }}" data-original-title="Товары" data-popup="tooltip"><i class="icon-lan2"></i></a>
+                <a href="{{ route('admin.catalog_products.index', $catalog) }}" data-original-title="Список" data-popup="tooltip"><i class="icon-lan2"></i></a>
                 @endif
                 <form method="POST" action="{{ route('admin.catalogs.destroy', $catalog) }}" class="form__delete">
                     {{ csrf_field() }}
