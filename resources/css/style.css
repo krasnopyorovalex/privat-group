@@ -14668,8 +14668,12 @@ h2.adh2 {
   background-image: -webkit-gradient(linear, left top, right top, from(#C7F9F4), to(#005F81));
   background-image: linear-gradient(to right, #C7F9F4, #005F81);
 }
+.main-text ul {
+    list-style: disc;
+}
 .main-text ul li {
-  line-height: 34px
+  line-height: 34px;
+  display: list-item;
 }
 .section-banner img {
   width: 100%;
