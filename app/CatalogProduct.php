@@ -42,7 +42,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  */
 class CatalogProduct extends Model
 {
-    use AutoAliasTrait;
+    //use AutoAliasTrait;
 
     private const LABELS = [
         '' => 'Не выбрано',
@@ -64,7 +64,7 @@ class CatalogProduct extends Model
     /**
      * @var array
      */
-    protected $guarded= ['image'];
+    protected $guarded = ['image', 'alias'];
 
     /**
      * @return HasOne

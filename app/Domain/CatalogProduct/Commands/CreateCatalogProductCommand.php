@@ -2,6 +2,7 @@
 
 namespace App\Domain\CatalogProduct\Commands;
 
+use App\Domain\CatalogProduct\Queries\ExistsCatalogProductByAliasQuery;
 use App\Domain\Image\Commands\UploadImageCommand;
 use App\Http\Requests\Request;
 use App\CatalogProduct;
@@ -28,15 +29,21 @@ class CreateCatalogProductCommand
 
     /**
      * @return bool
+     * @throws \Exception
      */
     public function handle(): bool
     {
         $catalogProduct = new CatalogProduct();
-        $catalogProduct->fill($this->request->all());
+        $catalogProduct->fill($this->request->validated());
+
+        $catalogProduct->alias = str_slug($this->request->post('alias'));
+        while ($this->dispatch(new ExistsCatalogProductByAliasQuery($catalogProduct->alias))) {
+            $catalogProduct->alias .= '-' . random_int(2, 100);
+        }
 
         $catalogProduct->save();
 
-        if($this->request->has('image')) {
+        if ($this->request->has('image')) {
             return $this->dispatch(new UploadImageCommand($this->request, $catalogProduct->id, CatalogProduct::class));
         }
 
