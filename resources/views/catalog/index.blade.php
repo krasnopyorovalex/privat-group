@@ -112,7 +112,7 @@
                                                             @endif
                                                         </div>
                                                     </div>
-                                                    <p class="product-modern-text">{{ strip_tags($product->preview) }}</p>
+                                                    <p class="product-modern-text">{!! $product->preview !!}</p>
                                                     <a class="button button-primary" href="{{ $product->url }}">Подробнее</a>
                                                 </div>
                                             </div>
