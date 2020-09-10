@@ -24,12 +24,7 @@ class UpdateCatalogProductRequest extends Request
             'props' => 'string|nullable',
             'pos' => 'integer|min:0|max:255',
             'on_request' => 'boolean',
-            'address' => 'string|nullable',
-            'alias' => [
-                'required',
-                'max:255',
-                Rule::unique('catalog_products')->ignore($this->id)
-            ]
+            'address' => 'string|nullable'
         ];
     }
 
@@ -43,9 +38,7 @@ class UpdateCatalogProductRequest extends Request
         return [
             'name.required' => 'Поле «Название» обязательно для заполнения',
             'title.required' => 'Поле «Title» обязательно для заполнения',
-            'text.required' => 'Поле «Текст» обязательно для заполнения',
-            'alias.required' => 'Поле «Alias» обязательно для заполнения',
-            'alias.unique' => 'Значение поля «Alias» уже присутствует в базе данных',
+            'text.required' => 'Поле «Текст» обязательно для заполнения'
         ];
     }
 }

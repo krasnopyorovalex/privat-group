@@ -6,7 +6,6 @@ use App\CatalogProduct;
 use App\Domain\CatalogProduct\Queries\GetCatalogProductByIdQuery;
 use App\Domain\Image\Commands\DeleteImageCommand;
 use App\Domain\Image\Commands\UploadImageCommand;
-use App\Events\RedirectDetected;
 use App\Http\Requests\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
@@ -39,11 +38,6 @@ class UpdateCatalogProductCommand
     public function handle(): bool
     {
         $catalogProduct = $this->dispatch(new GetCatalogProductByIdQuery($this->id));
-        $urlNew = $this->request->post('alias');
-
-        if ($catalogProduct->getOriginal('alias') !== $urlNew) {
-            event(new RedirectDetected($catalogProduct->getOriginal('alias'), str_slug($urlNew), 'catalog_product.show'));
-        }
 
         if ($this->request->has('image')) {
             if ($catalogProduct->image) {
