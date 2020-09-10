@@ -52,6 +52,6 @@ class UpdateCatalogProductCommand
             $this->dispatch(new UploadImageCommand($this->request, $catalogProduct->id, CatalogProduct::class));
         }
 
-        return $catalogProduct->update($this->request->all());
+        return $catalogProduct->update($this->request->validated());
     }
 }
