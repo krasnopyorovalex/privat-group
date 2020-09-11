@@ -53,7 +53,7 @@ class Catalog extends Model
      */
     public function catalogs(): HasMany
     {
-        return $this->hasMany(__CLASS__, 'parent_id', 'id')->orderBy('pos');
+        return $this->hasMany(__CLASS__, 'parent_id', 'id')->orderBy('created_at');
     }
 
     /**
