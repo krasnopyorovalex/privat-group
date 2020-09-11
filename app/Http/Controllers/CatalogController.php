@@ -23,7 +23,7 @@ class CatalogController extends Controller
 
         $catalogs = $this->dispatch(new GetAllCatalogsWithoutParentQuery());
 
-        $products = $catalog->products()->orderBy('created_at')->orderBy('label')->paginate();
+        $products = $catalog->products()->orderBy('created_at')->orderBy('label', 'desc')->paginate();
 
         return view('catalog.index', [
             'catalog' => $catalog,
