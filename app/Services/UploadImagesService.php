@@ -17,12 +17,12 @@ class UploadImagesService
     /**
      * @var int
      */
-    private $widthThumb = 320;
+    private $widthThumb = 270;
 
     /**
      * @var int
      */
-    private $heightThumb = 320;
+    private $heightThumb = 270;
 
     /**
      * @var UploadedFile
@@ -119,7 +119,10 @@ class UploadImagesService
     {
         (new ImageManager())
             ->make($this->image)
-            ->resize($this->widthThumb, $this->heightThumb)
+            ->resize($this->widthThumb, $this->heightThumb, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })
             ->save(public_path('storage/' . $this->entity . '/' . $this->entityId .'/' . $this->getImageHashName() . '_thumb.' . $this->getExt()));
     }
 
@@ -130,7 +133,7 @@ class UploadImagesService
         $imHeight = $im->height();
         $imWidth = $im->width();
 
-        $im->text('fabrikabani-krym.ru', abs($imWidth/2), abs($imHeight/2), static function($font) {
+        $im->text('privatestate-crimea.ru', abs($imWidth/2), abs($imHeight/2), static function($font) {
             $font->file(public_path('fonts/Arial-Black.ttf'));
             $font->size(24);
             $font->color(array(255, 255, 255, 0.6));
@@ -146,7 +149,7 @@ class UploadImagesService
         $imHeightThumb = $imThumb->height();
         $imWidthThumb = $imThumb->width();
 
-        $imThumb->text('fabrikabani-krym.ru', abs($imWidthThumb/2), abs($imHeightThumb/2), static function($font) {
+        $imThumb->text('privatestate-crimea.ru', abs($imWidthThumb/2), abs($imHeightThumb/2), static function($font) {
             $font->file(public_path('fonts/Arial-Black.ttf'));
             $font->size(24);
             $font->color(array(255, 255, 255, 0.6));
