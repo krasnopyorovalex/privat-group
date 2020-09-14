@@ -4735,14 +4735,14 @@ textarea.textarea-lg {
   right: auto;
   left: 15px
 }
-.product-modern .unit-left {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  align-items: stretch
-}
+/*.product-modern .unit-left {*/
+/*  display: -webkit-box;*/
+/*  display: -webkit-flex;*/
+/*  display: flex;*/
+/*  -webkit-box-align: stretch;*/
+/*  -webkit-align-items: stretch;*/
+/*  align-items: stretch*/
+/*}*/
 .product-modern .unit-body {
   display: -webkit-box;
   display: -webkit-flex;
