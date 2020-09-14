@@ -14741,3 +14741,6 @@ h2.adh2 {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
+.section.product-gallery img {
+  max-width: unset;
+}
