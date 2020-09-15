@@ -55,7 +55,7 @@
                         <div class="form_question">
                             <div>
                                 <div class="form_info"><p>Задать вопрос</p></div>
-                                <form action="{{ route('send.question') }}" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">
+                                <form action="{{ route('send.question') }}" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe" onsubmit="yaCounter67358938.reachGoal('VOPROS-NA-GLAVNOJ'); return true">
                                     @csrf
                                     <div class="form-wrap">
                                         <input class="form-input" id="subscribe-form-2-email" type="text" name="name" autocomplete="off" placeholder="Имя" required="" />
