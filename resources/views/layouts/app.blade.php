@@ -190,7 +190,20 @@
                         <div class="col-md-auto">
                             <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>ООО "Private Estate"</span><span>.&nbsp;Все права защищены.</span></p>
                         </div>
-                        <div class="col-md-auto"></div>
+                        <div class="col-md-auto">
+                            <div class="develop">
+                                <div class="develop__link">
+                                    <a href="https://krasber.ru" target="_blank">
+                                        Создание, продвижение и <br>техподдержка сайтов
+                                    </a>
+                                </div>
+                                <div class="develop__logo">
+                                    <a href="https://krasber.ru" target="_blank">
+                                        <img src="{{ asset('images/logo_green.svg') }}" alt="Веб-студия Красбер">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

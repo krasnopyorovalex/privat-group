@@ -14745,3 +14745,6 @@ h2.adh2 {
   max-width: unset;
   width: 100%;
 }
+.develop {
+  display: none;
+}
