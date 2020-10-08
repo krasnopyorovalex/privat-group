@@ -33,7 +33,7 @@
     text-decoration: underline
 }
 
-.categories-menu > ul > li:hover > a {
+.categories-menu > ul > li:hover > a, .categories-menu > ul > li.active a {
     background-color: #005F81;
 }
 

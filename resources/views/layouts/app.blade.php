@@ -91,7 +91,7 @@
                                     <div class="categories-menu">
                                         <ul>
                                             @foreach($categories as $category)
-                                                <li>
+                                                <li class="{{ $category->alias === request('alias') ? 'active' : '' }}">
                                                     <a href="{{ route('catalog.show', ['alias' => $category->alias]) }}">{{ $category->name }}</a>
                                                     <div class="categories-menu-count">{{ $category->products_count ?: $category->catalogs->sum('products_count') }}</div>
                                                     @if($category->catalogs->count())
