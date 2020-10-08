@@ -18,7 +18,7 @@
     <section class="breadcrumbs-custom">
         <div class="breadcrumbs-custom-body parallax-content context-dark bg-inside-pages">
             <div class="container">
-                <h2 class="breadcrumbs-custom-title">{{ $page->name }}</h2>
+                <h1 class="breadcrumbs-custom-title">{{ $page->name }}</h1>
             </div>
         </div>
         <div class="breadcrumbs-custom-footer">

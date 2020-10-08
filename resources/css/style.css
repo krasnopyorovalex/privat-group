@@ -14646,7 +14646,7 @@ h2.adh2 {
   align-items: center;
   text-align: left;
 }
-.main-text {
+.main-text, .seo-text {
   font-size: 19px;
   color: #000;
 }
