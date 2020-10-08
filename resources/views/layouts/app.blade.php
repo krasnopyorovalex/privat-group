@@ -147,7 +147,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4 col-xl-3 wow fadeInRight" data-wow-delay=".1s">
-                            <h4 class="footer-classic-title">Контакты</h4>
+                            <div class="footer-classic-title">Контакты</div>
                             <ul class="contacts-creative">
                                 <li>
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
@@ -166,20 +166,9 @@
                             </ul>
                         </div>
                         <div class="col-lg-4 wow fadeInRight" data-wow-delay=".2s">
-{{--                            <h4 class="footer-classic-title">Информация</h4>--}}
-{{--                            <p>Получи бесплатную консультацию и статью "10 критических ошибок при строительстве бани или сауны"</p>--}}
-{{--                            <form action="{{ route('send.subscribe') }}" class="rd-form rd-mailform rd-form-inline rd-form-inline-2" method="post" id="form__subscribe">--}}
-{{--                                @csrf--}}
-{{--                                <div class="form-wrap">--}}
-{{--                                    <input class="form-input" id="subscribe-form-2-email" type="text" name="phone" autocomplete="off" placeholder="Телефон" required="" />--}}
-{{--                                </div>--}}
-{{--                                <div class="form-wrap">--}}
-{{--                                    <input class="form-input" id="subscribe-form-2-email" type="email" name="email" autocomplete="off" placeholder="E-mail" required="" />--}}
-{{--                                </div>--}}
-{{--                                <div class="form-button submit">--}}
-{{--                                    <button class="button button-icon-2 button-zakaria button-secondary" type="submit"><span class="fl-bigmug-line-paper122"></span></button>--}}
-{{--                                </div>--}}
-{{--                            </form>--}}
+                            <div class="footer-menu">
+                                @includeWhen($menu->get('menu_footer'), 'layouts.menus.footer', ['menu' => $menu])
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,6 @@
+<div class="footer-classic-title">
+    Полезные ссылки
+</div>
 <nav itemscope="" itemtype="http://schema.org/SiteNavigationElement">
     <ul>
         @foreach($menu->get('menu_footer') as $item)

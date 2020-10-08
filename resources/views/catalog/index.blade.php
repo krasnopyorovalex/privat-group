@@ -18,7 +18,7 @@
     <section class="breadcrumbs-custom">
         <div class="breadcrumbs-custom-body parallax-content context-dark bg-inside-pages">
             <div class="container">
-                <h2 class="breadcrumbs-custom-title">{{ $catalog->name }}</h2>
+                <h1 class="breadcrumbs-custom-title">{{ $catalog->name }}</h1>
             </div>
         </div>
         <div class="breadcrumbs-custom-footer">
@@ -122,33 +122,6 @@
                                         @endif
                                     </article>
                                 </div>
-
-{{--                                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">--}}
-{{--                                    <!-- Product-->--}}
-{{--                                    <article class="product">--}}
-{{--                                        <div class="product-body">--}}
-{{--                                            @if($product->image)--}}
-{{--                                            <div class="product-figure">--}}
-{{--                                                <a href="{{ $product->url }}">--}}
-{{--                                                    <img src="" data-src="{{ $product->image->path }}" alt="{{ $product->image->alt }}" title="{{ $product->image->title }}" width="220" height="160"/>--}}
-{{--                                                </a>--}}
-{{--                                            </div>--}}
-{{--                                            @endif--}}
-{{--                                            <h5 class="product-title"><a href="{{ $product->url }}">{{ $product->name }}</a></h5>--}}
-{{--                                                <div class="product-price-wrap">--}}
-{{--                                                    <div class="product-price">{!! $product->getPrice() !!}</div>--}}
-{{--                                                </div>--}}
-{{--                                        </div>--}}
-{{--                                        @if($product->label)--}}
-{{--                                        <span class="product-badge product-badge-{{ $product->label }}">{{ $product->getLabelName($product->label) }}</span>--}}
-{{--                                        @endif--}}
-{{--                                        <div class="product-button-wrap">--}}
-{{--                                            <div class="product-button">--}}
-{{--                                                <a class="button button-secondary button-zakaria fl-bigmug-line-search74" href="{{ $product->url }}"></a>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </article>--}}
-{{--                                </div>--}}
                             @endforeach
                         @endif
                     </div>
@@ -160,10 +133,19 @@
                         </nav>
                     </div>
                     @endif
-
                     @includeWhen($catalog->catalogs, 'layouts.shortcodes.catalogs', ['catalogs' => $catalog->catalogs])
-
                 </div>
+                @if($catalog->text)
+                    <div class="col-lg-12 col-xl-12">
+                        <div class="row row-30 row-lg-50">
+                            <div class="col-12">
+                                <div class="seo-text">
+                                    {!! $catalog->text !!}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
     </section>

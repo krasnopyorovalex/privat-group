@@ -4175,7 +4175,8 @@ textarea.textarea-lg {
   color: #76aa6f
 }
 .footer-classic-title {
-  font-weight: 600
+  font-weight: 600;
+  font-size: 22px;
 }
 .list-schedule {
   letter-spacing: 0
@@ -14747,4 +14748,26 @@ h2.adh2 {
 }
 .develop {
   display: none;
+}
+.footer-menu ul li + li {
+  margin: .3rem 0 0 0;
+}
+.footer-menu ul li a:hover {
+  cursor: pointer;
+  text-decoration: underline
+}
+.pagination .page-item + .page-item {
+  margin-left: .5rem;
+}
+.pagination .page-item.active, .pagination .page-item:hover {
+  border: 1px solid #76aa6f;
+  font-weight: 700;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+.pagination .page-item {
+  border-radius: 6px;
+  border: 1px solid #151515;
+  width: 26px;
+  height: 26px;
 }
