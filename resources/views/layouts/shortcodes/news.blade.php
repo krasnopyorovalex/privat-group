@@ -19,7 +19,7 @@
                             {{ $new->published_at->formatLocalized('%d %B %Y') }}
                         </time>
                     </div>
-                    <h5 class="post-classic-title"><a href="{{ $new->url }}">{{ $new->name }}</a></h5>
+                    <div class="post-classic-title"><a href="{{ $new->url }}">{{ $new->name }}</a></div>
                     <p itemprop="articleBody" class="post-classic-text">{!! strip_tags($new->preview) !!}</p>
                 </div>
             </article>

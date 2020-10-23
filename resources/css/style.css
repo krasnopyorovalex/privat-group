@@ -3234,7 +3234,9 @@ textarea.textarea-lg {
   background: #f9faf9
 }
 .post-classic-title {
-  font-weight: 500
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
 }
 * + .post-classic-title {
   margin-top: 8px

@@ -516,7 +516,8 @@
         padding: 25px 7% 30px
     }
     .post-classic-text {
-        line-height: 1.74
+        line-height: 18px;
+        font-size: 14px;
     }
     * + .post-classic-title {
         margin-top: 14px
