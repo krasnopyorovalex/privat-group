@@ -14331,6 +14331,9 @@ textarea:focus::placeholder {
 .modal {
   top: 10%;
 }
+.section-content p + ul {
+  margin: 15px 0 0 0;
+}
 .section-content ul {
   list-style-type: disc;
   padding: 0 0 0 15px;
