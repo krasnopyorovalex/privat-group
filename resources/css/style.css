@@ -14661,6 +14661,9 @@ h2.adh2 {
 .seo-text ul li {
   padding: 0 0 0 1rem;
 }
+.seo-text p {
+  text-align: justify;
+}
 .main-text .title {
   font-weight: 700;
   margin: 0 0 .5rem 0;
