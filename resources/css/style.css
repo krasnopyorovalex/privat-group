@@ -14655,6 +14655,12 @@ h2.adh2 {
   font-size: 18px;
   color: #000;
 }
+.seo-text ul {
+  margin: .5rem 0;
+}
+.seo-text ul li {
+  padding: 0 0 0 1rem;
+}
 .main-text .title {
   font-weight: 700;
   margin: 0 0 .5rem 0;
