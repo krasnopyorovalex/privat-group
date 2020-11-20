@@ -14657,9 +14657,11 @@ h2.adh2 {
 }
 .seo-text ul {
   margin: .5rem 0;
+  list-style: disc;
 }
 .seo-text ul li {
   padding: 0 0 0 1rem;
+  display: list-item;
 }
 .seo-text p {
   text-align: justify;
