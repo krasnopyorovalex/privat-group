@@ -14656,12 +14656,11 @@ h2.adh2 {
   color: #000;
 }
 .seo-text ul {
+  padding: 0 0 0 2rem;
   margin: .5rem 0;
   list-style: disc;
 }
 .seo-text ul li {
-  margin: 0 0 0 1rem;
-  padding: 0 0 0 2rem;
   display: list-item;
 }
 .seo-text p {
