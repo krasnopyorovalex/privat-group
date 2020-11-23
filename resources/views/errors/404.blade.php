@@ -40,7 +40,7 @@
                 <header class="section-single-header page-header">
                     <div class="page-head-inner">
                         <a class="brand" href="{{ route('page.show') }}">
-                            <img class="brand-logo-light img_404" src="{{ asset('images/logo.png') }}" alt="Агентство недвижимости - PrivatEstate в Ялте | Private Estate" title="Агентство недвижимости - PrivatEstate в Ялте | Private Estate"/>
+                            <img class="brand-logo-light img_404" src="{{ asset('images/logo.png') }}" alt="Агентство недвижимости - PrivatEstate" title="Агентство недвижимости - PrivatEstate"/>
                         </a>
                     </div>
                 </header>
