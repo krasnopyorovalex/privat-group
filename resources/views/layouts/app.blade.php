@@ -54,7 +54,7 @@
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand">
                                     <a class="brand" href="{{ route('page.show') }}">
-                                        <img class="brand-logo-dark" src="{{ asset('images/logo.svg') }}" alt="Все для бани" title=""/>
+                                        <img class="brand-logo-dark" src="{{ asset('images/logo.svg') }}" alt="Агентство недвижимости - PrivatEstate в Ялте | Private Estate" title="Агентство недвижимости - PrivatEstate в Ялте | Private Estate" />
                                     </a>
                                 </div>
                                 <a class="mobile_phone" href="tel:+79789455747">
@@ -99,7 +99,7 @@
                                                         @foreach($category->catalogs as $subCategory)
                                                         <li>
                                                             <a href="{{ route('catalog.show', ['alias' => $subCategory->alias]) }}">{{ $subCategory->name }}</a>
-                                                            <div class="categories-menu-count">{{ $subCategory->products_count }}</div>
+                                                            <div class="categories-menu-count hidden">{{ $subCategory->products_count }}</div>
                                                         </li>
                                                         @endforeach
                                                     </ul>

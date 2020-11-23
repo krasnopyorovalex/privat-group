@@ -52,8 +52,8 @@
                                     @foreach($catalogs as $cat)
                                     <li class="{{ $cat->alias === request('alias') ? 'active' : '' }}">
                                         <a href="{{ $cat->url }}">{{ $cat->name }}</a>
-                                        <div class="line"></div>
-                                        <div class="count">{{ $cat->products_count ?: $cat->catalogs->sum('products_count') }}</div>
+                                        <div class="line hidden"></div>
+                                        <div class="count hidden">{{ $cat->products_count ?: $cat->catalogs->sum('products_count') }}</div>
                                     </li>
                                     @endforeach
                                 </ul>
