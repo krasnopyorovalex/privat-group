@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', $product->title)
-@section('description', $product->description . '. Звоните сейчас: +7 (978) 94-557-47')
+@section('description', $product->description . '. Помощь в оформлении. Звоните для консультации: +7 (978) 945-57-47')
 @push('og')
     <meta property="og:title" content="{{ $product->title }}">
     <meta property="og:type" content="website">
