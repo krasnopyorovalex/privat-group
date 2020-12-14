@@ -14657,18 +14657,22 @@ h2.adh2 {
 }
 .seo-text ul {
   padding: 0 0 0 2rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   list-style: disc;
 }
 .seo-text ol {
   padding: 0 0 0 2rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  list-style: decimal;
+}
+.seo-text ol li {
+  display: list-item;
 }
 .seo-text p + h2 {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
 }
 .seo-text p + p {
-  margin: 0 0 .5rem 0;
+  margin: 0 0 1rem 0;
 }
 .seo-text ul li {
   display: list-item;
