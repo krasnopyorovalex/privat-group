@@ -14677,6 +14677,9 @@ h2.adh2 {
 .seo-text ul li {
   display: list-item;
 }
+.seo-text ul li + li {
+  margin: 1rem 0 0 0;
+}
 .seo-text p {
   text-align: justify;
 }
