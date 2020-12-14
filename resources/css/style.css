@@ -14655,10 +14655,14 @@ h2.adh2 {
   font-size: 18px;
   color: #000;
 }
-.seo-text ul, .seo-text ol {
+.seo-text ul {
   padding: 0 0 0 2rem;
   margin: 1rem 0;
   list-style: disc;
+}
+.seo-text ol {
+  padding: 0 0 0 2rem;
+  margin: 1rem 0;
 }
 .seo-text p + h2 {
   margin: 0 0 1rem 0;
