@@ -14671,7 +14671,9 @@ h2.adh2 {
 .seo-text h2, .seo-text h3, .seo-text h4 {
   margin: 0 0 1rem 0;
 }
-.seo-text p + h2, .seo-text p + h3, .seo-text p + h4 {
+.seo-text p + h2, .seo-text p + h3, .seo-text p + h4,
+.seo-text ol + h2, .seo-text ol + h3, .seo-text ol + h4,
+.seo-text ul + h2, .seo-text ul + h3, .seo-text ul + h4 {
   margin: 2rem 0 0 0;
 }
 .seo-text p + p {
