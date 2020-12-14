@@ -14669,10 +14669,10 @@ h2.adh2 {
   display: list-item;
 }
 .seo-text h2, .seo-text h3, .seo-text h4 {
-  margin: 2rem 0 1rem 0;
-}
-.seo-text > h2, .seo-text > h3, .seo-text > h4 {
   margin: 0 0 1rem 0;
+}
+.seo-text p + h2, .seo-text p + h3, .seo-text p + h4 {
+  margin: 2rem 0 0 0;
 }
 .seo-text p + p {
   margin: 0 0 1rem 0;
