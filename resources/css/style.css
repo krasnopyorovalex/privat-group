@@ -14654,6 +14654,7 @@ h2.adh2 {
 .main-text, .seo-text {
   font-size: 18px;
   color: #000;
+  text-align: justify;
 }
 .seo-text ul {
   padding: 0 0 0 2rem;
