@@ -54,7 +54,7 @@
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand">
                                     <a class="brand" href="{{ route('page.show') }}">
-                                        <img class="brand-logo-dark" src="{{ asset('images/logo.svg') }}" alt="Агентство недвижимости - PrivatEstate" title="Агентство недвижимости - PrivatEstate" />
+                                        <img class="brand-logo-dark" src="{{ asset('images/logo.svg') }}" alt="Агентство недвижимости - Private Estate" title="Агентство недвижимости - Private Estate" />
                                     </a>
                                 </div>
                                 <a class="mobile_phone" href="tel:+79789455747">
