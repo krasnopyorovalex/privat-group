@@ -136,12 +136,19 @@
                             </ul>
                             <div class="footer-classic-social">
                                 <div class="group-lg group-middle">
-                                    <p>Мы в соцсеятх</p>
+                                    <p>Мы в соцсетях</p>
                                     <div>
                                         <ul class="list-inline list-social list-inline-sm">
                                             <li><a class="icon mdi mdi-vk" href="https://vk.com/privateestatecrimea" target="_blank" rel="noopener noreferrer"></a></li>
 {{--                                            <li><a class="icon mdi mdi-instagram" href="https://www.instagram.com/fabrika_bani/" target="_blank"></a></li>--}}
                                         </ul>
+                                    </div>
+                                </div>
+                                <div class="group-lg group-middle">
+                                    <div>
+                                        <a href="https://librayalta.ru/?14071" target="_blank" rel="nofollow" title="Private Estate, агентство недвижимости, Ялта">
+                                            <img src="https://s.libraonline.ru/f/img/libraua_button.png" alt="Каталог предприятий и организаций" width="86px" height="29px">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
