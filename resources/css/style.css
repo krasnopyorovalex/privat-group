@@ -4202,6 +4202,9 @@ textarea.textarea-lg {
   padding-top: 24px;
   border-top: 1px solid #e1e1e1
 }
+* + .footer-librayalta-link {
+  margin-top: 10px;
+}
 .contacts-creative {
   letter-spacing: .05em;
   color: #151515

@@ -144,12 +144,12 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="group-lg group-middle">
-                                    <div>
-                                        <a href="https://librayalta.ru/?14071" target="_blank" rel="nofollow" title="Private Estate, агентство недвижимости, Ялта">
-                                            <img src="https://s.libraonline.ru/f/img/libraua_button.png" alt="Каталог предприятий и организаций" width="86px" height="29px">
-                                        </a>
-                                    </div>
+                            </div>
+                            <div class="footer-librayalta-link">
+                                <div>
+                                    <a href="https://librayalta.ru/?14071" target="_blank" rel="nofollow" title="Private Estate, агентство недвижимости, Ялта">
+                                        <img src="https://s.libraonline.ru/f/img/libraua_button.png" alt="Каталог предприятий и организаций" width="86px" height="29px">
+                                    </a>
                                 </div>
                             </div>
                         </div>
