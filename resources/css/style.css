@@ -14662,6 +14662,9 @@ h2.adh2 {
 .seo-text h2, .seo-text h3, .seo-text h4, .seo-text h5 {
   line-height: inherit;
 }
+.seo-text h3 {
+  font-size: 20px;
+}
 .seo-text ul {
   padding: 0 0 0 2rem;
   margin: 1.5rem 0;
