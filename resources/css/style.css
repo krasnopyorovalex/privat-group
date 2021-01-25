@@ -4191,7 +4191,7 @@ textarea.textarea-lg {
   min-width: 174px
 }
 .list-schedule li > * + * {
-  margin-left: 12px
+  margin-left: 16px
 }
 .footer-classic-social {
   color: #151515;
