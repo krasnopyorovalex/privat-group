@@ -37,4 +37,13 @@ class CatalogProductImage extends Model
     {
         return asset('storage/catalog_products/' . $this->catalog_product_id . '/' . $this->basename . '.' . $this->ext);
     }
+
+    /**
+     * @param int $index
+     * @return string
+     */
+    public function getAlt(int $index): string
+    {
+        return $this->alt ?: sprintf('%s - изображение %s', $this->catalogProduct->name, $index);
+    }
 }
