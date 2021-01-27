@@ -75,7 +75,7 @@
                                                     @if($product->image)
                                                     <article class="product-creative">
                                                         <div class="product-figure">
-                                                            <img src="" class="left-img" data-src="{{ $product->image->path }}" alt="{{ $product->image->alt }}" title="{{ $product->image->title }}" />
+                                                            <img src="" class="left-img" data-src="{{ $product->image->path }}" alt="{{ $product->name }}" title="{{ $product->image->title }}" />
                                                         </div>
                                                     </article>
                                                     @endif
