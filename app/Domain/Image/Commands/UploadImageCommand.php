@@ -55,7 +55,7 @@ class UploadImageCommand
         (new ImageManager())
             ->make(Storage::path($path))
             ->resize(360, 360)
-            ->save(str_replace($extension, '_thumb.' . $extension, Storage::path($path)));
+            ->save(str_replace('.'.$extension, '_thumb.' . $extension, Storage::path($path)));
 
 
 //        $im = (new ImageManager())->make(Storage::path($path));
