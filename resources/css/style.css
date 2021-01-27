@@ -3821,6 +3821,13 @@ textarea.textarea-lg {
   position: relative;
   text-align: center
 }
+.thumbnail-classic > div {
+  max-width: 360px;
+  max-height: 360px;
+}
+.thumbnail-classic > div img {
+  object-fit: cover;
+}
 .thumbnail-classic-figure {
   display: block
 }
