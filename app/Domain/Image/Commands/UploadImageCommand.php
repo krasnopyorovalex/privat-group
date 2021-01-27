@@ -50,6 +50,14 @@ class UploadImageCommand
     {
         $path = $this->request->file('image')->store('public/images');
 
+        $extension = pathinfo($path, PATHINFO_EXTENSION);
+
+        (new ImageManager())
+            ->make(Storage::path($path))
+            ->resize(360, 360)
+            ->save(str_replace($extension, '_thumb.' . $extension, Storage::path($path)));
+
+
 //        $im = (new ImageManager())->make(Storage::path($path));
 
 //        $imHeight = $im->height();
