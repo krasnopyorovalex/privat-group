@@ -44,4 +44,14 @@ class Image extends Model
     {
         return $this->morphTo();
     }
+
+    /**
+     * @return string
+     */
+    public function getThumb(): string
+    {
+        $extension = pathinfo($this->path, PATHINFO_EXTENSION);
+
+        return asset('storage/images/' . str_replace('.'.$extension, '_thumb.' . $extension, $this->path));
+    }
 }

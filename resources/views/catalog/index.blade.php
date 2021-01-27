@@ -75,7 +75,7 @@
                                                     @if($product->image)
                                                     <article class="product-creative">
                                                         <div class="product-figure">
-                                                            <img src="{{ $product->image->path }}" class="left-img main-img" alt="{{ $product->name }}" title="{{ $product->image->title }}" />
+                                                            <img src="{{ $product->image->getThumb() }}" class="left-img main-img" alt="{{ $product->name }}" title="{{ $product->image->title }}" />
                                                         </div>
                                                     </article>
                                                     @endif
