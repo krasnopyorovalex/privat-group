@@ -1900,9 +1900,7 @@
         min-height: 240px
     }
     .product-figure {
-        min-height: 200px;
-        width: 320px;
-        height: 320px;
+        min-height: 200px
     }
     .desktop .product {
         padding-bottom: 40px
