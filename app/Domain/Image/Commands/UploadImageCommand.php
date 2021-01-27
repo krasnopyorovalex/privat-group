@@ -2,6 +2,7 @@
 
 namespace App\Domain\Image\Commands;
 
+use App\CatalogProduct;
 use App\Http\Requests\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Intervention\Image\ImageManager;
@@ -50,13 +51,14 @@ class UploadImageCommand
     {
         $path = $this->request->file('image')->store('public/images');
 
-        $extension = pathinfo($path, PATHINFO_EXTENSION);
+        if ($this->imageableType === CatalogProduct::class) {
+            $extension = pathinfo($path, PATHINFO_EXTENSION);
 
-        (new ImageManager())
-            ->make(Storage::path($path))
-            ->resize(360, 360)
-            ->save(str_replace('.'.$extension, '_thumb.' . $extension, Storage::path($path)));
-
+            (new ImageManager())
+                ->make(Storage::path($path))
+                ->resize(360, 360)
+                ->save(str_replace('.'.$extension, '_thumb.' . $extension, Storage::path($path)));
+        }
 
 //        $im = (new ImageManager())->make(Storage::path($path));
 

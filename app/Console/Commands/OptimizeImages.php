@@ -3,11 +3,12 @@
 namespace App\Console\Commands;
 
 use App\CatalogProductImage;
+use App\Image;
 use Illuminate\Console\Command;
 use Intervention\Image\ImageManager;
 use Storage;
 
-class OptimizeIMages extends Command
+class OptimizeImages extends Command
 {
     /**
      * The name and signature of the console command.
@@ -38,6 +39,19 @@ class OptimizeIMages extends Command
                 ->make($image)
                 ->resize(360, 360)
                 ->save(public_path('storage/catalog_products/' . $file->catalog_product_id .'/' . $file->basename . '_thumb.' . $file->ext));
+        }
+
+        $images = Image::where('imageable_type', 'App\CatalogProduct')->get();
+
+        foreach ($images as $image) {
+            $extension = pathinfo($image['path'], PATHINFO_EXTENSION);
+
+            $path = str_replace('//storage', '/public', Storage::path($image['path']));
+
+            (new ImageManager())
+                ->make($path)
+                ->resize(360, 360)
+                ->save(str_replace('.'.$extension, '_thumb.' . $extension, $path));
         }
 
         $this->info('Well done!');
