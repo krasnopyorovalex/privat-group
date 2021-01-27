@@ -4615,18 +4615,18 @@ textarea.textarea-lg {
 .product-2 .product-figure {
   min-height: 220px
 }
-.product-figure {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  align-items: flex-end;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  min-height: 180px
-}
+/*.product-figure {*/
+/*  display: -webkit-box;*/
+/*  display: -webkit-flex;*/
+/*  display: flex;*/
+/*  -webkit-box-align: end;*/
+/*  -webkit-align-items: flex-end;*/
+/*  align-items: flex-end;*/
+/*  -webkit-box-pack: center;*/
+/*  -webkit-justify-content: center;*/
+/*  justify-content: center;*/
+/*  min-height: 180px*/
+/*}*/
 .product-title {
   font-weight: 500;
   letter-spacing: 0;
