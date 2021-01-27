@@ -52,8 +52,6 @@ class Image extends Model
     {
         $extension = pathinfo($this->path, PATHINFO_EXTENSION);
 
-        $path = str_replace('//storage', '/public', \Storage::path($this->path));
-
-        return asset('storage/images/' . str_replace('.'.$extension, '_thumb.' . $extension, $path));
+        return asset(str_replace('.'.$extension, '_thumb.' . $extension, $this->path));
     }
 }
