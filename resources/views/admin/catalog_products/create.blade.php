@@ -2,8 +2,8 @@
 
 @section('breadcrumb')
     <li><a href="{{ route('admin.catalogs.index') }}">Категории каталога</a></li>
-    <li><a href="{{ route('admin.catalog_products.index', $catalog) }}">Список товаров</a></li>
-    <li class="active">Форма добавления товара</li>
+    <li><a href="{{ route('admin.catalog_products.index', $catalog) }}">Список объектов</a></li>
+    <li class="active">Форма добавления объекта</li>
 @endsection
 
 @section('content')

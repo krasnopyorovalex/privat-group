@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
     <li><a href="{{ route('admin.catalogs.index') }}">Категории каталога</a></li>
-    <li class="active">Список товаров</li>
+    <li class="active">Список объектов</li>
 @endsection
 
 @section('content')
