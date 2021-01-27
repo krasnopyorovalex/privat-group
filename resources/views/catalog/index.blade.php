@@ -83,7 +83,7 @@
                                                         @foreach($product->images->take(2) as $image)
                                                             <article class="product-creative">
                                                                 <div class="product-figure">
-                                                                    <img src="" class="left-img" data-src="{{ $image->getThumb() }}" alt="{{ $image->alt }}" title="{{ $image->title }}" />
+                                                                    <img src="" class="left-img" data-src="{{ $image->getThumb() }}" alt="{{ $image->getAlt($loop->index) }}" title="{{ $image->title }}" />
                                                                 </div>
                                                             </article>
                                                         @endforeach
