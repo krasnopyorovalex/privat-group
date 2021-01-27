@@ -44,6 +44,6 @@ class CatalogProductImage extends Model
      */
     public function getAlt(int $index): string
     {
-        return $this->alt ?: sprintf('%s - изображение %s', $this->catalogProduct->name, $index);
+        return $this->alt ?: sprintf('%s - изображение %s', $this->catalogProduct->name, $index + 1);
     }
 }

@@ -29,6 +29,9 @@ class GetCatalogProductByAliasQuery
      */
     public function handle()
     {
-        return CatalogProduct::where('alias', $this->alias)->with(['images'])->firstOrFail();
+        $catalogProduct = CatalogProduct::where('alias', $this->alias)->with(['images'])->firstOrFail();
+        $catalogProduct->images->each->setRelation('catalogProduct', $catalogProduct);
+
+        return $catalogProduct;
     }
 }
