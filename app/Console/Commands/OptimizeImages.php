@@ -37,7 +37,7 @@ class OptimizeImages extends Command
 
             (new ImageManager())
                 ->make($image)
-                ->resize(360, 360)
+                ->fit(360, 360)
                 ->save(public_path('storage/catalog_products/' . $file->catalog_product_id .'/' . $file->basename . '_thumb.' . $file->ext));
         }
 
@@ -50,7 +50,7 @@ class OptimizeImages extends Command
 
             (new ImageManager())
                 ->make($path)
-                ->resize(360, 360)
+                ->fit(360, 360)
                 ->save(str_replace('.'.$extension, '_thumb.' . $extension, $path));
         }
 
