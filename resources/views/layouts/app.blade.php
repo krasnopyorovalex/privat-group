@@ -62,8 +62,8 @@
                                     +7 (978) 94-557-47
                                 </a>
                                 <span class="h-icons-list mobile_phone">
-                                    <a href="https://wa.me/79789455747" rel="noopener noreferrer"><img src="{{ asset('images/viber.svg') }}" alt=""></a>
-                                    <a href="viber://add?number=79789455747" rel="noopener noreferrer"><img src="{{ asset('images/whatsapp.svg') }}" alt=""></a>
+                                    <a href="https://wa.me/79789455747" rel="noopener noreferrer"><img src="{{ asset('images/whatsapp.svg') }}" alt=""></a>
+                                    <a href="viber://add?number=79789455747" rel="noopener noreferrer"><img src="{{ asset('images/viber.svg') }}" alt=""></a>
                                 </span>
                             </div>
                             <div class="rd-navbar-nav-wrap">
@@ -178,8 +178,8 @@
                                         <div class="unit-body">
                                             <a href="tel:+79789455747">+7 (978) 94-557-47</a>
                                             <span class="h-icons-list">
-                                                <a href="https://wa.me/79789455747" rel="noopener noreferrer"><img src="{{ asset('images/viber.svg') }}" alt=""></a>
-                                                <a href="viber://add?number=79789455747" rel="noopener noreferrer"><img src="{{ asset('images/whatsapp.svg') }}" alt=""></a>
+                                                <a href="https://wa.me/79789455747" rel="noopener noreferrer"><img src="{{ asset('images/whatsapp.svg') }}" alt=""></a>
+                                                <a href="viber://add?number=79789455747" rel="noopener noreferrer"><img src="{{ asset('images/viber.svg') }}" alt=""></a>
                                             </span>
                                         </div>
                                     </div>
