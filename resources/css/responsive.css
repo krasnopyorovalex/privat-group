@@ -3410,6 +3410,10 @@
         color: #151515;
         text-decoration: underline;
     }
+    .lg-outer.lg-pull-caption-up.lg-thumb-open .lg-sub-html {
+        font-size: 13px;
+        line-height: normal;
+    }
 }
 @media (min-width:576px) and (max-width:767px) {
     .footer-modern-list-2 {
