@@ -3400,11 +3400,13 @@
         line-height: 24px;
     }
     .categories-menu > ul > li:hover > a, .categories-menu > ul > li.active > a {
-        background: none;
+        background: #fff;
         color: #151515;
     }
     .categories-menu .categories-sub-menu li:hover {
-        background: none;
+        background-color: #fff;
+    }
+    .categories-menu .categories-sub-menu li:hover a {
         color: #151515;
     }
 }
