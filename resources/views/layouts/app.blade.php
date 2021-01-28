@@ -80,11 +80,11 @@
                                     <a href="tel:+79789455747" class="h-phone">
                                         <span class="fa-phone"></span>
                                         +7 (978) 94-557-47
-                                        <span class="h-icons-list">
-                                        <img src="{{ asset('images/viber.svg') }}" alt="">
-                                        <img src="{{ asset('images/whatsapp.svg') }}" alt="">
-                                    </span>
                                     </a>
+                                    <span class="h-icons-list">
+                                        <a href="https://wa.me/79789455747"><img src="{{ asset('images/viber.svg') }}" alt=""></a>
+                                        <a href="viber://add?number=79789455747"><img src="{{ asset('images/whatsapp.svg') }}" alt=""></a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
