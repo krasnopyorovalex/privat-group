@@ -3399,6 +3399,12 @@
         font-size: 16px;
         line-height: 24px;
     }
+    .categories-menu > ul > li:hover > a, .categories-menu > ul > li.active > a {
+        background-color: #fff;
+    }
+    .categories-menu .categories-sub-menu li:hover {
+        background-color: #fff;
+    }
 }
 @media (min-width:576px) and (max-width:767px) {
     .footer-modern-list-2 {
