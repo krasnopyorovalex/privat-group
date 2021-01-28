@@ -8,7 +8,7 @@
                 <article class="thumbnail-classic">
                     <div>
                         <a href="{{ $image->getPath() }}" data-lightgallery="item" title="{{ $image->name }}">
-                            <img src="" data-src="{{ $image->getThumb() }}" alt="{{ $image->getAlt($loop->index) }}" title="{{ $image->title }}" />
+                            <img src="{{ $image->getThumb() }}" alt="{{ $image->getAlt($loop->index) }}" title="{{ $image->title }}" />
                         </a>
                     </div>
                 </article>
