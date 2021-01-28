@@ -60,6 +60,10 @@
                                 <a class="mobile_phone" href="tel:+79789455747">
                                     <span class="icon mdi mdi-phone"></span>
                                     +7 (978) 94-557-47
+                                    <span class="h-icons-list">
+                                        <img src="{{ asset('images/viber.svg') }}" alt="">
+                                        <img src="{{ asset('images/whatsapp.svg') }}" alt="">
+                                    </span>
                                 </a>
                             </div>
                             <div class="rd-navbar-nav-wrap">
