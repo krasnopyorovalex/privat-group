@@ -61,6 +61,10 @@
                                     <span class="icon mdi mdi-phone"></span>
                                     +7 (978) 94-557-47
                                 </a>
+                                <span class="h-icons-list">
+                                    <a href="https://wa.me/79789455747" rel="noopener noreferrer"><img src="{{ asset('images/viber.svg') }}" alt=""></a>
+                                    <a href="viber://add?number=79789455747" rel="noopener noreferrer"><img src="{{ asset('images/whatsapp.svg') }}" alt=""></a>
+                                </span>
                             </div>
                             <div class="rd-navbar-nav-wrap">
                                 @includeWhen($menu->get('menu_header'), 'layouts.menus.header', ['menu' => $menu])
@@ -82,8 +86,8 @@
                                         +7 (978) 94-557-47
                                     </a>
                                     <span class="h-icons-list">
-                                        <a href="https://wa.me/79789455747"><img src="{{ asset('images/viber.svg') }}" alt=""></a>
-                                        <a href="viber://add?number=79789455747"><img src="{{ asset('images/whatsapp.svg') }}" alt=""></a>
+                                        <a href="https://wa.me/79789455747" rel="noopener noreferrer"><img src="{{ asset('images/viber.svg') }}" alt=""></a>
+                                        <a href="viber://add?number=79789455747" rel="noopener noreferrer"><img src="{{ asset('images/whatsapp.svg') }}" alt=""></a>
                                     </span>
                                 </div>
                             </div>
