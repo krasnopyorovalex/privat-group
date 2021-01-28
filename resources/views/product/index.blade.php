@@ -44,7 +44,7 @@
                 <div class="col-lg-5">
                     @if($product->image)
                     <div class="single-product-image">
-                        <img src="{{ $product->image->path }}" alt="{{ $product->image->alt }}" title="{{ $product->image->title }}">
+                        <img src="{{ $product->image->path }}" alt="{{ $product->name }}" title="{{ $product->image->title }}">
                     </div>
                     @endif
                 </div>
