@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row row-30 isotope" data-lightgallery="group">
             @foreach ($product->images as $image)
-            <div class="col-md-3 col-sm-3 col-lg-3 col-6">
+            <div class="col-md-2 col-sm-2 col-lg-2 col-6">
                 <!-- Thumbnail Classic-->
                 <article class="thumbnail-classic">
                     <div>
