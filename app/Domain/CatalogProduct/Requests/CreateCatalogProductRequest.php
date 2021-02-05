@@ -15,6 +15,7 @@ class CreateCatalogProductRequest extends Request
         return [
             'name' => 'bail|required|max:512',
             'catalog_id' => 'required|numeric|exists:catalogs,id',
+            'city_id' => 'numeric|exists:cities,id|nullable',
             'label' => 'string|max:16|nullable',
             'price' => 'integer|max:4294967295',
             'title' => 'required|max:512',

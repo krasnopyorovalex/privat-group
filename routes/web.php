@@ -39,6 +39,7 @@ Route::group(['middleware' => ['redirector', 'shortcode']], static function () {
     Route::get('catalog/{alias}', 'CatalogController@show')->name('catalog.show');
 //    Route::get('projects/{alias}', 'ProjectController@show')->name('project.show');
     Route::get('product/{alias}', 'CatalogProductController@show')->name('catalog_product.show');
+    Route::get('city/{alias}', 'CityController@show')->name('city.show');
 });
 
 Route::group(['prefix' => '_root', 'middleware' => 'auth', 'namespace' => 'Admin', 'as' => 'admin.'], static function () {

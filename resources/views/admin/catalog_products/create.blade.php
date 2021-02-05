@@ -36,6 +36,8 @@
                                 </select>
                             </div>
 
+                            @select(['name' => 'city_id', 'label' => 'Город объекта', 'items' => $cities])
+
                             @input(['name' => 'name', 'label' => 'Название'])
                             @input(['name' => 'title', 'label' => 'Title'])
                             @input(['name' => 'description', 'label' => 'Description'])

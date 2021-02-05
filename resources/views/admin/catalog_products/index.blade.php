@@ -20,6 +20,7 @@
                 <th>Название</th>
                 <th>Цена</th>
                 <th>Категория</th>
+                <th>Город объекта</th>
                 <th>Обновлена</th>
                 <th></th>
             </tr>
@@ -31,6 +32,7 @@
                     <td>{{ $catalogProduct->name }}</td>
                     <td>{!! $catalogProduct->getPrice() !!}</td>
                     <td><span class="label label-primary bg-teal-400">{{ $catalogProduct->catalog->name }}</span></td>
+                    <td><span class="label label-primary bg-teal-400">{{ $catalogProduct->city ? $catalogProduct->city->name : '' }}</span></td>
                     <td><span class="label label-primary">{{ $catalogProduct->updated_at->diffForHumans() }}</span></td>
                     <td>
                         <div>

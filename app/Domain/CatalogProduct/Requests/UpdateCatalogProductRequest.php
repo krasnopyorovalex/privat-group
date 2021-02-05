@@ -15,6 +15,7 @@ class UpdateCatalogProductRequest extends Request
     {
         return [
             'name' => 'bail|required|max:512',
+            'city_id' => 'numeric|exists:cities,id|nullable',
             'price' => 'integer|max:4294967295',
             'label' => 'string|max:16|nullable',
             'title' => 'required|max:512',

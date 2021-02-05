@@ -8071,7 +8071,6 @@
          *
          * @param array $proxies A list of trusted proxies, the string 'REMOTE_ADDR' will be replaced with $_SERVER['REMOTE_ADDR']
          * @param int $trustedHeaderSet A bit field of Request::HEADER_*, to set which headers to trust from your proxies
-         * @throws \InvalidArgumentException When $trustedHeaderSet is invalid
          * @static 
          */ 
         public static function setTrustedProxies($proxies, $trustedHeaderSet)
@@ -8752,7 +8751,6 @@
          *
          * @param bool $asResource If true, a resource will be returned
          * @return string|resource The request body content or a resource to read the body stream
-         * @throws \LogicException
          * @static 
          */ 
         public static function getContent($asResource = false)
@@ -8785,7 +8783,7 @@
                     /**
          * Gets the preferred format for the response by inspecting, in the following order:
          *   * the request format set using setRequestFormat
-         *   * the values of the Accept HTTP header
+         *   * the values of the Accept HTTP header.
          * 
          * Note that if you use this method, you should send the "Vary: Accept" header
          * in the response to prevent any issues with intermediary HTTP caches.
@@ -13363,7 +13361,7 @@
          * update a cart
          *
          * @param $id
-         * @param $data the $data will be an associative array, you don't need to pass all the data, only the key value
+         * @param array $data the $data will be an associative array, you don't need to pass all the data, only the key value
          * of the item you want to update on it
          * @return bool 
          * @static 

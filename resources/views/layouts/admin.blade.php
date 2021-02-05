@@ -85,6 +85,7 @@
                             <li><a href="{{ route('admin.infos.index') }}"><i class="icon-newspaper"></i> <span>Новости</span></a></li>
 {{--                            <li><a href="{{ route('admin.guestbooks.index') }}"><i class="icon-bubble2"></i> <span>Отзывы</span></a></li>--}}
                             <li><a href="{{ route('admin.sliders.index') }}"><i class="icon-images2"></i> <span>Слайдер</span></a></li>
+                            <li><a href="{{ route('admin.cities.index') }}"><i class="icon-city "></i> <span>Города</span></a></li>
 {{--                            <li><a href="{{ route('admin.galleries.index') }}"><i class="icon-stack-picture"></i> <span>Галерея</span></a></li>--}}
 {{--                            <li><a href="{{ route('admin.tabs.index') }}"><i class="icon-stack"></i> <span>Вкладки</span></a></li>--}}
                             <li><a href="{{ route('admin.menus.index') }}"><i class="icon-lan2"></i> <span>Навигация</span></a></li>

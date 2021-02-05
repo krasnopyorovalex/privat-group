@@ -59,7 +59,7 @@ class CatalogProduct extends Model
         'on_request' => 'boolean',
     ];
 
-    protected $with = ['catalog', 'image'];
+    protected $with = ['catalog', 'image', 'city'];
 
     /**
      * @var array
@@ -72,6 +72,14 @@ class CatalogProduct extends Model
     public function catalog(): HasOne
     {
         return $this->hasOne(Catalog::class, 'id', 'catalog_id');
+    }
+
+    /**
+     * @return HasOne
+     */
+    public function city(): HasOne
+    {
+        return $this->hasOne(City::class, 'id', 'city_id');
     }
 
     /**
