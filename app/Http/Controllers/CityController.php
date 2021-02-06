@@ -22,11 +22,18 @@ class CityController extends Controller
     {
         $city = $this->dispatch(new GetCityByAliasQuery($alias));
 
-        $products = $city->products()->orderByDesc('label')->orderBy('created_at')->paginate();
+        $products = $city->products()
+            ->orderByDesc('label')
+            ->orderBy('created_at')
+            ->paginate();
+
+        $catalogList = $products->pluck('catalog.name', 'catalog.alias')->unique();
 
         return view('city.index', [
             'city' => $city,
-            'products' => $products,
+            'grouped' => $products->groupBy('catalog.alias'),
+            'catalogList' => $catalogList,
+            'productsForLinks' => $products
         ]);
     }
 }

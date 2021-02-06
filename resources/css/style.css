@@ -14841,3 +14841,10 @@ h2.adh2 {
 .h-icons-list a + a {
   margin: 0 0 0 .2rem;
 }
+.group-name {
+  font-size: 30px;
+  font-weight: 700;
+}
+.group-name a:hover {
+  text-decoration: underline;
+}

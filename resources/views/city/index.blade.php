@@ -35,72 +35,83 @@
             <div class="row row-50">
                 <div class="col-12">
                     <div class="row row-30 row-lg-50">
-                        @if($products)
-                            @foreach($products as $product)
-                                <div class="col-12">
-                                    <article class="product-modern text-center text-sm-left">
-                                        <div class="unit unit-spacing-0 flex-column flex-sm-row">
-                                            <div class="unit-left">
-                                                <!-- Owl Carousel-->
-                                                <div class="owl-carousel owl-style-5" data-nav="true" data-items="1" data-margin="30" data-dots="false" data-autoplay="false">
-                                                    @if($product->image)
-                                                    <article class="product-creative">
-                                                        <div class="product-figure">
-                                                            <img src="{{ $product->image->getThumb() }}" class="left-img main-img" alt="{{ $product->name }}" title="{{ $product->image->title }}" />
-                                                        </div>
-                                                    </article>
-                                                    @endif
-                                                    @if($product->images->count())
-                                                        @foreach($product->images->take(2) as $image)
-                                                            <article class="product-creative">
-                                                                <div class="product-figure">
-                                                                    <img src="" class="left-img" data-src="{{ $image->getThumb() }}" alt="{{ $image->getAlt($loop->index) }}" title="{{ $image->title }}" />
-                                                                </div>
-                                                            </article>
-                                                        @endforeach
-                                                    @endif
-                                                </div>
-                                            </div>
-                                            <div class="unit-body">
-                                                <div class="product-modern-body">
-                                                    <div class="h4 product-modern-title">
-                                                        <a href="{{ $product->url }}">{{ $product->name }}</a>
-                                                    </div>
-                                                    @if($product->address)
-                                                    <div class="product-address-wrap">
-                                                        <div class="product-address">
-                                                            <span class="icon mdi mdi-map-marker"></span>
-                                                            {{ $product->address }}
-                                                        </div>
-                                                    </div>
-                                                    @endif
-                                                    <div class="product-price-wrap">
-                                                        <div class="product-price">
-                                                            @if($product->on_request)
-                                                                Цена под запрос
-                                                            @else
-                                                                {!! $product->getPrice() !!}
+                        @if($grouped)
+                            @foreach($grouped as $groupAlias => $products)
+                                <div class="col-12 mb-3">
+                                    <div class="group-name">
+                                        <a href="{{ route('catalog.show', ['alias' => $groupAlias]) }}">
+                                            {{ $catalogList->get($groupAlias) }}
+                                        </a>
+                                    </div>
+                                </div>
+                                @if($products)
+                                    @foreach($products as $product)
+                                        <div class="col-12">
+                                            <article class="product-modern text-center text-sm-left">
+                                                <div class="unit unit-spacing-0 flex-column flex-sm-row">
+                                                    <div class="unit-left">
+                                                        <!-- Owl Carousel-->
+                                                        <div class="owl-carousel owl-style-5" data-nav="true" data-items="1" data-margin="30" data-dots="false" data-autoplay="false">
+                                                            @if($product->image)
+                                                                <article class="product-creative">
+                                                                    <div class="product-figure">
+                                                                        <img src="{{ $product->image->getThumb() }}" class="left-img main-img" alt="{{ $product->name }}" title="{{ $product->image->title }}" />
+                                                                    </div>
+                                                                </article>
+                                                            @endif
+                                                            @if($product->images->count())
+                                                                @foreach($product->images->take(2) as $image)
+                                                                    <article class="product-creative">
+                                                                        <div class="product-figure">
+                                                                            <img src="" class="left-img" data-src="{{ $image->getThumb() }}" alt="{{ $image->getAlt($loop->index) }}" title="{{ $image->title }}" />
+                                                                        </div>
+                                                                    </article>
+                                                                @endforeach
                                                             @endif
                                                         </div>
                                                     </div>
-                                                    <p class="product-modern-text">{!! $product->preview !!}</p>
-                                                    <a class="button button-primary" href="{{ $product->url }}">Подробнее</a>
+                                                    <div class="unit-body">
+                                                        <div class="product-modern-body">
+                                                            <div class="h4 product-modern-title">
+                                                                <a href="{{ $product->url }}">{{ $product->name }}</a>
+                                                            </div>
+                                                            @if($product->address)
+                                                                <div class="product-address-wrap">
+                                                                    <div class="product-address">
+                                                                        <span class="icon mdi mdi-map-marker"></span>
+                                                                        {{ $product->address }}
+                                                                    </div>
+                                                                </div>
+                                                            @endif
+                                                            <div class="product-price-wrap">
+                                                                <div class="product-price">
+                                                                    @if($product->on_request)
+                                                                        Цена под запрос
+                                                                    @else
+                                                                        {!! $product->getPrice() !!}
+                                                                    @endif
+                                                                </div>
+                                                            </div>
+                                                            <p class="product-modern-text">{!! $product->preview !!}</p>
+                                                            <a class="button button-primary" href="{{ $product->url }}">Подробнее</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                                @if($product->label)
+                                                    <span class="product-badge product-badge-{{ $product->label }}">{{ $product->getLabelName($product->label) }}</span>
+                                                @endif
+                                            </article>
                                         </div>
-                                        @if($product->label)
-                                            <span class="product-badge product-badge-{{ $product->label }}">{{ $product->getLabelName($product->label) }}</span>
-                                        @endif
-                                    </article>
-                                </div>
+                                    @endforeach
+                                @endif
                             @endforeach
                         @endif
                     </div>
 
-                    @if($products)
+                    @if($productsForLinks)
                     <div class="pagination-wrap">
                         <nav>
-                            {{ $products->links() }}
+                            {{ $productsForLinks->links() }}
                         </nav>
                     </div>
                     @endif

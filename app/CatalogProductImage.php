@@ -14,6 +14,8 @@ class CatalogProductImage extends Model
      */
     protected $guarded = [];
 
+    protected $with = ['catalogProduct'];
+
     /**
      * @return BelongsTo
      */
