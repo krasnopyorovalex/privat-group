@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-8 col-xl-9">
+                <div class="col-lg-8 col-xl-9">
                     <div class="row row-30 row-lg-50">
                         @if($grouped)
                             @foreach($grouped as $groupAlias => $products)

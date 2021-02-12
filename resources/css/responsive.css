@@ -3436,6 +3436,9 @@
     .aside .aside-menu {
         display: none;
     }
+    .owl-carousel.owl-style-5 {
+        width: 100%;
+    }
 }
 @media (min-width:576px) and (max-width:767px) {
     .footer-modern-list-2 {
