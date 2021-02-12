@@ -3439,6 +3439,9 @@
     .owl-carousel.owl-style-5 {
         width: 100%;
     }
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 5px;
+    }
 }
 @media (min-width:576px) and (max-width:767px) {
     .footer-modern-list-2 {
