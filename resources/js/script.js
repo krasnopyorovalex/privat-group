@@ -907,7 +907,7 @@ jQuery(document).ajaxError(function () {
     });
 
     $('.aside').on('click', '.rd-navbar-toggle', function () {
-        return $(this).closest('.aside').find('.aside-menu').toggle(300);
+        return $(this).closest('.aside').find('.aside-menu').toggle(300) && $(this).toggleClass('active');
     });
 
 })();
