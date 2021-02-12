@@ -144,7 +144,7 @@
                             </ul>
                             <div class="footer-classic-social">
                                 <div class="group-lg group-middle">
-                                    <p>Мы в соцсетях</p>
+                                    <p>Мы в соцсетях:</p>
                                     <div>
                                         <ul class="list-inline list-social list-inline-sm">
                                             <li><a class="icon mdi mdi-vk" href="https://vk.com/privateestatecrimea" target="_blank" rel="noopener noreferrer"></a></li>

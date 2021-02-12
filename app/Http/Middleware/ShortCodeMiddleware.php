@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use App\Domain\Article\Queries\GetAllArticlesQuery;
 use App\Domain\Catalog\Queries\GetAllCatalogsQuery;
+use App\Domain\City\Queries\GetAllCitiesQuery;
 use App\Domain\Info\Queries\GetAllInfosQuery;
 use App\Domain\OurService\Queries\GetAllOurServicesQuery;
 use App\Domain\Page\Queries\GetAllPagesQuery;
@@ -42,6 +43,7 @@ class ShortCodeMiddleware
                     $news = $this->dispatch(new GetAllInfosQuery(true));
                     $ourServices = $this->dispatch(new GetAllOurServicesQuery());
                     $catalog = $this->dispatch(new GetAllCatalogsQuery());
+                    $cities = $this->dispatch(new GetAllCitiesQuery());
 
                     return view('layouts.shortcodes.sitemap', [
                         'pages' => $pages,
@@ -49,7 +51,8 @@ class ShortCodeMiddleware
                         'projects' => $projects,
                         'news' => $news,
                         'ourServices' => $ourServices,
-                        'catalog' => $catalog
+                        'catalog' => $catalog,
+                        'cities' => $cities
                     ]);
                 }
             ],

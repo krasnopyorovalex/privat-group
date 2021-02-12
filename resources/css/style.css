@@ -460,7 +460,8 @@ p [style*=max-width] {
   display: none
 }
 .brand .brand-logo-dark {
-  display: block
+  display: block;
+  max-width: 270px;
 }
 .brand .brand-logo-fixed {
   display: none
@@ -7408,7 +7409,6 @@ html.tablet .ui-to-top {
   background: #fff
 }
 .rd-navbar-toggle {
-  display: inline-block;
   position: relative;
   width: 40px;
   height: 48px;

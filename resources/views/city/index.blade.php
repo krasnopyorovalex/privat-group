@@ -33,7 +33,50 @@
     <section class="section section-xxl bg-default text-md-left">
         <div class="container">
             <div class="row row-50">
-                <div class="col-12">
+                <div class="col-lg-4 col-xl-3">
+                    <div class="aside row row-30 row-md-50 justify-content-md-between">
+                        <div class="aside-item col-sm-6 col-lg-12">
+                            <div class="aside-title">
+                                <button class="rd-navbar-toggle"><span></span></button>
+                                Категории каталога
+                            </div>
+                            <div class="aside-menu">
+                                @if($catalogs)
+                                    <ul class="list-shop-filter">
+                                        @foreach($catalogs as $cat)
+                                            <li class="{{ $cat->alias === request('alias') ? 'active' : '' }}">
+                                                <a href="{{ $cat->url }}">{{ $cat->name }}</a>
+                                                <div class="line hidden"></div>
+                                                <div class="count hidden">{{ $cat->products_count ?: $cat->catalogs->sum('products_count') }}</div>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="aside row row-30 row-md-50 justify-content-md-between">
+                        <div class="aside-item col-sm-6 col-lg-12">
+                            <div class="aside-title">
+                                <button class="rd-navbar-toggle"><span></span></button>
+                                Выберите город
+                            </div>
+                            <div class="aside-menu">
+                                @if($cities)
+                                    <ul class="list-shop-filter">
+                                        @foreach($cities as $city)
+                                            <li class="{{ $city->alias === request('alias') ? 'active' : '' }}">
+                                                <a href="{{ $city->url }}">{{ $city->name }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-xl-9">
                     <div class="row row-30 row-lg-50">
                         @if($grouped)
                             @foreach($grouped as $groupAlias => $products)

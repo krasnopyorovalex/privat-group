@@ -55,4 +55,11 @@
             </li>
         @endforeach
     @endif
+    @if(count($cities))
+        @foreach($cities as $city)
+            <li>
+                <a href="{{ $city->url }}">{{ $city->name }}</a>
+            </li>
+        @endforeach
+    @endif
 </ul>

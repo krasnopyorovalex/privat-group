@@ -906,4 +906,8 @@ jQuery(document).ajaxError(function () {
         return false;
     });
 
+    $('.aside').on('click', '.rd-navbar-toggle', function () {
+        return $(this).closest('.aside').find('.aside-menu').toggle(300);
+    });
+
 })();

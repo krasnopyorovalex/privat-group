@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Domain\Catalog\Queries\GetAllCatalogsWithoutParentQuery;
 use App\Domain\Catalog\Queries\GetCatalogByAliasQuery;
+use App\Domain\City\Queries\GetAllCitiesQuery;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\View\View;
 
@@ -25,10 +26,13 @@ class CatalogController extends Controller
 
         $products = $catalog->products()->orderByDesc('label')->orderBy('created_at')->paginate();
 
+        $cities = $this->dispatch(new GetAllCitiesQuery());
+
         return view('catalog.index', [
             'catalog' => $catalog,
             'products' => $products,
-            'catalogs' => $catalogs
+            'catalogs' => $catalogs,
+            'cities' => $cities
         ]);
     }
 }

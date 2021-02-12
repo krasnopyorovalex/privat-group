@@ -3414,6 +3414,28 @@
         font-size: 13px;
         line-height: normal;
     }
+    .rd-navbar-main-element.connection-elements {
+        display: none;
+    }
+    .section-inset-2, .section-lg, .section-md, .section-xl, .section-xxl {
+        padding: 25px 0;
+    }
+    .aside .aside-item {
+        margin-bottom: 5px;
+    }
+    .aside-title {
+        display: flex;
+        align-items: center;
+        padding-bottom: 0;
+        font-size: 14px;
+    }
+    .aside .rd-navbar-toggle {
+        margin: 0 .5rem 0 0;
+        display: inline-block;
+    }
+    .aside .aside-menu {
+        display: none;
+    }
 }
 @media (min-width:576px) and (max-width:767px) {
     .footer-modern-list-2 {

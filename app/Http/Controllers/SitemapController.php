@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Domain\Article\Queries\GetAllArticlesQuery;
 use App\Domain\Catalog\Queries\GetAllCatalogsQuery;
+use App\Domain\City\Queries\GetAllCitiesQuery;
 use App\Domain\Info\Queries\GetAllInfosQuery;
 use App\Domain\OurService\Queries\GetAllOurServicesQuery;
 use App\Domain\Page\Queries\GetAllPagesQuery;
@@ -27,6 +28,7 @@ class SitemapController extends Controller
         $news = $this->dispatch(new GetAllInfosQuery(true));
         $ourServices = $this->dispatch(new GetAllOurServicesQuery());
         $catalog = $this->dispatch(new GetAllCatalogsQuery());
+        $cities = $this->dispatch(new GetAllCitiesQuery());
 
         return response()
             ->view('sitemap.index', [
@@ -35,7 +37,8 @@ class SitemapController extends Controller
                 'projects' => $projects,
                 'news' => $news,
                 'ourServices' => $ourServices,
-                'catalog' => $catalog
+                'catalog' => $catalog,
+                'cities' => $cities
             ])
             ->header('Content-Type', 'text/xml');
     }

@@ -30,6 +30,16 @@
             </url>
         @endforeach
     @endif
+    @if (count($cities))
+        @foreach($cities as $city)
+            <url>
+                <loc>{{ $city->url }}</loc>
+                <lastmod>{{ Illuminate\Support\Carbon::parse($city->updated_at)->format("Y-m-d\\TH:i:sP") }}</lastmod>
+                <changefreq>daily</changefreq>
+                <priority>0.8</priority>
+            </url>
+        @endforeach
+    @endif
     @if (count($ourServices))
         @foreach($ourServices as $ourService)
             @if(count($ourService->ourServiceItems))
