@@ -34,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-9 flex-start">
-                    <div class="content page__content">
+                    <div class="content page__content seo-text">
                         @if($article->image)
                         <img src="{{ asset($article->image->path) }}" alt="{{ $article->image->alt }}" title="{{ $article->image->title }}" class="responsive">
                         @endif
