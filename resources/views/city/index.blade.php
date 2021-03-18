@@ -65,9 +65,9 @@
                             <div class="aside-menu">
                                 @if($cities)
                                     <ul class="list-shop-filter">
-                                        @foreach($cities as $city)
-                                            <li class="{{ $city->alias === request('alias') ? 'active' : '' }}">
-                                                <a href="{{ $city->url }}">{{ $city->name }}</a>
+                                        @foreach($cities as $cityItem)
+                                            <li class="{{ $cityItem->alias === request('alias') ? 'active' : '' }}">
+                                                <a href="{{ $cityItem->url }}">{{ $cityItem->name }}</a>
                                             </li>
                                         @endforeach
                                     </ul>
@@ -159,7 +159,6 @@
                     </div>
                     @endif
                 </div>
-                {!! $city->text !!}
                 @if($city->text)
                     <div class="col-lg-12 col-xl-12">
                         <div class="row row-30 row-lg-50">
