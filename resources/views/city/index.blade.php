@@ -159,6 +159,7 @@
                     </div>
                     @endif
                 </div>
+                {!! $city->text !!}
                 @if($city->text)
                     <div class="col-lg-12 col-xl-12">
                         <div class="row row-30 row-lg-50">
