@@ -34,7 +34,7 @@
     <section class="section section-content bg-default text-justify">
         <div class="container">
             <div class="row row-xl row-30">
-                <div class="col-md-12">
+                <div class="col-md-12 seo-text">
                     {!! $new->text !!}
                 </div>
             </div>
